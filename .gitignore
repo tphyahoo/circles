@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# Local Claude Code permission grants — machine-specific, and contains an
+# allowlist you may not want mirrored to GitHub.
+.claude/settings.local.json
+
+# Scratch note used to pass requests mid-session — not part of the work.
+Untitled.md
+
+# Obsidian: keep the shared vault config (app/appearance/core-plugins),
+# ignore the per-machine UI state, which rewrites itself constantly.
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
