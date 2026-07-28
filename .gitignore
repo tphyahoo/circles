@@ -9,6 +9,11 @@ __pycache__/
 # Scratch note used to pass requests mid-session — not part of the work.
 Untitled.md
 
+# TLC scratch output — regenerated on every model-check run.
+site/states/
+*.old
+.toolbox/
+
 # Obsidian: keep the shared vault config (app/appearance/core-plugins),
 # ignore the per-machine UI state, which rewrites itself constantly.
 .obsidian/workspace.json

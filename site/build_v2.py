@@ -132,6 +132,12 @@ HTML = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
     padding: 1rem 1.15rem; overflow-x: auto;
     font-family: var(--mono); font-size: .8rem; line-height: 1.62; color: #C9D1D9;
   }
+  .code.spec pre {
+    background: var(--pad-2); color: var(--ink);
+    border: 1px solid var(--rule); border-left: 3px solid var(--gold);
+  }
+  .code.spec .kw { color: var(--correction, #A3392B); }
+  .code.spec .cm { color: var(--muted); }
   .code .kw { color: #FF7B72; }
   .code .cm { color: #8B949E; font-style: italic; }
   .code .st { color: #79C0FF; }
@@ -314,7 +320,45 @@ HTML = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
   </div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Copy this down. It is the entire circle, and I want you to notice what is <em>not</em> in it.</p>
+    <p>Before anybody writes a line of it &mdash; what has to be <em>true</em> of the answer? Not how you would get it. What would make it right.</p>
+  </div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>&hellip;It should look like a circle?</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Not good enough. Nobody can check &ldquo;looks like a circle.&rdquo; Give me something that could be checked by something with no eyes.</p>
+  </div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says"><p>Nothing more than half a dot off the ring.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p><span class="stage">(writing)</span> That's it. And notice what it is &mdash; that's <em>your own sentence</em> from twenty minutes ago, and it has just become the definition.</p>
+    <p>Now. &ldquo;Half a step off the ring&rdquo; sounds like it needs a distance, and a distance needs a square root, and we have spent all morning refusing to take one. So square both sides and watch it go away.</p>
+  </div></div>
+
+  <div class="line"><div class="code spec">
+    <span class="attrib">The blueprint</span>
+<pre><span class="cm">\* squared distance. no square root lives in this file.</span>
+Quadrance(p) == p[1]*p[1] + p[2]*p[2]
+
+<span class="cm">\* "no more than half a step off the ring", squared out</span>
+<span class="cm">\* so that every number in it is a whole number:</span>
+NearRing(p) == /\ (2*R - 1)^2 =&lt; 4 * Quadrance(p)
+               /\ 4 * Quadrance(p) =&lt; (2*R + 1)^2
+
+<span class="cm">\* and this is the circle. all of it.</span>
+Circle == { p \in Dots : NearRing(p) }</pre>
+  </div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Four lines, and I want you to notice what is <em>missing</em> from them. There is no first dot. There is no next dot. Nothing goes round the ring in any order, because nothing goes round the ring at all &mdash; it is a set, and a set does not have a beginning.</p>
+    <p>Nobody draws a house out of bricks. You draw it on paper, and the paper is not made of brick. This is the paper.</p>
+  </div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says"><p>So where's the program?</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>The program is somebody's <em>clever way of picking dots that satisfy this</em>. It is downstream. Copy it down, and notice that it agrees with nothing you just wrote &mdash; it has loops in it, and an order, and a running total, and none of those words appear above.</p>
   </div></div>
 
   <div class="line"><div class="code">
@@ -370,7 +414,117 @@ HTML = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
 
 <!-- 04 -->
 <section>
-  <h2><span class="n">04</span> The dots that land perfectly</h2>
+  <h2><span class="n">04</span> Checking it without reading it</h2>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Now. I have two copies of that program on the board. They differ by exactly one number. One of them is right and one of them is wrong.</p>
+    <p>Find the wrong one. By reading.</p>
+  </div></div>
+
+  <div class="line"><div class="beat">(Three minutes. Somebody guesses the 10. Somebody guesses the minus sign. Both wrong.)</div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>They look the same.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>They do look the same. So stop reading them. We are going to say what a <em>drawing</em> has to satisfy &mdash; not what it does, what it owes us &mdash; and then let the machine sort them out.</p>
+  </div></div>
+
+  <div class="line"><div class="code spec">
+    <span class="attrib">What a drawing owes us</span>
+<pre><span class="cm">\* it only drew dots that were allowed</span>
+Sound(drawn)     == drawn \subseteq Circle
+
+<span class="cm">\* it left no column empty</span>
+Complete(drawn)  == \A x \in -R..R : \E p \in drawn : p[1] = x
+
+<span class="cm">\* whatever it drew, it drew all eight mirrors of</span>
+Symmetric(drawn) == \A p \in drawn : Mirrors(p) \subseteq drawn
+
+Correct(drawn)   == Sound(drawn) /\ Complete(drawn) /\ Symmetric(drawn)</pre>
+  </div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>Both fine. I checked them at thirteen.</p></div></div>
+
+  <div class="line"><div class="out">R = 13
+program A:  Correct
+program B:  Correct</div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>You checked them at thirteen. Check them at everything.</p>
+  </div></div>
+
+  <div class="line"><div class="out">R = 3 to 120
+program A:  Correct at all 118
+program B:  FAILS at 103 of 118 — always Sound; it drew a dot that was not allowed
+            passes at 3, 4, 5, 6, 7, 9, 10, 11, 13, 17, 18, 19, 28, 31 …</div></div>
+
+  <div class="line"><div class="beat">(Ralphie looks at the 13 in his own list of passing radii for a while.)</div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>The <span class="m">6</span> in program B is a <span class="m">4</span>. None of you were ever going to see that by reading, and it did not matter, because you had written down what must be true.</p>
+    <p>But look at what nearly happened. The broken program is wrong at a hundred and three radii out of a hundred and eighteen, and it is <em>right at thirteen</em>, which is the number we have been using all morning. Ralphie tested it once and it told him everything was fine.</p>
+  </div></div>
+
+  <div class="line"><div class="keybox"><span class="lbl">Checking one case is not checking</span><p>A wrong program is not wrong everywhere. It is wrong <em>somewhere</em>, and it will be perfectly well behaved on the example you happen to try &mdash; especially if you picked that example because it was the one you understood.</p></div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says"><p>So we don't have to understand the program.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>You have to understand the <em>rules</em>. The program is somebody's clever trick for satisfying them. Tricks are cheap. Knowing what would make a trick correct is not.</p>
+  </div></div>
+
+  <div class="line"><div class="beat">(Ralphie has been typing this whole time and now looks alarmed.)</div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says">
+    <p>Mrs. Feeney, I added a fourth rule and now the <em>good</em> program fails.</p>
+  </div></div>
+
+  <div class="line"><div class="code spec">
+    <span class="attrib">Ralphie's fourth condition</span>
+<pre><span class="cm">\* each column's dot sits at the whole-number part of</span>
+<span class="cm">\* the square root. seems obvious enough.</span>
+Tidy(drawn) == \A x \in -R..R :
+                 &lt;&lt;x, WholePartOfSqrt(R*R - x*x)&gt;&gt; \in drawn</pre>
+  </div></div>
+
+  <div class="line"><div class="out">program A:  FAILS at R = 3 — Tidy is false</div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>So program A is broken after all? At <em>three</em>?</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p><span class="stage">(very pleased, and hiding it badly)</span> Maybe. Or your rule is broken. Which is it?</p>
+  </div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>&hellip;How would I even tell?</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>The same way we settle everything in here. Go count one by hand.</p>
+  </div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says">
+    <p><span class="stage">(already doing it)</span> Three is too cramped to see anything. Do thirteen.</p>
+    <p>Column eleven. Thirteen squared is one sixty-nine, minus one twenty-one is forty-eight. Square root of forty-eight is about six point nine.</p>
+    <p>So the nearest dot is at <em>seven</em>. Your rule chops it down to six. Your rule rounds the wrong way, and it has been rounding the wrong way since three.</p>
+  </div></div>
+
+  <div class="line"><div class="beat">(Ralphie stares at his screen for a second.)</div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>My rule was wrong. Not the program.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Your rule was wrong. And this is the part I want you to remember longer than anything else today.</p>
+  </div></div>
+
+  <div class="line"><div class="keybox"><span class="lbl">Rules are claims too</span><p>A rule that says what must be true is itself a thing that might be false. It can be wrong in exactly the confident, plausible-looking way a program can be wrong &mdash; and it will happily accuse a correct program of being broken.</p><p>So a rule has to answer to something outside itself: <span class="exact">a case you worked out by hand.</span> Thirteen and eleven and six point nine. That is why we counted three hundred and seventeen dots one at a time before we trusted anything.</p></div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says"><p>So we check the program with the rules, and the rules with the counting.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>All the way down. Yes.</p></div></div>
+</section>
+
+<!-- 05 -->
+<section>
+  <h2><span class="n">05</span> The dots that land perfectly</h2>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
     <p>Back to Ralphie's twelve. Most dots on our ring are near-misses &mdash; off by a bit, under half. But some land <span class="exact">dead on</span>. Ralphie found six-eight-ten without knowing what he had. What did you have, Ralphie?</p>
@@ -408,7 +562,7 @@ HTML = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
 
 <!-- 05 -->
 <section>
-  <h2><span class="n">05</span> How much room is inside</h2>
+  <h2><span class="n">06</span> How much room is inside</h2>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
     <p>Last thing today, and it's the one I'd keep if they made me throw the rest out.</p>
@@ -526,7 +680,7 @@ HTML = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
 
 <!-- 06 -->
 <section>
-  <h2><span class="n">06</span> The bell</h2>
+  <h2><span class="n">07</span> The bell</h2>
 
   <div class="line"><div class="who">Ralphie</div><div class="says"><p>How many digits <em>do</em> you need?</p></div></div>
 
@@ -582,6 +736,11 @@ HTML = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
   <h3>Checked before printing</h3>
   <p>Every number here was computed rather than remembered: the twelve dots at radius 5, 10 and 13; the twenty at radius 25 and thirty-six at 65; the worst-case error of 0.48 of a step at radius 110; the dot counts 317 / 31,417 / 3,141,549 / 314,159,053 and the &pi; digits they yield; and the integer-only drawing rule, verified to place its dots in the same spots as the square-root method at every radius tested.</p>
   <p>The thirty-eight digits: circumference of the observable universe (radius ~46 billion light years) to a precision of one hydrogen-atom radius needs 38 significant figures. Fifteen digits is the working precision NASA JPL reports using for interplanetary navigation.</p>
+
+  <h3 style="margin-top:2rem">Whose ideas these are</h3>
+  <p><strong>The drawing algorithm</strong> is Bresenham's circle algorithm &mdash; J. E. Bresenham, &ldquo;A Linear Algorithm for Incremental Digital Display of Circular Arcs&rdquo;, <em>Communications of the ACM</em> 20(2), February 1977, 100&ndash;106. Not the better-known 1965 paper (&ldquo;Algorithm for computer control of a digital plotter&rdquo;, <em>IBM Systems Journal</em> 4(1), 25&ndash;30), which draws lines; the circle came twelve years afterwards. The variant used here is usually called the midpoint circle algorithm.</p>
+  <p><strong>Counting dots to get &pi;</strong> is the Gauss circle problem. <strong>Which radii carry dots that land exactly</strong> is the theory of sums of two squares, from Fermat and Jacobi. <strong>Writing the blueprint before the program</strong>, and the observation that a specification is not written in the material the thing is built from, is Leslie Lamport &mdash; &ldquo;Thinking Above the Code&rdquo;, Microsoft Research Faculty Summit, 2014 &mdash; and the notation of the blueprint is his TLA+.</p>
+  <p>None of the mathematics in this lesson is new. The only thing arranged here is the order.</p>
 </footer>
 
 </div>
