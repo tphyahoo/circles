@@ -40,6 +40,25 @@ Published artifact: https://claude.ai/code/artifact/fac3d388-297f-4604-a7ef-e665
   reduction mod p is a quotient, not an approximation. For a picture that actually
   looks like a circle, use a bounded integer lattice (see `two_finite_worlds.png`).
 
+## Toolchain
+
+Installed locally under `~/.local`, no sudo, nothing system-wide:
+
+- Temurin JRE 21 — `~/.local/lib/jdk-21.0.11+10-jre/`
+- `tla2tools.jar` — `~/.local/lib/`
+- `tlc` and `sany` wrappers — `~/.local/bin/` (already on PATH)
+
+Model-check with `tlc CircleCheck.tla` from `site/`, editing `CircleCheck.cfg` to set
+the radius and pick an invariant. All of this works offline.
+
+Not yet installed, and wanted: **VS Code plus the official `tlaplus.vscode-tlaplus`
+extension.** The TLA+ Toolbox is in maintenance mode; the project recommends the VS Code
+extension instead. It needs network to install, and will use the Java above.
+
+Obsidian will not render the `.tla` files and does not index symlinks — symlinked `.md`
+companions were tried and removed. Once VS Code is in, the split is: specs there, notes
+in Obsidian, and no workaround is needed. Do not build an `.md`-to-`.tla` sync step.
+
 ## Working conventions
 
 - **Run scripts by path, not as inline one-liners.** Write throwaway analysis to a file
