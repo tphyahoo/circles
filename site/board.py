@@ -138,7 +138,7 @@ note(ax, -11.4, 12.3, 'every dot exactly ten from the middle', INK, 16)
 note(ax, -11.4, -12.4, 'twelve of them. that is not a circle.', INK, 16)
 save(fig, 'board_02_twelve.png')
 
-# ------------------------------------------------------------- 3. the half dot
+# ------------------------------------------------------------- 3. the half-unit
 # Radius 5 so the arc visibly curves; column 2, where the ring passes between the
 # dots at 4 and 5. Deliberately NO decimals: working out where the ring actually
 # crosses would need a square root, which is the thing this lesson refuses to take.
@@ -239,3 +239,65 @@ note(ax, 4.15, 3.60, 'lands nearer a hundred. no ruler, no string.', INK, 14)
 ax.set_xlim(4.0, 12.6); ax.set_ylim(3.25, 10.8)
 ax.set_aspect('equal'); ax.axis('off')
 save(fig, 'board_06_squares.png')
+
+# ------------------------------------------------- 7. Ralphie's rule accuses
+# R = 13, column 11. His rule demands the dot at 6; the drawing has 7. Working
+# out which is right needs no ruler either -- just square them.
+fig, ax = plt.subplots(figsize=(6.8, 5.6), facecolor=BOARD)
+ax.set_facecolor(BOARD)
+for x in range(8, 14):
+    for y in range(3, 10):
+        ax.plot(x, y, marker='.', ms=3.6, color=PRINTED, zorder=0)
+ring(ax, 13, INK, 2.4)
+local_numbers(ax, [9, 10, 11, 12, 13], [4, 5, 6, 7, 8, 9])
+stroke(ax, [11, 11], [3.4, 9.4], PRINTED, 1.4, z=1)
+dot(ax, 11, 7, BLUE, 13)
+ring(ax, .34, RED, 2.2, cx=11, cy=7, z=6)
+dot(ax, 11, 6, PRINTED, 11)
+note(ax, 11.35, 7.05, '121 + 49 = 170', RED, 13)
+note(ax, 11.35, 6.68, 'one over. take it.', RED, 12)
+note(ax, 11.35, 6.05, '121 + 36 = 157', INK, 13)
+note(ax, 11.35, 5.68, 'twelve under.', INK, 12)
+note(ax, 8.15, 9.55, 'column 11 of the ring at 13.  169 is the target.', INK, 14)
+note(ax, 8.15, 3.75, "the rule wanted the dot at 6. the drawing put", INK, 14)
+note(ax, 8.15, 3.42, 'one at 7, and 7 is nearer. the rule was wrong.', INK, 14)
+ax.set_xlim(8.0, 15.6); ax.set_ylim(3.0, 9.9)
+ax.set_aspect('equal'); ax.axis('off')
+save(fig, 'board_07_badrule.png')
+
+# ------------------------------------------------------- 8. a lucky radius
+# r = 5 by hand: twelve dots land perfectly, and they are 3-4-5 eight ways over
+# plus the four on the axes.
+fig, ax = board(-7, 7, 6.6)
+numbers(ax, -7, 7, step=5)
+ring(ax, 5, PRINTED, 1.8, ls='--')
+for (x, y) in [(x, y) for x in range(-7, 8) for y in range(-7, 8) if x*x + y*y == 25]:
+    dot(ax, x, y, BLUE, 12)
+stroke(ax, [0, 3], [0, 0], RED, 2.2)
+stroke(ax, [3, 3], [0, 4], RED, 2.2)
+stroke(ax, [0, 3], [0, 4], RED, 2.2)
+note(ax, 1.5, -.75, '3', RED, 14, ha='center')
+note(ax, 3.35, 2.0, '4', RED, 14)
+note(ax, 1.0, 2.4, '5', RED, 14)
+note(ax, -7.4, 8.1, 'r = 5.  twelve dots land perfectly.', INK, 16)
+note(ax, -7.4, -8.2, 'eight of them are 3-4-5 turned around.', INK, 15)
+save(fig, 'board_08_lucky5.png')
+
+# --------------------------------------------- 9. counting a column at a time
+# Popovich's fix: you do not check every dot in the square, you say how tall
+# each column is and add the heights up.
+fig, ax = board(-11, 11, 6.8)
+numbers(ax, -11, 11)
+inside = [(x, y) for x in range(-10, 11) for y in range(-10, 11) if x*x + y*y <= 100]
+ax.scatter([p[0] for p in inside], [p[1] for p in inside], s=26, color=BLUE,
+           alpha=.30, edgecolors='none', zorder=3)
+for x, col in [(-6, 8), (0, 10), (5, 8), (9, 4)]:
+    h = max(y for (px, y) in inside if px == x)
+    ax.scatter([x]*(2*h+1), list(range(-h, h+1)), s=30, color=BLUE,
+               edgecolors='none', zorder=5)
+    stroke(ax, [x + .42, x + .42], [-h, h], RED, 1.8)
+    note(ax, x + .62, 0, str(2*h + 1), RED, 13)
+ring(ax, 10, PRINTED, 1.8, ls='--')
+note(ax, -11.4, 12.3, 'do not check every dot. measure each column.', INK, 16)
+note(ax, -11.4, -12.4, 'add the heights up. that is the whole count.', INK, 16)
+save(fig, 'board_09_columns.png')

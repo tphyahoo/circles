@@ -20,15 +20,40 @@ blueprint; the Python is the particle board.
 
 ## Credits
 
-The drawing algorithm this specifies is Bresenham's circle algorithm:
+The algorithm taught here is the **midpoint circle algorithm**, initialised
+`d = 3 - 2r`. It is almost universally called "Bresenham's circle algorithm", and that
+attribution is wrong in a way worth recording.
+
+Bresenham's actual 1977 paper --
 
 > J. E. Bresenham, "A Linear Algorithm for Incremental Digital Display of Circular
-> Arcs", *Communications of the ACM* 20(2), February 1977, 100–106.
+> Arcs", *Communications of the ACM* 20(2), February 1977, 100-106
 
-Not the better-known 1965 paper — "Algorithm for computer control of a digital
-plotter", *IBM Systems Journal* 4(1), 25–30 — which draws **lines**. The circle came
-twelve years later. The variant used here is usually called the *midpoint circle
-algorithm*.
+-- uses a different decision variable. His is evaluated at the *diagonal* neighbour,
+`Delta = [(X+1)^2 + (Y-1)^2] - R^2`, initialised `Delta_0 = 2 - 2R`, with three moves
+rather than two. The two algorithms agree on their output -- his quarter-arc points sit
+inside the midpoint octant and its mirrors at every radius tested to 200 -- but they are
+not the same procedure, and `3 - 2r` is not his.
+
+(And not the famous 1965 paper either: "Algorithm for computer control of a digital
+plotter", *IBM Systems Journal* 4(1), 25-30, draws **lines**.)
+
+On ties, the paper is worth reading before anyone repeats what this file used to
+say. Our midpoint `d` is always odd, so it never lands on zero, and the `else` branch
+never breaks a tie. That is a fact about the *midpoint* variant only.
+
+Bresenham's own `Delta` **does** hit zero -- at 143 of the radii from 2 to 399 -- and he
+handles it explicitly:
+
+> "(c) If Delta_i = 0 then (X+1, Y-1) is on the true circle, i.e. case 5, and the
+> movement should be m2. In this case the above steps yield delta > 0 and delta' < 0 so
+> a proper m2 move is forced by either calculation."
+
+His `Delta` is zero exactly when `(X+1)^2 + (Y-1)^2 = R^2` -- when a lattice point lands
+*perfectly* on the ring. So the radii where his algorithm meets the case are precisely
+the ones carrying whole-number triangles: 5, 10, 15, 17, 20, 25, 29, 30, 34, 35, ...
+
+He did not dodge the case. He found it, named it, and proved it was unambiguous.
 
 On writing the blueprint before the program at all, and on a specification not being
 written in the material the thing is built from:
@@ -81,6 +106,21 @@ Symmetric(drawn) == \A p \in drawn : Mirrors(p) \subseteq drawn
     \* whatever it drew, it drew all eight mirrors of
 
 Correct(drawn) == Sound(drawn) /\ Complete(drawn) /\ Symmetric(drawn)
+
+    (*  "take the nearest" only names a dot if there is never a tie. A tie in
+        column x between the dots at y and y+1 would mean their two totals sat
+        the same distance either side of the target, i.e.
+
+              (R^2 - Q1)  =  (Q2 - R^2)      i.e.   Q1 + Q2  =  2*R^2
+
+        It never happens, and not by luck: Q1 + Q2 is
+        2x^2 + y^2 + (y+1)^2 = 2x^2 + 2y^2 + 2y + 1, which is always ODD,
+        while 2*R^2 is always EVEN.  *)
+
+NoTies == \A x \in -R..R : \A y \in -R..R :
+            LET Q1 == x*x + y*y
+                Q2 == x*x + (y+1)*(y+1)
+            IN  Q1 + Q2 # 2*R*R
 =============================================================================
 ```
 

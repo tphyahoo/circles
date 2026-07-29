@@ -91,18 +91,21 @@ volume of cones and spheres*
 3. Pythagoras Without a Square Root
 4. Which Numbers Are Hypotenuses? — sums of two squares
 5. A Circle Is a Set of Dots
-6. Drawing a Circle With Nothing but Addition — Bresenham
+6. Drawing a Circle With Nothing but Addition — the midpoint algorithm
 7. Counting Your Way to π — the Gauss circle problem
 8. Pick's Theorem — the area of any lattice polygon, by counting its dots
 9. Spread — turning, measured without trigonometry
 
-> *Credits:* Wildberger, *Divine Proportions* (2005), for quadrance and spread;
-> Bresenham (1977) for the circle — *A Linear Algorithm for Incremental Digital
-> Display of Circular Arcs*, CACM 20(2), 100–106. **Not** the famous 1965 paper, which
-> is *Algorithm for computer control of a digital plotter*, IBM Systems Journal 4(1),
-> 25–30, and draws **lines**. The circle version came twelve years later, and the
-> variant used here is usually called the *midpoint circle algorithm*. Also: Gauss for
-> the circle problem; Fermat and Jacobi for two squares; Pick (1899).
+> *Credits:* Wildberger, *Divine Proportions* (2005), for quadrance and spread.
+>
+> The circle-drawing algorithm here is the **midpoint circle algorithm** (`d = 3 − 2r`).
+> Read the primary source before crediting it: Bresenham's *A Linear Algorithm for
+> Incremental Digital Display of Circular Arcs*, CACM 20(2), Feb 1977, 100–106, uses a
+> **different** decision variable — evaluated at the diagonal neighbour, initialised
+> `2 − 2R`. The two agree on output but are not the same procedure, so the near-universal
+> name "Bresenham's circle algorithm" for the `3 − 2r` form is a misattribution. (And the
+> famous 1965 IBM Systems Journal paper draws lines, not circles.) Also: Gauss for the
+> circle problem; Fermat and Jacobi for two squares; Pick (1899).
 
 ---
 
