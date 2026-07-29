@@ -50,7 +50,7 @@ Quadrance(p) == p[1]*p[1] + p[2]*p[2]
         and the reason is that we never need one.  *)
 
 NearRing(p) ==
-    (*  "no more than half a step off the ring".
+    (*  "no more than half a unit off the ring".
           |Sqrt(Q) - R| =< 1/2
         is the same claim as
           (2R-1)^2 =< 4Q =< (2R+1)^2

@@ -165,9 +165,13 @@ HTML = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
   figure { margin: 2.5rem 0; }
   .plate { background: var(--plate); border: 1px solid var(--rule); padding: .7rem; }
   .plate img { width: 100%; height: auto; display: block; }
+  /* the board is a whiteboard: it stays light whatever theme the reader is in */
+  .boardshot { background: #F8F7F3; border: 1px solid var(--rule); padding: .5rem; }
+  .boardshot img { width: 100%; height: auto; display: block; }
+  figcaption .pn.hand { color: var(--gold); }
   figcaption {
     font-family: var(--sans); font-size: .78rem; line-height: 1.6; color: var(--muted);
-    margin-top: .8rem; display: grid; grid-template-columns: 5rem 1fr; gap: 0 1.2rem;
+    margin-top: .8rem; display: grid; grid-template-columns: 7.5rem 1fr; gap: 0 1.2rem;
   }
   figcaption .pn { font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--blue); font-size: .68rem; padding-top: .12em; }
   figcaption .pt { max-width: 39rem; }
@@ -196,7 +200,7 @@ HTML = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
 
 <header class="top">
   <p class="course">Honors Math &nbsp;·&nbsp; Period 3 &nbsp;·&nbsp; First Day</p>
-  <h1>Circles, and the<br /><em>Half-Dot Problem</em></h1>
+  <h1>Circles, and<br /><em>How Wrong We're Willing to Be</em></h1>
   <p class="standfirst">In which nothing is infinite, nobody uses a square root, and &pi; turns up anyway &mdash; by being counted.</p>
 </header>
 
@@ -229,6 +233,11 @@ HTML = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
     <p>Now. Put your finger on the middle dot and find me every dot exactly ten away.</p>
   </div></div>
 
+  <figure>
+    <div class="boardshot"><img src="__B1__" alt="A whiteboard printed with a lattice of faint dots, the centre dot circled in red marker and labelled the middle, with one unit measured between two adjacent dots" /></div>
+    <figcaption><span class="pn hand">Fig. 1 &middot; board</span><span class="pt">The whole world, and the only thing in it. The lattice is printed on the board; everything else is marker.</span></figcaption>
+  </figure>
+
   <div class="line"><div class="beat">(Scratching. A long pause. Ralphie's hand goes up, then down, then up.)</div></div>
 
   <div class="line"><div class="who">Ralphie</div><div class="says">
@@ -245,6 +254,11 @@ HTML = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
 
   <div class="line"><div class="who p">Popovich</div><div class="says"><p>No. That's twelve dots.</p></div></div>
 
+  <figure>
+    <div class="boardshot"><img src="__B2__" alt="Twelve blue dots marked on the lattice, all exactly ten steps from the centre, with a six-eight-ten right triangle drawn in red marker from the middle to one of them" /></div>
+    <figcaption><span class="pn hand">Fig. 2 &middot; board</span><span class="pt">Every dot exactly ten away &mdash; and the one Ralphie found first, which is a 6-8-10 triangle whether he knew it or not.</span></figcaption>
+  </figure>
+
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>Correct, and thank you for not being polite about it. Twelve dots is not a circle. So we have a problem, and here it is:</p></div></div>
 
   <div class="line"><div class="keybox"><span class="lbl">The trouble</span><p>Almost no dot is <em>exactly</em> ten from the middle. If we insist on &ldquo;exactly,&rdquo; our circles have twelve dots in them and enormous holes. A rule that strict doesn't draw &mdash; it just says no.</p></div></div>
@@ -256,6 +270,39 @@ HTML = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
     <p>So we loosen it, exactly one notch. New rule: <strong>for each column, take the dot nearest to ten away.</strong> Not the exact one. The nearest one.</p>
+  </div></div>
+
+  <figure>
+    <div class="boardshot"><img src="__B4__" alt="Fifty-six blue dots on the lattice forming an unmistakable ring, with the true circle faintly dashed behind them" /></div>
+    <figcaption><span class="pn hand">Fig. 3 &middot; board</span><span class="pt">Fifty-six dots. Nobody in the room disputes that this is a circle, which is what makes the next two minutes worth having.</span></figcaption>
+  </figure>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says">
+    <p>How do we know which one's nearest, though? Do we measure it?</p>
+  </div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>With what, Ralphie. A piece of string?</p></div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>&hellip;I was going to say a ruler.</p></div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says">
+    <p>You don't measure. Ten away means the squares add up to a hundred. So square the two dots that look close and see which total lands nearer a hundred.</p>
+  </div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>Do the seventh column for me.</p></div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says">
+    <p>Forty-nine and forty-nine is ninety-eight. Two short. Forty-nine and sixty-four is a hundred and thirteen. Thirteen over. So it's the lower one.</p>
+  </div></div>
+
+  <figure>
+    <div class="boardshot"><img src="__B6__" alt="One column of the lattice with the ring crossing it, the two candidate dots labelled 49 plus 64 equals 113 and 49 plus 49 equals 98, and the nearer one circled" /></div>
+    <figcaption><span class="pn hand">Fig. 4 &middot; board</span><span class="pt">No ruler and no string. Squaring turns &ldquo;which is nearer&rdquo; into arithmetic you can do in your head &mdash; and it never once asks what the distance actually <em>is</em>.</span></figcaption>
+  </figure>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Notice what he did <em>not</em> do. He never worked out how far away either dot was. He only worked out which of them was <em>nearer</em>, and squaring is enough for that.</p>
+    <p>This is going to keep happening all year, so learn to like it: the squared distance is easier than the distance, and most of the time the distance was never the thing you wanted.</p>
   </div></div>
 
   <div class="line"><div class="who p">Popovich</div><div class="says">
@@ -289,11 +336,16 @@ HTML = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
 
   <div class="line"><div class="who p">Popovich</div><div class="says"><p>Because if it were more than half, a different dot would be closer, and you'd have picked that one instead.</p></div></div>
 
+  <figure>
+    <div class="boardshot"><img src="__B3__" alt="A curved arc drawn in marker passing between two lattice dots in the same column, with the gap above the ring and the gap below it braced together as one whole unit" /></div>
+    <figcaption><span class="pn hand">Fig. 5 &middot; board</span><span class="pt">Popovich's argument, drawn. The ring passes between two dots one unit apart, so the two gaps make one unit between them &mdash; so whichever is shorter cannot be more than a half. Notice the board never says where the ring actually crosses: working that out would need a square root, and the argument does not need to know.</span></figcaption>
+  </figure>
+
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
     <p><span class="stage">(to the room)</span> Say that back to yourselves tonight until it's boring. That is the entire argument.</p>
   </div></div>
 
-  <div class="line"><div class="keybox"><span class="lbl">The answer to the objection</span><p>Our circle is never off by more than <span class="exact">half a dot</span>. Not on average &mdash; <em>ever</em>. Not at radius ten, not at radius ten thousand, not at radius the-size-of-the-county. The error doesn't grow, because &ldquo;nearest&rdquo; means what it says.</p></div></div>
+  <div class="line"><div class="keybox"><span class="lbl">The answer to the objection</span><p>Our circle is never off by more than <span class="exact">half a unit</span>. Not on average &mdash; <em>ever</em>. Not at radius ten, not at radius ten thousand, not at radius the-size-of-the-county. The error doesn't grow, because &ldquo;nearest&rdquo; means what it says.</p></div></div>
 
   <div class="line"><div class="who">Ralphie</div><div class="says"><p>Wait, it doesn't get worse when the circle gets bigger?</p></div></div>
 
@@ -329,7 +381,7 @@ HTML = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
     <p>Not good enough. Nobody can check &ldquo;looks like a circle.&rdquo; Give me something that could be checked by something with no eyes.</p>
   </div></div>
 
-  <div class="line"><div class="who p">Popovich</div><div class="says"><p>Nothing more than half a dot off the ring.</p></div></div>
+  <div class="line"><div class="who p">Popovich</div><div class="says"><p>Nothing more than half a unit off the ring.</p></div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
     <p><span class="stage">(writing)</span> That's it. And notice what it is &mdash; that's <em>your own sentence</em> from twenty minutes ago, and it has just become the definition.</p>
@@ -341,7 +393,7 @@ HTML = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
 <pre><span class="cm">\* squared distance. no square root lives in this file.</span>
 Quadrance(p) == p[1]*p[1] + p[2]*p[2]
 
-<span class="cm">\* "no more than half a step off the ring", squared out</span>
+<span class="cm">\* "no more than half a unit off the ring", squared out</span>
 <span class="cm">\* so that every number in it is a whole number:</span>
 NearRing(p) == /\ (2*R - 1)^2 =&lt; 4 * Quadrance(p)
                /\ 4 * Quadrance(p) =&lt; (2*R + 1)^2
@@ -388,6 +440,11 @@ Circle == { p \in Dots : NearRing(p) }</pre>
     <p>And look at the loop condition: <span class="m">while x &lt;= y</span>. It stops at the diagonal. You only ever compute one eighth of the ring &mdash; the other seven eighths are mirror images, which is what that list of eight pairs is doing. You get them for free.</p>
   </div></div>
 
+  <figure>
+    <div class="boardshot"><img src="__B5__" alt="The lattice with one eighth of the plane shaded, the four fold lines dashed through the centre, and a single red dot inside the shaded wedge together with its seven mirror images" /></div>
+    <figcaption><span class="pn hand">Fig. 6 &middot; board</span><span class="pt">The shaded wedge is the only part anyone computes. The four dashed lines are the folds; one dot in the wedge lands on eight when you unfold it.</span></figcaption>
+  </figure>
+
   <div class="line"><div class="who">Ralphie</div><div class="says"><p>That's how a computer draws a circle?</p></div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
@@ -396,7 +453,7 @@ Circle == { p \in Dots : NearRing(p) }</pre>
 
   <figure>
     <div class="plate"><img src="__P1__" alt="A circle of radius 110 drawn as blue lattice dots, visually smooth and round" /></div>
-    <figcaption><span class="pn">Plate I</span><span class="pt">Radius 110. Six hundred and twenty-four dots, placed using nothing but addition and subtraction. No dot is more than half a step off the true ring &mdash; and that is a promise that holds at every radius, not a lucky outcome at this one.</span></figcaption>
+    <figcaption><span class="pn">Fig. 7 &middot; screen</span><span class="pt">Radius 110. Six hundred and twenty-four dots, placed using nothing but addition and subtraction. No dot is more than half a unit off the true ring &mdash; and that is a promise that holds at every radius, not a lucky outcome at this one.</span></figcaption>
   </figure>
 
   <div class="line"><div class="who p">Popovich</div><div class="says">
@@ -550,7 +607,7 @@ Tidy(drawn) == \A x \in -R..R :
 
   <figure>
     <div class="plate"><img src="__P2__" alt="Circle of radius 25 in blue dots with twenty gold dots marking the points that land exactly on the radius" /></div>
-    <figcaption><span class="pn">Plate II</span><span class="pt">Radius 25. The blue dots are nearest-fits. The <span style="color:var(--gold);font-weight:600">gold</span> ones land perfectly &mdash; twenty of them, because 25 is a lucky radius that carries two different whole-number triangles. Sixty-five is luckier still, with four.</span></figcaption>
+    <figcaption><span class="pn">Fig. 8 &middot; screen</span><span class="pt">Radius 25. The blue dots are nearest-fits. The <span style="color:var(--gold);font-weight:600">gold</span> ones land perfectly &mdash; twenty of them, because 25 is a lucky radius that carries two different whole-number triangles. Sixty-five is luckier still, with four.</span></figcaption>
   </figure>
 
   <div class="line"><div class="who p">Popovich</div><div class="says"><p>Is there a radius where <em>all</em> of them land?</p></div></div>
@@ -577,7 +634,7 @@ Tidy(drawn) == \A x \in -R..R :
 
   <figure>
     <div class="plate"><img src="__P3__" alt="A filled disk of 317 blue lattice dots at radius 10" /></div>
-    <figcaption><span class="pn">Plate III</span><span class="pt">Radius 10. Three hundred and seventeen dots. You can count them by hand in about four minutes, and two students in every class always do.</span></figcaption>
+    <figcaption><span class="pn">Fig. 9 &middot; screen</span><span class="pt">Radius 10. Three hundred and seventeen dots. You can count them by hand in about four minutes, and two students in every class always do.</span></figcaption>
   </figure>
 
   <div class="line"><div class="beat">(Four minutes. Ralphie finishes first and is wrong. Popovich finishes second and isn't.)</div></div>
@@ -746,7 +803,11 @@ Tidy(drawn) == \A x \in -R..R :
 </div>
 """
 
-HTML = HTML.replace('__P1__', img('p1_circle.png')).replace('__P2__', img('p2_exact.png')).replace('__P3__', img('p3_count.png'))
+for k, f in [('__P1__','p1_circle.png'), ('__P2__','p2_exact.png'), ('__P3__','p3_count.png'),
+             ('__B1__','board_01_world.png'), ('__B2__','board_02_twelve.png'),
+             ('__B3__','board_03_halfdot.png'), ('__B4__','board_04_nearest.png'),
+             ('__B5__','board_05_mirrors.png'), ('__B6__','board_06_squares.png')]:
+    HTML = HTML.replace(k, img(f))
 out = HERE / 'day-one-circles.html'
 out.write_text(HTML)
 print('wrote', out, f'{out.stat().st_size/1024:.0f} KB')
