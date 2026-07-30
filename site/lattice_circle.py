@@ -95,6 +95,12 @@ def count_dots(r):
 
 
 if __name__ == "__main__":
+    # ---------------------------------------------------------------- the boundary
+    # Everything above this line is integer-only, and no_floats.py enforces that.
+    # Below it we divide, and we import pi, because a count is not a decimal and
+    # turning one into the other is a separate act performed for human eyes. This
+    # is the only place in the file where a non-integer exists, and it is here on
+    # purpose. See no_floats.py, which checks the two halves separately.
     import math
     for r in (5, 13, 25, 110):
         print(f"r={r:4d}  {len(draw(r)):5d} dots on the ring")

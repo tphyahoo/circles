@@ -10,7 +10,7 @@ import pathlib
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from matplotlib.patches import Circle as CirclePatch, Wedge
+from matplotlib.patches import Circle as CirclePatch, Wedge, FancyArrowPatch, Rectangle
 
 BOARD   = '#F8F7F3'
 PRINTED = '#C9CDC6'
@@ -301,3 +301,57 @@ ring(ax, 10, PRINTED, 1.8, ls='--')
 note(ax, -11.4, 12.3, 'do not check every dot. measure each column.', INK, 16)
 note(ax, -11.4, -12.4, 'add the heights up. that is the whole count.', INK, 16)
 save(fig, 'board_09_columns.png')
+
+# ---------------------------------------------- 10. moving it across
+# Ralphie's reason for the two hundred. Zoomed to the top of the two piles,
+# because at full height a difference of three is invisible and the three is
+# the entire point.
+fig, ax = plt.subplots(figsize=(6.8, 4.8), facecolor=BOARD)
+ax.set_facecolor(BOARD)
+LO = 88
+for i, (h, lbl, col) in enumerate([(97, '97', RED), (103, '103', BLUE)]):
+    x = i * 2.2
+    ax.add_patch(Rectangle((x, LO), 1.3, h - LO, fc=col, ec='none', alpha=.22, zorder=2))
+    stroke(ax, [x, x + 1.3], [h, h], col, 2.6)
+    note(ax, x + .65, h + (1.4 if h > 100 else -2.4), lbl, col, 17, ha='center')
+stroke(ax, [-.35, 4.2], [100, 100], INK, 1.6, ls='--', z=3)
+note(ax, 4.35, 100, 'a hundred', INK, 13)
+stroke(ax, [1.42, 1.42], [97, 100], RED, 2.0)
+stroke(ax, [1.34, 1.50], [97, 97], RED, 1.6)
+note(ax, 1.58, 98.5, '3 short', RED, 12)
+stroke(ax, [3.62, 3.62], [100, 103], BLUE, 2.0)
+stroke(ax, [3.54, 3.70], [103, 103], BLUE, 1.6)
+note(ax, 3.78, 101.5, '3 over', BLUE, 12)
+a = FancyArrowPatch((1.75, 98.6), (2.05, 101.4), arrowstyle='-|>', mutation_scale=13,
+                    color=INK, lw=1.6, connectionstyle='arc3,rad=-0.5', zorder=6)
+ax.add_patch(a); sketchy(a)
+note(ax, 1.9, 104.4, 'the same three', INK, 13, ha='center')
+note(ax, -.35, 107.2, "three off one, three onto the other", INK, 16)
+note(ax, -.35, 89.6, "(both piles carry on below)", PRINTED, 12)
+note(ax, -.35, 86.0, '97 + 103 = 200.  moving it across', INK, 15)
+note(ax, -.35, 84.2, "doesn't change the pile.", INK, 15)
+ax.set_xlim(-.5, 6.6); ax.set_ylim(83, 109); ax.axis('off')
+save(fig, 'board_10_pile.png')
+
+# ------------------------------------------- 11. the board after the tie argument
+# Not a diagram -- her actual working, left up on the board.
+fig, ax = plt.subplots(figsize=(6.9, 5.4), facecolor=BOARD)
+ax.set_facecolor(BOARD)
+rows = [
+    (.92, 'target 100', INK, 15, None),
+    (.80, 'a tie would need the two totals to make 200', INK, 14, None),
+    (.63, 'column 7    98 + 113  =  211', INK, 15, 'no tie'),
+    (.53, 'column 3    90 + 109  =  199', RED, 15, 'closest anyone gets'),
+    (.43, 'a tie       97 + 103  =  200', PRINTED, 15, 'never happens'),
+    (.24, 'two dots one apart  ->  always ODD', INK, 14, None),
+    (.14, 'twice the target    ->  always EVEN', INK, 14, None),
+]
+for y, s, c, sz, tail in rows:
+    note(ax, .04, y, s, c, sz)
+    if tail:
+        note(ax, .74, y, tail, (RED if c is RED else PRINTED), 12)
+stroke(ax, [.03, .70], [.585, .585], PRINTED, 1.2)
+stroke(ax, [.03, .70], [.195, .195], PRINTED, 1.2)
+note(ax, .04, .045, 'so they are never the same number.', INK, 15)
+ax.set_xlim(0, 1.02); ax.set_ylim(0, 1.0); ax.axis('off')
+save(fig, 'board_11_tiework.png')

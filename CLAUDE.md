@@ -10,19 +10,50 @@ markdown that references them.
 
 ## Layout
 
+The active work is the lesson in `site/`. The root holds the original modular-circle
+plotter and the earlier writing.
+
 | Path | What |
 |---|---|
-| `circles.py` | The plotter. Run `python3 circles.py` → opens one window, writes nothing. |
-| `day-one-circles.md` | Straight reference write-up of the real mathematics. |
-| `day-one-dialogue.md` | Classroom-dialogue version (Mrs. Feeney / Ralphie / Popovich). |
-| `site/day-one-circles.html` | Published page — the "half-dot" lesson set on a lattice. |
-| `site/day-one-circles-v1-ministry.html` | Earlier version, `F_p` framing, kept for reference. |
-| `site/build_v2.py`, `site/build_page.py` | Rebuild those pages; images inline from `site/plates/`. |
-| `*.png` (root) | Figures referenced by the markdown notes. |
+| `site/day-one-circles.html` | **The lesson.** Published page. Never edit directly — it is generated. |
+| `site/build_v2.py` | Generates that page. Edit this. Images inline as base64 from `site/plates/`. |
+| `site/board.py` | The **board** figures — Mrs. Feeney's whiteboard. Writes into `plates/`. |
+| `site/screen.py` | The **screen** figures — projector output. Writes into `plates/`. |
+| `site/Circle.tla` | The blueprint: what a circle *is*, plus `NoTies`. Literate; read its header. |
+| `site/CircleCheck.tla` | The drawing transliterated, plus a sabotaged variant, for TLC. |
+| `site/CircleCheck.cfg` | TLC config — set the radius and pick an invariant here. |
+| `site/lattice_circle.py` | The drawing in Python, with the blueprint's invariants as asserts. |
+| `site/no_floats.py` | Proves `lattice_circle.py` is integer-only. Exits non-zero if not. |
+| `site/day-one-circles-v1-ministry.html` | Abandoned first version, `F_p` framing. Reference only. |
+| `circles.py` | The modular-circle plotter. `python3 circles.py` opens one window. |
+| `day-one-circles.md`, `day-one-dialogue.md` | Earlier writing on the `F_p` material. |
+| `docs/table-of-contents.md` | Outline for the whole book, 7th grade through calculus. |
 | `google_ai_tab_dump.txt` | The original transcript. Source of the errors, not a reference. |
 
-Published artifact: https://claude.ai/code/artifact/fac3d388-297f-4604-a7ef-e66563567d6e
-(republish by pointing Artifact at `site/day-one-circles.html`.)
+**Two visual registers, and the distinction is the argument, not decoration.** The board
+is a whiteboard with a printed dot lattice: printed things (lattice, axes, numerals) are
+precise and faint, anything drawn on top is marker and wobbles. The screen is the
+projector: machine output only. `board.py` enforces this — only marker artists get
+sketch params. Figures are numbered `Fig. N` in one sequence by document position, so
+inserting one renumbers the rest automatically.
+
+To rebuild everything: `python3 board.py && python3 screen.py && python3 build_v2.py`
+from `site/`.
+
+### Publishing
+
+The live page is https://claude.ai/code/artifact/fac3d388-297f-4604-a7ef-e66563567d6e
+
+To update it from a **new session**, call Artifact with `site/day-one-circles.html` **and
+pass that URL as `url`**. Without the `url` parameter a fresh conversation mints a brand
+new artifact and the link above goes stale — the original was published from a
+session-scoped scratchpad path that no longer exists.
+
+Note: the board figures are **not byte-reproducible.** `path.sketch` gives the marker its
+wobble and is not seeded, so re-running `board.py` changes the PNGs cosmetically and the
+page size drifts by a kilobyte or two. That is expected. Do not go looking for a content
+diff, and do not seed it away — the variation is what stops the figures looking
+machine-drawn.
 
 ## Facts worth not rediscovering
 
@@ -39,6 +70,27 @@ Published artifact: https://claude.ai/code/artifact/fac3d388-297f-4604-a7ef-e665
 - A modular circle is *not* a discretised circle. `ℤ/p` has no order or metric —
   reduction mod p is a quotient, not an approximation. For a picture that actually
   looks like a circle, use a bounded integer lattice (see `two_finite_worlds.png`).
+
+### About the lesson specifically
+
+- **The characteristic error of this material is a decimal that quietly needs a square
+  root.** It surfaced four separate times: gaps written as 0.42/0.58, a worst-case error
+  of 0.48 (twice), and Popovich evaluating √48 ≈ 6.9. Each looked like harmless
+  precision. Before writing any number into the lesson, ask whether getting it requires
+  the operation the lesson refuses.
+- The classroom does not use the words "square root". Popovich tries and is stopped —
+  *"that way lie paradoxes… not today, anyway."* The frame around the lesson (captions,
+  colophon) may use the term; the room may not.
+- **`3 − 2r` is NOT Bresenham's algorithm.** It is the midpoint variant. Bresenham's 1977
+  CACM paper uses a decision variable at the diagonal neighbour, initialised `2 − 2R`,
+  with three moves. They agree on output but are different procedures. His Δ *does* hit
+  zero — at 143 of the radii 2..399 — and he handles it as his "case 5". It is zero
+  exactly at the Pythagorean radii, which is why §03 plants a promise that §05 pays off.
+- `NoTies` has a proof as well as a check: two dots one apart give totals summing to an
+  odd number, twice the target is even. TLC verifies it one radius at a time; the parity
+  argument settles all of them. Do not delete the proof in favour of the check.
+- Everything in the page is verified before being written. The colophon says so, which
+  means it has to stay true.
 
 ## Toolchain
 

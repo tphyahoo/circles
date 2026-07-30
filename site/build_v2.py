@@ -201,7 +201,7 @@ HTML = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
 <header class="top">
   <p class="course">Honors Math &nbsp;·&nbsp; Period 3 &nbsp;·&nbsp; First Day</p>
   <h1>Circles, and<br /><em>How Wrong We're Willing to Be</em></h1>
-  <p class="standfirst">In which nothing is infinite, nobody uses a square root, and &pi; turns up anyway &mdash; by being counted.</p>
+  <p class="standfirst">In which nothing is infinite, nothing is measured, and &pi; turns up anyway &mdash; by being counted.</p>
 </header>
 
 <div class="cast">
@@ -327,7 +327,45 @@ HTML = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
   </div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Which means the two totals add up to two hundred. Twice the target. Same in general &mdash; the two totals would have to make twice the target between them.</p>
+    <p>Then what would the two of them have to add up to?</p>
+  </div></div>
+
+  <div class="line"><div class="beat">(Working. Somebody counts on their fingers, which Mrs. Feeney pretends not to see.)</div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>&hellip;Two hundred?</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>Don't ask me, tell me. Why two hundred?</p></div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says">
+    <p>Because one of them is a hundred <em>take away</em> something, and the other one is a hundred <em>plus</em> the same something. So when you add them up the something cancels itself out and you're left with two hundreds.</p>
+  </div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>Do it with a number so the back row can see it.</p></div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says">
+    <p>Say one's three under. That's ninety-seven. Then the other's three over, so that's a hundred and three. And ninety-seven and a hundred and three is two hundred.</p>
+    <p>The three you took off the first one is the same three you put on the second. Moving it across doesn't change the pile.</p>
+  </div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p><span class="stage">(writing &ldquo;moving it across doesn't change the pile&rdquo; on the board)</span> That is the whole of it, and it works for any amount, not just three. Under by seven, over by seven &mdash; ninety-three and a hundred and seven. Two hundred. It cannot help itself.</p>
+  </div></div>
+
+  <figure>
+    <div class="boardshot"><img src="__B10__" alt="Two columns drawn on the board, one topping out three below a dashed line marked a hundred and the other three above it, with an arrow showing the same three moving across" /></div>
+    <figcaption><span class="pn hand">Fig. 5 &middot; board</span><span class="pt">Ralphie's reason, drawn. What one pile is short, the other is over by, and it is the same three. Zoomed to the tops, because at full height a difference of three is invisible &mdash; and the three is the entire point.</span></figcaption>
+  </figure>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Exactly two hundred, and I want to be careful about what that sentence means, because it is not a statement about any dots we have actually looked at.</p>
+    <p>Your column seven: ninety-eight and a hundred and thirteen. Add those.</p>
+  </div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>Two hundred and eleven.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Two hundred and eleven, so no tie in that column, obviously. Two hundred is not something the totals <em>do</em>. It is the thing they would have to do <em>if</em> there were a tie.</p>
+    <p>So the question is now a completely different question, and a much easier one. Never mind circles. Is there any column anywhere, at any radius, where the two totals land on exactly twice the target?</p>
   </div></div>
 
   <div class="line"><div class="beat">(A long pause. Then Ralphie, who asked the question, gets there first.)</div></div>
@@ -348,6 +386,20 @@ HTML = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
     <p>Ralphie has just proved something. Not checked it &mdash; <em>proved</em> it. There is no radius, no column, and no dot anywhere in this room or outside it where that rule gets stuck, and he did it with odd and even.</p>
   </div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says">
+    <p>How close does it get?</p>
+  </div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p><span class="stage">(delighted, checking)</span> On the ten-ring? Column three. The dots at nine and ten give ninety and a hundred and nine. That is <em>one hundred and ninety-nine</em>.</p>
+    <p>One short. It gets as near as it is arithmetically possible to get and it still cannot arrive, because arriving would mean an odd number was even.</p>
+  </div></div>
+
+  <figure>
+    <div class="boardshot"><img src="__B11__" alt="The board after the argument, showing column seven totalling 211, column three totalling 199 marked as the closest, a greyed-out tie needing 200, and the note that one side is always odd and the other always even" /></div>
+    <figcaption><span class="pn hand">Fig. 6 &middot; board</span><span class="pt">What is left on the board when they finish. The greyed line is the tie &mdash; written down, never met. Two hundred is the only one of the three that never happens.</span></figcaption>
+  </figure>
 
   <div class="line"><div class="keybox"><span class="lbl">The rule is never stuck</span><p>Two dots one apart give totals that always sum to an <span class="exact">odd</span> number. Twice the target is always <span class="exact">even</span>. So the two can never be equally near, at any radius, in any column &mdash; and &ldquo;take the nearest&rdquo; always names exactly one dot.</p><p>No search found this. It was settled by asking what a tie would require and noticing that the requirement is impossible.</p></div></div>
 
@@ -388,7 +440,7 @@ HTML = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
 
   <figure>
     <div class="boardshot"><img src="__B3__" alt="A curved arc drawn in marker passing between two lattice dots in the same column, with the gap above the ring and the gap below it braced together as one whole unit" /></div>
-    <figcaption><span class="pn hand">Fig. 5 &middot; board</span><span class="pt">Popovich's argument, drawn. The ring passes between two dots one unit apart, so the two gaps make one unit between them &mdash; so whichever is shorter cannot be more than a half. Notice the board never says where the ring actually crosses: working that out would need a square root, and the argument does not need to know.</span></figcaption>
+    <figcaption><span class="pn hand">Fig. 7 &middot; board</span><span class="pt">Popovich's argument, drawn. The ring passes between two dots one unit apart, so the two gaps make one unit between them &mdash; so whichever is shorter cannot be more than a half. Notice the board never says where the ring actually crosses: working that out would need a square root, and the argument does not need to know.</span></figcaption>
   </figure>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
@@ -408,14 +460,14 @@ HTML = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
 
 <!-- 03 -->
 <section>
-  <h2><span class="n">03</span> Drawing it, without a single square root</h2>
+  <h2><span class="n">03</span> Drawing it, without knowing how far</h2>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Now the good part. To find the nearest dot you'd think we need square roots &mdash; the square root of a hundred minus <span class="m">x</span> squared, every column, and most of those roots are horrible.</p>
+    <p>Now the good part. To find the nearest dot you'd think we need to know how far away things are &mdash; how far, in every single column. And we have just agreed that mostly there is no such number.</p>
     <p>We don't. Watch. Start at the top of the circle. Step one to the right. Ask one question: <em>am I still closer to the ring if I stay, or if I drop down one?</em> Answer it. Step again.</p>
   </div></div>
 
-  <div class="line"><div class="who">Ralphie</div><div class="says"><p>How do you answer it without the square root?</p></div></div>
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>How do you answer it without knowing how far anything is?</p></div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
     <p>You keep a running number and add to it. When it goes negative you stay; when it doesn't, you drop. The amount you add is built out of the numbers you already have.</p>
@@ -435,7 +487,36 @@ HTML = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
     <p><span class="stage">(writing)</span> That's it. And notice what it is &mdash; that's <em>your own sentence</em> from twenty minutes ago, and it has just become the definition.</p>
-    <p>Now. &ldquo;Half a step off the ring&rdquo; sounds like it needs a distance, and a distance needs a square root, and we have spent all morning refusing to take one. So square both sides and watch it go away.</p>
+    <p>Now. &ldquo;Half a unit off the ring&rdquo; sounds like it needs to know how far the dot actually is. And most of these dots have no how-far. There is no whole number that squares to forty-eight, and there is no fraction either &mdash; the distance is simply not a thing you can write down.</p>
+    <p>So do not ask for it. Square both sides and watch the question go away.</p>
+  </div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says">
+    <p>There's a name for it, though. The number that isn't there. My grandfather had a word for it.</p>
+  </div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>Did he.</p></div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says"><p>He called it a square r&mdash;</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>Popovich.</p></div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says">
+    <p>You're the one who said there's no number. I'm saying it has a name anyway.</p>
+  </div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>It has a name in books I am not handing you in the first week of term. That way lie paradoxes, and paradoxes are a spring problem.</p>
+    <p>Don't be a rebel in my classroom. Not today, anyway.</p>
+  </div></div>
+
+  <div class="line"><div class="beat">(Popovich sits back. Not conceding &mdash; filing it.)</div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says"><p>Not today.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Thank you. <span class="stage">(beat)</span> Ask me in April. I will tell you the whole thing and you will be sorry you asked.</p>
+    <p>And for what it is worth &mdash; your grandfather knew the word too, and laid out eleven miles of road without ever once needing it. Hold on to that part.</p>
   </div></div>
 
   <div class="line"><div class="code spec">
@@ -486,7 +567,7 @@ Circle == { p \in Dots : NearRing(p) }</pre>
   </div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>No square root. No &pi;. No decimal point <em>anywhere</em> &mdash; every number in there is a whole number from start to finish. Adding, subtracting, doubling. That's the whole toolkit.</p>
+    <p>No distances. No &pi;. No decimal point <em>anywhere</em> &mdash; every number in there is a whole number from start to finish. Adding, subtracting, doubling. That's the whole toolkit.</p>
     <p>And look at the loop condition: <span class="m">while x &lt;= y</span>. It stops at the diagonal. You only ever compute one eighth of the ring &mdash; the other seven eighths are mirror images, which is what that list of eight pairs is doing. You get them for free.</p>
   </div></div>
 
@@ -520,13 +601,13 @@ Circle == { p \in Dots : NearRing(p) }</pre>
 
   <figure>
     <div class="boardshot"><img src="__B5__" alt="The lattice with one eighth of the plane shaded, the four fold lines dashed through the centre, and a single red dot inside the shaded wedge together with its seven mirror images" /></div>
-    <figcaption><span class="pn hand">Fig. 6 &middot; board</span><span class="pt">The shaded wedge is the only part anyone computes. The four dashed lines are the folds; one dot in the wedge lands on eight when you unfold it.</span></figcaption>
+    <figcaption><span class="pn hand">Fig. 8 &middot; board</span><span class="pt">The shaded wedge is the only part anyone computes. The four dashed lines are the folds; one dot in the wedge lands on eight when you unfold it.</span></figcaption>
   </figure>
 
   <div class="line"><div class="who">Ralphie</div><div class="says"><p>That's how a computer draws a circle?</p></div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>That is <em>exactly</em> how a computer draws a circle. Every circle you have ever seen on a screen in your life was made this way. Nobody's graphics card has ever once taken a square root to draw a rim.</p>
+    <p>That is <em>exactly</em> how a computer draws a circle. Every circle you have ever seen on a screen in your life was made this way. Nobody's graphics card has ever once needed to know how far a pixel was to draw a rim.</p>
   </div></div>
 
   <div class="line"><div class="who">Ralphie</div><div class="says"><p>Can we see a big one? Bigger than the board.</p></div></div>
@@ -539,7 +620,7 @@ Circle == { p \in Dots : NearRing(p) }</pre>
 
   <figure>
     <div class="plate"><img src="__P1__" alt="A circle of radius 110 drawn as blue lattice dots, visually smooth and round" /></div>
-    <figcaption><span class="pn">Fig. 7 &middot; screen</span><span class="pt">Radius 110. Six hundred and twenty-four dots, placed using nothing but addition and subtraction. No dot is more than half a unit off the true ring &mdash; and that is a promise that holds at every radius, not a lucky outcome at this one.</span></figcaption>
+    <figcaption><span class="pn">Fig. 9 &middot; screen</span><span class="pt">Radius 110. Six hundred and twenty-four dots, placed using nothing but addition and subtraction. No dot is more than half a unit off the true ring &mdash; and that is a promise that holds at every radius, not a lucky outcome at this one.</span></figcaption>
   </figure>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
@@ -563,12 +644,12 @@ highest 4Q seen:  48,820
 inside the band:  624 of 624</div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Every one. And notice what we did <em>not</em> do &mdash; nobody worked out how far off any dot actually was. That would need a square root, and we have not got one and do not want one.</p>
+    <p>Every one. And notice what we did <em>not</em> do &mdash; nobody worked out how far off any dot actually was. For most of them there is no such number to work out.</p>
     <p>We asked a smaller question. Not <em>how far</em>. Only <em>near enough or not</em>. Popovich's sentence, eleven times bigger than the board, and it still costs nothing to check.</p>
   </div></div>
 
   <div class="line"><div class="who p">Popovich</div><div class="says">
-    <p>My grandfather laid out roads. County roads, before I was born. He had a steel chain and a notebook and he never took a square root in his life.</p>
+    <p>My grandfather laid out roads. County roads, before I was born. He had a steel chain and a notebook and he never once needed a number that wasn't there.</p>
   </div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>Are the roads still there?</p></div></div>
@@ -611,6 +692,52 @@ Symmetric(drawn) == \A p \in drawn : Mirrors(p) \subseteq drawn
 Correct(drawn)   == Sound(drawn) /\ Complete(drawn) /\ Symmetric(drawn)</pre>
   </div></div>
 
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>Mine isn't in there.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>Which one is yours?</p></div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says">
+    <p>The tie one. That there's never two dots equally near. We <em>proved</em> that and it's not written down anywhere.</p>
+  </div></div>
+
+  <div class="line"><div class="beat">(Mrs. Feeney reads her own three rules again, slowly.)</div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>No, it is not, and that is a fair complaint. But before you write it in &mdash; look at where you would put it. Read the three you have and tell me what they are all about.</p>
+  </div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says">
+    <p>They're all about the drawing. What it drew, what it left out, whether it mirrored properly.</p>
+  </div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>And Ralphie's?</p></div></div>
+
+  <div class="line"><div class="beat">(Ralphie opens his mouth, then doesn't.)</div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says">
+    <p>His isn't about the drawing at all. There's no program in it. It's about the dots.</p>
+  </div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>His is about whether the <em>question</em> means anything. The very first rule says the drawing may only use dots that are near enough &mdash; and the whole method for finding them was &ldquo;take the nearest one&rdquo;. If two could tie, there is no such thing as the nearest one, and that rule is asking for a dot that might not exist.</p>
+    <p>So it does not go among the three. It goes <em>above</em> them.</p>
+  </div></div>
+
+  <div class="line"><div class="code spec">
+    <span class="attrib">Added to the blueprint</span>
+<pre><span class="cm">\* not about any drawing. about whether "the nearest"</span>
+<span class="cm">\* names anything at all.</span>
+NoTies == \A x \in -R..R : \A y \in -R..R :
+            LET Q1 == x*x + y*y
+                Q2 == x*x + (y+1)*(y+1)
+            IN  Q1 + Q2 # 2*R*R</pre>
+  </div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>And note the order we did that in. Ralphie did not write it down and then wonder whether it was true. He settled it with odd and even, at his desk, twenty minutes ago &mdash; and <em>then</em> we wrote it where a machine can keep checking it.</p>
+    <p>That is the right way round, and it is the opposite of what most people do.</p>
+  </div></div>
+
   <div class="line"><div class="who">Ralphie</div><div class="says"><p>Both fine. I checked them at thirteen.</p></div></div>
 
   <div class="line"><div class="out">R = 13
@@ -628,7 +755,7 @@ program B:  FAILS at 103 of 118 — always Sound; it drew a dot that was not all
 
   <figure>
     <div class="plate"><img src="__S2__" alt="A strip of 118 bars, one per radius, red where the sabotaged program is caught and blue where it passes, with radius 13 marked in gold" /></div>
-    <figcaption><span class="pn">Fig. 8 &middot; screen</span><span class="pt">One bar per radius from 3 to 120. Red is caught, blue passes. The gold marker is thirteen, sitting comfortably among the radii where the broken program looks perfect.</span></figcaption>
+    <figcaption><span class="pn">Fig. 10 &middot; screen</span><span class="pt">One bar per radius from 3 to 120. Red is caught, blue passes. The gold marker is thirteen, sitting comfortably among the radii where the broken program looks perfect.</span></figcaption>
   </figure>
 
   <div class="line"><div class="beat">(Ralphie looks at the 13 in his own list of passing radii for a while.)</div></div>
@@ -638,7 +765,7 @@ program B:  FAILS at 103 of 118 — always Sound; it drew a dot that was not all
 
   <figure>
     <div class="plate"><img src="__S1__" alt="Two circles side by side at radius 8, the right-hand one with eight dots circled in red where they fall outside what the blueprint permits" /></div>
-    <figcaption><span class="pn">Fig. 9 &middot; screen</span><span class="pt">Radius eight, where the sabotage does bite. Eight of program B&rsquo;s dots sit outside the permitted band &mdash; and they are not visibly out of place until something checks them.</span></figcaption>
+    <figcaption><span class="pn">Fig. 11 &middot; screen</span><span class="pt">Radius eight, where the sabotage does bite. Eight of program B&rsquo;s dots sit outside the permitted band &mdash; and they are not visibly out of place until something checks them.</span></figcaption>
   </figure>
     <p>But look at what nearly happened. The broken program is wrong at a hundred and three radii out of a hundred and eighteen, and it is <em>right at thirteen</em>, which is the number we have been using all morning. Ralphie tested it once and it told him everything was fine.</p>
   </div></div>
@@ -681,15 +808,16 @@ Tidy(drawn) == \A x \in -R..R :
 
   <div class="line"><div class="who p">Popovich</div><div class="says">
     <p><span class="stage">(already doing it)</span> Three is too cramped to see anything. Do thirteen.</p>
-    <p>Column eleven. Thirteen squared is one sixty-nine, minus one twenty-one is forty-eight. Square root of forty-eight is about six point nine.</p>
-    <p>So the nearest dot is at <em>seven</em>. Your rule chops it down to six. Your rule rounds the wrong way, and it has been rounding the wrong way since three.</p>
+    <p>Column eleven. Thirteen squared is one sixty-nine. Take off a hundred and twenty-one and you want forty-eight.</p>
+    <p>Six squared is thirty-six &mdash; that's twelve short. Seven squared is forty-nine &mdash; that's one over. So it's <em>seven</em>, and it isn't close.</p>
+    <p>Your rule chops it down to six. It rounds the wrong way, and it has been rounding the wrong way since three.</p>
   </div></div>
 
   <div class="line"><div class="beat">(Ralphie stares at his screen for a second.)</div></div>
 
   <figure>
     <div class="boardshot"><img src="__B7__" alt="Column 11 of the radius 13 ring, showing 121 plus 49 equals 170 for the dot at 7 and 121 plus 36 equals 157 for the dot at 6, against a target of 169" /></div>
-    <figcaption><span class="pn hand">Fig. 10 &middot; board</span><span class="pt">Popovich settling it by hand. The target is 169. The dot at 7 gives 170, one over; the dot at 6 gives 157, twelve under. Ralphie&rsquo;s rule demanded the 6.</span></figcaption>
+    <figcaption><span class="pn hand">Fig. 12 &middot; board</span><span class="pt">Popovich settling it by hand. The target is 169. The dot at 7 gives 170, one over; the dot at 6 gives 157, twelve under. Ralphie&rsquo;s rule demanded the 6.</span></figcaption>
   </figure>
 
   <div class="line"><div class="who">Ralphie</div><div class="says"><p>My rule was wrong. Not the program.</p></div></div>
@@ -717,7 +845,7 @@ Tidy(drawn) == \A x \in -R..R :
 
   <figure>
     <div class="boardshot"><img src="__B8__" alt="The radius 5 ring with its twelve exactly-landing dots marked, and a 3-4-5 triangle drawn from the centre to one of them" /></div>
-    <figcaption><span class="pn hand">Fig. 11 &middot; board</span><span class="pt">Radius five, worked by hand. Twelve dots land perfectly, and eight of them are the same 3-4-5 triangle turned around.</span></figcaption>
+    <figcaption><span class="pn hand">Fig. 13 &middot; board</span><span class="pt">Radius five, worked by hand. Twelve dots land perfectly, and eight of them are the same 3-4-5 triangle turned around.</span></figcaption>
   </figure>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
@@ -738,12 +866,12 @@ Tidy(drawn) == \A x \in -R..R :
 
   <figure>
     <div class="plate"><img src="__S3__" alt="Three rings side by side at radii 5, 25 and 65, with the exactly-landing dots picked out in gold: twelve, twenty and thirty-six of them" /></div>
-    <figcaption><span class="pn">Fig. 12 &middot; screen</span><span class="pt">Five, twenty-five, sixty-five. The gold dots land perfectly. A radius is lucky when it carries several whole-number triangles at once.</span></figcaption>
+    <figcaption><span class="pn">Fig. 14 &middot; screen</span><span class="pt">Five, twenty-five, sixty-five. The gold dots land perfectly. A radius is lucky when it carries several whole-number triangles at once.</span></figcaption>
   </figure>
 
   <figure>
     <div class="plate"><img src="__P2__" alt="Circle of radius 25 in blue dots with twenty gold dots marking the points that land exactly on the radius" /></div>
-    <figcaption><span class="pn">Fig. 13 &middot; screen</span><span class="pt">Radius 25. The blue dots are nearest-fits. The <span style="color:var(--gold);font-weight:600">gold</span> ones land perfectly &mdash; twenty of them, because 25 is a lucky radius that carries two different whole-number triangles. Sixty-five is luckier still, with four.</span></figcaption>
+    <figcaption><span class="pn">Fig. 15 &middot; screen</span><span class="pt">Radius 25. The blue dots are nearest-fits. The <span style="color:var(--gold);font-weight:600">gold</span> ones land perfectly &mdash; twenty of them, because 25 is a lucky radius that carries two different whole-number triangles. Sixty-five is luckier still, with four.</span></figcaption>
   </figure>
 
   <div class="line"><div class="who p">Popovich</div><div class="says">
@@ -783,7 +911,7 @@ Tidy(drawn) == \A x \in -R..R :
 
   <figure>
     <div class="plate"><img src="__P3__" alt="A filled disk of 317 blue lattice dots at radius 10" /></div>
-    <figcaption><span class="pn">Fig. 14 &middot; screen</span><span class="pt">Radius 10. Three hundred and seventeen dots. You can count them by hand in about four minutes, and two students in every class always do.</span></figcaption>
+    <figcaption><span class="pn">Fig. 16 &middot; screen</span><span class="pt">Radius 10. Three hundred and seventeen dots. You can count them by hand in about four minutes, and two students in every class always do.</span></figcaption>
   </figure>
 
   <div class="line"><div class="beat">(Four minutes. Ralphie finishes first and is wrong. Popovich finishes second and isn't.)</div></div>
@@ -856,7 +984,7 @@ Tidy(drawn) == \A x \in -R..R :
 
   <figure>
     <div class="boardshot"><img src="__B9__" alt="The disk of dots at radius 10 with four columns picked out and their heights measured as 17, 21, 17 and 9" /></div>
-    <figcaption><span class="pn hand">Fig. 15 &middot; board</span><span class="pt">What Popovich did instead. You never look at a dot: you measure how tall each column is and add the heights.</span></figcaption>
+    <figcaption><span class="pn hand">Fig. 17 &middot; board</span><span class="pt">What Popovich did instead. You never look at a dot: you measure how tall each column is and add the heights.</span></figcaption>
   </figure>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
@@ -884,7 +1012,7 @@ Tidy(drawn) == \A x \in -R..R :
 
   <figure>
     <div class="plate"><img src="__S4__" alt="A line chart of dots inside divided by radius squared, dropping from above 3.2 and settling onto a dashed line marked pi" /></div>
-    <figcaption><span class="pn">Fig. 16 &middot; screen</span><span class="pt">The same table, drawn. It is not creeping towards &pi; by luck &mdash; counting dots is what &pi; <em>is</em>.</span></figcaption>
+    <figcaption><span class="pn">Fig. 18 &middot; screen</span><span class="pt">The same table, drawn. It is not creeping towards &pi; by luck &mdash; counting dots is what &pi; <em>is</em>.</span></figcaption>
   </figure>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
@@ -970,7 +1098,8 @@ for k, f in [('__P1__','p1_circle.png'), ('__P2__','p2_exact.png'), ('__P3__','p
              ('__B5__','board_05_mirrors.png'), ('__B6__','board_06_squares.png'), ('__B7__','board_07_badrule.png'),
              ('__B8__','board_08_lucky5.png'), ('__B9__','board_09_columns.png'),
              ('__S1__','s1_sabotage.png'), ('__S2__','s2_where_it_bites.png'),
-             ('__S3__','s3_lucky.png'), ('__S4__','s4_counting_pi.png')]:
+             ('__S3__','s3_lucky.png'), ('__S4__','s4_counting_pi.png'), ('__B10__','board_10_pile.png'),
+             ('__B11__','board_11_tiework.png')]:
     HTML = HTML.replace(k, img(f))
 out = HERE / 'day-one-circles.html'
 out.write_text(HTML)
