@@ -1020,22 +1020,33 @@ Tidy(drawn) == \A x \in -R..R :
 
   <div class="line"><div class="who">Ralphie</div><div class="says"><p>How many digits <em>do</em> you need?</p></div></div>
 
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>How many did you get?</p></div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>&hellip;Six. At ten thousand.</p></div></div>
+
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Wonderful question, and the answer is smaller than anyone expects. The people who fly spacecraft to other planets use about <span class="exact">fifteen</span>.</p>
+    <p>Six, off a morning's counting. So make a guess. How many would you want before you'd let somebody build a bridge with it?</p>
   </div></div>
 
-  <div class="line"><div class="who">Ralphie</div><div class="says"><p>Fifteen? That's it?</p></div></div>
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>&hellip;Twenty?</p></div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says"><p>Fewer. Nobody measures a bridge that well.</p></div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>That's it. And if you wanted to draw a circle around the entire observable universe and have it come out right to within the width of a single hydrogen atom &mdash; the whole universe, one atom &mdash; you'd need about <span class="exact">thirty-eight</span>.</p>
+    <p>Popovich is closer, and I am not going to tell you the number because <em>I do not know it</em>. Not exactly. I know it is smaller than people expect, and I know I have never once needed more than a handful of them.</p>
   </div></div>
 
-  <div class="line"><div class="beat">(Nobody says anything for a second.)</div></div>
-
-  <div class="line"><div class="who p">Popovich</div><div class="says"><p>So the rest of them are for what?</p></div></div>
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>You don't know?</p></div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p><span class="stage">(smiling)</span> Curiosity. Which is a perfectly good reason and I don't want to hear it slandered. But no bridge has ever needed the fortieth digit, and no bridge ever will.</p>
+    <p>I have spent fifty minutes telling you not to believe a number because a grown-up said it. I am not going to spoil that in the last two.</p>
+    <p><span class="stage">(writing it up)</span> Find out. Somebody flies things to other planets for a living and they will have written down what they use. Bring me the number and bring me where you got it.</p>
+  </div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says"><p>And if nobody's written it down?</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Then that is a much more interesting Thursday than the one I had planned.</p>
   </div></div>
 
   <div class="line"><div class="beat">(bell)</div></div>
@@ -1073,7 +1084,7 @@ Tidy(drawn) == \A x \in -R..R :
   <p>Every number here was computed rather than remembered: the twelve dots at radius 5, 10 and 13; the twenty at radius 25 and thirty-six at 65; all 624 dots at radius 110 sitting inside the integer band, four times the squares between 219&sup2; and 221&sup2; &mdash; established without taking a square root; the dot counts 317 / 31,417 / 3,141,549 / 314,159,053 and the &pi; digits they yield; and the integer-only drawing rule, verified to place its dots in the same spots as the square-root method at every radius tested. Ralphie's parity argument is also carried in the specification as an invariant, <span style="font-family:var(--mono)">NoTies</span>, model-checked at eight radii &mdash; though the argument itself settles every radius at once.</p>
   <p>The same parity fact makes the drawing algorithm deterministic: its decision variable is odd at every step, so it never lands on nought and the <span style="font-family:var(--mono)">otherwise</span> branch never breaks a tie. Checked at every radius from 2 to 1999. That is a fact about the <em>midpoint</em> variant, which is what this lesson teaches.</p>
   <p>Bresenham's own 1977 algorithm is a different procedure &mdash; a decision variable evaluated at the diagonal neighbour, initialised <span style="font-family:var(--mono)">2 &minus; 2R</span> rather than <span style="font-family:var(--mono)">3 &minus; 2r</span>. His <em>does</em> land on zero, at 143 of the radii from 2 to 399, and he handles it explicitly as his &ldquo;case 5&rdquo;, proving the move stays forced. It is zero exactly when a lattice point sits perfectly on the ring &mdash; so the radii that trouble his algorithm are precisely the lucky ones. The two algorithms agree on their output at every radius tested to 200, but <span style="font-family:var(--mono)">3 &minus; 2r</span> is not his, and calling it &ldquo;Bresenham's circle algorithm&rdquo;, as almost everyone does, is a misattribution.</p>
-  <p>The thirty-eight digits: circumference of the observable universe (radius ~46 billion light years) to a precision of one hydrogen-atom radius needs 38 significant figures. Fifteen digits is the working precision NASA JPL reports using for interplanetary navigation.</p>
+  <p>Ralphie's homework, for anyone who wants it now: NASA JPL reports working to about fifteen digits for interplanetary navigation. Thirty-eight would draw a circle round the observable universe to within a hydrogen atom. Mrs. Feeney does not know either figure, and would rather he looked them up than took them from her &mdash; which is the only reason they are down here and not up there.</p>
 
   <h3 style="margin-top:2rem">Whose ideas these are</h3>
   <p><strong>The drawing algorithm</strong> is Bresenham's circle algorithm &mdash; J. E. Bresenham, &ldquo;A Linear Algorithm for Incremental Digital Display of Circular Arcs&rdquo;, <em>Communications of the ACM</em> 20(2), February 1977, 100&ndash;106. Not the better-known 1965 paper (&ldquo;Algorithm for computer control of a digital plotter&rdquo;, <em>IBM Systems Journal</em> 4(1), 25&ndash;30), which draws lines; the circle came twelve years afterwards. The variant used here is usually called the midpoint circle algorithm.</p>
