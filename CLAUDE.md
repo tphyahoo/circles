@@ -116,6 +116,30 @@ Obsidian will not render the `.tla` files and does not index symlinks — symlin
 companions were tried and removed. Once VS Code is in, the split is: specs there, notes
 in Obsidian, and no workaround is needed. Do not build an `.md`-to-`.tla` sync step.
 
+## What this lesson is, and is not
+
+**It is about saying what the mathematics is, and then doing it the obvious way.
+It is not about doing it fast.**
+
+- **Say what the thing IS**, precisely, in the shortest notation that cannot be
+  misread. That is what the TLA+ is for. Not specification-as-professional-practice
+  — just legibility. It is shorter and harder to misread than the Python.
+- **Then compute it the stupid way.** Try everything, keep what fits. The naive
+  method is the one the class can write, check, and believe.
+- **Efficient implementation is a different class.** Running totals, magic
+  constants, exploiting symmetry to compute one eighth and mirror the rest — none
+  of that belongs here. If it appears at all it appears as something *deferred*:
+  "there is a faster way, it gets the same dots, that is another lesson."
+
+Why: every time efficiency material has gone in, it has crowded out the
+mathematics and then generated questions the lesson has to stop and answer —
+where did the 6 come from, why one eighth, what is the running number. Those are
+good questions about a subject this lesson is not teaching. The tell is that the
+answer is always "bookkeeping" or "grind through the algebra", which is exactly
+the kind of thing this lesson refuses to say about anything else.
+
+Corollary: prefer a picture of the result over a procedure for getting there.
+
 ## Working conventions
 
 - **Run scripts by path, not as inline one-liners.** Write throwaway analysis to a file

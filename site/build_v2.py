@@ -500,250 +500,92 @@ DOC1 = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
   <h2><span class="n">03</span> Drawing it, without knowing how far</h2>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Now the good part. To find the nearest dot you'd think we need to know how far away things are &mdash; how far, in every single column. And we have just agreed that mostly there is no such number.</p>
-    <p>We don't. Watch. Start at the top of the circle. Step one to the right. Ask one question: <em>am I still closer to the ring if I stay, or if I drop down one?</em> Answer it. Step again.</p>
-  </div></div>
-
-  <div class="line"><div class="who">Ralphie</div><div class="says"><p>How do you answer it without knowing how far anything is?</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>You keep a running number and add to it. When it goes negative you stay; when it doesn't, you drop.</p>
-  </div></div>
-
-  <div class="line"><div class="who">Ralphie</div><div class="says">
-    <p>Add <em>what</em>, though? Where would you even get the number to add?</p>
-  </div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Right. Nobody ever asks that and everybody should, so we are going to do it properly.</p>
-    <p>Nine and sixteen. What's the gap?</p>
-  </div></div>
-
-  <div class="line"><div class="who">Ralphie</div><div class="says"><p>Seven.</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>Sixteen and twenty-five.</p></div></div>
-
-  <div class="line"><div class="who">Ralphie</div><div class="says"><p>Nine.</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>Twenty-five and thirty-six.</p></div></div>
-
-  <div class="line"><div class="who">Ralphie</div><div class="says"><p>Eleven. They're going up by two every time.</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Seven, nine, eleven, thirteen. Odd numbers, two apart, for ever. And <em>that</em> is the entire trick.</p>
-    <p>When you take one step to the right, your <span class="m">x</span> squared has to become <span class="m">x</span>-plus-one squared &mdash; and you do not have to work that out, because you already know what the gap is. It is two <span class="m">x</span> plus one. Every time. Going down a row is the same trick backwards.</p>
-    <p>So you never compute a total again for the whole ring. You only ever compute how much it <em>changed</em>, and the change is an addition.</p>
-  </div></div>
-
-  <div class="line"><div class="who p">Popovich</div><div class="says"><p>Then where does the six come from?</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>The six is what you get when you grind that through for both dots and both directions and collect the pieces. I can put the algebra on the board and it will take us to the bell, and you will come out of it knowing less than you know now.</p>
-    <p>So: the <em>shape</em> is yours &mdash; consecutive squares are two apart, so a step costs you an addition. The six is bookkeeping. Be suspicious of it, and we will come back and check whether I have got it right.</p>
-  </div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
     <p>Before anybody writes a line of it &mdash; say what a circle <em>is</em>. Not how you would go about drawing one. What it is.</p>
   </div></div>
 
-  <div class="line"><div class="who">Ralphie</div><div class="says"><p>&hellip;It should look like a circle?</p></div></div>
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>&hellip;The dots that are nearest to being ten away?</p></div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Not good enough. That is a description of a picture. I want the thing itself, short enough to fit on one line and impossible to read two ways.</p>
-  </div></div>
-
-  <div class="line"><div class="who p">Popovich</div><div class="says"><p>Nothing more than half a unit off the ring.</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p><span class="stage">(writing)</span> That's it. And notice what it is &mdash; that's <em>your own sentence</em> from twenty minutes ago, and it has just become the definition.</p>
-    <p>Now. &ldquo;Half a unit off the ring&rdquo; sounds like it needs to know how far the dot actually is. And most of these dots have no how-far. There is no whole number that squares to forty-eight, and there is no fraction either &mdash; the distance is simply not a thing you can write down.</p>
-    <p>So do not ask for it. Square both sides and watch the question go away.</p>
-  </div></div>
-
-  <div class="line"><div class="who p">Popovich</div><div class="says">
-    <p>There's a name for it, though. The number that isn't there. My grandfather had a word for it.</p>
-  </div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>Did he.</p></div></div>
-
-  <div class="line"><div class="who p">Popovich</div><div class="says"><p>He called it a square r&mdash;</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>Popovich.</p></div></div>
-
-  <div class="line"><div class="who p">Popovich</div><div class="says">
-    <p>You're the one who said there's no number. I'm saying it has a name anyway.</p>
-  </div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>It has a name in books I am not handing you in the first week of term. That way lie paradoxes, and paradoxes are a spring problem.</p>
-    <p>Don't be a rebel in my classroom. Not today, anyway.</p>
-  </div></div>
-
-  <div class="line"><div class="beat">(Popovich sits back. Not conceding &mdash; filing it.)</div></div>
-
-  <div class="line"><div class="who p">Popovich</div><div class="says"><p>Not today.</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Thank you. <span class="stage">(beat)</span> Ask me in April. I will tell you the whole thing and you will be sorry you asked.</p>
-    <p>And for what it is worth &mdash; your grandfather knew the word too, and laid out eleven miles of road without ever once needing it. Hold on to that part.</p>
+    <p>Yes. Now say it so it fits on one line and cannot be read two ways.</p>
+    <p>And remember what we found in the last half hour &mdash; asking how far a dot is takes you straight to a number that does not exist. So do not ask. Square everything and compare the totals, exactly as Popovich did.</p>
   </div></div>
 
   <div class="line"><div class="code spec">
     <span class="attrib">On the board</span>
-<pre><span class="cm">\* squared distance. no square root lives in this file.</span>
-Quadrance(p) == p[1]*p[1] + p[2]*p[2]
+<pre><span class="cm">\* the total. no distances live in this file.</span>
+Total(p) == p[1]*p[1] + p[2]*p[2]
 
-<span class="cm">\* "no more than half a unit off the ring", squared out</span>
-<span class="cm">\* so that every number in it is a whole number:</span>
-NearRing(p) == /\ (2*R - 1)^2 =&lt; 4 * Quadrance(p)
-               /\ 4 * Quadrance(p) =&lt; (2*R + 1)^2
+<span class="cm">\* how far that total misses the one we want</span>
+Gap(p) == Abs(Total(p) - R*R)
 
-<span class="cm">\* and this is the circle. all of it.</span>
-Circle == { p \in Dots : NearRing(p) }</pre>
+<span class="cm">\* and this is the circle: in each column, the dot</span>
+<span class="cm">\* whose total misses by least.</span>
+Circle == { p \in Dots :
+              \A q \in Dots :
+                (q[1] = p[1]) =&gt; Gap(p) =&lt; Gap(q) }</pre>
   </div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Four lines, and I want you to notice what is <em>missing</em> from them. There is no first dot. There is no next dot. Nothing goes round the ring in any order, because nothing goes round the ring at all &mdash; it is a set, and a set does not have a beginning.</p>
-    <p>Notice also how short it is. That is not tidiness. Every extra word is somewhere the two of us could have understood each other differently, and there is nowhere in those four lines for that to happen.</p>
-  </div></div>
-
-  <div class="line"><div class="who p">Popovich</div><div class="says"><p>So where's the program?</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>A way of finding them. It will have loops in it, and an order, and a running total, and none of those words are up there, because none of them are anything to do with what a circle <em>is</em>. Copy it down and watch how much longer it has to be.</p>
-  </div></div>
-
-  <div class="line"><div class="code">
-    <span class="attrib">On the board</span>
-<pre><span class="kw">def</span> circle(r):
-    x, y, d = 0, r, 3 - 2*r
-    dots = []
-
-    <span class="kw">while</span> x &lt;= y:
-        <span class="cm"># one dot gives you eight, by mirroring</span>
-        <span class="kw">for</span> a, b <span class="kw">in</span> [(x,y), (y,x), (-x,y), (-y,x),
-                     (x,-y), (y,-x), (-x,-y), (-y,-x)]:
-            dots.append((a, b))
-
-        <span class="kw">if</span> d &lt; 0:        <span class="cm"># under</span>
-            d = d + 4*x + 6
-        <span class="kw">elif</span> d &gt; 0:      <span class="cm"># over</span>
-            d = d + 4*(x - y) + 10
-            y = y - 1
-        <span class="kw">else</span>:            <span class="cm"># exactly nought</span>
-            <span class="kw">raise</span> ThisNeverHappens
-
-        x = x + 1
-
-    <span class="kw">return</span> dots</pre>
-  </div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>No distances. No &pi;. No decimal point <em>anywhere</em> &mdash; every number in there is a whole number from start to finish. Adding, subtracting, doubling. That's the whole toolkit.</p>
-    <p>And look at the loop condition: <span class="m">while x &lt;= y</span>. It stops at the diagonal. You only ever compute one eighth of the ring &mdash; the other seven eighths are mirror images, which is what that list of eight pairs is doing. You get them for free.</p>
+    <p>That is the whole thing. Read it back to me in English, Popovich.</p>
   </div></div>
 
   <div class="line"><div class="who p">Popovich</div><div class="says">
-    <p>What's the third one for? It just says it never happens.</p>
-  </div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>It says it never happens.</p></div></div>
-
-  <div class="line"><div class="who p">Popovich</div><div class="says">
-    <p>Then take it out. It's a line that can't run. It's doing nothing.</p>
+    <p>A dot is on the circle if no other dot in its column has a total closer to the one we want.</p>
   </div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Take it out and the program behaves exactly the same, and nobody in this room ever finds out why. Leave it in and it is a <em>claim</em> &mdash; and a claim is a thing somebody can argue with.</p>
-    <p><span class="stage">(to Ralphie)</span> It's yours. Why can that number never be nought?</p>
+    <p>Which is exactly what you said out loud twenty minutes ago, and now it is written down in a way that cannot drift.</p>
+    <p>Notice what is <em>not</em> in it. No first dot. No next dot. Nothing goes round the ring in any order, because nothing goes round the ring at all &mdash; it is a set, and a set does not have a beginning.</p>
   </div></div>
 
-  <div class="line"><div class="who">Ralphie</div><div class="says"><p>&hellip;Why is everything mine today.</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>Answer the question.</p></div></div>
-
-  <div class="line"><div class="who">Ralphie</div><div class="says">
-    <p>Because it's odd. Every time you look at it. It's an even thing plus an odd thing minus an even thing, so it comes out odd, and nought is even.</p>
-  </div></div>
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>But how do you actually <em>do</em> it?</p></div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>So that third line is not decoration and it is not a comment. It is the shortest way of writing down what Ralphie proved this morning, put in the one place where somebody might need it.</p>
-    <p>And if it ever <em>does</em> run, exactly one of two things has gone wrong. Either the program is broken, or Ralphie is. That line is watching both of them.</p>
+    <p>Stupidly. On purpose.</p>
+    <p>Take a column. Try every dot in it. Keep the one whose total misses by least. Then do the next column. Then do it again along the rows, because near the sides a single column holds half the ring and is no use to you.</p>
   </div></div>
 
-  <div class="line"><div class="who p">Popovich</div><div class="says"><p>So the program only works at all because of odd and even.</p></div></div>
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>That's it? That's just&hellip; trying all of them.</p></div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Yes &mdash; for <em>this</em> way of writing it. And I want to be careful here, because there is more than one way to write the same algorithm, and the other one does not get off so lightly.</p>
-    <p>Write the running number a slightly different way and it <em>does</em> land on nought sometimes. Not often. And when it does, it is not a problem &mdash; it is telling you something.</p>
+    <p>That is just trying all of them. It is not clever, nothing in it is hidden, you could do it with a pencil if you had a free afternoon, and it is <em>right</em>.</p>
+    <p>There is a faster way. There is always a faster way. It gets the same dots and it is a lovely piece of work and it is somebody else's lesson &mdash; because to show it to you I would have to hand you four numbers and tell you to trust me, and I have spent all morning telling you not to do that.</p>
   </div></div>
 
-  <div class="line"><div class="who p">Popovich</div><div class="says"><p>Telling you what?</p></div></div>
+  <div class="line"><div class="who p">Popovich</div><div class="says"><p>You're going to leave it there.</p></div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Ask me again after we have looked at which dots land perfectly. <span class="stage">(she writes &ldquo;nought&rdquo; in the corner of the board and boxes it)</span> That is a promise, not a dodge.</p>
-  </div></div>
-
-  <figure>
-    <div class="boardshot"><img src="__B5__" alt="The lattice with one eighth of the plane shaded, the four fold lines dashed through the centre, and a single red dot inside the shaded wedge together with its seven mirror images" /></div>
-    <figcaption><span class="pn hand">Fig. 8 &middot; board</span><span class="pt">The shaded wedge is the only part anyone computes. The four dashed lines are the folds; one dot in the wedge lands on eight when you unfold it.</span></figcaption>
-  </figure>
-
-  <div class="line"><div class="who">Ralphie</div><div class="says"><p>That's how a computer draws a circle?</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>That is <em>exactly</em> how a computer draws a circle. Every circle you have ever seen on a screen in your life was made this way. Nobody's graphics card has ever once needed to know how far a pixel was to draw a rim.</p>
-  </div></div>
-
-  <div class="line"><div class="who">Ralphie</div><div class="says"><p>Can we see a big one? Bigger than the board.</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p><span class="stage">(crossing to the projector, which has been off all morning)</span> We can, and we are going to have to start being careful about something. Everything up to now has been <em>mine</em> &mdash; my board, my marker, my arithmetic, and you have all been checking it as I went.</p>
-    <p>This is a machine. It does not check itself, and it does not care whether I am right. Watch what it does anyway.</p>
-    <p>Put up the one from this morning. Radius a hundred and ten.</p>
+    <p>I am going to leave it there. Be annoyed about it &mdash; that is the correct response to being handed a number you cannot check.</p>
+    <p><span class="stage">(to the projector)</span> Put up the one from this morning. Radius a hundred and ten, done the stupid way.</p>
   </div></div>
 
   <figure>
     <div class="plate"><img src="__P1__" alt="A circle of radius 110 drawn as blue lattice dots, visually smooth and round" /></div>
-    <figcaption><span class="pn">Fig. 9 &middot; screen</span><span class="pt">Radius 110. Six hundred and twenty-four dots, placed using nothing but addition and subtraction. No dot is more than half a unit off the true ring &mdash; and that is a promise that holds at every radius, not a lucky outcome at this one.</span></figcaption>
+    <figcaption><span class="pn">Fig. 8 &middot; screen</span><span class="pt">Radius 110, found by trying every dot in every column and keeping the best. Six hundred and twenty-four of them, no distance measured anywhere, and no dot more than half a unit off the ring.</span></figcaption>
   </figure>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Six hundred and twenty-four dots. And I promised you this morning that not one of them would be more than half a unit off, however big we made it.</p>
-    <p>So check me. Six hundred and twenty-four dots, Ralphie. Off you go with your ruler.</p>
-  </div></div>
-
-  <div class="line"><div class="who">Ralphie</div><div class="says"><p>&hellip;That's not fair, that would take all week.</p></div></div>
-
-  <div class="line"><div class="who p">Popovich</div><div class="says">
-    <p>You don't need a ruler. You wrote the rule down twenty minutes ago. Four times the squares, between two hundred and nineteen squared and two hundred and twenty-one squared.</p>
-  </div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p><span class="stage">(typing)</span> Four times the squares. Between <span class="m">47,961</span> and <span class="m">48,841</span>. Every dot.</p>
-  </div></div>
-
-  <div class="line"><div class="out">r = 110
-lowest  4Q seen:  48,008
-highest 4Q seen:  48,820
-inside the band:  624 of 624</div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Every one. And notice what we did <em>not</em> do &mdash; nobody worked out how far off any dot actually was. For most of them there is no such number to work out.</p>
-    <p>We asked a smaller question. Not <em>how far</em>. Only <em>near enough or not</em>. Popovich's sentence, eleven times bigger than the board, and it still costs nothing to check.</p>
+    <p>Six hundred and twenty-four dots, and I promised you this morning that not one of them would be more than half a unit off, however big we made it. So check me.</p>
   </div></div>
 
   <div class="line"><div class="who p">Popovich</div><div class="says">
-    <p>My grandfather laid out roads. County roads, before I was born. He had a steel chain and a notebook and he never once needed a number that wasn't there.</p>
+    <p>You don't need to. It's the rule. You took the nearest one in every column, so it can't be more than half by the thing I said.</p>
   </div></div>
 
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>Are the roads still there?</p></div></div>
-
-  <div class="line"><div class="who p">Popovich</div><div class="says"><p>I ride my bike on one.</p></div></div>
+  <div class="line"><div class="beat">(Mrs. Feeney stops with the marker halfway to the board.)</div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Then your grandfather is the whole lesson and I'd like him to come talk to fourth period.</p>
+    <p>&hellip;Say that once more.</p>
   </div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says">
+    <p>You don't have to check it at a hundred and ten. It was never about a hundred and ten. Any column, any size &mdash; the two gaps make one unit between them, so the nearer one is at most half. It was done this morning.</p>
+  </div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p><span class="stage">(putting the marker down)</span> That is the first time this year anybody has told me not to bother checking something, and been right.</p>
+  </div></div>
+
 </section>
 
 <!-- the bell -->
@@ -1321,7 +1163,7 @@ DOC2 = r"""<title>Honors Math, Period 3 — Day Three: Counting</title>
 for k, f in [('__P1__','p1_circle.png'), ('__P2__','p2_exact.png'), ('__P3__','p3_count.png'),
              ('__B1__','board_01_world.png'), ('__B2__','board_02_twelve.png'),
              ('__B3__','board_03_halfdot.png'), ('__B4__','board_04_nearest.png'),
-             ('__B5__','board_05_mirrors.png'), ('__B6__','board_06_squares.png'), ('__B7__','board_07_badrule.png'),
+             ('__B6__','board_06_squares.png'), ('__B7__','board_07_badrule.png'),
              ('__B8__','board_08_lucky5.png'), ('__B9__','board_09_columns.png'),
              ('__S2__','s2_where_it_bites.png'),
              ('__S3__','s3_lucky.png'), ('__S4__','s4_counting_pi.png'), ('__B10__','board_10_pile.png'),
