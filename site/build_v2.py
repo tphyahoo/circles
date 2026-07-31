@@ -507,7 +507,39 @@ DOC1 = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
   <div class="line"><div class="who">Ralphie</div><div class="says"><p>How do you answer it without knowing how far anything is?</p></div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>You keep a running number and add to it. When it goes negative you stay; when it doesn't, you drop. The amount you add is built out of the numbers you already have.</p>
+    <p>You keep a running number and add to it. When it goes negative you stay; when it doesn't, you drop.</p>
+  </div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says">
+    <p>Add <em>what</em>, though? Where would you even get the number to add?</p>
+  </div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Right. Nobody ever asks that and everybody should, so we are going to do it properly.</p>
+    <p>Nine and sixteen. What's the gap?</p>
+  </div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>Seven.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>Sixteen and twenty-five.</p></div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>Nine.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>Twenty-five and thirty-six.</p></div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>Eleven. They're going up by two every time.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Seven, nine, eleven, thirteen. Odd numbers, two apart, for ever. And <em>that</em> is the entire trick.</p>
+    <p>When you take one step to the right, your <span class="m">x</span> squared has to become <span class="m">x</span>-plus-one squared &mdash; and you do not have to work that out, because you already know what the gap is. It is two <span class="m">x</span> plus one. Every time. Going down a row is the same trick backwards.</p>
+    <p>So you never compute a total again for the whole ring. You only ever compute how much it <em>changed</em>, and the change is an addition.</p>
+  </div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says"><p>Then where does the six come from?</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>The six is what you get when you grind that through for both dots and both directions and collect the pieces. I can put the algebra on the board and it will take us to the bell, and you will come out of it knowing less than you know now.</p>
+    <p>So: the <em>shape</em> is yours &mdash; consecutive squares are two apart, so a step costs you an addition. The six is bookkeeping. Be suspicious of it, and we will come back and check whether I have got it right.</p>
   </div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
