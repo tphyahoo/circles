@@ -19,3 +19,6 @@ site/states/
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
 .obsidian/cache
+
+# bare fragments for the Artifact publisher; the served pages are the real documents
+docs/_bare_*.html

@@ -1,4 +1,4 @@
-import base64, pathlib
+import base64, pathlib, re
 
 HERE = pathlib.Path(__file__).resolve().parent
 S = HERE / 'plates'
@@ -200,6 +200,27 @@ DOC1 = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
     figcaption { grid-template-columns: 1fr; gap: .3rem; }
   }
   @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+  /* ---- print ------------------------------------------------------------ */
+  @media print {
+    @page { margin: 16mm 14mm; }
+    html, body {
+      background: #fff !important; background-image: none !important;
+      color: #000; font-size: 10.5pt; line-height: 1.45;
+      -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    }
+    .pad { max-width: none; box-shadow: none; padding: 0; background: #fff; }
+    header.top { padding-top: 0; }
+    /* never split these across a page */
+    figure, .code, .codepair, .keybox, .hw, .out, .eq, .tablewrap,
+    .line, .cast-row, .beat { break-inside: avoid; page-break-inside: avoid; }
+    h2 { break-after: avoid; page-break-after: avoid; margin-top: 1.2rem; }
+    figure img { max-height: 8.5cm; width: auto; margin: 0 auto; }
+    .plate, .boardshot { padding: .25rem; }
+    .nextday { display: none; }
+    a { color: inherit; text-decoration: none; }
+  }
+
+
 
   .nextday {
     grid-column: 2; max-width: 39rem; margin: 2.4rem 0 0;
@@ -927,6 +948,26 @@ DOC2 = r"""<title>Honors Math, Period 3 — Day Three: Counting</title>
     figcaption { grid-template-columns: 1fr; gap: .3rem; }
   }
   @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+  /* ---- print ------------------------------------------------------------ */
+  @media print {
+    @page { margin: 16mm 14mm; }
+    html, body {
+      background: #fff !important; background-image: none !important;
+      color: #000; font-size: 10.5pt; line-height: 1.45;
+      -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    }
+    .pad { max-width: none; box-shadow: none; padding: 0; background: #fff; }
+    header.top { padding-top: 0; }
+    /* never split these across a page */
+    figure, .code, .codepair, .keybox, .hw, .out, .eq, .tablewrap,
+    .line, .cast-row, .beat { break-inside: avoid; page-break-inside: avoid; }
+    h2 { break-after: avoid; page-break-after: avoid; margin-top: 1.2rem; }
+    figure img { max-height: 8.5cm; width: auto; margin: 0 auto; }
+    .plate, .boardshot { padding: .25rem; }
+    .nextday { display: none; }
+    a { color: inherit; text-decoration: none; }
+  }
+
 
   .nextday {
     grid-column: 2; max-width: 39rem; margin: 2.4rem 0 0;
@@ -1240,8 +1281,28 @@ for k, f in [('__P1__','p1_circle.png'), ('__P2__','p2_exact.png'), ('__P3__','p
     DOC1 = DOC1.replace(k, img(f))
     DOC2 = DOC2.replace(k, img(f))
 # Canonical output is docs/index.html, which is what GitHub Pages serves.
+def as_document(fragment):
+    """GitHub Pages serves these directly, so they need to BE documents.
+    Without a doctype the browser drops into quirks mode, which among other
+    things truncates printing to a few pages."""
+    m = re.search(r'<title>(.*?)</title>', fragment, re.S)
+    title = m.group(1) if m else 'Honors Math, Period 3'
+    body = fragment.replace(m.group(0), '', 1) if m else fragment
+    style = ''
+    ms = re.search(r'<style>.*?</style>', body, re.S)
+    if ms:
+        style = ms.group(0)
+        body = body.replace(style, '', 1)
+    return ('<!doctype html>\n<html lang="en">\n<head>\n'
+            '<meta charset="utf-8">\n'
+            '<meta name="viewport" content="width=device-width, initial-scale=1">\n'
+            f'<title>{title}</title>\n{style}\n</head>\n<body>\n'
+            f'{body.strip()}\n</body>\n</html>\n')
+
 docs = HERE.parent / 'docs'
 for name, doc in (('index.html', DOC1), ('counting.html', DOC2)):
     p = docs / name
-    p.write_text(doc)
+    p.write_text(as_document(doc))
     print(f'wrote {p}  {p.stat().st_size/1024:.0f} KB')
+    # bare copies for the Artifact publisher, which adds its own skeleton
+    (docs / ('_bare_' + name)).write_text(doc)
