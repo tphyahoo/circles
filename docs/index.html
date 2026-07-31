@@ -545,30 +545,30 @@ Circle == { p \in Dots :
 
   <div class="line"><div class="code">
     <span class="attrib">On the board</span>
-<pre><span class="kw">def</span> circle(r, slack=0):
+<pre><span class="kw">def</span> circle(r):
     dots = set()
 
-    <span class="cm"># every column: how far does each dot's total miss r*r?</span>
+    <span class="cm"># every column: which dot's total misses r*r by least?</span>
     <span class="kw">for</span> x <span class="kw">in</span> range(-r, r + 1):
         gaps = [(abs(x*x + y*y - r*r), y) <span class="kw">for</span> y <span class="kw">in</span> range(0, r + 1)]
-        best = min(g <span class="kw">for</span> g, _ <span class="kw">in</span> gaps)
+        best = min(gap <span class="kw">for</span> gap, _ <span class="kw">in</span> gaps)
         <span class="kw">for</span> gap, y <span class="kw">in</span> gaps:
-            <span class="kw">if</span> gap &lt;= best + slack:
+            <span class="kw">if</span> gap == best:
                 dots.add((x, y)); dots.add((x, -y))
 
     <span class="cm"># then the same along the rows, for the steep sides</span>
     <span class="kw">for</span> y <span class="kw">in</span> range(-r, r + 1):
         gaps = [(abs(x*x + y*y - r*r), x) <span class="kw">for</span> x <span class="kw">in</span> range(0, r + 1)]
-        best = min(g <span class="kw">for</span> g, _ <span class="kw">in</span> gaps)
+        best = min(gap <span class="kw">for</span> gap, _ <span class="kw">in</span> gaps)
         <span class="kw">for</span> gap, x <span class="kw">in</span> gaps:
-            <span class="kw">if</span> gap &lt;= best + slack:
+            <span class="kw">if</span> gap == best:
                 dots.add((x, y)); dots.add((-x, y))
 
     <span class="kw">return</span> dots
 
 
 <span class="kw">def</span> show(r, slack=0):
-    ring = circle(r, slack)
+    ring = circle(r) <span class="kw">if</span> slack == 0 <span class="kw">else</span> bolder(r, slack)
     red, off = <span class="st">'\033[31m'</span>, <span class="st">'\033[0m'</span>
     <span class="kw">for</span> y <span class="kw">in</span> range(r, -r - 1, -1):
         print(<span class="st">''</span>.join(red + <span class="st">'. '</span> + off <span class="kw">if</span> (x, y) <span class="kw">in</span> ring <span class="kw">else</span> <span class="st">'. '</span>
@@ -634,7 +634,34 @@ r = 2000   11,312 dots     3.006 seconds</div></div>
   <div class="line"><div class="who">Ralphie</div><div class="says"><p>Keep more of them? Not just the best one &mdash; the best one and the ones near it.</p></div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Which is one word in the program. Instead of <em>keep the best</em>, say <em>keep anything within so-much of the best</em>. Give it sixty.</p>
+    <p>Which is one line. Here is the whole change.</p>
+  </div></div>
+
+  <div class="line"><div class="code">
+    <span class="attrib">The tweak</span>
+<pre><span class="cm">#  was:</span>
+        <span class="kw">if</span> gap == best:
+
+<span class="cm">#  now:</span>
+        <span class="kw">if</span> gap &lt;= best + slack:</pre>
+  </div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says">
+    <p>Hang on. That doesn't match the board any more. The board says <em>misses by least</em>. That says <em>misses by nearly least</em>.</p>
+  </div></div>
+
+  <div class="line"><div class="beat">(Mrs. Feeney does not answer immediately, which is how the class knows he has found the thing.)</div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>It does not match, and I am not going to fix the board. I am going to leave them disagreeing and tell you why.</p>
+    <p>A circle <em>is</em> the nearest dots. That is not a rule I chose, it is what the thing is. If I widen the definition every time a projector is dim, then a circle is whatever I could see last Tuesday, and the word stops meaning anything.</p>
+  </div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>So the fat one isn't a circle.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>The fat one is not a circle. It is a band <em>around</em> a circle, drawn wide enough to point at from the back of the room.</p>
+    <p>And that is fine, so long as I can say exactly how far from the truth I have wandered &mdash; which I can, because the definition is still sitting up there being strict at me.</p>
   </div></div>
 
   <figure>

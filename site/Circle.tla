@@ -67,7 +67,6 @@ written in the material the thing is built from:
 EXTENDS Integers
 
 CONSTANT R              \* the radius: a whole number
-CONSTANT Slack          \* how much worse than the best we will still accept
 
 Dots == (-R..R) \X (-R..R)
 
@@ -76,37 +75,41 @@ Total(p) == p[1]*p[1] + p[2]*p[2]
         asking how far a dot is takes you to a number that is not there.  *)
 
 Gap(p) == LET d == Total(p) - R*R IN IF d < 0 THEN -d ELSE d
-    (*  how far this dot's total misses the one we want  *)
 
 Circle == { p \in Dots :
               \A q \in Dots :
-                (q[1] = p[1]) => Gap(p) =< Gap(q) + Slack }
-    (*  A dot is on the circle if no other dot in its column beats it by more
-        than Slack. With Slack = 0 that is exactly "the nearest one" and the
-        ring is one dot thick.  *)
+                (q[1] = p[1]) => Gap(p) =< Gap(q) }
+    (*  In each column, the dot whose total misses by least. One dot thick.  *)
 ====
 ```
 
 ## Notes
 
-`Slack` is the price of a bolder line, and it is not free.
+Every dot here is the nearest in its column, so the two gaps either side of the
+ring make one unit between them and nothing is more than **half a unit** out.
+Measured worst case: 0.37 at R=12, 0.46 at R=60, 0.49 at R=120.
 
-With `Slack = 0` every kept dot is the nearest in its column, and the two gaps
-either side of the ring make one unit between them, so nothing is more than
-**half a unit** off. That is the promise the lesson makes.
+### Why there is no `Slack` in this module
 
-Widening it costs exactly what you would expect. A dot's gap can now exceed the
-best by `Slack`, and a gap of `g` puts you roughly `g / 2R` from the true ring,
-so the worst case becomes
+The lesson draws a thicker ring at large radii, keeping every dot within some
+slack of the best, because one dot per column is a hairline at R=120 and
+invisible on a projector. That slack is deliberately **not** in this file, and
+the omission is the interesting part.
 
-    1/2  +  Slack / 2R
+A circle is the nearest dots. Drawing a fatter band does not produce a different
+circle — it produces a *neighbourhood* of the same one, drawn wide enough to
+point at. The definition should not move because the projector is bad.
 
-Measured, against radii 12, 30 and 60: at `Slack = 0` the worst dot is 0.46 units
-out; at `Slack = R` it is 0.73 against a bound of 1.0; at `Slack = 2R`, 1.45
-against 1.5. The bound holds and is not tight, which is what you want from a
-bound.
+So the drawing program departs from this specification on purpose when it is
+asked to. That is allowed, and it is safe, precisely because the departure can be
+stated exactly: with slack `s` a kept dot may miss by `s` more than the best, and
+a gap of `g` sits about `g / 2R` from the true ring, so the worst case goes from
+1/2 to
 
-So `Slack = R` doubles the promise, from half a unit to one. Anything drawn that
-way is still a circle, but it is a circle you have agreed to be twice as wrong
-about, and the lesson should say so out loud rather than quietly enjoying the
-thicker line.
+    1/2  +  s / 2R
+
+At `s = R` that is one unit; at `s = 2R`, one and a half. Measured: 0.73 and 1.49
+against those bounds.
+
+Which is the whole use of having written the definition down. Not that the
+program always obeys it — that the one time it does not, you can say by how much.

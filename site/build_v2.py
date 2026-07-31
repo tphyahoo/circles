@@ -11,12 +11,15 @@ def img(n):
 KEYWORDS = {'def','for','in','if','else','elif','return','while','and','or','not','import','from'}
 
 
-def show_program(path, drop_docstring=True):
+def show_program(path, drop_docstring=True, only=None):
     """Print board_program.py into the lesson. Same file screen/photograph runs,
     so the code on the page cannot drift from the figure under it."""
     src = (HERE / path).read_text()
     if drop_docstring:
         src = re.sub(r'^""".*?"""\n+', '', src, flags=re.S)
+    if only:
+        blocks = re.split(r'\n\n\n+', src.strip())
+        src = '\n\n\n'.join(b for b in blocks if any(f'def {n}(' in b for n in only))
     out = []
     for line in src.rstrip().split('\n'):
         code, _, comment = line.partition('#')
@@ -633,7 +636,34 @@ r = 2000   11,312 dots     3.006 seconds</div></div>
   <div class="line"><div class="who">Ralphie</div><div class="says"><p>Keep more of them? Not just the best one &mdash; the best one and the ones near it.</p></div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Which is one word in the program. Instead of <em>keep the best</em>, say <em>keep anything within so-much of the best</em>. Give it sixty.</p>
+    <p>Which is one line. Here is the whole change.</p>
+  </div></div>
+
+  <div class="line"><div class="code">
+    <span class="attrib">The tweak</span>
+<pre><span class="cm">#  was:</span>
+        <span class="kw">if</span> gap == best:
+
+<span class="cm">#  now:</span>
+        <span class="kw">if</span> gap &lt;= best + slack:</pre>
+  </div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says">
+    <p>Hang on. That doesn't match the board any more. The board says <em>misses by least</em>. That says <em>misses by nearly least</em>.</p>
+  </div></div>
+
+  <div class="line"><div class="beat">(Mrs. Feeney does not answer immediately, which is how the class knows he has found the thing.)</div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>It does not match, and I am not going to fix the board. I am going to leave them disagreeing and tell you why.</p>
+    <p>A circle <em>is</em> the nearest dots. That is not a rule I chose, it is what the thing is. If I widen the definition every time a projector is dim, then a circle is whatever I could see last Tuesday, and the word stops meaning anything.</p>
+  </div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>So the fat one isn't a circle.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>The fat one is not a circle. It is a band <em>around</em> a circle, drawn wide enough to point at from the back of the room.</p>
+    <p>And that is fine, so long as I can say exactly how far from the truth I have wandered &mdash; which I can, because the definition is still sitting up there being strict at me.</p>
   </div></div>
 
   <figure>
@@ -1272,7 +1302,7 @@ DOC2 = r"""<title>Honors Math, Period 3 — Day Three: Counting</title>
 </div>
 """
 
-_prog = show_program('board_program.py')
+_prog = show_program('board_program.py', only=['circle', 'show'])
 DOC1 = DOC1.replace('__PROGRAM__', _prog)
 DOC2 = DOC2.replace('__PROGRAM__', _prog)
 
