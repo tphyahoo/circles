@@ -236,3 +236,30 @@ style(ax, f'r = {r}   ·   {len(D)} dots inside   ·   {len(D)}/100 = {len(D)/10
 ax.scatter([p[0] for p in D], [p[1] for p in D], s=30, color=BLUE, alpha=.85, edgecolors='none')
 ax.set_aspect('equal')
 plt.tight_layout(); save(fig, 'p3_count.png', dpi=64)
+
+
+# ===================== the printed circle, as an image of the text ============
+# Rendering the characters in HTML depends on the reader's monospace metrics, and
+# a 4% error in the cell aspect is enough to turn a circle into an egg. So we
+# render the text ourselves, where the geometry is ours.
+def printed_circle(r, name):
+    ring = draw_slowly(r)
+    ring = set(ring)
+    rows = [''.join('O ' if (x, y) in ring else '. ' for x in range(-r, r + 1)).rstrip()
+            for y in range(r, -r - 1, -1)]
+    # two layers so the kept dots and the rest can be different colours
+    faint = '\n'.join(''.join(' ' if c == 'O' else c for c in row) for row in rows)
+    bold  = '\n'.join(''.join(c if c == 'O' else ' ' for c in row) for row in rows)
+
+    cols = max(len(row) for row in rows)
+    fig_w = cols * 0.085
+    fig_h = len(rows) * 0.166
+    fig = plt.figure(figsize=(fig_w, fig_h), facecolor=BG)
+    for text, colour in ((faint, '#39424B'), (bold, BLUE)):
+        fig.text(0.02, 0.98, text, family='monospace', fontsize=11,
+                 color=colour, va='top', ha='left', linespacing=1.0)
+    save(fig, name, dpi=100)
+    return len(rows), cols
+
+n, c = printed_circle(12, 'p4_printed.png')
+print(f'   printed circle: {n} rows x {c} columns')
