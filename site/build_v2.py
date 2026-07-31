@@ -730,9 +730,37 @@ Correct(drawn)   == Sound(drawn) /\ Complete(drawn) /\ Symmetric(drawn)</pre>
   </div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>His is about whether the <em>question</em> means anything. The very first rule says the drawing may only use dots that are near enough &mdash; and the whole method for finding them was &ldquo;take the nearest one&rdquo;. If two could tie, there is no such thing as the nearest one, and that rule is asking for a dot that might not exist.</p>
-    <p>So it does not go among the three. It goes <em>above</em> them.</p>
+    <p>His is about the dots themselves, not about anybody's drawing. So where does it go?</p>
   </div></div>
+
+  <div class="line"><div class="beat">(She reads her own three rules again, and stops.)</div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Here is what is bothering me, and I would rather say it than hide it. Read those three. Which one of them would <em>break</em> if two dots tied?</p>
+  </div></div>
+
+  <div class="line"><div class="beat">(A while.)</div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says"><p>&hellip;None of them.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>None of them. Sound asks whether a dot was allowed. Complete asks whether a column is empty. Symmetric asks about mirrors. A tie does not touch any of it.</p>
+  </div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>So mine's useless.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Yours is true, and it is important, and it protects nothing I have written on this board. Which is an extremely uncomfortable thing to be holding at ten to four on a Tuesday.</p>
+    <p>Look at what it is guarding. It guards the word <em>nearest</em>. And <em>nearest</em> is not in these rules anywhere. We said it out loud all morning and then we did not write it down.</p>
+  </div></div>
+
+  <div class="line"><div class="beat">(Nobody has anything.)</div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Put it up anyway. Above them, not among them. And be suspicious of it while it is up there.</p>
+  </div></div>
+
+  <div class="line"><div class="keybox"><span class="lbl">A guarantee with nothing to guard</span><p>Ralphie has proved something true and useful, and it defends none of our rules. It defends a word we used and never wrote down.</p><p>When a specification carries a guarantee about a term it does not contain, that is not tidiness. It is the specification telling you it is <span class="exact">short a rule</span> &mdash; and you will not find out which one by staring at it.</p></div></div>
 
   <div class="line"><div class="code spec">
     <span class="attrib">Added to the blueprint</span>
@@ -1254,8 +1282,22 @@ Nearest(drawn) == \A x \in -R..R : \A y \in -R..R :
                         Gap(x, y) =&lt; Gap(x, z)</pre>
   </div></div>
 
+  <div class="line"><div class="beat">(Popovich is looking at the top of the board, where the tie rule has been sitting since yesterday.)</div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says">
+    <p>That's what Ralphie's one was for.</p>
+  </div></div>
+
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>And it does the job. Add that rule and the stripe dies on the spot &mdash; every red dot on that screen has a better dot sitting in its own column.</p>
+    <p><span class="stage">(quietly)</span> That is what it was for.</p>
+    <p>It sat up there for a day guarding a rule we had not written. It said &ldquo;there is exactly one nearest dot&rdquo; when nothing underneath it had ever used the word. That was the specification telling us, out loud, that it was short a rule &mdash; and we all read it and none of us heard it.</p>
+    <p>Now it has something to protect. <em>Nearest</em> only names a dot because Ralphie proved it does.</p>
+  </div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p><span class="stage">(to nobody)</span> I said it was important.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>You did. <span class="stage">(beat)</span> And add that rule and the stripe dies on the spot &mdash; every red dot on that screen has a better dot sitting in its own column.</p>
   </div></div>
 
   <div class="line"><div class="who">Ralphie</div><div class="says">
