@@ -1138,20 +1138,41 @@ DOC2 = r"""<title>Honors Math, Period 3 — Day Three: Counting</title>
   </div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>That is the correct way to fail at it, and I mean that. Anybody else.</p>
+    <p>That is the correct way to fail at it, and I mean that. Popovich.</p>
   </div></div>
 
-  <div class="line"><div class="beat">(A long pause. Then, from the window, without looking up:)</div></div>
+  <div class="line"><div class="who p">Popovich</div><div class="says">
+    <p>I think there isn't one. I think the three rules are the circle.</p>
+  </div></div>
 
-  <div class="line"><div class="who n">Nell</div><div class="says"><p>Draw all of them.</p></div></div>
+  <div class="line"><div class="beat">(Mrs. Feeney looks at the class for a while.)</div></div>
 
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>&hellip;Say that again.</p></div></div>
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>All right. I'm going to give it to you, and you are going to be annoyed, and being annoyed is the correct response.</p>
+    <p>I should say I did not find it either. Somebody found it in this room eleven years ago and I have been setting it ever since. So don't feel &mdash;</p>
+  </div></div>
+
+  <div class="line"><div class="beat">(From the window. Quietly, and not as an answer &mdash; as a worry.)</div></div>
+
+  <div class="line"><div class="who n">Nell</div><div class="says"><p>Is it wrong if I just didn't pick?</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>&hellip;Didn't pick what, Nell.</p></div></div>
 
   <div class="line"><div class="who n">Nell</div><div class="says">
-    <p>Every dot that's allowed. Don't choose. The first rule says which dots you're <em>allowed</em> to use, so use all of them.</p>
+    <p>Which dot to keep. I couldn't work out how to choose the right one in each column so I just&hellip; kept all of them. The allowed ones. I know that isn't what you asked for. I couldn't get it to break, though. I did check.</p>
   </div></div>
 
-  <div class="line"><div class="beat">(Mrs. Feeney puts down the register and goes to the board.)</div></div>
+  <div class="line"><div class="beat">(Mrs. Feeney puts the register down without looking at it.)</div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Nell. You did not do the homework.</p>
+  </div></div>
+
+  <div class="line"><div class="who n">Nell</div><div class="says"><p>&hellip;I know.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>You did something considerably worse. Say the rules back to me while I draw it.</p>
+  </div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
     <p>Sound. Every dot we drew is a dot we were allowed to draw &mdash; we only drew allowed ones, so yes.</p>
@@ -1207,13 +1228,20 @@ Nearest(drawn) == \A x \in -R..R : \A y \in -R..R :
   </div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>And it does the job. Add that rule and the stripe fails immediately &mdash; every red dot on that screen has a better dot sitting in its own column.</p>
-    <p><span class="stage">(to Nell)</span> You have been in this room for two days without saying a word.</p>
+    <p>And it does the job. Add that rule and the stripe dies on the spot &mdash; every red dot on that screen has a better dot sitting in its own column.</p>
   </div></div>
 
-  <div class="line"><div class="who n">Nell</div><div class="says"><p>I was listening.</p></div></div>
+  <div class="line"><div class="who">Ralphie</div><div class="says">
+    <p>That's not <em>fair</em> though. She wasn't even trying to break it. She just didn't do the last bit.</p>
+  </div></div>
 
-  <div class="line"><div class="beat">(Ralphie looks like he wants to say something and, wisely, doesn't.)</div></div>
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p><span class="stage">(immediately)</span> Yes. Write that down, all of you, that is the actual lesson and Ralphie has just said it out loud without meaning to.</p>
+  </div></div>
+
+  <div class="line"><div class="keybox"><span class="lbl">Who breaks a rule</span><p>Nell was not attacking the rules. She was <span class="exact">obeying</span> them, carefully, having not understood the part we never wrote down. That is who finds the hole &mdash; not somebody clever trying to get round you, but somebody doing exactly what you said and nothing more.</p><p>You cannot defend against that by being cleverer. Only by saying what you meant.</p></div></div>
+
+  <div class="line"><div class="beat">(Ralphie looks like he wants to argue, and works out that he agrees.)</div></div>
 </section>
 
 <!-- 05 -->
