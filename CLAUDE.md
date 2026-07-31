@@ -140,6 +140,13 @@ the kind of thing this lesson refuses to say about anything else.
 
 Corollary: prefer a picture of the result over a procedure for getting there.
 
+**This has now pulled the lesson off course three times** — the checking section,
+the fourth-rule arc, and a thickness parameter that turned into an argument about
+when a program may depart from its specification. Each began as a small, locally
+reasonable answer to a real question. The tell is the same every time: the
+mathematics stops moving and the subject becomes the apparatus. When you notice
+yourself explaining what a specification is *for*, the lesson has drifted.
+
 ## Working conventions
 
 - **Run scripts by path, not as inline one-liners.** Write throwaway analysis to a file

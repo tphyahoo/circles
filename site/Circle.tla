@@ -88,28 +88,3 @@ Circle == { p \in Dots :
 Every dot here is the nearest in its column, so the two gaps either side of the
 ring make one unit between them and nothing is more than **half a unit** out.
 Measured worst case: 0.37 at R=12, 0.46 at R=60, 0.49 at R=120.
-
-### Why there is no `Slack` in this module
-
-The lesson draws a thicker ring at large radii, keeping every dot within some
-slack of the best, because one dot per column is a hairline at R=120 and
-invisible on a projector. That slack is deliberately **not** in this file, and
-the omission is the interesting part.
-
-A circle is the nearest dots. Drawing a fatter band does not produce a different
-circle — it produces a *neighbourhood* of the same one, drawn wide enough to
-point at. The definition should not move because the projector is bad.
-
-So the drawing program departs from this specification on purpose when it is
-asked to. That is allowed, and it is safe, precisely because the departure can be
-stated exactly: with slack `s` a kept dot may miss by `s` more than the best, and
-a gap of `g` sits about `g / 2R` from the true ring, so the worst case goes from
-1/2 to
-
-    1/2  +  s / 2R
-
-At `s = R` that is one unit; at `s = 2R`, one and a half. Measured: 0.73 and 1.49
-against those bounds.
-
-Which is the whole use of having written the definition down. Not that the
-program always obeys it — that the one time it does not, you can say by how much.
