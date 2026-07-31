@@ -3,7 +3,7 @@
 **Work in progress.** One eighth-grade maths lesson, its specification, and the checking
 that produced both.
 
-### → [Read the lesson](https://tphyahoo.github.io/circles/)
+### → [Day one and two](https://tphyahoo.github.io/circles/) · [Day three](https://tphyahoo.github.io/circles/counting.html)
 
 (GitHub shows HTML as source, so the link above goes to the rendered page.)
 
@@ -54,6 +54,10 @@ off-topic; every one of Ralphie's forty turns ends in complete punctuation; and 
 are thirty one-liners in a hundred and sixty-six turns. The students are currently
 functions rather than people. That pass hasn't happened.
 
+**Day three.** It is thinner than days one and two and it shows — three payoffs
+crammed into a few hundred words. It is deliberately a separate file so it can be cut
+without touching the rest.
+
 **More figures.** There are eighteen. Several moments still have Mrs. Feeney writing on
 the board with nothing shown.
 
@@ -62,10 +66,14 @@ through calculus. That is a map of a territory, not a commitment to walk it.
 
 ## Reading it
 
-The lesson is a single self-contained HTML file, served at
-[tphyahoo.github.io/circles](https://tphyahoo.github.io/circles/) and built to
-`docs/index.html`. Everything is inlined, including the figures, so the file works
-offline and from disk.
+Two self-contained HTML files, each with its figures inlined so they work offline
+and from disk:
+
+- **`docs/index.html`** — days one and two. What a circle is on a lattice, how wrong
+  the answer is allowed to be, and how to prove a program drew it correctly. Ends on
+  its own bell and its own homework; complete in itself.
+- **`docs/counting.html`** — day three. Which dots land perfectly, and counting your
+  way to π. Less finished than the first two days.
 
 To rebuild everything from source, from `site/`:
 

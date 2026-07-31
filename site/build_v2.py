@@ -6,7 +6,7 @@ S = HERE / 'plates'
 def img(n):
     return 'data:image/png;base64,' + base64.b64encode((S / n).read_bytes()).decode()
 
-HTML = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
+DOC1 = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
 <style>
   :root {
     --pad:      #EDF0F2;
@@ -194,6 +194,16 @@ HTML = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
     figcaption { grid-template-columns: 1fr; gap: .3rem; }
   }
   @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+
+  .nextday {
+    grid-column: 2; max-width: 39rem; margin: 2.4rem 0 0;
+    border-top: 1px solid var(--rule); padding-top: 1.1rem;
+    font-family: var(--sans); font-size: .9rem; color: var(--muted);
+  }
+  .nextday p { margin: 0 0 .35rem; }
+  .nextday a { color: var(--blue); font-weight: 600; text-decoration: none; }
+  .nextday a:hover, .nextday a:focus { text-decoration: underline; }
+  .hw .unsolved { color: var(--gold); font-style: italic; font-weight: 600; }
 </style>
 
 <div class="pad">
@@ -833,9 +843,286 @@ Tidy(drawn) == \A x \in -R..R :
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>All the way down. Yes.</p></div></div>
 </section>
 
+
+<!-- the bell -->
+<section>
+  <h2><span class="n">05</span> The bell</h2>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Two minutes. Look at where we started.</p>
+    <p>Ralphie found twelve dots this morning, and Popovich said &mdash; correctly &mdash; that twelve dots is not a circle.</p>
+  </div></div>
+
+  <div class="line"><div class="beat">(Nobody says anything. The board is covered.)</div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>We have one now. We know it is never wrong by more than half a unit, and we know that at every size, for ever. We know the rule that finds it never gets stuck, and we know <em>that</em> because Ralphie proved it with odd and even, not because I told you.</p>
+    <p>And we have three sentences that will catch a program lying to us &mdash; including one that lies extremely well at thirteen.</p>
+  </div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says">
+    <p>We never did find out how far away anything was.</p>
+  </div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>No. <span class="stage">(gathering the markers)</span> And you stopped asking about half an hour ago.</p>
+  </div></div>
+
+  <div class="hw">
+    <h3>Homework &mdash; the whole assignment</h3>
+    <ol>
+      <li>The ring at nineteen. Which dot sits in column six? Do not measure anything, and show me the two totals you compared.</li>
+      <li>Ralphie's proof was about two dots <em>one</em> apart. Does it still work for dots <em>two</em> apart? If it does, say why in one line. If it doesn't, bring me a tie.</li>
+      <li><span class="unsolved">The one I want most.</span> Our three rules are Sound, Complete and Symmetric. Find something that obeys all three and is <em>not</em> the circle we wanted. It exists. When you find it, write the fourth rule that would have stopped it.</li>
+    </ol>
+  </div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Number three is not a trick and it is not impossible. It is the thing that keeps me up at night, and one of you is going to find it on the bus.</p>
+  </div></div>
+
+  <div class="line"><div class="beat">(bell)</div></div>
+
+  <div class="line"><div class="nextday">
+    <p><strong>The next lesson</strong> is about which dots land <em>perfectly</em> &mdash; and about counting your way to &pi;.</p>
+    <p><a href="counting.html">Go on to day three &rarr;</a></p>
+  </div></div>
+</section>
+
+<footer class="colo">
+  <h3>Checked before printing</h3>
+  <p>Every number here was computed rather than remembered: the twelve dots at radius 5, 10 and 13; the twenty at radius 25 and thirty-six at 65; all 624 dots at radius 110 sitting inside the integer band, four times the squares between 219&sup2; and 221&sup2; &mdash; established without taking a square root; the dot counts 317 / 31,417 / 3,141,549 / 314,159,053 and the &pi; digits they yield; and the integer-only drawing rule, verified to place its dots in the same spots as the square-root method at every radius tested. Ralphie's parity argument is also carried in the specification as an invariant, <span style="font-family:var(--mono)">NoTies</span>, model-checked at eight radii &mdash; though the argument itself settles every radius at once.</p>
+  <p>The same parity fact makes the drawing algorithm deterministic: its decision variable is odd at every step, so it never lands on nought and the <span style="font-family:var(--mono)">otherwise</span> branch never breaks a tie. Checked at every radius from 2 to 1999. That is a fact about the <em>midpoint</em> variant, which is what this lesson teaches.</p>
+  <p>Bresenham's own 1977 algorithm is a different procedure &mdash; a decision variable evaluated at the diagonal neighbour, initialised <span style="font-family:var(--mono)">2 &minus; 2R</span> rather than <span style="font-family:var(--mono)">3 &minus; 2r</span>. His <em>does</em> land on zero, at 143 of the radii from 2 to 399, and he handles it explicitly as his &ldquo;case 5&rdquo;, proving the move stays forced. It is zero exactly when a lattice point sits perfectly on the ring &mdash; so the radii that trouble his algorithm are precisely the lucky ones. The two algorithms agree on their output at every radius tested to 200, but <span style="font-family:var(--mono)">3 &minus; 2r</span> is not his, and calling it &ldquo;Bresenham's circle algorithm&rdquo;, as almost everyone does, is a misattribution.</p>
+  <p>Ralphie's homework, for anyone who wants it now: NASA JPL reports working to about fifteen digits for interplanetary navigation. Thirty-eight would draw a circle round the observable universe to within a hydrogen atom. Mrs. Feeney does not know either figure, and would rather he looked them up than took them from her &mdash; which is the only reason they are down here and not up there.</p>
+
+  <h3 style="margin-top:2rem">Whose ideas these are</h3>
+  <p><strong>The drawing algorithm</strong> is Bresenham's circle algorithm &mdash; J. E. Bresenham, &ldquo;A Linear Algorithm for Incremental Digital Display of Circular Arcs&rdquo;, <em>Communications of the ACM</em> 20(2), February 1977, 100&ndash;106. Not the better-known 1965 paper (&ldquo;Algorithm for computer control of a digital plotter&rdquo;, <em>IBM Systems Journal</em> 4(1), 25&ndash;30), which draws lines; the circle came twelve years afterwards. The variant used here is usually called the midpoint circle algorithm.</p>
+  <p><strong>Counting dots to get &pi;</strong> is the Gauss circle problem. <strong>Which radii carry dots that land exactly</strong> is the theory of sums of two squares, from Fermat and Jacobi. <strong>Writing the blueprint before the program</strong>, and the observation that a specification is not written in the material the thing is built from, is Leslie Lamport &mdash; &ldquo;Thinking Above the Code&rdquo;, Microsoft Research Faculty Summit, 2014 &mdash; and the notation of the blueprint is his TLA+.</p>
+  <p>None of the mathematics in this lesson is new. The only thing arranged here is the order.</p>
+</footer>
+
+</div>
+"""
+
+DOC2 = r"""<title>Honors Math, Period 3 — Day Three: Counting</title>
+<style>
+  :root {
+    --pad:      #EDF0F2;
+    --pad-2:    #E3E9ED;
+    --rule:     #C9D6DE;
+    --rule-fine:#DCE5EA;
+    --ink:      #16222B;
+    --blue:     #1D5C8F;
+    --gold:     #9A6B12;
+    --muted:    #667680;
+    --plate:    #0D1117;
+    --serif: Charter, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --sans: system-ui, "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
+    --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --pad:#0F1419; --pad-2:#161C22; --rule:#232C34; --rule-fine:#1A2128;
+      --ink:#DCE3E8; --blue:#6FA8FF; --gold:#E3B341; --muted:#7E8C96;
+    }
+  }
+  :root[data-theme="dark"] {
+    --pad:#0F1419; --pad-2:#161C22; --rule:#232C34; --rule-fine:#1A2128;
+    --ink:#DCE3E8; --blue:#6FA8FF; --gold:#E3B341; --muted:#7E8C96;
+  }
+  :root[data-theme="light"] {
+    --pad:#EDF0F2; --pad-2:#E3E9ED; --rule:#C9D6DE; --rule-fine:#DCE5EA;
+    --ink:#16222B; --blue:#1D5C8F; --gold:#9A6B12; --muted:#667680;
+  }
+
+  body {
+    margin: 0;
+    padding: 0 1.5rem 6rem;
+    background-color: var(--pad);
+    background-image:
+      repeating-linear-gradient(to right,  var(--rule-fine) 0 1px, transparent 1px 28px),
+      repeating-linear-gradient(to bottom, var(--rule-fine) 0 1px, transparent 1px 28px);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.64;
+    -webkit-font-smoothing: antialiased;
+  }
+  .pad {
+    max-width: 60rem; margin: 0 auto;
+    background: var(--pad);
+    box-shadow: 0 0 0 1px var(--rule);
+    padding: 0 clamp(1.2rem, 4vw, 3.5rem);
+  }
+
+  /* ---- header ---- */
+  header.top { padding: 3.2rem 0 1.4rem; border-bottom: 3px double var(--rule); }
+  .course {
+    font-family: var(--sans); font-size: .72rem; font-weight: 600;
+    letter-spacing: .16em; text-transform: uppercase; color: var(--blue);
+    margin: 0 0 1.4rem;
+  }
+  header.top h1 {
+    font-family: var(--serif); font-weight: 600;
+    font-size: clamp(2.1rem, 6vw, 3.2rem); line-height: 1.06;
+    letter-spacing: -.02em; margin: 0 0 1rem; text-wrap: balance;
+  }
+  header.top h1 em { font-style: italic; color: var(--blue); }
+  .standfirst {
+    font-size: 1.02rem; color: var(--muted); max-width: 38rem; margin: 0 0 .6rem;
+  }
+
+  /* ---- cast ---- */
+  .cast { padding: 2rem 0 2.2rem; border-bottom: 1px solid var(--rule); margin-bottom: 3rem; display: grid; gap: 1rem; }
+  .cast-row { display: grid; grid-template-columns: 9rem 1fr; gap: 0 2rem; }
+  .cast-name {
+    font-family: var(--sans); font-size: .74rem; font-weight: 600;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--blue); padding-top: .3em;
+  }
+  .cast-desc { font-size: .95rem; max-width: 44rem; }
+
+  /* ---- sections ---- */
+  section { margin: 0 0 3.6rem; }
+  h2 {
+    font-family: var(--sans); font-size: .76rem; font-weight: 700;
+    letter-spacing: .15em; text-transform: uppercase; color: var(--ink);
+    margin: 0 0 2rem; padding-bottom: .65rem; border-bottom: 1px solid var(--rule);
+    display: flex; gap: 1.1rem; align-items: baseline;
+  }
+  h2 .n { color: var(--blue); font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+  /* ---- dialogue ---- */
+  .line { display: grid; grid-template-columns: 9rem 1fr; gap: 0 2rem; margin-bottom: 1.1rem; }
+  .who {
+    font-family: var(--sans); font-size: .74rem; font-weight: 600;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--blue); padding-top: .36em;
+  }
+  .who.f { color: var(--ink); }
+  .who.p { color: var(--muted); }
+  .says { max-width: 39rem; }
+  .says p { margin: 0 0 .8rem; }
+  .says p:last-child { margin-bottom: 0; }
+  .stage { color: var(--muted); font-style: italic; }
+  .beat { grid-column: 2; color: var(--muted); font-style: italic; font-size: .93rem; margin: 1.3rem 0 1.4rem; max-width: 39rem; }
+  code, .m { font-family: var(--mono); font-size: .92em; }
+
+  /* ---- emphasis: gold means it lands exactly ---- */
+  .exact { color: var(--gold); font-weight: 600; }
+  .keybox {
+    grid-column: 2; max-width: 39rem; margin: 1.5rem 0 1.7rem;
+    border-left: 3px solid var(--gold); padding: 1rem 1.3rem;
+    background: color-mix(in srgb, var(--gold) 8%, transparent);
+  }
+  .keybox p { margin: 0; }
+  .keybox .lbl {
+    font-family: var(--sans); font-size: .66rem; font-weight: 700; letter-spacing: .13em;
+    text-transform: uppercase; color: var(--gold); display: block; margin-bottom: .4rem;
+  }
+
+  /* ---- code on the board / on a screen ---- */
+  .code { grid-column: 2; max-width: 39rem; margin: 1.4rem 0 1.7rem; }
+  .code .attrib {
+    display: block; font-family: var(--sans); font-size: .64rem; font-weight: 700;
+    letter-spacing: .13em; text-transform: uppercase; color: var(--muted); margin-bottom: .45rem;
+  }
+  .code pre {
+    margin: 0; background: var(--plate); border: 1px solid var(--rule);
+    padding: 1rem 1.15rem; overflow-x: auto;
+    font-family: var(--mono); font-size: .8rem; line-height: 1.62; color: #C9D1D9;
+  }
+  .code.spec pre {
+    background: var(--pad-2); color: var(--ink);
+    border: 1px solid var(--rule); border-left: 3px solid var(--gold);
+  }
+  .code.spec .kw { color: var(--correction, #A3392B); }
+  .code.spec .cm { color: var(--muted); }
+  .code .kw { color: #FF7B72; }
+  .code .cm { color: #8B949E; font-style: italic; }
+  .code .st { color: #79C0FF; }
+  .out {
+    grid-column: 2; max-width: 39rem; margin: -.9rem 0 1.7rem;
+    font-family: var(--mono); font-size: .78rem; color: var(--muted);
+    border-left: 2px solid var(--rule); padding: .5rem 0 .5rem 1rem;
+  }
+
+  .eq {
+    grid-column: 2; font-family: var(--mono); font-size: .92rem;
+    background: var(--pad-2); border-left: 3px solid var(--blue);
+    padding: .9rem 1.2rem; margin: 1.2rem 0; max-width: 39rem; overflow-x: auto;
+  }
+
+  /* ---- tables ---- */
+  .tablewrap { grid-column: 2; overflow-x: auto; margin: 1.5rem 0 1.7rem; max-width: 42rem; }
+  table { border-collapse: collapse; width: 100%; font-family: var(--mono); font-size: .79rem; }
+  th, td { text-align: left; padding: .5rem 1rem .5rem 0; border-bottom: 1px solid var(--rule); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  th { font-family: var(--sans); font-size: .64rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 700; border-bottom: 2px solid var(--ink); }
+  td.g { color: var(--gold); font-weight: 600; }
+  td.b { color: var(--blue); }
+
+  /* ---- plates ---- */
+  figure { margin: 2.5rem 0; }
+  .plate { background: var(--plate); border: 1px solid var(--rule); padding: .7rem; }
+  .plate img { width: 100%; height: auto; display: block; }
+  /* the board is a whiteboard: it stays light whatever theme the reader is in */
+  .boardshot { background: #F8F7F3; border: 1px solid var(--rule); padding: .5rem; }
+  .boardshot img { width: 100%; height: auto; display: block; }
+  figcaption .pn.hand { color: var(--gold); }
+  figcaption {
+    font-family: var(--sans); font-size: .78rem; line-height: 1.6; color: var(--muted);
+    margin-top: .8rem; display: grid; grid-template-columns: 7.5rem 1fr; gap: 0 1.2rem;
+  }
+  figcaption .pn { font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--blue); font-size: .68rem; padding-top: .12em; }
+  figcaption .pt { max-width: 39rem; }
+
+  /* ---- homework ---- */
+  .hw { border: 2px solid var(--ink); background: var(--pad-2); padding: 1.7rem 1.9rem; margin: 2.3rem 0; }
+  .hw h3 { font-family: var(--sans); font-size: .72rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--blue); margin: 0 0 1.2rem; }
+  .hw ol { margin: 0; padding-left: 1.3rem; display: grid; gap: .9rem; }
+  .hw li { max-width: 39rem; padding-left: .3rem; }
+
+  footer.colo { border-top: 3px double var(--rule); margin-top: 4rem; padding: 1.5rem 0 3rem; font-family: var(--sans); font-size: .78rem; line-height: 1.7; color: var(--muted); }
+  footer.colo h3 { font-size: .68rem; letter-spacing: .15em; text-transform: uppercase; color: var(--ink); margin: 0 0 .9rem; }
+  footer.colo p { max-width: 42rem; margin: 0 0 .8rem; }
+
+  @media (max-width: 760px) {
+    body { font-size: 16px; padding: 0 .6rem 4rem; }
+    .line, .cast-row { grid-template-columns: 1fr; gap: .15rem; }
+    .who, .cast-name { padding-top: 0; margin-bottom: .05rem; }
+    .beat, .keybox, .eq, .tablewrap { grid-column: 1; }
+    figcaption { grid-template-columns: 1fr; gap: .3rem; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+
+  .nextday {
+    grid-column: 2; max-width: 39rem; margin: 2.4rem 0 0;
+    border-top: 1px solid var(--rule); padding-top: 1.1rem;
+    font-family: var(--sans); font-size: .9rem; color: var(--muted);
+  }
+  .nextday p { margin: 0 0 .35rem; }
+  .nextday a { color: var(--blue); font-weight: 600; text-decoration: none; }
+  .nextday a:hover, .nextday a:focus { text-decoration: underline; }
+  .hw .unsolved { color: var(--gold); font-style: italic; font-weight: 600; }
+</style>
+
+<div class="pad">
+
+<header class="top">
+  <p class="course">Honors Math &nbsp;·&nbsp; Period 3 &nbsp;·&nbsp; Day Three</p>
+  <h1>What Lands Perfectly,<br /><em>and How Much Room Is Inside</em></h1>
+  <p class="standfirst">In which some radii turn out to be luckier than others, a promise made on the first day is kept, and &pi; arrives by being counted.</p>
+</header>
+
+<div class="cast">
+  <div class="cast-row"><div class="cast-name">Previously</div><div class="cast-desc">A circle is the dots nearest a given distance from the middle, and it is never wrong by more than half a unit. Nobody has measured anything. On day one Mrs. Feeney boxed the word <em>nought</em> in the corner of the board and promised to come back to it. <a href="index.html">&larr; days one and two</a></div></div>
+  <div class="cast-row"><div class="cast-name">Mrs. Feeney</div><div class="cast-desc">Nineteen years of eighth grade. Has never once written &ldquo;because I said so&rdquo; on a board.</div></div>
+  <div class="cast-row"><div class="cast-name">Ralphie</div><div class="cast-desc">Front row. Proved something yesterday and has not entirely got over it.</div></div>
+  <div class="cast-row"><div class="cast-name">Popovich</div><div class="cast-desc">Back row, hood up. Still waiting on the nought.</div></div>
+</div>
+
 <!-- 05 -->
 <section>
-  <h2><span class="n">05</span> The dots that land perfectly</h2>
+  <h2><span class="n">01</span> The dots that land perfectly</h2>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
     <p>Back to Ralphie's twelve. Most dots on our ring are near-misses &mdash; off by a bit, under half. But some land <span class="exact">dead on</span>. Ralphie found six-eight-ten without knowing what he had. What did you have, Ralphie?</p>
@@ -896,7 +1183,7 @@ Tidy(drawn) == \A x \in -R..R :
 
 <!-- 05 -->
 <section>
-  <h2><span class="n">06</span> How much room is inside</h2>
+  <h2><span class="n">02</span> How much room is inside</h2>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
     <p>Last thing today, and it's the one I'd keep if they made me throw the rest out.</p>
@@ -1024,7 +1311,7 @@ Tidy(drawn) == \A x \in -R..R :
 
 <!-- 06 -->
 <section>
-  <h2><span class="n">07</span> The bell</h2>
+  <h2><span class="n">03</span> The bell</h2>
 
   <div class="line"><div class="who">Ralphie</div><div class="says"><p>How many digits <em>do</em> you need?</p></div></div>
 
@@ -1087,6 +1374,11 @@ Tidy(drawn) == \A x \in -R..R :
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>Ask him. Fourth period. Tell him to bring the chain.</p></div></div>
 </section>
 
+
+  <div class="line"><div class="nextday">
+    <p><a href="index.html">&larr; back to days one and two</a></p>
+  </div></div>
+
 <footer class="colo">
   <h3>Checked before printing</h3>
   <p>Every number here was computed rather than remembered: the twelve dots at radius 5, 10 and 13; the twenty at radius 25 and thirty-six at 65; all 624 dots at radius 110 sitting inside the integer band, four times the squares between 219&sup2; and 221&sup2; &mdash; established without taking a square root; the dot counts 317 / 31,417 / 3,141,549 / 314,159,053 and the &pi; digits they yield; and the integer-only drawing rule, verified to place its dots in the same spots as the square-root method at every radius tested. Ralphie's parity argument is also carried in the specification as an invariant, <span style="font-family:var(--mono)">NoTies</span>, model-checked at eight radii &mdash; though the argument itself settles every radius at once.</p>
@@ -1111,8 +1403,11 @@ for k, f in [('__P1__','p1_circle.png'), ('__P2__','p2_exact.png'), ('__P3__','p
              ('__S1__','s1_sabotage.png'), ('__S2__','s2_where_it_bites.png'),
              ('__S3__','s3_lucky.png'), ('__S4__','s4_counting_pi.png'), ('__B10__','board_10_pile.png'),
              ('__B11__','board_11_tiework.png')]:
-    HTML = HTML.replace(k, img(f))
+    DOC1 = DOC1.replace(k, img(f))
+    DOC2 = DOC2.replace(k, img(f))
 # Canonical output is docs/index.html, which is what GitHub Pages serves.
-out = HERE.parent / 'docs' / 'index.html'
-out.write_text(HTML)
-print('wrote', out, f'{out.stat().st_size/1024:.0f} KB')
+docs = HERE.parent / 'docs'
+for name, doc in (('index.html', DOC1), ('counting.html', DOC2)):
+    p = docs / name
+    p.write_text(doc)
+    print(f'wrote {p}  {p.stat().st_size/1024:.0f} KB')

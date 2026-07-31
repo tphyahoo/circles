@@ -15,8 +15,9 @@ plotter and the earlier writing.
 
 | Path | What |
 |---|---|
-| `docs/index.html` | **The lesson.** Generated — never edit directly. This is what GitHub Pages serves. |
-| `site/build_v2.py` | Generates `docs/index.html`. Edit this. Images inline as base64 from `site/plates/`. |
+| `docs/index.html` | **Days one and two.** Generated — never edit directly. Pages serves this. |
+| `docs/counting.html` | **Day three**, a separate document so it can be cut cleanly. Also generated. |
+| `site/build_v2.py` | Generates **both** pages from `DOC1` and `DOC2`. Edit this. Images inline from `site/plates/`. |
 | `site/board.py` | The **board** figures — Mrs. Feeney's whiteboard. Writes into `plates/`. |
 | `site/screen.py` | The **screen** figures — projector output. Writes into `plates/`. |
 | `site/Circle.tla` | The blueprint: what a circle *is*, plus `NoTies`. Literate; read its header. |
@@ -44,7 +45,7 @@ from `site/`.
 
 Two published copies, and they are different things:
 
-- **GitHub Pages** — https://tphyahoo.github.io/circles/ — served from `docs/index.html`
+- **GitHub Pages** — https://tphyahoo.github.io/circles/ and `/counting.html` — served from `docs/`
   on every push to `main`. This is the public one. Nothing to do but push.
 - **Claude artifact** — https://claude.ai/code/artifact/fac3d388-297f-4604-a7ef-e66563567d6e
 
