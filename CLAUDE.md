@@ -148,3 +148,15 @@ Corollary: prefer a picture of the result over a procedure for getting there.
   `VAR=x` prefixes or pipes miss the permission allowlist and cause approval prompts.
 - Verify numeric claims by computing them before writing them down. Nearly every error
   in the source transcript was a plausible-sounding number nobody checked.
+
+### The board program
+
+`site/board_program.py` is the single source of truth for the code in the lesson.
+`build_v2.py` reads it and prints it into the page; `photograph.py` runs it and
+captures its stdout — colour codes and all — into the figure. There is no second
+implementation, so the picture cannot drift from the code beside it.
+
+That was not true for most of this project's life: the figures came from
+matplotlib in `screen.py` while the page showed hand-written code, so the lesson
+claimed "here is the program and here is what it prints" and it was not so. If
+you add another program to the lesson, add it the same way.

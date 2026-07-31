@@ -6,6 +6,30 @@ S = HERE / 'plates'
 def img(n):
     return 'data:image/png;base64,' + base64.b64encode((S / n).read_bytes()).decode()
 
+
+
+KEYWORDS = {'def','for','in','if','else','elif','return','while','and','or','not','import','from'}
+
+
+def show_program(path, drop_docstring=True):
+    """Print board_program.py into the lesson. Same file screen/photograph runs,
+    so the code on the page cannot drift from the figure under it."""
+    src = (HERE / path).read_text()
+    if drop_docstring:
+        src = re.sub(r'^""".*?"""\n+', '', src, flags=re.S)
+    out = []
+    for line in src.rstrip().split('\n'):
+        code, _, comment = line.partition('#')
+        esc = lambda s: s.replace('&','&amp;').replace('<','&lt;').replace('>','&gt;')
+        piece = re.sub(r"'[^']*'", lambda m: f'<span class="st">{esc(m.group(0))}</span>', esc(code))
+        piece = re.sub(r'\b(' + '|'.join(KEYWORDS) + r')\b',
+                       lambda m: f'<span class="kw">{m.group(1)}</span>', piece)
+        if comment:
+            piece += f'<span class="cm">#{esc(comment)}</span>'
+        out.append(piece)
+    return '\n'.join(out).rstrip()
+
+
 DOC1 = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
 <style>
   :root {
@@ -547,33 +571,7 @@ Circle == { p \in Dots :
 
   <div class="line"><div class="code">
     <span class="attrib">On the board</span>
-<pre><span class="kw">def</span> circle(r):
-    dots = set()
-
-    <span class="cm"># every column: try every dot, keep the best</span>
-    <span class="kw">for</span> x <span class="kw">in</span> range(-r, r + 1):
-        best = 0
-        <span class="kw">for</span> y <span class="kw">in</span> range(0, r + 1):
-            <span class="kw">if</span> abs(x*x + y*y - r*r) &lt; abs(x*x + best*best - r*r):
-                best = y
-        dots.add((x, best)); dots.add((x, -best))
-
-    <span class="cm"># then the same along the rows, for the steep sides</span>
-    <span class="kw">for</span> y <span class="kw">in</span> range(-r, r + 1):
-        best = 0
-        <span class="kw">for</span> x <span class="kw">in</span> range(0, r + 1):
-            <span class="kw">if</span> abs(x*x + y*y - r*r) &lt; abs(best*best + y*y - r*r):
-                best = x
-        dots.add((best, y)); dots.add((-best, y))
-
-    <span class="kw">return</span> dots
-
-
-<span class="kw">def</span> show(r):
-    ring = circle(r)
-    <span class="kw">for</span> y <span class="kw">in</span> range(r, -r - 1, -1):
-        print(<span class="st">''</span>.join(<span class="st">'O '</span> <span class="kw">if</span> (x, y) <span class="kw">in</span> ring <span class="kw">else</span> <span class="st">'. '</span>
-                      <span class="kw">for</span> x <span class="kw">in</span> range(-r, r + 1)))</pre>
+<pre>__PROGRAM__</pre>
   </div></div>
 
   <div class="line"><div class="who">Ralphie</div><div class="says"><p>That's it? That's just&hellip; trying all of them.</p></div></div>
@@ -614,7 +612,7 @@ r = 2000   11,312 dots     3.006 seconds</div></div>
 
   <figure>
     <div class="plate"><img src="__P4__" alt="The program's printed output: a twenty-five line grid of dots with the ones it kept marked as letter O, forming a clear ring" /></div>
-    <figcaption><span class="pn">Fig. 8 &middot; screen</span><span class="pt">What <span style="font-family:var(--mono)">show(12)</span> gives you: every dot on the sheet, with the sixty-eight it kept picked out in red.</span></figcaption>
+    <figcaption><span class="pn">Fig. 8 &middot; screen</span><span class="pt">What <span style="font-family:var(--mono)">show(12)</span> prints &mdash; the actual output of the code above, captured rather than redrawn. Every dot on the sheet, the sixty-eight it kept in red.</span></figcaption>
   </figure>
 
   <div class="line"><div class="who">Ralphie</div><div class="says"><p>Do a big one.</p></div></div>
@@ -623,7 +621,7 @@ r = 2000   11,312 dots     3.006 seconds</div></div>
 
   <figure>
     <div class="plate"><img src="__P5__" alt="The same output at radius sixty: a dense grid of grey dots with three hundred and forty of them picked out in red, forming a ring that reads as a smooth circle" /></div>
-    <figcaption><span class="pn">Fig. 9 &middot; screen</span><span class="pt">The same program, radius sixty. Three hundred and forty dots kept. Nothing has changed about the method &mdash; there are simply more dots, and at this size the eye stops seeing the steps.</span></figcaption>
+    <figcaption><span class="pn">Fig. 9 &middot; screen</span><span class="pt"><span style="font-family:var(--mono)">show(60)</span>: a hundred and twenty-one lines of it, three hundred and forty dots kept. Nothing about the method changed &mdash; there are simply more dots, and at this size the eye stops seeing the steps.</span></figcaption>
   </figure>
 
   <div class="line"><div class="who p">Popovich</div><div class="says"><p>It got rounder.</p></div></div>
@@ -1228,6 +1226,10 @@ DOC2 = r"""<title>Honors Math, Period 3 — Day Three: Counting</title>
 
 </div>
 """
+
+_prog = show_program('board_program.py')
+DOC1 = DOC1.replace('__PROGRAM__', _prog)
+DOC2 = DOC2.replace('__PROGRAM__', _prog)
 
 for k, f in [('__P4__','p4_printed.png'), ('__P5__','p5_printed_big.png'), ('__P2__','p2_exact.png'), ('__P3__','p3_count.png'),
              ('__B1__','board_01_world.png'), ('__B2__','board_02_twelve.png'),
