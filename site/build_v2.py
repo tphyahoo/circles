@@ -485,13 +485,13 @@ DOC1 = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
   </div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Before anybody writes a line of it &mdash; what has to be <em>true</em> of the answer? Not how you would get it. What would make it right.</p>
+    <p>Before anybody writes a line of it &mdash; say what a circle <em>is</em>. Not how you would go about drawing one. What it is.</p>
   </div></div>
 
   <div class="line"><div class="who">Ralphie</div><div class="says"><p>&hellip;It should look like a circle?</p></div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Not good enough. Nobody can check &ldquo;looks like a circle.&rdquo; Give me something that could be checked by something with no eyes.</p>
+    <p>Not good enough. That is a description of a picture. I want the thing itself, short enough to fit on one line and impossible to read two ways.</p>
   </div></div>
 
   <div class="line"><div class="who p">Popovich</div><div class="says"><p>Nothing more than half a unit off the ring.</p></div></div>
@@ -531,7 +531,7 @@ DOC1 = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
   </div></div>
 
   <div class="line"><div class="code spec">
-    <span class="attrib">The blueprint</span>
+    <span class="attrib">On the board</span>
 <pre><span class="cm">\* squared distance. no square root lives in this file.</span>
 Quadrance(p) == p[1]*p[1] + p[2]*p[2]
 
@@ -546,13 +546,13 @@ Circle == { p \in Dots : NearRing(p) }</pre>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
     <p>Four lines, and I want you to notice what is <em>missing</em> from them. There is no first dot. There is no next dot. Nothing goes round the ring in any order, because nothing goes round the ring at all &mdash; it is a set, and a set does not have a beginning.</p>
-    <p>Nobody draws a house out of bricks. You draw it on paper, and the paper is not made of brick. This is the paper.</p>
+    <p>Notice also how short it is. That is not tidiness. Every extra word is somewhere the two of us could have understood each other differently, and there is nowhere in those four lines for that to happen.</p>
   </div></div>
 
   <div class="line"><div class="who p">Popovich</div><div class="says"><p>So where's the program?</p></div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>The program is somebody's <em>clever way of picking dots that satisfy this</em>. It is downstream. Copy it down, and notice that it agrees with nothing you just wrote &mdash; it has loops in it, and an order, and a running total, and none of those words appear above.</p>
+    <p>A way of finding them. It will have loops in it, and an order, and a running total, and none of those words are up there, because none of them are anything to do with what a circle <em>is</em>. Copy it down and watch how much longer it has to be.</p>
   </div></div>
 
   <div class="line"><div class="code">
@@ -686,11 +686,11 @@ inside the band:  624 of 624</div></div>
   <div class="line"><div class="who">Ralphie</div><div class="says"><p>They look the same.</p></div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>They do look the same. So stop reading them. We are going to say what a <em>drawing</em> has to satisfy &mdash; not what it does, what it owes us &mdash; and then let the machine sort them out.</p>
+    <p>They do look the same. So stop reading them, and write down three things that are true of the circle instead. Not true of a program &mdash; true of the <em>circle</em>. Then we can ask whether either of those is one.</p>
   </div></div>
 
   <div class="line"><div class="code spec">
-    <span class="attrib">What a drawing owes us</span>
+    <span class="attrib">Three things that are true of it</span>
 <pre><span class="cm">\* it only drew dots that were allowed</span>
 Sound(drawn)     == drawn \subseteq Circle
 
@@ -735,7 +735,7 @@ Correct(drawn)   == Sound(drawn) /\ Complete(drawn) /\ Symmetric(drawn)</pre>
   </div></div>
 
   <div class="line"><div class="code spec">
-    <span class="attrib">Added to the blueprint</span>
+    <span class="attrib">Added, above the other three</span>
 <pre><span class="cm">\* not about any drawing. about whether "the nearest"</span>
 <span class="cm">\* names anything at all.</span>
 NoTies == \A x \in -R..R : \A y \in -R..R :
@@ -775,7 +775,7 @@ program B:  FAILS at 103 of 118 — always Sound; it drew a dot that was not all
     <p>The <span class="m">6</span> in program B is a <span class="m">4</span>. None of you were ever going to see that by reading, and it did not matter, because you had written down what must be true.</p>
 
   <figure>
-    <div class="plate"><img src="__S1__" alt="Two circles side by side at radius 8, the right-hand one with eight dots circled in red where they fall outside what the blueprint permits" /></div>
+    <div class="plate"><img src="__S1__" alt="Two circles side by side at radius 8, the right-hand one with eight dots circled in red where they fall outside what the definition allows" /></div>
     <figcaption><span class="pn">Fig. 11 &middot; screen</span><span class="pt">Radius eight, where the sabotage does bite. Eight of program B&rsquo;s dots sit outside the permitted band &mdash; and they are not visibly out of place until something checks them.</span></figcaption>
   </figure>
     <p>But look at what nearly happened. The broken program is wrong at a hundred and three radii out of a hundred and eighteen, and it is <em>right at thirteen</em>, which is the number we have been using all morning. Ralphie tested it once and it told him everything was fine.</p>
@@ -786,7 +786,7 @@ program B:  FAILS at 103 of 118 — always Sound; it drew a dot that was not all
   <div class="line"><div class="who p">Popovich</div><div class="says"><p>So we don't have to understand the program.</p></div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>You have to understand the <em>rules</em>. The program is somebody's clever trick for satisfying them. Tricks are cheap. Knowing what would make a trick correct is not.</p>
+    <p>You have to understand the <em>circle</em>. The program is one person's trick for finding it. Tricks are cheap and there are dozens of them. Knowing what the answer looks like is not.</p>
   </div></div>
 
   <div class="line"><div class="beat">(Ralphie has been typing this whole time and now looks alarmed.)</div></div>
