@@ -730,37 +730,9 @@ Correct(drawn)   == Sound(drawn) /\ Complete(drawn) /\ Symmetric(drawn)</pre>
   </div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>His is about the dots themselves, not about anybody's drawing. So where does it go?</p>
+    <p>His is about the dots themselves, not about anybody's drawing &mdash; so it does not sit alongside the other three. It sits above them.</p>
+    <p>Everything we have done today rests on the words <em>the nearest one</em>. If two dots could tie there is no such thing as the nearest one, and every rule underneath would be pointing at a dot that might not exist. Ralphie has just shown that cannot happen.</p>
   </div></div>
-
-  <div class="line"><div class="beat">(She reads her own three rules again, and stops.)</div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Here is what is bothering me, and I would rather say it than hide it. Read those three. Which one of them would <em>break</em> if two dots tied?</p>
-  </div></div>
-
-  <div class="line"><div class="beat">(A while.)</div></div>
-
-  <div class="line"><div class="who p">Popovich</div><div class="says"><p>&hellip;None of them.</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>None of them. Sound asks whether a dot was allowed. Complete asks whether a column is empty. Symmetric asks about mirrors. A tie does not touch any of it.</p>
-  </div></div>
-
-  <div class="line"><div class="who">Ralphie</div><div class="says"><p>So mine's useless.</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Yours is true, and it is important, and it protects nothing I have written on this board. Which is an extremely uncomfortable thing to be holding at ten to four on a Tuesday.</p>
-    <p>Look at what it is guarding. It guards the word <em>nearest</em>. And <em>nearest</em> is not in these rules anywhere. We said it out loud all morning and then we did not write it down.</p>
-  </div></div>
-
-  <div class="line"><div class="beat">(Nobody has anything.)</div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Put it up anyway. Above them, not among them. And be suspicious of it while it is up there.</p>
-  </div></div>
-
-  <div class="line"><div class="keybox"><span class="lbl">A guarantee with nothing to guard</span><p>Ralphie has proved something true and useful, and it defends none of our rules. It defends a word we used and never wrote down.</p><p>When a specification carries a guarantee about a term it does not contain, that is not tidiness. It is the specification telling you it is <span class="exact">short a rule</span> &mdash; and you will not find out which one by staring at it.</p></div></div>
 
   <div class="line"><div class="code spec">
     <span class="attrib">Added to the blueprint</span>
@@ -902,12 +874,12 @@ Tidy(drawn) == \A x \in -R..R :
     <ol>
       <li>The ring at nineteen. Which dot sits in column six? Do not measure anything, and show me the two totals you compared.</li>
       <li>Ralphie's proof was about two dots <em>one</em> apart. Does it still work for dots <em>two</em> apart? If it does, say why in one line. If it doesn't, bring me a tie.</li>
-      <li><span class="unsolved">The one I want most.</span> Our three rules are Sound, Complete and Symmetric. Find something that obeys all three and is <em>not</em> the circle we wanted. It exists. When you find it, write the fourth rule that would have stopped it.</li>
+      <li><span class="unsolved">The one I want most.</span> A ring of radius 25 has twenty dots that land on it perfectly. A ring of radius 24 has four. Both are perfectly ordinary numbers. Go and find out what 25 has that 24 hasn't. <em>Hint: it is not about the 25.</em></li>
     </ol>
   </div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Number three is not a trick and it is not impossible. It is the thing that keeps me up at night, and one of you is going to find it on the bus.</p>
+    <p>Number three has an answer and it is a good one, and if you find it before Thursday you will have found the reason we are spending Thursday on it.</p>
   </div></div>
 
   <div class="line"><div class="beat">(bell)</div></div>
@@ -1148,174 +1120,11 @@ DOC2 = r"""<title>Honors Math, Period 3 — Day Three: Counting</title>
   <div class="cast-row"><div class="cast-name">Mrs. Feeney</div><div class="cast-desc">Nineteen years of eighth grade. Has never once written &ldquo;because I said so&rdquo; on a board.</div></div>
   <div class="cast-row"><div class="cast-name">Ralphie</div><div class="cast-desc">Front row. Proved something yesterday and has not entirely got over it.</div></div>
   <div class="cast-row"><div class="cast-name">Popovich</div><div class="cast-desc">Back row, hood up. Still waiting on the nought.</div></div>
-  <div class="cast-row"><div class="cast-name">Nell</div><div class="cast-desc">By the window. Has not said anything since Tuesday.</div></div>
 </div>
-
-<!-- 00 -->
-<section>
-  <h2><span class="n">01</span> Somebody found it on the bus</h2>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Number three. Something that obeys all our rules and is not the circle. Who has it?</p>
-  </div></div>
-
-  <div class="line"><div class="beat">(Nothing.)</div></div>
-
-  <div class="line"><div class="who">Ralphie</div><div class="says">
-    <p>I tried for an hour. Everything I drew broke one of them. If I left a column out it wasn't Complete, if I put a dot too far out it wasn't Sound &mdash;</p>
-  </div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>That is the correct way to fail at it, and I mean that. Popovich.</p>
-  </div></div>
-
-  <div class="line"><div class="who p">Popovich</div><div class="says">
-    <p>I think there isn't one. I think the three rules are the circle.</p>
-  </div></div>
-
-  <div class="line"><div class="beat">(Mrs. Feeney looks at the class for a while.)</div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>All right. I'm going to give it to you, and you are going to be annoyed, and being annoyed is the correct response.</p>
-    <p>I should say I did not find it either. Somebody found it in this room eleven years ago and I have been setting it ever since. So don't feel &mdash;</p>
-  </div></div>
-
-  <div class="line"><div class="beat">(From the window. Quietly, and not as an answer &mdash; as a worry.)</div></div>
-
-  <div class="line"><div class="who n">Nell</div><div class="says"><p>Is it wrong if I just didn't pick?</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>&hellip;Didn't pick what, Nell.</p></div></div>
-
-  <div class="line"><div class="who n">Nell</div><div class="says">
-    <p>Which dot to keep. I couldn't work out how to choose the right one in each column so I just&hellip; kept all of them. The allowed ones. I know that isn't what you asked for. I couldn't get it to break, though. I did check.</p>
-  </div></div>
-
-  <div class="line"><div class="beat">(Mrs. Feeney puts the register down without looking at it.)</div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Nell. You did not do the homework.</p>
-  </div></div>
-
-  <div class="line"><div class="who n">Nell</div><div class="says"><p>&hellip;I know.</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>You did something considerably worse. Say the rules back to me while I draw it.</p>
-  </div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Sound. Every dot we drew is a dot we were allowed to draw &mdash; we only drew allowed ones, so yes.</p>
-    <p>Complete. Is any column empty? We drew <em>everything</em>. No.</p>
-    <p>Symmetric. We drew every allowed dot, and the mirror of an allowed dot is allowed. So yes.</p>
-  </div></div>
-
-  <div class="line"><div class="who p">Popovich</div><div class="says"><p>It passes.</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>It passes. Now look at it.</p></div></div>
-
-  <figure>
-    <div class="plate"><img src="__S5__" alt="Two rings side by side at radius 25, the left one a thin circle of 140 dots and the right one 168 dots with the extra ones in red, making the rim visibly lumpy and several dots thick" /></div>
-    <figcaption><span class="pn">Fig. 1 &middot; screen</span><span class="pt">Both obey Sound, Complete and Symmetric. The red dots break no rule anyone wrote down. At radius twenty-five the rim reaches five dots thick.</span></figcaption>
-  </figure>
-
-  <div class="line"><div class="who">Ralphie</div><div class="says"><p>That's not a circle. That's a stripe.</p></div></div>
-
-  <div class="line"><div class="beat">(And then, before anyone answers him, Ralphie again &mdash; louder, because he thinks he has caught her out.)</div></div>
-
-  <div class="line"><div class="who">Ralphie</div><div class="says">
-    <p>Hang on. That can't be right at all. We <em>proved</em> yesterday there's only ever one nearest dot. I proved it. So how are there <em>five</em> of them stacked up in that column?</p>
-  </div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p><span class="stage">(genuinely pleased)</span> Good. Hold on to being annoyed for a second and read me the first rule off the board. Not what it means. What it <em>says</em>.</p>
-  </div></div>
-
-  <div class="line"><div class="beat">(Popovich reads it twice before he answers.)</div></div>
-
-  <div class="line"><div class="who p">Popovich</div><div class="says"><p>&hellip;That the dot is near enough.</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Near enough. So take the column Ralphie is shouting about &mdash; the one at the far side, twenty-five across. Target is six hundred and twenty-five.</p>
-  </div></div>
-
-  <div class="line"><div class="out">x = 25          total     away from 625
-   y = 1          626              1     <- nearest
-   y = 2          629              4
-   y = 3          634              9
-   y = 4          641             16
-   y = 5          650             25
-
-   all five inside the band.  all five allowed.</div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Five dots pass. And exactly one of them is <em>nearest</em> &mdash; the one that is one away &mdash; and there is no argument about which, because Ralphie settled that yesterday with odd and even.</p>
-    <p>Both things are true at once. There is always exactly one nearest dot. And <em>nearest is not what we asked for.</em></p>
-  </div></div>
-
-  <div class="line"><div class="beat">(Ralphie opens his mouth and shuts it.)</div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Popovich. What did you actually say, on the first day, when I asked how to pick a dot?</p>
-  </div></div>
-
-  <div class="line"><div class="who p">Popovich</div><div class="says"><p>Take the nearest one.</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p><em>Near enough.</em> You said <em>nearest</em> and we wrote down <em>near enough</em>, and those are not the same sentence. One of them picks a dot. The other one hands out permission slips.</p>
-    <p>Nell's stripe walked straight through the gap between them.</p>
-  </div></div>
-
-  <div class="line"><div class="keybox"><span class="lbl">What a specification is for</span><p>Nobody made a mistake yesterday. Every rule we wrote is true, and the program we checked really does obey them. What we got wrong was <span class="exact">weaker than what we meant</span> &mdash; and you cannot see that by staring at it. You see it when something obeys the rules and is obviously wrong.</p><p>That is the whole job. Not catching a liar. Catching yourself.</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>So. Fourth rule. Nell, it's yours, say it.</p></div></div>
-
-  <div class="line"><div class="who n">Nell</div><div class="says">
-    <p>For every column, keep the dot whose total is closest to the target. Not one that's close. The closest one.</p>
-  </div></div>
-
-  <div class="line"><div class="code spec">
-    <span class="attrib">The fourth rule</span>
-<pre><span class="cm">\* it did not merely use allowed dots. in each column it</span>
-<span class="cm">\* used the BEST one. this is what we meant all along.</span>
-Nearest(drawn) == \A x \in -R..R : \A y \in -R..R :
-                    &lt;&lt;x, y&gt;&gt; \in drawn =&gt;
-                      \A z \in -R..R :
-                        Gap(x, y) =&lt; Gap(x, z)</pre>
-  </div></div>
-
-  <div class="line"><div class="beat">(Popovich is looking at the top of the board, where the tie rule has been sitting since yesterday.)</div></div>
-
-  <div class="line"><div class="who p">Popovich</div><div class="says">
-    <p>That's what Ralphie's one was for.</p>
-  </div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p><span class="stage">(quietly)</span> That is what it was for.</p>
-    <p>It sat up there for a day guarding a rule we had not written. It said &ldquo;there is exactly one nearest dot&rdquo; when nothing underneath it had ever used the word. That was the specification telling us, out loud, that it was short a rule &mdash; and we all read it and none of us heard it.</p>
-    <p>Now it has something to protect. <em>Nearest</em> only names a dot because Ralphie proved it does.</p>
-  </div></div>
-
-  <div class="line"><div class="who">Ralphie</div><div class="says"><p><span class="stage">(to nobody)</span> I said it was important.</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>You did. <span class="stage">(beat)</span> And add that rule and the stripe dies on the spot &mdash; every red dot on that screen has a better dot sitting in its own column.</p>
-  </div></div>
-
-  <div class="line"><div class="who">Ralphie</div><div class="says">
-    <p>That's not <em>fair</em> though. She wasn't even trying to break it. She just didn't do the last bit.</p>
-  </div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p><span class="stage">(immediately)</span> Yes. Write that down, all of you, that is the actual lesson and Ralphie has just said it out loud without meaning to.</p>
-  </div></div>
-
-  <div class="line"><div class="keybox"><span class="lbl">Who breaks a rule</span><p>Nell was not attacking the rules. She was <span class="exact">obeying</span> them, carefully, having not understood the part we never wrote down. That is who finds the hole &mdash; not somebody clever trying to get round you, but somebody doing exactly what you said and nothing more.</p><p>You cannot defend against that by being cleverer. Only by saying what you meant.</p></div></div>
-
-  <div class="line"><div class="beat">(Ralphie looks like he wants to argue, and works out that he agrees.)</div></div>
-</section>
 
 <!-- 05 -->
 <section>
-  <h2><span class="n">02</span> The dots that land perfectly</h2>
+  <h2><span class="n">01</span> The dots that land perfectly</h2>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
     <p>Back to Ralphie's twelve. Most dots on our ring are near-misses &mdash; off by a bit, under half. But some land <span class="exact">dead on</span>. Ralphie found six-eight-ten without knowing what he had. What did you have, Ralphie?</p>
@@ -1325,7 +1134,7 @@ Nearest(drawn) == \A x \in -R..R : \A y \in -R..R :
 
   <figure>
     <div class="boardshot"><img src="__B8__" alt="The radius 5 ring with its twelve exactly-landing dots marked, and a 3-4-5 triangle drawn from the centre to one of them" /></div>
-    <figcaption><span class="pn hand">Fig. 2 &middot; board</span><span class="pt">Radius five, worked by hand. Twelve dots land perfectly, and eight of them are the same 3-4-5 triangle turned around.</span></figcaption>
+    <figcaption><span class="pn hand">Fig. 1 &middot; board</span><span class="pt">Radius five, worked by hand. Twelve dots land perfectly, and eight of them are the same 3-4-5 triangle turned around.</span></figcaption>
   </figure>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
@@ -1346,12 +1155,12 @@ Nearest(drawn) == \A x \in -R..R : \A y \in -R..R :
 
   <figure>
     <div class="plate"><img src="__S3__" alt="Three rings side by side at radii 5, 25 and 65, with the exactly-landing dots picked out in gold: twelve, twenty and thirty-six of them" /></div>
-    <figcaption><span class="pn">Fig. 3 &middot; screen</span><span class="pt">Five, twenty-five, sixty-five. The gold dots land perfectly. A radius is lucky when it carries several whole-number triangles at once.</span></figcaption>
+    <figcaption><span class="pn">Fig. 2 &middot; screen</span><span class="pt">Five, twenty-five, sixty-five. The gold dots land perfectly. A radius is lucky when it carries several whole-number triangles at once.</span></figcaption>
   </figure>
 
   <figure>
     <div class="plate"><img src="__P2__" alt="Circle of radius 25 in blue dots with twenty gold dots marking the points that land exactly on the radius" /></div>
-    <figcaption><span class="pn">Fig. 4 &middot; screen</span><span class="pt">Radius 25. The blue dots are nearest-fits. The <span style="color:var(--gold);font-weight:600">gold</span> ones land perfectly &mdash; twenty of them, because 25 is a lucky radius that carries two different whole-number triangles. Sixty-five is luckier still, with four.</span></figcaption>
+    <figcaption><span class="pn">Fig. 3 &middot; screen</span><span class="pt">Radius 25. The blue dots are nearest-fits. The <span style="color:var(--gold);font-weight:600">gold</span> ones land perfectly &mdash; twenty of them, because 25 is a lucky radius that carries two different whole-number triangles. Sixty-five is luckier still, with four.</span></figcaption>
   </figure>
 
   <div class="line"><div class="who p">Popovich</div><div class="says">
@@ -1376,7 +1185,7 @@ Nearest(drawn) == \A x \in -R..R : \A y \in -R..R :
 
 <!-- 05 -->
 <section>
-  <h2><span class="n">03</span> How much room is inside</h2>
+  <h2><span class="n">02</span> How much room is inside</h2>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
     <p>Last thing today, and it's the one I'd keep if they made me throw the rest out.</p>
@@ -1391,7 +1200,7 @@ Nearest(drawn) == \A x \in -R..R : \A y \in -R..R :
 
   <figure>
     <div class="plate"><img src="__P3__" alt="A filled disk of 317 blue lattice dots at radius 10" /></div>
-    <figcaption><span class="pn">Fig. 5 &middot; screen</span><span class="pt">Radius 10. Three hundred and seventeen dots. You can count them by hand in about four minutes, and two students in every class always do.</span></figcaption>
+    <figcaption><span class="pn">Fig. 4 &middot; screen</span><span class="pt">Radius 10. Three hundred and seventeen dots. You can count them by hand in about four minutes, and two students in every class always do.</span></figcaption>
   </figure>
 
   <div class="line"><div class="beat">(Four minutes. Ralphie finishes first and is wrong. Popovich finishes second and isn't.)</div></div>
@@ -1464,7 +1273,7 @@ Nearest(drawn) == \A x \in -R..R : \A y \in -R..R :
 
   <figure>
     <div class="boardshot"><img src="__B9__" alt="The disk of dots at radius 10 with four columns picked out and their heights measured as 17, 21, 17 and 9" /></div>
-    <figcaption><span class="pn hand">Fig. 6 &middot; board</span><span class="pt">What Popovich did instead. You never look at a dot: you measure how tall each column is and add the heights.</span></figcaption>
+    <figcaption><span class="pn hand">Fig. 5 &middot; board</span><span class="pt">What Popovich did instead. You never look at a dot: you measure how tall each column is and add the heights.</span></figcaption>
   </figure>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
@@ -1492,7 +1301,7 @@ Nearest(drawn) == \A x \in -R..R : \A y \in -R..R :
 
   <figure>
     <div class="plate"><img src="__S4__" alt="A line chart of dots inside divided by radius squared, dropping from above 3.2 and settling onto a dashed line marked pi" /></div>
-    <figcaption><span class="pn">Fig. 7 &middot; screen</span><span class="pt">The same table, drawn. It is not creeping towards &pi; by luck &mdash; counting dots is what &pi; <em>is</em>.</span></figcaption>
+    <figcaption><span class="pn">Fig. 6 &middot; screen</span><span class="pt">The same table, drawn. It is not creeping towards &pi; by luck &mdash; counting dots is what &pi; <em>is</em>.</span></figcaption>
   </figure>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
@@ -1504,7 +1313,7 @@ Nearest(drawn) == \A x \in -R..R : \A y \in -R..R :
 
 <!-- 06 -->
 <section>
-  <h2><span class="n">04</span> The bell</h2>
+  <h2><span class="n">03</span> The bell</h2>
 
   <div class="line"><div class="who">Ralphie</div><div class="says"><p>How many digits <em>do</em> you need?</p></div></div>
 
@@ -1595,7 +1404,7 @@ for k, f in [('__P1__','p1_circle.png'), ('__P2__','p2_exact.png'), ('__P3__','p
              ('__B8__','board_08_lucky5.png'), ('__B9__','board_09_columns.png'),
              ('__S1__','s1_sabotage.png'), ('__S2__','s2_where_it_bites.png'),
              ('__S3__','s3_lucky.png'), ('__S4__','s4_counting_pi.png'), ('__B10__','board_10_pile.png'),
-             ('__B11__','board_11_tiework.png'), ('__S5__','s5_the_band.png')]:
+             ('__B11__','board_11_tiework.png')]:
     DOC1 = DOC1.replace(k, img(f))
     DOC2 = DOC2.replace(k, img(f))
 # Canonical output is docs/index.html, which is what GitHub Pages serves.
