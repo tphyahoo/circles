@@ -677,229 +677,9 @@ inside the band:  624 of 624</div></div>
   </div></div>
 </section>
 
-<!-- 04 -->
-<section>
-  <h2><span class="n">04</span> Checking it without reading it</h2>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Before we go on I am going to cheat, and I want you to watch me do it.</p>
-    <p>Here is the middle of that program, twice. The eight mirrors are identical in both so I have left them out. One of these is what you copied down five minutes ago. The other one <em>I broke this morning</em>, before any of you came in, by changing a single number.</p>
-  </div></div>
-
-  <div class="line"><div class="who">Ralphie</div><div class="says"><p>Which number?</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>That's the homework for the next three minutes. Find the broken one. By reading it.</p></div></div>
-
-  <div class="line"><div class="codepair">
-    <div class="code">
-      <span class="attrib">Program A</span>
-<pre><span class="kw">while</span> x &lt;= y:
-    plot the eight
-    mirrors of (x, y)
-
-    <span class="kw">if</span> d &lt; 0:
-        d = d + 4*x + 6
-    <span class="kw">else</span>:
-        d = d + 4*(x - y) + 10
-        y = y - 1
-    x = x + 1</pre>
-    </div>
-    <div class="code">
-      <span class="attrib">Program B</span>
-<pre><span class="kw">while</span> x &lt;= y:
-    plot the eight
-    mirrors of (x, y)
-
-    <span class="kw">if</span> d &lt; 0:
-        d = d + 4*x + 4
-    <span class="kw">else</span>:
-        d = d + 4*(x - y) + 10
-        y = y - 1
-    x = x + 1</pre>
-    </div>
-  </div></div>
-
-  <div class="line"><div class="beat">(Three minutes. Somebody guesses the 10. Somebody guesses the minus sign. Both wrong.)</div></div>
-
-  <div class="line"><div class="who">Ralphie</div><div class="says"><p>They look the same.</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>They do look the same. And I want to be honest with you about why, because it is not that you are bad at looking.</p>
-    <p>Ask yourself what the <span class="m">6</span> is <em>for</em>. Not what it does to the running number &mdash; why is it a six. Anyone.</p>
-  </div></div>
-
-  <div class="line"><div class="beat">(Nothing. Ralphie turns back a page in his book and finds nothing there either.)</div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Nobody knows, and I barely know. It fell out of the algebra. It is a correct number and it is a completely opaque one, and there are three more like it on that board.</p>
-    <p>So reading was never going to work. Not because the difference is small &mdash; because you have nothing to check it <em>against</em>. You cannot tell a right six from a wrong six by looking at a six.</p>
-  </div></div>
-
-  <div class="line"><div class="who p">Popovich</div><div class="says"><p>So what do we check it against?</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p><span class="stage">(turning the board over)</span> The circle. Stop reading the program and write down three things that are true of a circle &mdash; not of a program, of the <em>circle</em> &mdash; and then we can ask whether either of those piles of dots is one.</p>
-  </div></div>
-
-  <div class="line"><div class="code spec">
-    <span class="attrib">Three things that are true of it</span>
-<pre><span class="cm">\* it only drew dots that were allowed</span>
-Sound(drawn)     == drawn \subseteq Circle
-
-<span class="cm">\* it left no column empty</span>
-Complete(drawn)  == \A x \in -R..R : \E p \in drawn : p[1] = x
-
-<span class="cm">\* whatever it drew, it drew all eight mirrors of</span>
-Symmetric(drawn) == \A p \in drawn : Mirrors(p) \subseteq drawn
-
-Correct(drawn)   == Sound(drawn) /\ Complete(drawn) /\ Symmetric(drawn)</pre>
-  </div></div>
-
-  <div class="line"><div class="who">Ralphie</div><div class="says"><p>Mine isn't in there.</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>Which one is yours?</p></div></div>
-
-  <div class="line"><div class="who">Ralphie</div><div class="says">
-    <p>The tie one. That there's never two dots equally near. We <em>proved</em> that and it's not written down anywhere.</p>
-  </div></div>
-
-  <div class="line"><div class="beat">(Mrs. Feeney reads her own three rules again, slowly.)</div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>No, it is not, and that is a fair complaint. But before you write it in &mdash; look at where you would put it. Read the three you have and tell me what they are all about.</p>
-  </div></div>
-
-  <div class="line"><div class="who p">Popovich</div><div class="says">
-    <p>They're all about the drawing. What it drew, what it left out, whether it mirrored properly.</p>
-  </div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>And Ralphie's?</p></div></div>
-
-  <div class="line"><div class="beat">(Ralphie opens his mouth, then doesn't.)</div></div>
-
-  <div class="line"><div class="who p">Popovich</div><div class="says">
-    <p>His isn't about the drawing at all. There's no program in it. It's about the dots.</p>
-  </div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>His is about the dots themselves, not about anybody's drawing &mdash; so it does not sit alongside the other three. It sits above them.</p>
-    <p>Everything we have done today rests on the words <em>the nearest one</em>. If two dots could tie there is no such thing as the nearest one, and every rule underneath would be pointing at a dot that might not exist. Ralphie has just shown that cannot happen.</p>
-  </div></div>
-
-  <div class="line"><div class="code spec">
-    <span class="attrib">Added, above the other three</span>
-<pre><span class="cm">\* not about any drawing. about whether "the nearest"</span>
-<span class="cm">\* names anything at all.</span>
-NoTies == \A x \in -R..R : \A y \in -R..R :
-            LET Q1 == x*x + y*y
-                Q2 == x*x + (y+1)*(y+1)
-            IN  Q1 + Q2 # 2*R*R</pre>
-  </div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>And note the order we did that in. Ralphie did not write it down and then wonder whether it was true. He settled it with odd and even, at his desk, twenty minutes ago &mdash; and <em>then</em> we wrote it where a machine can keep checking it.</p>
-    <p>That is the right way round, and it is the opposite of what most people do.</p>
-  </div></div>
-
-  <div class="line"><div class="who">Ralphie</div><div class="says"><p>Both fine. I checked them at ten.</p></div></div>
-
-  <div class="line"><div class="out">R = 10
-program A:  Correct
-program B:  Correct</div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>You checked them at ten. Check them at everything.</p>
-  </div></div>
-
-  <div class="line"><div class="out">R = 3 to 120
-program A:  Correct at all 118
-program B:  FAILS at 103 of 118 — always Sound; it drew a dot that was not allowed
-            passes at 3, 4, 5, 6, 7, 9, 10, 11, 13, 17, 18, 19, 28, 31 …</div></div>
-
-  <figure>
-    <div class="plate"><img src="__S2__" alt="A strip of 118 bars, one per radius, red where the sabotaged program is caught and blue where it passes, with radius 13 marked in gold" /></div>
-    <figcaption><span class="pn">Fig. 10 &middot; screen</span><span class="pt">One bar per radius from 3 to 120. Red is caught, blue passes. The gold marker is ten, sitting comfortably among the radii where the broken program looks perfect.</span></figcaption>
-  </figure>
-
-  <div class="line"><div class="beat">(Ralphie looks at the 10 in his own list of passing radii for a while.)</div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>The <span class="m">6</span> in program B is a <span class="m">4</span>. None of you were ever going to see that by reading, and it did not matter, because you had written down what must be true.</p>
-
-  <figure>
-    <div class="plate"><img src="__S1__" alt="Two circles side by side at radius 8, the right-hand one with eight dots circled in red where they fall outside what the definition allows" /></div>
-    <figcaption><span class="pn">Fig. 11 &middot; screen</span><span class="pt">Radius eight, where the sabotage does bite. Eight of program B&rsquo;s dots sit outside the permitted band &mdash; and they are not visibly out of place until something checks them.</span></figcaption>
-  </figure>
-    <p>But look at what nearly happened. The broken program is wrong at a hundred and three radii out of a hundred and eighteen, and it is <em>right at ten</em> &mdash; the number that has been on this board since the first minute of the first lesson. Ralphie tested it once and it told him everything was fine.</p>
-  </div></div>
-
-  <div class="line"><div class="keybox"><span class="lbl">Checking one case is not checking</span><p>A wrong program is not wrong everywhere. It is wrong <em>somewhere</em>, and it will be perfectly well behaved on the example you happen to try &mdash; especially if you picked that example because it was the one you understood.</p></div></div>
-
-  <div class="line"><div class="who p">Popovich</div><div class="says"><p>So we don't have to understand the program.</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>You have to understand the <em>circle</em>. The program is one person's trick for finding it. Tricks are cheap and there are dozens of them. Knowing what the answer looks like is not.</p>
-  </div></div>
-
-  <div class="line"><div class="beat">(Ralphie has been typing this whole time and now looks alarmed.)</div></div>
-
-  <div class="line"><div class="who">Ralphie</div><div class="says">
-    <p>Mrs. Feeney, I added a fourth rule and now the <em>good</em> program fails.</p>
-  </div></div>
-
-  <div class="line"><div class="code spec">
-    <span class="attrib">Ralphie's fourth condition</span>
-<pre><span class="cm">\* each column's dot sits at the whole-number part of</span>
-<span class="cm">\* the square root. seems obvious enough.</span>
-Tidy(drawn) == \A x \in -R..R :
-                 &lt;&lt;x, WholePartOfSqrt(R*R - x*x)&gt;&gt; \in drawn</pre>
-  </div></div>
-
-  <div class="line"><div class="out">program A:  FAILS at R = 3 — Tidy is false</div></div>
-
-  <div class="line"><div class="who">Ralphie</div><div class="says"><p>So program A is broken after all? At <em>three</em>?</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p><span class="stage">(very pleased, and hiding it badly)</span> Maybe. Or your rule is broken. Which is it?</p>
-  </div></div>
-
-  <div class="line"><div class="who">Ralphie</div><div class="says"><p>&hellip;How would I even tell?</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>The same way we settle everything in here. Go count one by hand.</p>
-  </div></div>
-
-  <div class="line"><div class="who p">Popovich</div><div class="says">
-    <p><span class="stage">(already doing it)</span> Three is too cramped to see anything. Do thirteen.</p>
-    <p>Column eleven. Thirteen squared is one sixty-nine. Take off a hundred and twenty-one and you want forty-eight.</p>
-    <p>Six squared is thirty-six &mdash; that's twelve short. Seven squared is forty-nine &mdash; that's one over. So it's <em>seven</em>, and it isn't close.</p>
-    <p>Your rule chops it down to six. It rounds the wrong way, and it has been rounding the wrong way since three.</p>
-  </div></div>
-
-  <div class="line"><div class="beat">(Ralphie stares at his screen for a second.)</div></div>
-
-  <figure>
-    <div class="boardshot"><img src="__B7__" alt="Column 11 of the radius 13 ring, showing 121 plus 49 equals 170 for the dot at 7 and 121 plus 36 equals 157 for the dot at 6, against a target of 169" /></div>
-    <figcaption><span class="pn hand">Fig. 12 &middot; board</span><span class="pt">Popovich settling it by hand. The target is 169. The dot at 7 gives 170, one over; the dot at 6 gives 157, twelve under. Ralphie&rsquo;s rule demanded the 6.</span></figcaption>
-  </figure>
-
-  <div class="line"><div class="who">Ralphie</div><div class="says"><p>My rule was wrong. Not the program.</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Your rule was wrong. And this is the part I want you to remember longer than anything else today.</p>
-  </div></div>
-
-  <div class="line"><div class="keybox"><span class="lbl">Rules are claims too</span><p>A rule that says what must be true is itself a thing that might be false. It can be wrong in exactly the confident, plausible-looking way a program can be wrong &mdash; and it will happily accuse a correct program of being broken.</p><p>So a rule has to answer to something outside itself: <span class="exact">a case you worked out by hand.</span> Thirteen and eleven, and thirty-six against forty-nine. That is why we counted three hundred and seventeen dots one at a time before we trusted anything.</p></div></div>
-
-  <div class="line"><div class="who p">Popovich</div><div class="says"><p>So we check the program with the rules, and the rules with the counting.</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>All the way down. Yes.</p></div></div>
-</section>
-
-
 <!-- the bell -->
 <section>
-  <h2><span class="n">05</span> The bell</h2>
+  <h2><span class="n">04</span> The bell</h2>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
     <p>Two minutes. Look at where we started.</p>
@@ -909,8 +689,8 @@ Tidy(drawn) == \A x \in -R..R :
   <div class="line"><div class="beat">(Nobody says anything. The board is covered.)</div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>We have one now. We know it is never wrong by more than half a unit, and we know that at every size, for ever. We know the rule that finds it never gets stuck, and we know <em>that</em> because Ralphie proved it with odd and even, not because I told you.</p>
-    <p>And we have three sentences that will catch a program lying to us &mdash; including one that lies extremely well at ten.</p>
+    <p>We have one now. We know it is never wrong by more than half a unit, and we know that at every size. We know the rule that finds it never gets stuck, and we know <em>that</em> because Ralphie proved it with odd and even, not because I told you.</p>
+    <p>And none of it came from measuring anything.</p>
   </div></div>
 
   <div class="line"><div class="who p">Popovich</div><div class="says">
@@ -1454,7 +1234,7 @@ for k, f in [('__P1__','p1_circle.png'), ('__P2__','p2_exact.png'), ('__P3__','p
              ('__B3__','board_03_halfdot.png'), ('__B4__','board_04_nearest.png'),
              ('__B5__','board_05_mirrors.png'), ('__B6__','board_06_squares.png'), ('__B7__','board_07_badrule.png'),
              ('__B8__','board_08_lucky5.png'), ('__B9__','board_09_columns.png'),
-             ('__S1__','s1_sabotage.png'), ('__S2__','s2_where_it_bites.png'),
+             ('__S2__','s2_where_it_bites.png'),
              ('__S3__','s3_lucky.png'), ('__S4__','s4_counting_pi.png'), ('__B10__','board_10_pile.png'),
              ('__B11__','board_11_tiework.png')]:
     DOC1 = DOC1.replace(k, img(f))
