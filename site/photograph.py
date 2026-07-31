@@ -20,8 +20,8 @@ import matplotlib.pyplot as plt
 import board_program
 
 BG   = '#0D1117'
-PLAIN = '#39424B'
-RED   = '#F85149'
+PLAIN = '#2B333B'
+RED   = '#FF5A4E'
 OUT   = pathlib.Path(__file__).resolve().parent / 'plates'
 
 ANSI = re.compile(r'\033\[(\d+)m')
@@ -47,13 +47,17 @@ def capture(r):
     return lines
 
 
-def photograph(r, name, cell=0.055):
+def photograph(r, name, width_in=7.0):
     lines = capture(r)
     rows = len(lines)
     cols = max(len(l) for l in lines)
 
-    # a terminal cell is about twice as tall as it is wide
-    fig_w, fig_h = cols * cell, rows * cell * 2
+    # Fixed output width. A big grid rendered at its "natural" character size
+    # produces a huge canvas with three-pixel dots, which reads as an empty box.
+    # A terminal cell is about twice as tall as it is wide, so two characters
+    # per lattice column comes out square.
+    cell = width_in / cols
+    fig_w, fig_h = width_in, rows * cell * 2
     fig = plt.figure(figsize=(fig_w, fig_h), facecolor=BG)
     ax = fig.add_axes([0, 0, 1, 1]); ax.set_facecolor(BG); ax.axis('off')
     ax.set_xlim(0, cols); ax.set_ylim(0, rows)
@@ -65,12 +69,14 @@ def photograph(r, name, cell=0.055):
                 continue
             (xs_r if is_red else xs_p).append(col + .5)
             (ys_r if is_red else ys_p).append(rows - row - .5)
-    size = max(1.0, 260 / rows)
-    ax.scatter(xs_p, ys_p, s=size, marker='.', color=PLAIN, edgecolors='none')
-    ax.scatter(xs_r, ys_r, s=size * 1.7, marker='.', color=RED, edgecolors='none')
+    # size the marks from the cell, so the ring stays legible at any radius:
+    # red dots just touching, grid dots a third of that
+    pt = cell * 72.0
+    ax.scatter(xs_p, ys_p, s=(pt * .38) ** 2, marker='.', color=PLAIN, edgecolors='none')
+    ax.scatter(xs_r, ys_r, s=(pt * 1.15) ** 2, marker='.', color=RED, edgecolors='none')
 
     OUT.mkdir(exist_ok=True)
-    fig.savefig(OUT / name, facecolor=BG, dpi=150, bbox_inches='tight', pad_inches=.1)
+    fig.savefig(OUT / name, facecolor=BG, dpi=140, bbox_inches='tight', pad_inches=.12)
     plt.close(fig)
     return rows, cols, len(xs_r)
 
