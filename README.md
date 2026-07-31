@@ -1,7 +1,11 @@
 # circles
 
 **Work in progress.** One eighth-grade maths lesson, its specification, and the checking
-that produced both. Put here to be safe rather than to be read.
+that produced both.
+
+### → [Read the lesson](https://tphyahoo.github.io/circles/)
+
+(GitHub shows HTML as source, so the link above goes to the rendered page.)
 
 ---
 
@@ -58,7 +62,10 @@ through calculus. That is a map of a territory, not a commitment to walk it.
 
 ## Reading it
 
-The lesson is a single self-contained HTML file: `site/day-one-circles.html`.
+The lesson is a single self-contained HTML file, served at
+[tphyahoo.github.io/circles](https://tphyahoo.github.io/circles/) and built to
+`docs/index.html`. Everything is inlined, including the figures, so the file works
+offline and from disk.
 
 To rebuild everything from source, from `site/`:
 

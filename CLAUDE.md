@@ -15,8 +15,8 @@ plotter and the earlier writing.
 
 | Path | What |
 |---|---|
-| `site/day-one-circles.html` | **The lesson.** Published page. Never edit directly — it is generated. |
-| `site/build_v2.py` | Generates that page. Edit this. Images inline as base64 from `site/plates/`. |
+| `docs/index.html` | **The lesson.** Generated — never edit directly. This is what GitHub Pages serves. |
+| `site/build_v2.py` | Generates `docs/index.html`. Edit this. Images inline as base64 from `site/plates/`. |
 | `site/board.py` | The **board** figures — Mrs. Feeney's whiteboard. Writes into `plates/`. |
 | `site/screen.py` | The **screen** figures — projector output. Writes into `plates/`. |
 | `site/Circle.tla` | The blueprint: what a circle *is*, plus `NoTies`. Literate; read its header. |
@@ -42,10 +42,14 @@ from `site/`.
 
 ### Publishing
 
-The live page is https://claude.ai/code/artifact/fac3d388-297f-4604-a7ef-e66563567d6e
+Two published copies, and they are different things:
 
-To update it from a **new session**, call Artifact with `site/day-one-circles.html` **and
-pass that URL as `url`**. Without the `url` parameter a fresh conversation mints a brand
+- **GitHub Pages** — https://tphyahoo.github.io/circles/ — served from `docs/index.html`
+  on every push to `main`. This is the public one. Nothing to do but push.
+- **Claude artifact** — https://claude.ai/code/artifact/fac3d388-297f-4604-a7ef-e66563567d6e
+
+To update it from a **new session**, call Artifact with `docs/index.html` **and pass that
+URL as `url`**. Without the `url` parameter a fresh conversation mints a brand
 new artifact and the link above goes stale — the original was published from a
 session-scoped scratchpad path that no longer exists.
 

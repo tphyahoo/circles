@@ -1101,6 +1101,7 @@ for k, f in [('__P1__','p1_circle.png'), ('__P2__','p2_exact.png'), ('__P3__','p
              ('__S3__','s3_lucky.png'), ('__S4__','s4_counting_pi.png'), ('__B10__','board_10_pile.png'),
              ('__B11__','board_11_tiework.png')]:
     HTML = HTML.replace(k, img(f))
-out = HERE / 'day-one-circles.html'
+# Canonical output is docs/index.html, which is what GitHub Pages serves.
+out = HERE.parent / 'docs' / 'index.html'
 out.write_text(HTML)
 print('wrote', out, f'{out.stat().st_size/1024:.0f} KB')
