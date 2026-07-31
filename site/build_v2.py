@@ -1191,18 +1191,45 @@ DOC2 = r"""<title>Honors Math, Period 3 — Day Three: Counting</title>
 
   <div class="line"><div class="who">Ralphie</div><div class="says"><p>That's not a circle. That's a stripe.</p></div></div>
 
+  <div class="line"><div class="beat">(And then, before anyone answers him, Ralphie again &mdash; louder, because he thinks he has caught her out.)</div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says">
+    <p>Hang on. That can't be right at all. We <em>proved</em> yesterday there's only ever one nearest dot. I proved it. So how are there <em>five</em> of them stacked up in that column?</p>
+  </div></div>
+
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>It is a stripe, and it is a stripe that obeys every single thing we wrote down yesterday. So we did not write down what we meant.</p>
+    <p><span class="stage">(genuinely pleased)</span> Good. Hold on to being annoyed for a second and read me the first rule off the board. Not what it means. What it <em>says</em>.</p>
+  </div></div>
+
+  <div class="line"><div class="beat">(Popovich reads it twice before he answers.)</div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says"><p>&hellip;That the dot is near enough.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Near enough. So take the column Ralphie is shouting about &mdash; the one at the far side, twenty-five across. Target is six hundred and twenty-five.</p>
+  </div></div>
+
+  <div class="line"><div class="out">x = 25          total     away from 625
+   y = 1          626              1     <- nearest
+   y = 2          629              4
+   y = 3          634              9
+   y = 4          641             16
+   y = 5          650             25
+
+   all five inside the band.  all five allowed.</div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Five dots pass. And exactly one of them is <em>nearest</em> &mdash; the one that is one away &mdash; and there is no argument about which, because Ralphie settled that yesterday with odd and even.</p>
+    <p>Both things are true at once. There is always exactly one nearest dot. And <em>nearest is not what we asked for.</em></p>
+  </div></div>
+
+  <div class="line"><div class="beat">(Ralphie opens his mouth and shuts it.)</div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
     <p>Popovich. What did you actually say, on the first day, when I asked how to pick a dot?</p>
   </div></div>
 
   <div class="line"><div class="who p">Popovich</div><div class="says"><p>Take the nearest one.</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>And what does our first rule say?</p></div></div>
-
-  <div class="line"><div class="beat">(Popovich reads it off the board twice before he answers.)</div></div>
-
-  <div class="line"><div class="who p">Popovich</div><div class="says"><p>&hellip;That it's near enough.</p></div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
     <p><em>Near enough.</em> You said <em>nearest</em> and we wrote down <em>near enough</em>, and those are not the same sentence. One of them picks a dot. The other one hands out permission slips.</p>
