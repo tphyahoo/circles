@@ -749,14 +749,14 @@ NoTies == \A x \in -R..R : \A y \in -R..R :
     <p>That is the right way round, and it is the opposite of what most people do.</p>
   </div></div>
 
-  <div class="line"><div class="who">Ralphie</div><div class="says"><p>Both fine. I checked them at thirteen.</p></div></div>
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>Both fine. I checked them at ten.</p></div></div>
 
-  <div class="line"><div class="out">R = 13
+  <div class="line"><div class="out">R = 10
 program A:  Correct
 program B:  Correct</div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>You checked them at thirteen. Check them at everything.</p>
+    <p>You checked them at ten. Check them at everything.</p>
   </div></div>
 
   <div class="line"><div class="out">R = 3 to 120
@@ -766,10 +766,10 @@ program B:  FAILS at 103 of 118 — always Sound; it drew a dot that was not all
 
   <figure>
     <div class="plate"><img src="__S2__" alt="A strip of 118 bars, one per radius, red where the sabotaged program is caught and blue where it passes, with radius 13 marked in gold" /></div>
-    <figcaption><span class="pn">Fig. 10 &middot; screen</span><span class="pt">One bar per radius from 3 to 120. Red is caught, blue passes. The gold marker is thirteen, sitting comfortably among the radii where the broken program looks perfect.</span></figcaption>
+    <figcaption><span class="pn">Fig. 10 &middot; screen</span><span class="pt">One bar per radius from 3 to 120. Red is caught, blue passes. The gold marker is ten, sitting comfortably among the radii where the broken program looks perfect.</span></figcaption>
   </figure>
 
-  <div class="line"><div class="beat">(Ralphie looks at the 13 in his own list of passing radii for a while.)</div></div>
+  <div class="line"><div class="beat">(Ralphie looks at the 10 in his own list of passing radii for a while.)</div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
     <p>The <span class="m">6</span> in program B is a <span class="m">4</span>. None of you were ever going to see that by reading, and it did not matter, because you had written down what must be true.</p>
@@ -778,7 +778,7 @@ program B:  FAILS at 103 of 118 — always Sound; it drew a dot that was not all
     <div class="plate"><img src="__S1__" alt="Two circles side by side at radius 8, the right-hand one with eight dots circled in red where they fall outside what the definition allows" /></div>
     <figcaption><span class="pn">Fig. 11 &middot; screen</span><span class="pt">Radius eight, where the sabotage does bite. Eight of program B&rsquo;s dots sit outside the permitted band &mdash; and they are not visibly out of place until something checks them.</span></figcaption>
   </figure>
-    <p>But look at what nearly happened. The broken program is wrong at a hundred and three radii out of a hundred and eighteen, and it is <em>right at thirteen</em>, which is the number we have been using all morning. Ralphie tested it once and it told him everything was fine.</p>
+    <p>But look at what nearly happened. The broken program is wrong at a hundred and three radii out of a hundred and eighteen, and it is <em>right at ten</em> &mdash; the number that has been on this board since the first minute of the first lesson. Ralphie tested it once and it told him everything was fine.</p>
   </div></div>
 
   <div class="line"><div class="keybox"><span class="lbl">Checking one case is not checking</span><p>A wrong program is not wrong everywhere. It is wrong <em>somewhere</em>, and it will be perfectly well behaved on the example you happen to try &mdash; especially if you picked that example because it was the one you understood.</p></div></div>
@@ -837,7 +837,7 @@ Tidy(drawn) == \A x \in -R..R :
     <p>Your rule was wrong. And this is the part I want you to remember longer than anything else today.</p>
   </div></div>
 
-  <div class="line"><div class="keybox"><span class="lbl">Rules are claims too</span><p>A rule that says what must be true is itself a thing that might be false. It can be wrong in exactly the confident, plausible-looking way a program can be wrong &mdash; and it will happily accuse a correct program of being broken.</p><p>So a rule has to answer to something outside itself: <span class="exact">a case you worked out by hand.</span> Thirteen and eleven and six point nine. That is why we counted three hundred and seventeen dots one at a time before we trusted anything.</p></div></div>
+  <div class="line"><div class="keybox"><span class="lbl">Rules are claims too</span><p>A rule that says what must be true is itself a thing that might be false. It can be wrong in exactly the confident, plausible-looking way a program can be wrong &mdash; and it will happily accuse a correct program of being broken.</p><p>So a rule has to answer to something outside itself: <span class="exact">a case you worked out by hand.</span> Thirteen and eleven, and thirty-six against forty-nine. That is why we counted three hundred and seventeen dots one at a time before we trusted anything.</p></div></div>
 
   <div class="line"><div class="who p">Popovich</div><div class="says"><p>So we check the program with the rules, and the rules with the counting.</p></div></div>
 
@@ -858,7 +858,7 @@ Tidy(drawn) == \A x \in -R..R :
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
     <p>We have one now. We know it is never wrong by more than half a unit, and we know that at every size, for ever. We know the rule that finds it never gets stuck, and we know <em>that</em> because Ralphie proved it with odd and even, not because I told you.</p>
-    <p>And we have three sentences that will catch a program lying to us &mdash; including one that lies extremely well at thirteen.</p>
+    <p>And we have three sentences that will catch a program lying to us &mdash; including one that lies extremely well at ten.</p>
   </div></div>
 
   <div class="line"><div class="who p">Popovich</div><div class="says">

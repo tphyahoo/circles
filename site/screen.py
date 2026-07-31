@@ -105,7 +105,7 @@ for r in radii:
     ax.bar(r, 1, width=.92, color=(RED if bad_v[r] else BLUE), edgecolor='none')
 ax.set_yticks([]); ax.set_xlim(2, 121)
 ax.set_xlabel('radius', color=GREY, fontsize=9, family=MONO)
-ax.annotate('13', xy=(13, 1), xytext=(13, 1.9), color=GOLD, fontsize=11, family=MONO,
+ax.annotate('10', xy=(10, 1), xytext=(10, 1.9), color=GOLD, fontsize=11, family=MONO,
             ha='center', arrowprops=dict(arrowstyle='-|>', color=GOLD, lw=1.4))
 ax.set_ylim(0, 2.6)
 n_bad = sum(1 for r in radii if bad_v[r])
@@ -113,7 +113,7 @@ ax.set_title(f'program B, every radius from 3 to 120   ·   '
              f'wrong at {n_bad}   ·   right at {len(radii) - n_bad}',
              color='white', fontsize=11, family=MONO, pad=12)
 fig.text(.5, -.06, 'blue = passes every check.  red = caught.  '
-                   'thirteen is blue, and thirteen is the number we used all lesson.',
+                   'ten is blue, and ten is the number on the board all lesson.',
          color=GREY, fontsize=9.5, family=MONO, ha='center')
 plt.tight_layout()
 save(fig, 's2_where_it_bites.png', dpi=70)
