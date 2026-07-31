@@ -545,7 +545,53 @@ Circle == { p \in Dots :
     <p>Take a column. Try every dot in it. Keep the one whose total misses by least. Then do the next column. Then do it again along the rows, because near the sides a single column holds half the ring and is no use to you.</p>
   </div></div>
 
+  <div class="line"><div class="code">
+    <span class="attrib">On the board</span>
+<pre><span class="kw">def</span> circle(r):
+    dots = set()
+
+    <span class="cm"># every column: try every dot, keep the best</span>
+    <span class="kw">for</span> x <span class="kw">in</span> range(-r, r + 1):
+        best = 0
+        <span class="kw">for</span> y <span class="kw">in</span> range(0, r + 1):
+            <span class="kw">if</span> abs(x*x + y*y - r*r) &lt; abs(x*x + best*best - r*r):
+                best = y
+        dots.add((x, best)); dots.add((x, -best))
+
+    <span class="cm"># then the same along the rows, for the steep sides</span>
+    <span class="kw">for</span> y <span class="kw">in</span> range(-r, r + 1):
+        best = 0
+        <span class="kw">for</span> x <span class="kw">in</span> range(0, r + 1):
+            <span class="kw">if</span> abs(x*x + y*y - r*r) &lt; abs(best*best + y*y - r*r):
+                best = x
+        dots.add((best, y)); dots.add((-best, y))
+
+    <span class="kw">return</span> dots</pre>
+  </div></div>
+
   <div class="line"><div class="who">Ralphie</div><div class="says"><p>That's it? That's just&hellip; trying all of them.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>That is just trying all of them. Nothing in it is clever, nothing in it is hidden, you could do it with a pencil if you had a free afternoon, and it is <em>right</em>. Run it for the one on the screen.</p>
+  </div></div>
+
+  <div class="line"><div class="out">r =  110      624 dots     0.009 seconds</div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>That's not slow at all.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>No. Do two thousand.</p></div></div>
+
+  <div class="line"><div class="out">r =  110      624 dots     0.009 seconds
+r =  500    2,828 dots     0.186 seconds
+r = 1000    5,656 dots     0.754 seconds
+r = 2000   11,312 dots     3.006 seconds</div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says"><p>It's going up four times every time you double it.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Four times every time, and you can see exactly why from the program without timing anything. Double the ring and you get twice as many columns &mdash; and twice as many dots to try in each one. Two twos.</p>
+    <p>So it is not slow because computers are slow. It is slow because <em>trying everything</em> has a shape, and that is the shape.</p>
+  </div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
     <p>That is just trying all of them. It is not clever, nothing in it is hidden, you could do it with a pencil if you had a free afternoon, and it is <em>right</em>.</p>
@@ -561,7 +607,7 @@ Circle == { p \in Dots :
 
   <figure>
     <div class="plate"><img src="__P1__" alt="A circle of radius 110 drawn as blue lattice dots, visually smooth and round" /></div>
-    <figcaption><span class="pn">Fig. 8 &middot; screen</span><span class="pt">Radius 110, found by trying every dot in every column and keeping the best. Six hundred and twenty-four of them, no distance measured anywhere, and no dot more than half a unit off the ring.</span></figcaption>
+    <figcaption><span class="pn">Fig. 8 &middot; screen</span><span class="pt">Radius 110, found by trying every dot in every column and keeping the best. Six hundred and twenty-four of them, and not one more than half a unit off the ring.</span></figcaption>
   </figure>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">

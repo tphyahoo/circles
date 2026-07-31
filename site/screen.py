@@ -191,3 +191,48 @@ fig.text(.5, .015, 'the red dots break no rule we wrote down. at r=25 the rim re
          color=RED, fontsize=10, family=MONO, ha='center')
 plt.tight_layout(rect=[0, .06, 1, .93])
 save(fig, 's5_the_band.png', dpi=70)
+
+
+# ============ the three original plates, which had no generator in the repo ====
+def draw_slowly(r):
+    """The naive method the lesson teaches: try every dot, keep the nearest."""
+    dots = set()
+    for x in range(-r, r + 1):
+        best = 0
+        for y in range(0, r + 1):
+            if abs(x*x + y*y - r*r) < abs(x*x + best*best - r*r): best = y
+        dots |= {(x, best), (x, -best)}
+    for y in range(-r, r + 1):
+        best = 0
+        for x in range(0, r + 1):
+            if abs(x*x + y*y - r*r) < abs(best*best + y*y - r*r): best = x
+        dots |= {(best, y), (-best, y)}
+    return sorted(dots)
+
+# p1 -- the ring at 110
+r = 110; P = draw_slowly(r)
+fig, ax = plt.subplots(figsize=(7, 7), facecolor=BG); style(ax, f'r = {r}   ·   {len(P)} dots')
+ax.scatter([p[0] for p in P], [p[1] for p in P], s=11, color=BLUE, edgecolors='none')
+ax.set_aspect('equal')
+plt.tight_layout(); save(fig, 'p1_circle.png', dpi=64)
+
+# p2 -- which dots land exactly, at 25
+r = 25; P = draw_slowly(r)
+E = [(x, y) for x in range(-r, r+1) for y in range(-r, r+1) if x*x + y*y == r*r]
+fig, ax = plt.subplots(figsize=(7, 7), facecolor=BG)
+style(ax, f'r = {r}   ·   {len(E)} dots land perfectly')
+ax.scatter([p[0] for p in P], [p[1] for p in P], s=26, color=BLUE, alpha=.5,
+           edgecolors='none', label=f'nearest dot ({len(P)})')
+ax.scatter([p[0] for p in E], [p[1] for p in E], s=92, color=GOLD, edgecolors=BG,
+           linewidths=1.2, zorder=3, label=f'lands exactly ({len(E)})')
+ax.legend(facecolor='#161b22', edgecolor=DIM, labelcolor='#c9d1d9', fontsize=9, loc='upper right')
+ax.set_aspect('equal')
+plt.tight_layout(); save(fig, 'p2_exact.png', dpi=64)
+
+# p3 -- the dots inside, at 10
+r = 10; D = [(x, y) for x in range(-r, r+1) for y in range(-r, r+1) if x*x + y*y <= r*r]
+fig, ax = plt.subplots(figsize=(7, 7), facecolor=BG)
+style(ax, f'r = {r}   ·   {len(D)} dots inside   ·   {len(D)}/100 = {len(D)/100}')
+ax.scatter([p[0] for p in D], [p[1] for p in D], s=30, color=BLUE, alpha=.85, edgecolors='none')
+ax.set_aspect('equal')
+plt.tight_layout(); save(fig, 'p3_count.png', dpi=64)
