@@ -614,8 +614,24 @@ r = 2000   11,312 dots     3.006 seconds</div></div>
 
   <figure>
     <div class="plate"><img src="__P4__" alt="The program's printed output: a twenty-five line grid of dots with the ones it kept marked as letter O, forming a clear ring" /></div>
-    <figcaption><span class="pn">Fig. 8 &middot; screen</span><span class="pt">What <span style="font-family:var(--mono)">show(12)</span> prints. Every dot on the sheet, with the ones it kept marked. Shown as a picture only because a browser's idea of how tall a line is would squash it into an egg.</span></figcaption>
+    <figcaption><span class="pn">Fig. 8 &middot; screen</span><span class="pt">What <span style="font-family:var(--mono)">show(12)</span> gives you: every dot on the sheet, with the sixty-eight it kept picked out in red.</span></figcaption>
   </figure>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>Do a big one.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>Sixty.</p></div></div>
+
+  <figure>
+    <div class="plate"><img src="__P5__" alt="The same output at radius sixty: a dense grid of grey dots with three hundred and forty of them picked out in red, forming a ring that reads as a smooth circle" /></div>
+    <figcaption><span class="pn">Fig. 9 &middot; screen</span><span class="pt">The same program, radius sixty. Three hundred and forty dots kept. Nothing has changed about the method &mdash; there are simply more dots, and at this size the eye stops seeing the steps.</span></figcaption>
+  </figure>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says"><p>It got rounder.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>It did not get rounder. It is exactly as round as the small one &mdash; every dot on both is inside half a unit, and that was true before we drew either.</p>
+    <p><em>You</em> got further away. That is all that changed.</p>
+  </div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
     <p>There it is, and I promised you this morning that no dot on it would be more than half a unit off &mdash; at twelve, at a hundred and twelve, at any size at all. So check me.</p>
@@ -1213,7 +1229,7 @@ DOC2 = r"""<title>Honors Math, Period 3 — Day Three: Counting</title>
 </div>
 """
 
-for k, f in [('__P4__','p4_printed.png'), ('__P2__','p2_exact.png'), ('__P3__','p3_count.png'),
+for k, f in [('__P4__','p4_printed.png'), ('__P5__','p5_printed_big.png'), ('__P2__','p2_exact.png'), ('__P3__','p3_count.png'),
              ('__B1__','board_01_world.png'), ('__B2__','board_02_twelve.png'),
              ('__B3__','board_03_halfdot.png'), ('__B4__','board_04_nearest.png'),
              ('__B6__','board_06_squares.png'), ('__B7__','board_07_badrule.png'),

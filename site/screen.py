@@ -238,28 +238,30 @@ ax.set_aspect('equal')
 plt.tight_layout(); save(fig, 'p3_count.png', dpi=64)
 
 
-# ===================== the printed circle, as an image of the text ============
-# Rendering the characters in HTML depends on the reader's monospace metrics, and
-# a 4% error in the cell aspect is enough to turn a circle into an egg. So we
-# render the text ourselves, where the geometry is ours.
-def printed_circle(r, name):
-    ring = draw_slowly(r)
-    ring = set(ring)
-    rows = [''.join('O ' if (x, y) in ring else '. ' for x in range(-r, r + 1)).rstrip()
-            for y in range(r, -r - 1, -1)]
-    # two layers so the kept dots and the rest can be different colours
-    faint = '\n'.join(''.join(' ' if c == 'O' else c for c in row) for row in rows)
-    bold  = '\n'.join(''.join(c if c == 'O' else ' ' for c in row) for row in rows)
+# ===================== the printed circle ====================================
+# Every dot on the sheet, with the ones the program kept marked. Placed at their
+# real coordinates with a locked aspect rather than laid out as characters: two
+# characters per column against a line height is a guess at the reader's font
+# metrics, and it was out by 12% at r=12 and 30% at r=30. Circles came out as eggs.
+GRID = '#232B33'
+RING = '#F85149'
 
-    cols = max(len(row) for row in rows)
-    fig_w = cols * 0.085
-    fig_h = len(rows) * 0.166
-    fig = plt.figure(figsize=(fig_w, fig_h), facecolor=BG)
-    for text, colour in ((faint, '#39424B'), (bold, BLUE)):
-        fig.text(0.02, 0.98, text, family='monospace', fontsize=11,
-                 color=colour, va='top', ha='left', linespacing=1.0)
-    save(fig, name, dpi=100)
-    return len(rows), cols
 
-n, c = printed_circle(12, 'p4_printed.png')
-print(f'   printed circle: {n} rows x {c} columns')
+def printed_circle(r, name, dot=9, ringdot=14):
+    ring = set(draw_slowly(r))
+    grid = [(x, y) for x in range(-r, r + 1) for y in range(-r, r + 1)
+            if (x, y) not in ring]
+    fig, ax = plt.subplots(figsize=(6, 6), facecolor=BG)
+    ax.set_facecolor(BG)
+    ax.scatter([p[0] for p in grid], [p[1] for p in grid], s=dot, marker='.',
+               color=GRID, edgecolors='none')
+    ax.scatter([p[0] for p in ring], [p[1] for p in ring], s=ringdot, marker='.',
+               color=RING, edgecolors='none')
+    ax.set_aspect('equal'); ax.axis('off')
+    ax.set_xlim(-r - 1, r + 1); ax.set_ylim(-r - 1, r + 1)
+    save(fig, name, dpi=110)
+    return len(ring)
+
+
+print(f"   r=12: {printed_circle(12, 'p4_printed.png', 9, 14)} on the ring")
+print(f"   r=60: {printed_circle(60, 'p5_printed_big.png', 3, 5)} on the ring")
