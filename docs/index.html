@@ -125,6 +125,11 @@
     padding: 1rem 1.15rem; overflow-x: auto;
     font-family: var(--mono); font-size: .8rem; line-height: 1.62; color: #C9D1D9;
   }
+  .codepair { grid-column: 2; max-width: 39rem; margin: 1.4rem 0 1.7rem;
+              display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; }
+  .codepair .code { grid-column: auto; margin: 0; max-width: none; }
+  .codepair pre { font-size: .74rem; }
+  @media (max-width: 760px) { .codepair { grid-template-columns: 1fr; } }
   .code.spec pre {
     background: var(--pad-2); color: var(--ink);
     border: 1px solid var(--rule); border-left: 3px solid var(--gold);
@@ -669,8 +674,37 @@ inside the band:  624 of 624</div></div>
   <h2><span class="n">04</span> Checking it without reading it</h2>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Now. I have two copies of that program on the board. They differ by exactly one number. One of them is right and one of them is wrong.</p>
-    <p>Find the wrong one. By reading.</p>
+    <p>Now. Here is the middle of that program twice. The eight mirrors are the same in both and I have left them out. Everything else you can see.</p>
+    <p>They differ by exactly one number. One of them is right and one of them is wrong. Find the wrong one, by reading.</p>
+  </div></div>
+
+  <div class="line"><div class="codepair">
+    <div class="code">
+      <span class="attrib">Program A</span>
+<pre><span class="kw">while</span> x &lt;= y:
+    plot the eight
+    mirrors of (x, y)
+
+    <span class="kw">if</span> d &lt; 0:
+        d = d + 4*x + 6
+    <span class="kw">else</span>:
+        d = d + 4*(x - y) + 10
+        y = y - 1
+    x = x + 1</pre>
+    </div>
+    <div class="code">
+      <span class="attrib">Program B</span>
+<pre><span class="kw">while</span> x &lt;= y:
+    plot the eight
+    mirrors of (x, y)
+
+    <span class="kw">if</span> d &lt; 0:
+        d = d + 4*x + 4
+    <span class="kw">else</span>:
+        d = d + 4*(x - y) + 10
+        y = y - 1
+    x = x + 1</pre>
+    </div>
   </div></div>
 
   <div class="line"><div class="beat">(Three minutes. Somebody guesses the 10. Somebody guesses the minus sign. Both wrong.)</div></div>
