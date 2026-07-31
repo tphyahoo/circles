@@ -66,70 +66,47 @@ written in the material the thing is built from:
 ---------------------------- MODULE Circle ----------------------------
 EXTENDS Integers
 
-CONSTANT R                          \* the radius: a whole number
+CONSTANT R              \* the radius: a whole number
+CONSTANT Slack          \* how much worse than the best we will still accept
 
-Dots == (-R..R) \X (-R..R)          \* every dot on the sheet
+Dots == (-R..R) \X (-R..R)
 
-Quadrance(p) == p[1]*p[1] + p[2]*p[2]
-    (*  Squared distance. No square root appears anywhere in this module,
-        and the reason is that we never need one.  *)
+Total(p) == p[1]*p[1] + p[2]*p[2]
+    (*  No distances live in this module. We compare squared totals, because
+        asking how far a dot is takes you to a number that is not there.  *)
 
-NearRing(p) ==
-    (*  "no more than half a unit off the ring".
-          |Sqrt(Q) - R| =< 1/2
-        is the same claim as
-          (2R-1)^2 =< 4Q =< (2R+1)^2
-        which stays entirely in whole numbers.  *)
-    /\ (2*R - 1)^2 =< 4 * Quadrance(p)
-    /\ 4 * Quadrance(p) =< (2*R + 1)^2
+Gap(p) == LET d == Total(p) - R*R IN IF d < 0 THEN -d ELSE d
+    (*  how far this dot's total misses the one we want  *)
 
-Circle == { p \in Dots : NearRing(p) }
-    (*  THE DEFINITION, and all of it. Note what is absent: any order of
-        steps, any loop, any decision about which dot to visit first.
-        A set does not have a beginning.  *)
-
-Mirrors(p) ==
-    { <<p[1], p[2]>>, <<p[2], p[1]>>, <<-p[1], p[2]>>, <<-p[2], p[1]>>,
-      <<p[1], -p[2]>>, <<p[2], -p[1]>>, <<-p[1], -p[2]>>, <<-p[2], -p[1]>> }
-
-    (*  What a drawing owes us. A "drawing" is whatever set of dots
-        somebody's program produced; these say when it was allowed to
-        produce them.  *)
-
-Sound(drawn)     == drawn \subseteq Circle
-    \* every dot it drew was permitted
-
-Complete(drawn)  == \A x \in -R..R : \E p \in drawn : p[1] = x
-    \* it left no column empty
-
-Symmetric(drawn) == \A p \in drawn : Mirrors(p) \subseteq drawn
-    \* whatever it drew, it drew all eight mirrors of
-
-Correct(drawn) == Sound(drawn) /\ Complete(drawn) /\ Symmetric(drawn)
-
-    (*  "take the nearest" only names a dot if there is never a tie. A tie in
-        column x between the dots at y and y+1 would mean their two totals sat
-        the same distance either side of the target, i.e.
-
-              (R^2 - Q1)  =  (Q2 - R^2)      i.e.   Q1 + Q2  =  2*R^2
-
-        It never happens, and not by luck: Q1 + Q2 is
-        2x^2 + y^2 + (y+1)^2 = 2x^2 + 2y^2 + 2y + 1, which is always ODD,
-        while 2*R^2 is always EVEN.  *)
-
-NoTies == \A x \in -R..R : \A y \in -R..R :
-            LET Q1 == x*x + y*y
-                Q2 == x*x + (y+1)*(y+1)
-            IN  Q1 + Q2 # 2*R*R
-=============================================================================
+Circle == { p \in Dots :
+              \A q \in Dots :
+                (q[1] = p[1]) => Gap(p) =< Gap(q) + Slack }
+    (*  A dot is on the circle if no other dot in its column beats it by more
+        than Slack. With Slack = 0 that is exactly "the nearest one" and the
+        ring is one dot thick.  *)
+====
 ```
 
 ## Notes
 
-`Sound` and `Complete` are genuinely different claims, and the drawing is a *strict*
-subset of `Circle` at any interesting radius — at `R = 13` the blueprint permits 88 dots
-and Bresenham selects 72 of them. A specification says what is allowed; it does not say
-what you must pick.
+`Slack` is the price of a bolder line, and it is not free.
 
-At `R = 5` the two happen to coincide: the algorithm takes all 28. So "strictly thinner"
-is false at small radii, which is worth knowing before asserting it as an invariant.
+With `Slack = 0` every kept dot is the nearest in its column, and the two gaps
+either side of the ring make one unit between them, so nothing is more than
+**half a unit** off. That is the promise the lesson makes.
+
+Widening it costs exactly what you would expect. A dot's gap can now exceed the
+best by `Slack`, and a gap of `g` puts you roughly `g / 2R` from the true ring,
+so the worst case becomes
+
+    1/2  +  Slack / 2R
+
+Measured, against radii 12, 30 and 60: at `Slack = 0` the worst dot is 0.46 units
+out; at `Slack = R` it is 0.73 against a bound of 1.0; at `Slack = 2R`, 1.45
+against 1.5. The bound holds and is not tight, which is what you want from a
+bound.
+
+So `Slack = R` doubles the promise, from half a unit to one. Anything drawn that
+way is still a circle, but it is a circle you have agreed to be twice as wrong
+about, and the lesson should say so out loud rather than quietly enjoying the
+thicker line.

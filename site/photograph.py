@@ -27,11 +27,11 @@ OUT   = pathlib.Path(__file__).resolve().parent / 'plates'
 ANSI = re.compile(r'\033\[(\d+)m')
 
 
-def capture(r):
-    """Run show(r) and return the lines, each as a list of (char, is_red)."""
+def capture(r, slack=0):
+    """Run show(r, slack) and return the lines, each as a list of (char, is_red)."""
     buf = io.StringIO()
     with contextlib.redirect_stdout(buf):
-        board_program.show(r)
+        board_program.show(r, slack)
     lines = []
     for raw in buf.getvalue().splitlines():
         cells, red, i = [], False, 0
@@ -47,8 +47,8 @@ def capture(r):
     return lines
 
 
-def photograph(r, name, width_in=7.0):
-    lines = capture(r)
+def photograph(r, name, slack=0, width_in=7.0):
+    lines = capture(r, slack)
     rows = len(lines)
     cols = max(len(l) for l in lines)
 
@@ -82,7 +82,9 @@ def photograph(r, name, width_in=7.0):
 
 
 if __name__ == '__main__':
-    for r, name in ((12, 'p4_printed.png'), (60, 'p5_printed_big.png')):
-        rows, cols, red = photograph(r, name)
-        print(f'   show({r}) -> {rows} lines x {cols} characters, {red} of them red'
-              f'   -> plates/{name}')
+    for r, slack, name in ((12, 0, 'p4_printed.png'),
+                           (60, 0, 'p5_printed_big.png'),
+                           (60, 60, 'p6_printed_thick.png')):
+        rows, cols, red = photograph(r, name, slack)
+        print(f'   show({r}, slack={slack}) -> {rows} lines x {cols} characters, '
+              f'{red} red   -> plates/{name}')

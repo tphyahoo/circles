@@ -624,6 +624,51 @@ r = 2000   11,312 dots     3.006 seconds</div></div>
     <figcaption><span class="pn">Fig. 9 &middot; screen</span><span class="pt"><span style="font-family:var(--mono)">show(60)</span>: a hundred and twenty-one lines of it, three hundred and forty dots kept. Nothing about the method changed &mdash; there are simply more dots, and at this size the eye stops seeing the steps.</span></figcaption>
   </figure>
 
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>I can barely see it. It's gone all thin.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>It has. One dot per column looked bold at twelve and looks like a scratch at sixty. What would you do about it?</p>
+  </div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>Keep more of them? Not just the best one &mdash; the best one and the ones near it.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Which is one word in the program. Instead of <em>keep the best</em>, say <em>keep anything within so-much of the best</em>. Give it sixty.</p>
+  </div></div>
+
+  <figure>
+    <div class="plate"><img src="__P6__" alt="The same radius sixty ring drawn with slack, now two or three dots thick and clearly visible against the grid" /></div>
+    <figcaption><span class="pn">Fig. 10 &middot; screen</span><span class="pt"><span style="font-family:var(--mono)">show(60, slack=60)</span>. Five hundred and twelve dots instead of three hundred and forty, and you can see it from the back of the room.</span></figcaption>
+  </figure>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>That's much better.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>It is much better to look at. Now tell me what it cost, because it was not free and I want you to say the number.</p>
+    <p>What did I promise you this morning about how wrong any dot could be?</p>
+  </div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says"><p>Half a unit.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>And is that still true of the fat one?</p></div></div>
+
+  <div class="line"><div class="beat">(Popovich looks at it for a while.)</div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says">
+    <p>&hellip;No. It can't be. We're keeping dots that <em>aren't</em> the nearest one now. That was the whole reason it was half.</p>
+  </div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>It cannot be, and it is not. With that much slack the worst dot on there is about seven tenths of a unit out, and the most it could ever be is <em>one</em> &mdash; twice what I promised you.</p>
+    <p>So that is the trade, and it is the honest way round: I did not get a better circle. I got a circle I have agreed to be twice as wrong about, in exchange for being able to see it.</p>
+  </div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>So which one's the real circle?</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>The thin one. The fat one is the thin one shouted.</p>
+  </div></div>
+
   <div class="line"><div class="who p">Popovich</div><div class="says"><p>It got rounder.</p></div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
@@ -1231,7 +1276,7 @@ _prog = show_program('board_program.py')
 DOC1 = DOC1.replace('__PROGRAM__', _prog)
 DOC2 = DOC2.replace('__PROGRAM__', _prog)
 
-for k, f in [('__P4__','p4_printed.png'), ('__P5__','p5_printed_big.png'), ('__P2__','p2_exact.png'), ('__P3__','p3_count.png'),
+for k, f in [('__P4__','p4_printed.png'), ('__P5__','p5_printed_big.png'), ('__P6__','p6_printed_thick.png'), ('__P2__','p2_exact.png'), ('__P3__','p3_count.png'),
              ('__B1__','board_01_world.png'), ('__B2__','board_02_twelve.png'),
              ('__B3__','board_03_halfdot.png'), ('__B4__','board_04_nearest.png'),
              ('__B6__','board_06_squares.png'), ('__B7__','board_07_badrule.png'),
