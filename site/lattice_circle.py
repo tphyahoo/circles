@@ -71,11 +71,16 @@ def draw(r):
     x, y, d = 0, r, 3 - 2 * r
     while x <= y:
         dots |= mirrors((x, y))
-        if d < 0:
+        if d < 0:            # under
             d = d + 4 * x + 6
-        else:
+        elif d > 0:          # over
             d = d + 4 * (x - y) + 10
             y = y - 1
+        else:                # exactly nought -- see the parity argument
+            raise AssertionError(
+                f"the decision variable hit zero at r={r}, x={x}, y={y}. "
+                "either this algorithm is wrong or the parity proof is."
+            )
         x = x + 1
 
     # The invariants, let in. Stripped by `python3 -O`.

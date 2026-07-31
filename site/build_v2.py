@@ -593,11 +593,14 @@ Circle == { p \in Dots : NearRing(p) }</pre>
                      (x,-y), (y,-x), (-x,-y), (-y,-x)]:
             dots.append((a, b))
 
-        <span class="kw">if</span> d &lt; 0:
-            d = d + 4*x + 6          <span class="cm"># stay on this row</span>
-        <span class="kw">else</span>:
-            d = d + 4*(x - y) + 10   <span class="cm"># drop down one</span>
+        <span class="kw">if</span> d &lt; 0:        <span class="cm"># under</span>
+            d = d + 4*x + 6
+        <span class="kw">elif</span> d &gt; 0:      <span class="cm"># over</span>
+            d = d + 4*(x - y) + 10
             y = y - 1
+        <span class="kw">else</span>:            <span class="cm"># exactly nought</span>
+            <span class="kw">raise</span> ThisNeverHappens
+
         x = x + 1
 
     <span class="kw">return</span> dots</pre>
@@ -609,21 +612,34 @@ Circle == { p \in Dots : NearRing(p) }</pre>
   </div></div>
 
   <div class="line"><div class="who p">Popovich</div><div class="says">
-    <p>What happens if that running number lands on nought? It says <span class="m">less than nought</span>, and then <span class="m">otherwise</span>. Nought falls into <em>otherwise</em>. Why should it?</p>
+    <p>What's the third one for? It just says it never happens.</p>
   </div></div>
 
-  <div class="line"><div class="beat">(Mrs. Feeney looks at Ralphie rather than at Popovich.)</div></div>
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>It says it never happens.</p></div></div>
 
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>Ralphie. Answer him.</p></div></div>
-
-  <div class="line"><div class="who">Ralphie</div><div class="says"><p>&hellip;Why me?</p></div></div>
+  <div class="line"><div class="who p">Popovich</div><div class="says">
+    <p>Then take it out. It's a line that can't run. It's doing nothing.</p>
+  </div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Because you already did, twenty minutes ago. That running number is odd every single time it is looked at &mdash; it is an even thing plus an odd thing minus an even thing. And nought is even.</p>
-    <p>It never lands on nought. The <em>otherwise</em> never has to decide anything, because the case it would be deciding cannot happen.</p>
+    <p>Take it out and the program behaves exactly the same, and nobody in this room ever finds out why. Leave it in and it is a <em>claim</em> &mdash; and a claim is a thing somebody can argue with.</p>
+    <p><span class="stage">(to Ralphie)</span> It's yours. Why can that number never be nought?</p>
   </div></div>
 
-  <div class="line"><div class="who p">Popovich</div><div class="says"><p>So the program is only unambiguous because of odd and even.</p></div></div>
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>&hellip;Why is everything mine today.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>Answer the question.</p></div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says">
+    <p>Because it's odd. Every time you look at it. It's an even thing plus an odd thing minus an even thing, so it comes out odd, and nought is even.</p>
+  </div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>So that third line is not decoration and it is not a comment. It is the shortest way of writing down what Ralphie proved this morning, put in the one place where somebody might need it.</p>
+    <p>And if it ever <em>does</em> run, exactly one of two things has gone wrong. Either the program is broken, or Ralphie is. That line is watching both of them.</p>
+  </div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says"><p>So the program only works at all because of odd and even.</p></div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
     <p>Yes &mdash; for <em>this</em> way of writing it. And I want to be careful here, because there is more than one way to write the same algorithm, and the other one does not get off so lightly.</p>
