@@ -165,3 +165,29 @@ plt.tight_layout()
 save(fig, 's4_counting_pi.png', dpi=70)
 
 print('\nscreen illustrations written.')
+
+
+# ================================== S5. the thing that obeys every rule and is wrong
+R = 25
+band  = {(x, y) for x in range(-R, R+1) for y in range(-R, R+1) if near_ring((x, y), R)}
+drawn = walk(R)
+extra = band - drawn
+
+fig, axes = plt.subplots(1, 2, figsize=(11, 5.7), facecolor=BG)
+for ax, (pts, ttl, sub) in zip(axes, [
+        (drawn, 'what we wanted', f'{len(drawn)} dots'),
+        (band,  'what the rules allow', f'{len(band)} dots')]):
+    style(ax, ttl)
+    ax.scatter([p[0] for p in pts], [p[1] for p in pts], s=17, color=BLUE,
+               edgecolors='none', zorder=3)
+    if pts is band:
+        ax.scatter([p[0] for p in extra], [p[1] for p in extra], s=17, color=RED,
+                   edgecolors='none', zorder=4)
+    ax.set_xlim(-R-2, R+2); ax.set_ylim(-R-2, R+2); ax.set_aspect('equal')
+    ax.set_xlabel(sub, color=GREY, fontsize=9.5, family=MONO, labelpad=7)
+fig.suptitle('both of these are Sound, Complete and Symmetric',
+             color='white', fontsize=12.5, family=MONO, y=.97)
+fig.text(.5, .015, 'the red dots break no rule we wrote down. at r=25 the rim reaches five dots thick.',
+         color=RED, fontsize=10, family=MONO, ha='center')
+plt.tight_layout(rect=[0, .06, 1, .93])
+save(fig, 's5_the_band.png', dpi=70)

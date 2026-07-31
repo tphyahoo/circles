@@ -101,6 +101,7 @@ DOC1 = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
   }
   .who.f { color: var(--ink); }
   .who.p { color: var(--muted); }
+  .who.n { color: var(--gold); }
   .says { max-width: 39rem; }
   .says p { margin: 0 0 .8rem; }
   .says p:last-child { margin-bottom: 0; }
@@ -1000,6 +1001,7 @@ DOC2 = r"""<title>Honors Math, Period 3 — Day Three: Counting</title>
   }
   .who.f { color: var(--ink); }
   .who.p { color: var(--muted); }
+  .who.n { color: var(--gold); }
   .says { max-width: 39rem; }
   .says p { margin: 0 0 .8rem; }
   .says p:last-child { margin-bottom: 0; }
@@ -1118,11 +1120,105 @@ DOC2 = r"""<title>Honors Math, Period 3 — Day Three: Counting</title>
   <div class="cast-row"><div class="cast-name">Mrs. Feeney</div><div class="cast-desc">Nineteen years of eighth grade. Has never once written &ldquo;because I said so&rdquo; on a board.</div></div>
   <div class="cast-row"><div class="cast-name">Ralphie</div><div class="cast-desc">Front row. Proved something yesterday and has not entirely got over it.</div></div>
   <div class="cast-row"><div class="cast-name">Popovich</div><div class="cast-desc">Back row, hood up. Still waiting on the nought.</div></div>
+  <div class="cast-row"><div class="cast-name">Nell</div><div class="cast-desc">By the window. Has not said anything since Tuesday.</div></div>
 </div>
+
+<!-- 00 -->
+<section>
+  <h2><span class="n">01</span> Somebody found it on the bus</h2>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Number three. Something that obeys all our rules and is not the circle. Who has it?</p>
+  </div></div>
+
+  <div class="line"><div class="beat">(Nothing.)</div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says">
+    <p>I tried for an hour. Everything I drew broke one of them. If I left a column out it wasn't Complete, if I put a dot too far out it wasn't Sound &mdash;</p>
+  </div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>That is the correct way to fail at it, and I mean that. Anybody else.</p>
+  </div></div>
+
+  <div class="line"><div class="beat">(A long pause. Then, from the window, without looking up:)</div></div>
+
+  <div class="line"><div class="who n">Nell</div><div class="says"><p>Draw all of them.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>&hellip;Say that again.</p></div></div>
+
+  <div class="line"><div class="who n">Nell</div><div class="says">
+    <p>Every dot that's allowed. Don't choose. The first rule says which dots you're <em>allowed</em> to use, so use all of them.</p>
+  </div></div>
+
+  <div class="line"><div class="beat">(Mrs. Feeney puts down the register and goes to the board.)</div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Sound. Every dot we drew is a dot we were allowed to draw &mdash; we only drew allowed ones, so yes.</p>
+    <p>Complete. Is any column empty? We drew <em>everything</em>. No.</p>
+    <p>Symmetric. We drew every allowed dot, and the mirror of an allowed dot is allowed. So yes.</p>
+  </div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says"><p>It passes.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>It passes. Now look at it.</p></div></div>
+
+  <figure>
+    <div class="plate"><img src="__S5__" alt="Two rings side by side at radius 25, the left one a thin circle of 140 dots and the right one 168 dots with the extra ones in red, making the rim visibly lumpy and several dots thick" /></div>
+    <figcaption><span class="pn">Fig. 1 &middot; screen</span><span class="pt">Both obey Sound, Complete and Symmetric. The red dots break no rule anyone wrote down. At radius twenty-five the rim reaches five dots thick.</span></figcaption>
+  </figure>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>That's not a circle. That's a stripe.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>It is a stripe, and it is a stripe that obeys every single thing we wrote down yesterday. So we did not write down what we meant.</p>
+    <p>Popovich. What did you actually say, on the first day, when I asked how to pick a dot?</p>
+  </div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says"><p>Take the nearest one.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>And what does our first rule say?</p></div></div>
+
+  <div class="line"><div class="beat">(Popovich reads it off the board twice before he answers.)</div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says"><p>&hellip;That it's near enough.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p><em>Near enough.</em> You said <em>nearest</em> and we wrote down <em>near enough</em>, and those are not the same sentence. One of them picks a dot. The other one hands out permission slips.</p>
+    <p>Nell's stripe walked straight through the gap between them.</p>
+  </div></div>
+
+  <div class="line"><div class="keybox"><span class="lbl">What a specification is for</span><p>Nobody made a mistake yesterday. Every rule we wrote is true, and the program we checked really does obey them. What we got wrong was <span class="exact">weaker than what we meant</span> &mdash; and you cannot see that by staring at it. You see it when something obeys the rules and is obviously wrong.</p><p>That is the whole job. Not catching a liar. Catching yourself.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>So. Fourth rule. Nell, it's yours, say it.</p></div></div>
+
+  <div class="line"><div class="who n">Nell</div><div class="says">
+    <p>For every column, keep the dot whose total is closest to the target. Not one that's close. The closest one.</p>
+  </div></div>
+
+  <div class="line"><div class="code spec">
+    <span class="attrib">The fourth rule</span>
+<pre><span class="cm">\* it did not merely use allowed dots. in each column it</span>
+<span class="cm">\* used the BEST one. this is what we meant all along.</span>
+Nearest(drawn) == \A x \in -R..R : \A y \in -R..R :
+                    &lt;&lt;x, y&gt;&gt; \in drawn =&gt;
+                      \A z \in -R..R :
+                        Gap(x, y) =&lt; Gap(x, z)</pre>
+  </div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>And it does the job. Add that rule and the stripe fails immediately &mdash; every red dot on that screen has a better dot sitting in its own column.</p>
+    <p><span class="stage">(to Nell)</span> You have been in this room for two days without saying a word.</p>
+  </div></div>
+
+  <div class="line"><div class="who n">Nell</div><div class="says"><p>I was listening.</p></div></div>
+
+  <div class="line"><div class="beat">(Ralphie looks like he wants to say something and, wisely, doesn't.)</div></div>
+</section>
 
 <!-- 05 -->
 <section>
-  <h2><span class="n">01</span> The dots that land perfectly</h2>
+  <h2><span class="n">02</span> The dots that land perfectly</h2>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
     <p>Back to Ralphie's twelve. Most dots on our ring are near-misses &mdash; off by a bit, under half. But some land <span class="exact">dead on</span>. Ralphie found six-eight-ten without knowing what he had. What did you have, Ralphie?</p>
@@ -1132,7 +1228,7 @@ DOC2 = r"""<title>Honors Math, Period 3 — Day Three: Counting</title>
 
   <figure>
     <div class="boardshot"><img src="__B8__" alt="The radius 5 ring with its twelve exactly-landing dots marked, and a 3-4-5 triangle drawn from the centre to one of them" /></div>
-    <figcaption><span class="pn hand">Fig. 13 &middot; board</span><span class="pt">Radius five, worked by hand. Twelve dots land perfectly, and eight of them are the same 3-4-5 triangle turned around.</span></figcaption>
+    <figcaption><span class="pn hand">Fig. 2 &middot; board</span><span class="pt">Radius five, worked by hand. Twelve dots land perfectly, and eight of them are the same 3-4-5 triangle turned around.</span></figcaption>
   </figure>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
@@ -1153,12 +1249,12 @@ DOC2 = r"""<title>Honors Math, Period 3 — Day Three: Counting</title>
 
   <figure>
     <div class="plate"><img src="__S3__" alt="Three rings side by side at radii 5, 25 and 65, with the exactly-landing dots picked out in gold: twelve, twenty and thirty-six of them" /></div>
-    <figcaption><span class="pn">Fig. 14 &middot; screen</span><span class="pt">Five, twenty-five, sixty-five. The gold dots land perfectly. A radius is lucky when it carries several whole-number triangles at once.</span></figcaption>
+    <figcaption><span class="pn">Fig. 3 &middot; screen</span><span class="pt">Five, twenty-five, sixty-five. The gold dots land perfectly. A radius is lucky when it carries several whole-number triangles at once.</span></figcaption>
   </figure>
 
   <figure>
     <div class="plate"><img src="__P2__" alt="Circle of radius 25 in blue dots with twenty gold dots marking the points that land exactly on the radius" /></div>
-    <figcaption><span class="pn">Fig. 15 &middot; screen</span><span class="pt">Radius 25. The blue dots are nearest-fits. The <span style="color:var(--gold);font-weight:600">gold</span> ones land perfectly &mdash; twenty of them, because 25 is a lucky radius that carries two different whole-number triangles. Sixty-five is luckier still, with four.</span></figcaption>
+    <figcaption><span class="pn">Fig. 4 &middot; screen</span><span class="pt">Radius 25. The blue dots are nearest-fits. The <span style="color:var(--gold);font-weight:600">gold</span> ones land perfectly &mdash; twenty of them, because 25 is a lucky radius that carries two different whole-number triangles. Sixty-five is luckier still, with four.</span></figcaption>
   </figure>
 
   <div class="line"><div class="who p">Popovich</div><div class="says">
@@ -1183,7 +1279,7 @@ DOC2 = r"""<title>Honors Math, Period 3 — Day Three: Counting</title>
 
 <!-- 05 -->
 <section>
-  <h2><span class="n">02</span> How much room is inside</h2>
+  <h2><span class="n">03</span> How much room is inside</h2>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
     <p>Last thing today, and it's the one I'd keep if they made me throw the rest out.</p>
@@ -1198,7 +1294,7 @@ DOC2 = r"""<title>Honors Math, Period 3 — Day Three: Counting</title>
 
   <figure>
     <div class="plate"><img src="__P3__" alt="A filled disk of 317 blue lattice dots at radius 10" /></div>
-    <figcaption><span class="pn">Fig. 16 &middot; screen</span><span class="pt">Radius 10. Three hundred and seventeen dots. You can count them by hand in about four minutes, and two students in every class always do.</span></figcaption>
+    <figcaption><span class="pn">Fig. 5 &middot; screen</span><span class="pt">Radius 10. Three hundred and seventeen dots. You can count them by hand in about four minutes, and two students in every class always do.</span></figcaption>
   </figure>
 
   <div class="line"><div class="beat">(Four minutes. Ralphie finishes first and is wrong. Popovich finishes second and isn't.)</div></div>
@@ -1271,7 +1367,7 @@ DOC2 = r"""<title>Honors Math, Period 3 — Day Three: Counting</title>
 
   <figure>
     <div class="boardshot"><img src="__B9__" alt="The disk of dots at radius 10 with four columns picked out and their heights measured as 17, 21, 17 and 9" /></div>
-    <figcaption><span class="pn hand">Fig. 17 &middot; board</span><span class="pt">What Popovich did instead. You never look at a dot: you measure how tall each column is and add the heights.</span></figcaption>
+    <figcaption><span class="pn hand">Fig. 6 &middot; board</span><span class="pt">What Popovich did instead. You never look at a dot: you measure how tall each column is and add the heights.</span></figcaption>
   </figure>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
@@ -1299,7 +1395,7 @@ DOC2 = r"""<title>Honors Math, Period 3 — Day Three: Counting</title>
 
   <figure>
     <div class="plate"><img src="__S4__" alt="A line chart of dots inside divided by radius squared, dropping from above 3.2 and settling onto a dashed line marked pi" /></div>
-    <figcaption><span class="pn">Fig. 18 &middot; screen</span><span class="pt">The same table, drawn. It is not creeping towards &pi; by luck &mdash; counting dots is what &pi; <em>is</em>.</span></figcaption>
+    <figcaption><span class="pn">Fig. 7 &middot; screen</span><span class="pt">The same table, drawn. It is not creeping towards &pi; by luck &mdash; counting dots is what &pi; <em>is</em>.</span></figcaption>
   </figure>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
@@ -1311,7 +1407,7 @@ DOC2 = r"""<title>Honors Math, Period 3 — Day Three: Counting</title>
 
 <!-- 06 -->
 <section>
-  <h2><span class="n">03</span> The bell</h2>
+  <h2><span class="n">04</span> The bell</h2>
 
   <div class="line"><div class="who">Ralphie</div><div class="says"><p>How many digits <em>do</em> you need?</p></div></div>
 
@@ -1402,7 +1498,7 @@ for k, f in [('__P1__','p1_circle.png'), ('__P2__','p2_exact.png'), ('__P3__','p
              ('__B8__','board_08_lucky5.png'), ('__B9__','board_09_columns.png'),
              ('__S1__','s1_sabotage.png'), ('__S2__','s2_where_it_bites.png'),
              ('__S3__','s3_lucky.png'), ('__S4__','s4_counting_pi.png'), ('__B10__','board_10_pile.png'),
-             ('__B11__','board_11_tiework.png')]:
+             ('__B11__','board_11_tiework.png'), ('__S5__','s5_the_band.png')]:
     DOC1 = DOC1.replace(k, img(f))
     DOC2 = DOC2.replace(k, img(f))
 # Canonical output is docs/index.html, which is what GitHub Pages serves.
