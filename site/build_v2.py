@@ -670,6 +670,27 @@ r = 2000   11,312 dots     3.006 seconds</div></div>
   <div class="line"><div class="beat">(Nobody says anything. The board is covered.)</div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>And before that. Ralphie &mdash; nine o'clock this morning, first thing out of your mouth: all the points the same distance from the middle. I said there was a landmine in it. Find it for me.</p>
+  </div></div>
+
+  <div class="line"><div class="who r">Ralphie</div><div class="says">
+    <p>&hellip;There aren't any points. And you can't have the distance.</p>
+  </div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Two landmines. Ten words.</p>
+  </div></div>
+
+  <div class="line"><div class="who r">Ralphie</div><div class="says">
+    <p>So I was wrong.</p>
+  </div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>You were not wrong. What you said is a perfectly good definition of a circle.</p>
+    <p>It is just not a definition of anything in <em>this</em> room &mdash; and it took us from nine o'clock until the bell to find out what is.</p>
+  </div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
     <p>We have one now. We know it is never wrong by more than half a unit, and we know that at every size. We know the rule that finds it never gets stuck, and we know <em>that</em> because Ralphie proved it with odd and even, not because I told you.</p>
     <p>And none of it came from measuring anything.</p>
   </div></div>
