@@ -102,19 +102,92 @@ factoring. The elementary layer is already finite. Nobody needs saving from it.
 
 ---
 
+## How a chapter opens
+
+*Piloted on Volume I below. If it holds up there it should be carried through; if it
+does not, that is worth knowing before any more of this is written.*
+
+Every chapter opens with a **do now** — a task on the board before anyone sits down,
+answerable with only what earlier chapters gave them, needing no instruction and no
+teacher. They work it cold. Then the **aim** is not announced but *elicited*: the class
+names the day's question out of the trouble the do now has just put them in, and it goes
+up in their words and stays up until it is settled.
+
+This is a real constraint on the ordering, not a presentational one. A do now can only
+use what has already been taught, so a chapter that cannot produce one is in the wrong
+place — which makes the exercise a test of the sequence rather than a decoration on it.
+The aims below are written as a twelve-year-old would say them, deliberately. An aim in
+the teacher's words is an announcement wearing a costume.
+
+The failure mode to watch: eight consecutive ambushes is a lot of ambushes. Some
+chapters should be allowed to open with *here is a tool, now use it*, and the method
+gets tiring precisely when it is applied without exception.
+
+---
+
 ## Volume I — Seventh Grade: Counting Things
 
 *Traditional: ratios and proportions · negative numbers · expressions and equations ·
 area, surface area, volume · sampling and probability*
 
-1. Numbers You Can Point At
-2. Exact Fractions — why a fraction is a pair of whole numbers, and never a decimal
-3. Tables, and the Gaps Between Their Entries — `Δ` introduced
-4. When the Gap Never Changes — linear, discovered rather than defined
-5. When the Gap's Gap Never Changes — quadratics, before the quadratic formula
-6. Pascal's Triangle Is a Machine
-7. Sums That Collapse — `Σ` as the undoing of `Δ`; the Fundamental Theorem, unnamed
-8. Dots in a Box — area by counting
+**1. Numbers You Can Point At**
+- *Do now:* Write down the biggest number you can. One line, thirty seconds.
+- *What happens:* The board fills with `999999999`, a googol, `9⁹⁹`, and — always —
+  infinity. Some of these you could count out with enough time and paper. Some you
+  could not, and one of them is not that kind of thing at all.
+- *Aim:* **Which of these could you actually get to?**
+
+**2. Exact Fractions** — why a fraction is a pair of whole numbers, and never a decimal
+- *Do now:* Write `1/3` as a decimal. Now multiply what you wrote by three.
+- *What happens:* `0.333 × 3 = 0.999`. The ones who wrote more threes get more nines.
+  Nobody gets back to 1. The pair `(1, 3)` would have got back to 1 exactly, and it is
+  shorter to write.
+- *Aim:* **Where did the missing bit go?**
+
+**3. Tables, and the Gaps Between Their Entries** — `Δ` introduced
+- *Do now:* `2, 5, 10, 17, 26, 37`. What comes next, and how do you know?
+- *What happens:* Staring at it does not work. The ones who get it subtracted each
+  entry from the next and got `3, 5, 7, 9, 11`, which anybody can continue — so the
+  answer is 50. They did not solve the puzzle; they made a second table.
+- *Aim:* **Why does subtracting help?**
+
+**4. When the Gap Never Changes** — linear, discovered rather than defined
+- *Do now:* Four tables, no rules given. Take the gaps of each and put the tables into
+  piles by what the gaps do.
+- *What happens:* Two piles, without being told there would be two. The constant-gap
+  pile all turn out to be *so much per step, starting from somewhere* — which is the
+  definition, arrived at from the far side.
+- *Aim:* **What do the ones in the first pile have in common?**
+
+**5. When the Gap's Gap Never Changes** — quadratics, before the quadratic formula
+- *Do now:* A ball is let go down a ramp. Where it is at each tick: `0, 1, 4, 9, 16, 25`.
+  Take the gaps. Then take the gaps of those.
+- *What happens:* Gaps `1, 3, 5, 7, 9` — the odd numbers. Gaps of gaps: `2, 2, 2, 2`.
+  Constant, one floor down. This is Galileo's table from 1638, and he had no calculus;
+  he had a ramp and a pen. The constant is the acceleration, though nobody says so yet.
+- *Aim:* **The gaps keep changing but their gaps don't. What kind of thing is that?**
+
+**6. Pascal's Triangle Is a Machine**
+- *Do now:* Corner to corner across a three-by-three grid, moving only right or down.
+  How many different ways? Draw them.
+- *What happens:* Twenty, and drawing all twenty is miserable. Somebody writes the count
+  at each corner instead and notices each one is the two before it added together.
+- *Aim:* **Is there a way to get the number without drawing every path?**
+
+**7. Sums That Collapse** — `Σ` as the undoing of `Δ`; the Fundamental Theorem, unnamed
+- *Do now:* Here is a table: `1, 4, 9, 16, 25, 36, 49, 64`. Write down its gaps. Add the
+  gaps up. Now look at your total and look back at the table.
+- *What happens:* The gaps are `3, 5, 7, 9, 11, 13, 15` and they add to 63. The table
+  runs 1 to 64. Everything in the middle cancelled and nobody arranged for it to.
+- *Aim:* **Why is the total of the gaps just the last one take away the first?**
+
+**8. Dots in a Box** — area by counting
+- *Do now:* A right triangle on dotted paper, legs six and four. (a) What is its area?
+  (b) How many dots are inside it? Count them.
+- *What happens:* The formula says twelve. The count says seven. Both are done
+  correctly. Twelve dots sit on the edge, which is the whole of the discrepancy, and
+  nobody has said yet what an edge dot is half of.
+- *Aim:* **The formula says twelve and I count seven. Which one is the area?**
 
 > *Credits:* Boole (1860) and Jordan (1939) for the difference calculus; Graham, Knuth
 > & Patashnik, *Concrete Mathematics* ch. 2, for the modern treatment.
