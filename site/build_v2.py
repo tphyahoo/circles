@@ -801,15 +801,45 @@ r = 2000   11,312 dots     3.006 seconds</div></div>
 
 <footer class="colo">
   <h3>Checked before printing</h3>
-  <p>Every number here was computed rather than remembered: the twelve dots at radius 5, 10 and 13; the twenty at radius 25 and thirty-six at 65; all 624 dots at radius 110 sitting inside the integer band, four times the squares between 219&sup2; and 221&sup2; &mdash; established without taking a square root; the dot counts 317 / 31,417 / 3,141,549 / 314,159,053 and the &pi; digits they yield; and the integer-only drawing rule, verified to place its dots in the same spots as the square-root method at every radius tested. Ralphie's parity argument is also carried in the specification as an invariant, <span style="font-family:var(--mono)">NoTies</span>, model-checked at eight radii &mdash; though the argument itself settles every radius at once.</p>
-  <p>The same parity fact makes the drawing algorithm deterministic: its decision variable is odd at every step, so it never lands on nought and the <span style="font-family:var(--mono)">otherwise</span> branch never breaks a tie. Checked at every radius from 2 to 1999. That is a fact about the <em>midpoint</em> variant, which is what this lesson teaches.</p>
-  <p>Bresenham's own 1977 algorithm is a different procedure &mdash; a decision variable evaluated at the diagonal neighbour, initialised <span style="font-family:var(--mono)">2 &minus; 2R</span> rather than <span style="font-family:var(--mono)">3 &minus; 2r</span>. His <em>does</em> land on zero, at 143 of the radii from 2 to 399, and he handles it explicitly as his &ldquo;case 5&rdquo;, proving the move stays forced. It is zero exactly when a lattice point sits perfectly on the ring &mdash; so the radii that trouble his algorithm are precisely the lucky ones. The two algorithms agree on their output at every radius tested to 200, but <span style="font-family:var(--mono)">3 &minus; 2r</span> is not his, and calling it &ldquo;Bresenham's circle algorithm&rdquo;, as almost everyone does, is a misattribution.</p>
-  <p>Ralphie's homework, for anyone who wants it now: NASA JPL reports working to about fifteen digits for interplanetary navigation. Thirty-eight would draw a circle round the observable universe to within a hydrogen atom. Mrs. Feeney does not know either figure, and would rather he looked them up than took them from her &mdash; which is the only reason they are down here and not up there.</p>
+  <p>Every number here was computed rather than remembered: the twelve dots exactly ten
+  from the middle, and the twenty at radius twenty-five against four at twenty-four that
+  the last homework question turns on; all 624 dots of the drawing at radius 110 lying
+  inside the integer band, four times each total falling between 219&sup2; and 221&sup2;
+  &mdash; established without taking a square root; and the rule itself, which puts its
+  dots in exactly the spots that rounding a square root would, at every radius from 1
+  to 300.</p>
+
+  <p>Ralphie's parity argument is carried in the specification as an invariant,
+  <span style="font-family:var(--mono)">NoTies</span>, model-checked at eight radii
+  &mdash; though the argument itself settles every radius at once, which is the point
+  he makes to Mrs. Feeney and she concedes.</p>
+
+  <p>The program in &sect;03 is not a transcription of the one that drew the figures. It
+  <em>is</em> that program: the page prints the file, and Figures 8 and 9 are its output,
+  captured with the colours it printed rather than redrawn. There is no second copy to
+  drift.</p>
 
   <h3 style="margin-top:2rem">Whose ideas these are</h3>
-  <p><strong>The drawing algorithm</strong> is Bresenham's circle algorithm &mdash; J. E. Bresenham, &ldquo;A Linear Algorithm for Incremental Digital Display of Circular Arcs&rdquo;, <em>Communications of the ACM</em> 20(2), February 1977, 100&ndash;106. Not the better-known 1965 paper (&ldquo;Algorithm for computer control of a digital plotter&rdquo;, <em>IBM Systems Journal</em> 4(1), 25&ndash;30), which draws lines; the circle came twelve years afterwards. The variant used here is usually called the midpoint circle algorithm.</p>
-  <p><strong>Counting dots to get &pi;</strong> is the Gauss circle problem. <strong>Which radii carry dots that land exactly</strong> is the theory of sums of two squares, from Fermat and Jacobi. <strong>Writing the blueprint before the program</strong>, and the observation that a specification is not written in the material the thing is built from, is Leslie Lamport &mdash; &ldquo;Thinking Above the Code&rdquo;, Microsoft Research Faculty Summit, 2014 &mdash; and the notation of the blueprint is his TLA+.</p>
-  <p>None of the mathematics in this lesson is new. The only thing arranged here is the order.</p>
+  <p><strong>Which radii carry dots that land exactly</strong> is the theory of sums of
+  two squares, from Fermat and Jacobi. <strong>Writing the blueprint before the
+  program</strong>, and the observation that a specification is not written in the
+  material the thing is built from, is Leslie Lamport &mdash; &ldquo;Thinking Above the
+  Code&rdquo;, Microsoft Research Faculty Summit, 2014 &mdash; and the notation of the
+  blueprint is his TLA+.</p>
+
+  <p><strong>The faster way Mrs. Feeney refuses to show</strong> is the midpoint circle
+  algorithm. Anyone going to look it up should know that the
+  <span style="font-family:var(--mono)">3 &minus; 2r</span> form almost universally
+  called &ldquo;Bresenham's circle algorithm&rdquo; is not the procedure in Bresenham's
+  paper &mdash; his uses a decision variable at the diagonal neighbour, initialised
+  <span style="font-family:var(--mono)">2 &minus; 2R</span>. They agree on their output
+  and are different methods. J. E. Bresenham, &ldquo;A Linear Algorithm for Incremental
+  Digital Display of Circular Arcs&rdquo;, <em>Communications of the ACM</em> 20(2),
+  February 1977, 100&ndash;106 &mdash; not the better-known 1965 paper, which draws
+  lines.</p>
+
+  <p>None of the mathematics in this lesson is new. The only thing arranged here is the
+  order.</p>
 </footer>
 
 </div>
@@ -1319,15 +1349,21 @@ DOC2 = r"""<title>Honors Math, Period 3 — Day Three: Counting</title>
 
 <footer class="colo">
   <h3>Checked before printing</h3>
-  <p>Every number here was computed rather than remembered: the twelve dots at radius 5, 10 and 13; the twenty at radius 25 and thirty-six at 65; all 624 dots at radius 110 sitting inside the integer band, four times the squares between 219&sup2; and 221&sup2; &mdash; established without taking a square root; the dot counts 317 / 31,417 / 3,141,549 / 314,159,053 and the &pi; digits they yield; and the integer-only drawing rule, verified to place its dots in the same spots as the square-root method at every radius tested. Ralphie's parity argument is also carried in the specification as an invariant, <span style="font-family:var(--mono)">NoTies</span>, model-checked at eight radii &mdash; though the argument itself settles every radius at once.</p>
-  <p>The same parity fact makes the drawing algorithm deterministic: its decision variable is odd at every step, so it never lands on nought and the <span style="font-family:var(--mono)">otherwise</span> branch never breaks a tie. Checked at every radius from 2 to 1999. That is a fact about the <em>midpoint</em> variant, which is what this lesson teaches.</p>
-  <p>Bresenham's own 1977 algorithm is a different procedure &mdash; a decision variable evaluated at the diagonal neighbour, initialised <span style="font-family:var(--mono)">2 &minus; 2R</span> rather than <span style="font-family:var(--mono)">3 &minus; 2r</span>. His <em>does</em> land on zero, at 143 of the radii from 2 to 399, and he handles it explicitly as his &ldquo;case 5&rdquo;, proving the move stays forced. It is zero exactly when a lattice point sits perfectly on the ring &mdash; so the radii that trouble his algorithm are precisely the lucky ones. The two algorithms agree on their output at every radius tested to 200, but <span style="font-family:var(--mono)">3 &minus; 2r</span> is not his, and calling it &ldquo;Bresenham's circle algorithm&rdquo;, as almost everyone does, is a misattribution.</p>
-  <p>Ralphie's homework, for anyone who wants it now: NASA JPL reports working to about fifteen digits for interplanetary navigation. Thirty-eight would draw a circle round the observable universe to within a hydrogen atom. Mrs. Feeney does not know either figure, and would rather he looked them up than took them from her &mdash; which is the only reason they are down here and not up there.</p>
+  <p>Every number here was computed rather than remembered: the dot counts
+  317 / 31,417 / 3,141,549 / 314,159,053, at radius ten, a hundred, a thousand and ten
+  thousand, and the digits of &pi; they yield &mdash; each one counted by columns in
+  whole numbers, never by measuring an area; and the twenty dots landing exactly on
+  radius twenty-five against four on twenty-four.</p>
+
+  <p>Day one and day two carry their own receipt, for their own numbers.</p>
 
   <h3 style="margin-top:2rem">Whose ideas these are</h3>
-  <p><strong>The drawing algorithm</strong> is Bresenham's circle algorithm &mdash; J. E. Bresenham, &ldquo;A Linear Algorithm for Incremental Digital Display of Circular Arcs&rdquo;, <em>Communications of the ACM</em> 20(2), February 1977, 100&ndash;106. Not the better-known 1965 paper (&ldquo;Algorithm for computer control of a digital plotter&rdquo;, <em>IBM Systems Journal</em> 4(1), 25&ndash;30), which draws lines; the circle came twelve years afterwards. The variant used here is usually called the midpoint circle algorithm.</p>
-  <p><strong>Counting dots to get &pi;</strong> is the Gauss circle problem. <strong>Which radii carry dots that land exactly</strong> is the theory of sums of two squares, from Fermat and Jacobi. <strong>Writing the blueprint before the program</strong>, and the observation that a specification is not written in the material the thing is built from, is Leslie Lamport &mdash; &ldquo;Thinking Above the Code&rdquo;, Microsoft Research Faculty Summit, 2014 &mdash; and the notation of the blueprint is his TLA+.</p>
-  <p>None of the mathematics in this lesson is new. The only thing arranged here is the order.</p>
+  <p><strong>Counting dots to get &pi;</strong> is the Gauss circle problem.
+  <strong>Which radii carry dots that land exactly</strong> is the theory of sums of two
+  squares, from Fermat and Jacobi.</p>
+
+  <p>None of the mathematics in this lesson is new. The only thing arranged here is the
+  order.</p>
 </footer>
 
 </div>
