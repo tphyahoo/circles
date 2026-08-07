@@ -169,10 +169,18 @@ area, surface area, volume · sampling and probability*
 
 **6. Pascal's Triangle Is a Machine**
 - *Do now:* Corner to corner across a three-by-three grid, moving only right or down.
-  How many different ways? Draw them.
-- *What happens:* Twenty, and drawing all twenty is miserable. Somebody writes the count
-  at each corner instead and notices each one is the two before it added together.
-- *Aim:* **Is there a way to get the number without drawing every path?**
+  How many different ways? Draw them. — *Then, once they are done and pleased with
+  themselves:* now do the ten-by-ten.
+- *What happens:* Twenty, and drawing all twenty is miserable. Ten-by-ten is **184,756**,
+  which at ten seconds a path is three weeks of drawing without sleeping. The method is
+  not slow. It is finished as a method. Somebody writes the count at each corner instead
+  — 121 additions, and it fits in the lesson.
+- *Aim:* **Nobody can draw a hundred and eighty thousand of anything. What else is
+  there?**
+- *Why it is here:* the first place in the book where a way of getting an answer runs
+  out, rather than merely being tiresome. Drawing paths doubles every time a row is
+  added; the table grows like `n²`. A twelve-year-old can feel that difference with no
+  notation at all, and does not need to be told which of the two is the answer.
 
 **7. Sums That Collapse** — `Σ` as the undoing of `Δ`; the Fundamental Theorem, unnamed
 - *Do now:* Here is a table: `1, 4, 9, 16, 25, 36, 49, 64`. Write down its gaps. Add the
@@ -188,6 +196,24 @@ area, surface area, volume · sampling and probability*
   correctly. Twelve dots sit on the edge, which is the whole of the discrepancy, and
   nobody has said yet what an edge dot is half of.
 - *Aim:* **The formula says twelve and I count seven. Which one is the area?**
+
+**9. Two Rules, One Table** — a procedure is not its answer
+- *Do now:* Here is a table: `1, 3, 5, 7, 9, 11`. Write down a rule that makes it.
+  One line.
+- *What happens:* Half the room writes *add two to the one before*. The other half
+  writes *double where you are and take one off*. Both are correct and both make exactly
+  this table — but they are not the same instructions. The first cannot tell you the
+  hundredth entry without grinding out the ninety-nine before it. The second can be
+  asked directly. Pascal's triangle, three chapters ago, was the first kind and has no
+  known second kind; the collapsing sums of chapter seven turned a first kind into a
+  second.
+- *Aim:* **We wrote different rules. Are they the same rule?**
+- *Why it is here:* the answer is *no, and yes* — different work, same table — and
+  holding both halves at once is the whole of what it means to think about a procedure
+  rather than an answer. It is also the thing every later volume leans on. When a
+  faster method is deferred with *it gets the same dots*, this is the chapter that
+  makes the sentence mean something. Picked up again in V.6, recurrences and closed
+  forms.
 
 > *Credits:* Boole (1860) and Jordan (1939) for the difference calculus; Graham, Knuth
 > & Patashnik, *Concrete Mathematics* ch. 2, for the modern treatment.

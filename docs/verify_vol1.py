@@ -42,6 +42,20 @@ check('its gaps', g, [3, 5, 7, 9, 11, 13, 15])
 check('gaps added up', sum(g), 63)
 check('last take away first', table[-1] - table[0], 63)
 
+# I.6  the grid nobody can draw
+check('paths across a 10x10 grid', math.comb(20, 10), 184756)
+check('corners to fill in instead', (10 + 1) ** 2, 121)
+check('drawing them at 10s each, in days', round(math.comb(20, 10) * 10 / 86400), 21)
+
+# I.9  two rules, one table
+by_step, prev = [], 1
+for _ in range(6):
+    by_step.append(prev); prev += 2
+by_place = [2 * n - 1 for n in range(1, 7)]
+check('add two to the one before', by_step, [1, 3, 5, 7, 9, 11])
+check('double where you are, take one off', by_place, [1, 3, 5, 7, 9, 11])
+check('same table, different work', by_step == by_place, True)
+
 # I.8  the triangle where the formula and the counting disagree
 V = [(0, 0), (6, 0), (0, 4)]
 inside = [(x, y) for x in range(0, 7) for y in range(0, 5)
