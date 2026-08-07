@@ -27,6 +27,37 @@ who have neither, taking the discrete half first.
 
 ---
 
+## What it is for
+
+The substrate is **computation**. Not as a career and not as a subject beside the
+others, but as the tool the rest of it is done with — the way arithmetic is the
+substrate now.
+
+A graduate specialises afterward, into statistics or physics or algebraic geometry
+or building software, and arrives at any of them able to say what a procedure does
+before running it, in notation that cannot be read two ways. Very few people in our
+world get that at all; the ones who do get it at thirty, at work, badly.
+
+The trade is real and should be stated rather than discovered. **They do not come
+out knowing the physics and statistics an honors student here does.** Our sequence
+surveys everything and delivers mastery of nothing in particular; this one picks one
+thing and delivers it. A reader who wants the survey should buy the survey.
+
+The standing debt above is also the best evidence for the trade. *Concrete
+Mathematics* is six hundred pages of remediation, sold to people who already have
+the degree, for precisely the gap this proposes to close from the other side.
+
+**What this is not.** It is not "teach kids to code," which every school system has
+now attempted, and which produces students who can write a hundred lines of
+JavaScript and cannot say what any of it does. The distinction is
+computation-as-mathematics against coding-as-vocation, and it is worth restating
+because the failure mode is one short hop away: the moment the subject becomes the
+apparatus — how to specify, how to make it fast, what a tool is *for* — the
+mathematics has stopped moving. Legibility is the whole of what the formal notation
+is here to buy. Nothing beyond that is in scope.
+
+---
+
 ## How this differs, structurally
 
 Four differences do all the work. Everything else follows from them.
