@@ -306,13 +306,24 @@ DOC1 = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
   </div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Twelve. Did anybody get thirteen?</p>
+    <p>Twelve. Anybody got a thirteenth?</p>
   </div></div>
 
-  <div class="line"><div class="beat">(Nobody got thirteen.)</div></div>
+  <div class="line"><div class="who">Somebody</div><div class="says"><p>Seven and seven.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>Do it.</p></div></div>
+
+  <div class="line"><div class="who">Somebody</div><div class="says">
+    <p>Forty-nine and forty-nine&hellip; ninety-eight.</p>
+    <p><span class="stage">(pause)</span> That's two short.</p>
+  </div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>And?</p></div></div>
+
+  <div class="line"><div class="who">Somebody</div><div class="says"><p>&hellip;So it doesn't count.</p></div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>And nobody measured anything, and nobody put their hand up to ask me how, because you have been adding squares since September and you did not need me for this.</p>
+    <p>It does not count. Hold on to it anyway, because it is the best wrong answer anybody is going to give me this morning.</p>
   </div></div>
 
   <figure>
@@ -330,14 +341,17 @@ DOC1 = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
 
   <div class="line"><div class="who">Ralphie</div><div class="says"><p>All the points that are the same distance from the middle.</p></div></div>
 
+  <div class="line"><div class="beat">(She writes Ralphie's sentence along the top of the board and does not say anything about it. It is still there at the end of the day.)</div></div>
+
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Hold on to that sentence. There are two things wrong with it, and it is going to take us until the bell to find them both.</p>
-    <p>For now, just the first word that matters. <em>All</em> the points. And we found?</p>
+    <p><em>All</em> the points. And we found?</p>
   </div></div>
 
   <div class="line"><div class="who">Ralphie</div><div class="says"><p>Twelve.</p></div></div>
 
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>Twelve. On an entire board.</p></div></div>
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Twelve, on an entire board. And seven-and-seven, which is as near as makes no difference, gets nothing at all.</p>
+  </div></div>
 
   <div class="line"><div class="keybox"><span class="lbl">The trouble</span><p>Almost no dot is <em>exactly</em> ten from the middle. If we insist on &ldquo;exactly,&rdquo; our circles have twelve dots in them and enormous holes. A rule that strict doesn't draw &mdash; it just says no.</p></div></div>
 
@@ -354,20 +368,23 @@ DOC1 = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
   <div class="line"><div class="beat">(A longer silence than she is comfortable with. She waits it out anyway.)</div></div>
 
   <div class="line"><div class="who p">Popovich</div><div class="says">
-    <p>Then you can't have a circle here at all.</p>
-    <p>And you're going to tell us we can, and then you're going to cheat.</p>
+    <p>There isn't a circle. Not here.</p>
   </div></div>
 
+  <div class="line"><div class="beat">(Mrs. Feeney writes that in the top corner, in his words, and puts his name on it. Somebody points out that it is not a question.)</div></div>
+
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>I am going to do exactly one of those two things, and you are going to tell me which one at the bell.</p>
-    <p><span class="stage">(writing it in the top corner, where it stays for the rest of the day)</span></p>
+    <p>No, it isn't. Turn it into one.</p>
   </div></div>
 
-  <div class="line"><div class="keybox aim"><span class="lbl">The question &mdash; his, not hers</span><p>There are only twelve dots exactly ten away.<br />So what is a circle, if dots are all you have?</p></div></div>
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>Is he right?</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>Is he right.</p></div></div>
+
+  <div class="line"><div class="keybox aim"><span class="lbl">Top corner of the board, from ten past nine</span><p>&ldquo;There isn't a circle. Not here.&rdquo;&emsp;&mdash;&nbsp;Popovich<br />Is he right?</p></div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>That is Popovich's, and I have written it in his words and not mine, so that nobody can tell me at ten to ten that I asked an easier one.</p>
-    <p>Everything between here and the bell is that line. When it comes off the board, we're finished.</p>
+    <p>It stays up until somebody settles it.</p>
   </div></div>
 
 </section>
@@ -730,13 +747,13 @@ r = 2000   11,312 dots     3.006 seconds</div></div>
   <div class="line"><div class="who p">Popovich</div><div class="says"><p>I know what I told you.</p></div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Ralphie &mdash; the definition you gave me at the start. Say it again.</p>
+    <p>Ralphie. Your sentence is still along the top, where I put it. I have not rubbed it out all day. Read it.</p>
   </div></div>
 
   <div class="line"><div class="who">Ralphie</div><div class="says"><p>All the points that are the same distance from the middle.</p></div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>And I said there were two things wrong with it. Have you got them both?</p>
+    <p>Now tell me what is wrong with it.</p>
   </div></div>
 
   <div class="line"><div class="who">Ralphie</div><div class="says"><p>&hellip;There aren't any points. And you can't have the distance.</p></div></div>
