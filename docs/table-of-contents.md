@@ -38,6 +38,16 @@ or building software, and arrives at any of them able to say what a procedure do
 before running it, in notation that cannot be read two ways. Very few people in our
 world get that at all; the ones who do get it at thirty, at work, badly.
 
+**The claim is not that this is easier.** Nobody knows whether it is, and this
+document should not pretend to. The claim is that it is a different vantage, and that
+the vantage buys something specific: a student who can implement what a calculator or
+a spreadsheet does has taken that much magic out of the world and got a tool back —
+the kind of thing that hangs in a garage, which you are allowed to open, and which
+turns out to have nothing in it you could not have built.
+
+That is also the honest reason for the formal notation. Not rigour, and not
+professional practice. A thing you can read is a thing you can open.
+
 The trade is real and should be stated rather than discovered. **They do not come
 out knowing the physics and statistics an honors student here does.** Our sequence
 surveys everything and delivers mastery of nothing in particular; this one picks one
@@ -322,8 +332,12 @@ Stated up front so a prototype can attack them first.
 
 - **Chapter II.9 and the whole spread strand.** Reviewers of *Divine Proportions*
   granted its coherence but questioned whether quadrance and spread are actually
-  *easier* for ordinary students. Since "easier" is this book's entire claim, this is
-  the first chapter to write and test, not the last.
+  *easier* for ordinary students. That objection lands on a claim this book does not
+  make — see *What it is for*. What has to be tested is narrower and harder: not
+  whether spread is easier than sine, but whether a student who has **only** ever had
+  spread can do ninth-grade work with it. If the strand cannot carry Volume III on its
+  own, the sequence breaks here first, which is why this is still the first chapter to
+  write and test rather than the last.
 - **Radian measure** is the single genuinely unavoidable appeal to the continuum. Every
   other apparent obstacle turned out to be reachable by counting or by algebra; this one
   did not. `π` and `e` as *numbers* are fine — they are procedures with error
