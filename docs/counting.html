@@ -188,7 +188,14 @@
     body { font-size: 16px; padding: 0 .6rem 4rem; }
     .line, .cast-row { grid-template-columns: 1fr; gap: .15rem; }
     .who, .cast-name { padding-top: 0; margin-bottom: .05rem; }
-    .beat, .keybox, .eq, .tablewrap { grid-column: 1; }
+    .keybox.donow { border-left-color: var(--blue);
+    background: color-mix(in srgb, var(--blue) 7%, transparent); }
+  .keybox.donow .lbl { color: var(--blue); }
+  .keybox.aim { border-left: 0; border: 2px solid var(--blue); padding: 1.1rem 1.4rem;
+    background: color-mix(in srgb, var(--blue) 9%, transparent); }
+  .keybox.aim .lbl { color: var(--blue); }
+  .keybox.aim p { font-size: 1.1rem; line-height: 1.5; }
+  .beat, .keybox, .eq, .tablewrap { grid-column: 1; }
     figcaption { grid-template-columns: 1fr; gap: .3rem; }
   }
   @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }

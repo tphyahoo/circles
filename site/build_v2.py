@@ -223,7 +223,14 @@ DOC1 = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
     body { font-size: 16px; padding: 0 .6rem 4rem; }
     .line, .cast-row { grid-template-columns: 1fr; gap: .15rem; }
     .who, .cast-name { padding-top: 0; margin-bottom: .05rem; }
-    .beat, .keybox, .eq, .tablewrap { grid-column: 1; }
+    .keybox.donow { border-left-color: var(--blue);
+    background: color-mix(in srgb, var(--blue) 7%, transparent); }
+  .keybox.donow .lbl { color: var(--blue); }
+  .keybox.aim { border-left: 0; border: 2px solid var(--blue); padding: 1.1rem 1.4rem;
+    background: color-mix(in srgb, var(--blue) 9%, transparent); }
+  .keybox.aim .lbl { color: var(--blue); }
+  .keybox.aim p { font-size: 1.1rem; line-height: 1.5; }
+  .beat, .keybox, .eq, .tablewrap { grid-column: 1; }
     figcaption { grid-template-columns: 1fr; gap: .3rem; }
   }
   @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
@@ -276,56 +283,93 @@ DOC1 = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
 
 <!-- 01 -->
 <section>
-  <h2><span class="n">01</span> What a circle is, and the trouble with dots</h2>
+  <h2><span class="n">01</span> Twelve dots</h2>
 
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Good morning. Sit anywhere. Popovich, hood.</p>
-    <p>Today: circles. Everybody in this room has drawn one. Today you find out what one <em>is</em>, and I promise that's a different thing.</p>
-    <p>Somebody give me the definition. Not a drawing &mdash; the rule.</p>
-  </div></div>
+  <div class="line"><div class="keybox donow"><span class="lbl">On the board when they walk in</span><p>The middle dot is marked. Find every dot that is <em>exactly</em> ten away from it.</p><p>Do not measure anything.</p></div></div>
 
-  <div class="line"><div class="who">Ralphie</div><div class="says"><p>All the points that are the same distance from the middle!</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Perfect. Say it again but slower, because there's a landmine in it.</p>
-  </div></div>
-
-  <div class="line"><div class="who">Ralphie</div><div class="says"><p>All the points&hellip; the same distance&hellip; from the middle.</p></div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p><span class="stage">(tapping the board, which is a grid of dots)</span> Here is our world. Dots. A dot at every whole-number spot, as far as you like in any direction. That's all we've got &mdash; there's nothing <em>between</em> two dots, because there's nothing there to be.</p>
-    <p>Now. Put your finger on the middle dot and find me every dot exactly ten away.</p>
-  </div></div>
+  <div class="line"><div class="beat">(The lattice is printed on the board. Mrs. Feeney is at the window with her back to the room, which is the arrangement &mdash; she does not talk during the Do Now, and they do not ask her anything.)</div></div>
 
   <figure>
     <div class="boardshot"><img src="__B1__" alt="A whiteboard printed with a lattice of faint dots, the centre dot circled in red marker and labelled the middle, with one unit measured between two adjacent dots" /></div>
     <figcaption><span class="pn hand">Fig. 1 &middot; board</span><span class="pt">The whole world, and the only thing in it. The lattice is printed on the board; everything else is marker.</span></figcaption>
   </figure>
 
-  <div class="line"><div class="beat">(Scratching. A long pause. Ralphie's hand goes up, then down, then up.)</div></div>
-
-  <div class="line"><div class="who">Ralphie</div><div class="says">
-    <p>Ten to the right. Ten up. Ten left, ten down. Um. And &mdash; six across and eight up! That's ten, because six squared plus eight squared is thirty-six plus sixty-four is a hundred.</p>
-  </div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>Beautiful. Keep going.</p></div></div>
-
-  <div class="line"><div class="who">Ralphie</div><div class="says"><p>&hellip;Eight across and six up. <span class="stage">(pause)</span> That might be all of them.</p></div></div>
+  <div class="line"><div class="beat">(Four minutes. Scratching. Ralphie's hand goes up, then down, then up.)</div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>That's all of them. Twelve dots. Now &mdash; is that a circle?</p>
+    <p>Hand down, Ralphie, there is nothing to put your hand up for. Read me your list.</p>
   </div></div>
 
-  <div class="line"><div class="who p">Popovich</div><div class="says"><p>No. That's twelve dots.</p></div></div>
+  <div class="line"><div class="who">Ralphie</div><div class="says">
+    <p>Ten right, ten up, ten left, ten down. Then six across and eight up, because thirty-six and sixty-four is a hundred. And eight across and six up. And then all the flips of those.</p>
+    <p>Twelve.</p>
+  </div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Twelve. Did anybody get thirteen?</p>
+  </div></div>
+
+  <div class="line"><div class="beat">(Nobody got thirteen.)</div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>And nobody measured anything, and nobody put their hand up to ask me how, because you have been adding squares since September and you did not need me for this.</p>
+  </div></div>
 
   <figure>
     <div class="boardshot"><img src="__B2__" alt="Twelve blue dots marked on the lattice, all exactly ten steps from the centre, with a six-eight-ten right triangle drawn in red marker from the middle to one of them" /></div>
-    <figcaption><span class="pn hand">Fig. 2 &middot; board</span><span class="pt">Every dot exactly ten away &mdash; and the one Ralphie found first, which is a 6-8-10 triangle whether he knew it or not.</span></figcaption>
+    <figcaption><span class="pn hand">Fig. 2 &middot; board</span><span class="pt">Every dot exactly ten away &mdash; and the one Ralphie found first, which he got by adding two squares and not by measuring anything.</span></figcaption>
   </figure>
 
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>Correct, and thank you for not being polite about it. Twelve dots is not a circle. So we have a problem, and here it is:</p></div></div>
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>So. Is that a circle?</p></div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says"><p>No. That's twelve dots.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Thank you for not being polite about it. Why isn't it? Somebody just say the definition.</p>
+  </div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>All the points that are the same distance from the middle.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Hold on to that sentence. There are two things wrong with it, and it is going to take us until the bell to find them both.</p>
+    <p>For now, just the first word that matters. <em>All</em> the points. And we found?</p>
+  </div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>Twelve.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>Twelve. On an entire board.</p></div></div>
 
   <div class="line"><div class="keybox"><span class="lbl">The trouble</span><p>Almost no dot is <em>exactly</em> ten from the middle. If we insist on &ldquo;exactly,&rdquo; our circles have twelve dots in them and enormous holes. A rule that strict doesn't draw &mdash; it just says no.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>So give me today's question. Not the answer &mdash; I don't want the answer, I haven't got one yet either. The question. What is it we don't know?</p>
+  </div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>How do we find the rest of them?</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>There are no rest of them. Twelve is not a start, it is the finished and correct answer to the question I put on the board before you sat down. Again.</p>
+  </div></div>
+
+  <div class="line"><div class="beat">(A longer silence than she is comfortable with. She waits it out anyway.)</div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says">
+    <p>Then you can't have a circle here at all.</p>
+    <p>And you're going to tell us we can, and then you're going to cheat.</p>
+  </div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>I am going to do exactly one of those two things, and you are going to tell me which one at the bell.</p>
+    <p><span class="stage">(writing it in the top corner, where it stays for the rest of the day)</span></p>
+  </div></div>
+
+  <div class="line"><div class="keybox aim"><span class="lbl">The question &mdash; his, not hers</span><p>There are only twelve dots exactly ten away.<br />So what is a circle, if dots are all you have?</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>That is Popovich's, and I have written it in his words and not mine, so that nobody can tell me at ten to ten that I asked an easier one.</p>
+    <p>Everything between here and the bell is that line. When it comes off the board, we're finished.</p>
+  </div></div>
+
 </section>
 
 <!-- 02 -->
@@ -350,7 +394,15 @@ DOC1 = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
   <div class="line"><div class="who">Ralphie</div><div class="says"><p>&hellip;I was going to say a ruler.</p></div></div>
 
   <div class="line"><div class="who p">Popovich</div><div class="says">
-    <p>You don't measure. Ten away means the squares add up to a hundred. So square the two dots that look close and see which total lands nearer a hundred.</p>
+    <p><span class="stage">(not looking up)</span> Same as always. Add the squares.</p>
+  </div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Say it properly, for anybody who was off last week.</p>
+  </div></div>
+
+  <div class="line"><div class="who p">Popovich</div><div class="says">
+    <p>Ten away means the squares add up to a hundred. So square the two dots that look close, and see which total lands nearer a hundred.</p>
   </div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says"><p>Do the seventh column for me.</p></div></div>
@@ -366,7 +418,7 @@ DOC1 = r"""<title>Honors Math, Period 3 — Day One: Circles</title>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
     <p>Notice what he did <em>not</em> do. He never worked out how far away either dot was. He only worked out which of them was <em>nearer</em>, and squaring is enough for that.</p>
-    <p>This is going to keep happening all year, so learn to like it: the squared distance is easier than the distance, and most of the time the distance was never the thing you wanted.</p>
+    <p>You have taken it on trust from me for a fortnight that never once doing a square root would turn out to be worth something. That was the something. It has just bought you a circle.</p>
   </div></div>
 
   <div class="line"><div class="who">Ralphie</div><div class="says">
@@ -663,35 +715,41 @@ r = 2000   11,312 dots     3.006 seconds</div></div>
   <h2><span class="n">04</span> The bell</h2>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Two minutes. Look at where we started.</p>
-    <p>Ralphie found twelve dots this morning, and Popovich said &mdash; correctly &mdash; that twelve dots is not a circle.</p>
+    <p>Two minutes.</p>
+    <p><span class="stage">(pointing at the top corner of the board, which nobody has touched since ten past nine)</span> Popovich. That one is yours. Answer it.</p>
   </div></div>
 
-  <div class="line"><div class="beat">(Nobody says anything. The board is covered.)</div></div>
-
-  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>And before that. Ralphie &mdash; nine o'clock this morning, first thing out of your mouth: all the points the same distance from the middle. I said there was a landmine in it. Find it for me.</p>
-  </div></div>
-
-  <div class="line"><div class="who r">Ralphie</div><div class="says">
-    <p>&hellip;There aren't any points. And you can't have the distance.</p>
+  <div class="line"><div class="who p">Popovich</div><div class="says">
+    <p><span class="stage">(takes a while)</span> &hellip;We've got one.</p>
   </div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>Two landmines. Ten words.</p>
+    <p>This morning you told me we couldn't have one at all.</p>
   </div></div>
 
-  <div class="line"><div class="who r">Ralphie</div><div class="says">
-    <p>So I was wrong.</p>
-  </div></div>
+  <div class="line"><div class="who p">Popovich</div><div class="says"><p>I know what I told you.</p></div></div>
 
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>You were not wrong. What you said is a perfectly good definition of a circle.</p>
-    <p>It is just not a definition of anything in <em>this</em> room &mdash; and it took us from nine o'clock until the bell to find out what is.</p>
+    <p>Ralphie &mdash; the definition you gave me at the start. Say it again.</p>
   </div></div>
 
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>All the points that are the same distance from the middle.</p></div></div>
+
   <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
-    <p>We have one now. We know it is never wrong by more than half a unit, and we know that at every size. We know the rule that finds it never gets stuck, and we know <em>that</em> because Ralphie proved it with odd and even, not because I told you.</p>
+    <p>And I said there were two things wrong with it. Have you got them both?</p>
+  </div></div>
+
+  <div class="line"><div class="who">Ralphie</div><div class="says"><p>&hellip;There aren't any points. And you can't have the distance.</p></div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>Two of them. Ten words.</p>
+    <p>You were not wrong, mind. What you said is a perfectly good definition of a circle. It is just not a definition of anything in <em>this</em> room &mdash; and it has taken us from nine o'clock until the bell to find one that is.</p>
+  </div></div>
+
+  <div class="line"><div class="beat">(She rubs the question off the board. Nothing else on it gets touched. There is not much room left.)</div></div>
+
+  <div class="line"><div class="who f">Mrs. Feeney</div><div class="says">
+    <p>And we know it is never wrong by more than half a unit, and we know that at every size. We know the rule that finds it never gets stuck, and we know <em>that</em> because Ralphie proved it with odd and even, not because I told you.</p>
     <p>And none of it came from measuring anything.</p>
   </div></div>
 
@@ -925,7 +983,14 @@ DOC2 = r"""<title>Honors Math, Period 3 — Day Three: Counting</title>
     body { font-size: 16px; padding: 0 .6rem 4rem; }
     .line, .cast-row { grid-template-columns: 1fr; gap: .15rem; }
     .who, .cast-name { padding-top: 0; margin-bottom: .05rem; }
-    .beat, .keybox, .eq, .tablewrap { grid-column: 1; }
+    .keybox.donow { border-left-color: var(--blue);
+    background: color-mix(in srgb, var(--blue) 7%, transparent); }
+  .keybox.donow .lbl { color: var(--blue); }
+  .keybox.aim { border-left: 0; border: 2px solid var(--blue); padding: 1.1rem 1.4rem;
+    background: color-mix(in srgb, var(--blue) 9%, transparent); }
+  .keybox.aim .lbl { color: var(--blue); }
+  .keybox.aim p { font-size: 1.1rem; line-height: 1.5; }
+  .beat, .keybox, .eq, .tablewrap { grid-column: 1; }
     figcaption { grid-template-columns: 1fr; gap: .3rem; }
   }
   @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
