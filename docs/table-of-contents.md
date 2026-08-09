@@ -567,6 +567,39 @@ between them*.
 
 ---
 
+## Probably not going to need this
+
+Good ideas, parked. Kept so they do not have to be worked out twice.
+
+**A named setting.** The county that supplies the Volume I and II do-nows could be
+named, and *Finney County* was the candidate — it carries four things at once:
+**finite**; **Mrs. Feeney**, who already teaches the one lesson that exists; a **real
+county in western Kansas** laid out on the Public Land Survey grid, townships six miles
+square and roads running on section lines, so the lattice is the actual place; and
+**Hal Finney**, who spent a career in finite fields. Not needed yet and possibly never.
+If a setting does get invented it should be more fantastical than a plain American
+county — closer to Downing's Carmorra — while keeping the survey feel the do-nows have
+grown on their own. Mrs. Feeney keeps her spelling in the meantime; nothing turns on it.
+
+**A dedication.** To Hal Finney (1956–2014) — PGP, the first cypherpunk remailer,
+reusable proofs of work. Volumes IV and V teach the mathematics his work stood on:
+clock arithmetic, counting the points on a curve over a prime, and the discrete
+logarithm. Credit the cryptography and not the coin. And only if the book is finished.
+
+**Whether anything ever gets specified, or run.** *Program*, *specification*, *code*
+and *implement* appear **zero** times across all seven volumes' chapter listings. What
+the book does have is the idea underneath — I.9's *two rules, one table*, I.6's *the
+method is finished as a method*, II.7's *it gets the same stakes* — without ever asking
+a student to write down what a procedure should do before doing it. The one written
+lesson does the whole thing already: a blueprint in TLA+, a program that obeys it, and a
+figure that is that program's output. Two questions, both open: whether this becomes a
+strand or is merely named where it already happens; and — a correctness matter rather
+than an idea — that *What it is for* currently promises a graduate who can "implement
+what a calculator or a spreadsheet does" and "say what a procedure does before running
+it", neither of which any chapter delivers.
+
+---
+
 ## Known weak joints
 
 Stated up front so a prototype can attack them first.
