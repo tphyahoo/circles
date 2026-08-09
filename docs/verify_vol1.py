@@ -42,6 +42,17 @@ check('its gaps', g, [3, 5, 7, 9, 11, 13, 15])
 check('gaps added up', sum(g), 63)
 check('last take away first', table[-1] - table[0], 63)
 
+# I.2  three brothers and a hundred links
+share = round(100 / 3, 2)
+check('a third of a hundred links, two places', share, 33.33)
+check('three such shares add back to', round(3 * share, 2), 99.99)
+check('so the strip is short by, in links', round(100 - 3 * share, 2), 0.01)
+check('the pair (100,3) three times over', 3 * 100 == 300 and 300 // 3 == 100, True)
+
+# I.8  what the county would tax him on
+check('the parcel, in square chains', 6 * 4 / 2, 12.0)
+check('  -- which is, in acres (10 sq chains to the acre)', 12 / 10, 1.2)
+
 # I.6  the grid nobody can draw
 check('paths across a 10x10 grid', math.comb(20, 10), 184756)
 check('corners to fill in instead', (10 + 1) ** 2, 121)

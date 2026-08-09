@@ -113,13 +113,35 @@ teacher. They work it cold. Then the **aim** is not announced but *elicited*: th
 names the day's question out of the trouble the do now has just put them in, and it goes
 up in their words and stays up until it is settled.
 
-This is a real constraint on the ordering, not a presentational one. A do now can only
-use what has already been taught, so a chapter that cannot produce one is in the wrong
-place — which makes the exercise a test of the sequence rather than a decoration on it.
-The aims below are written as a twelve-year-old would say them, deliberately. An aim in
-the teacher's words is an announcement wearing a costume.
+Two rules, and the second is the harder one.
 
-The failure mode to watch: eight consecutive ambushes is a lot of ambushes. Some
+**A do now may only use what has already been taught.** So a chapter that cannot
+produce one is in the wrong place, which makes this a test of the ordering rather than
+a decoration on it.
+
+**The need comes from outside the room.** Somebody wants something and cannot have it
+yet — not *here is an interesting question*, which is a teacher wanting something and
+pretending it is the world. This is Douglas Downing's method in the Carmorra books
+(*Calculus the Easy Way*, and *Algebra* in the same setting), where nothing is ever
+taught: the kingdom needs something built or measured or predicted, and the mathematics
+is what it takes to get it. The difference here is that Downing wraps a conventional
+course in a fiction, and this reorders the course itself, so it cannot lean on the
+charm the way he can. The need has to be real.
+
+### Where the needs come from
+
+Volume I draws almost all of them from **the county** — its roads, its records, its
+land, its money. That was not planned. It is what turned up when each chapter was asked
+who wants this, and it is the same county whose roads Popovich's grandfather laid out
+with a chain, which suggests the setting was already there and had not been noticed.
+
+Whether that becomes a standing world with recurring people, the way Carmorra is, or
+stays a source of jobs that happens to repeat, is a live decision and should be made on
+purpose. Galileo appears in chapter five because a real man with a real ramp beats any
+invented need, and the two chapters where the county has to be reached for — one and
+four — are the weakest openings in the volume, which is worth watching for.
+
+The failure mode to watch: nine consecutive ambushes is a lot of ambushes. Some
 chapters should be allowed to open with *here is a tool, now use it*, and the method
 gets tiring precisely when it is applied without exception.
 
@@ -131,89 +153,104 @@ gets tiring precisely when it is applied without exception.
 area, surface area, volume · sampling and probability*
 
 **1. Numbers You Can Point At**
-- *Do now:* Write down the biggest number you can. One line, thirty seconds.
-- *What happens:* The board fills with `999999999`, a googol, `9⁹⁹`, and — always —
-  infinity. Some of these you could count out with enough time and paper. Some you
-  could not, and one of them is not that kind of thing at all.
-- *Aim:* **Which of these could you actually get to?**
+- *Do now:* The county pays a bounty on fence posts. A man arrives with a cartload and
+  says there's *about four hundred*. What do you write in the book?
+- *What happens:* Nobody will write *about four hundred*, because the book is what he
+  gets paid from. So somebody has to count them, and the number that goes in the book
+  is a different kind of thing from the number he said — one of them was got by doing
+  something, and the other was got by looking.
+- *Aim:* **What's wrong with "about"?**
 
 **2. Exact Fractions** — why a fraction is a pair of whole numbers, and never a decimal
-- *Do now:* Write `1/3` as a decimal. Now multiply what you wrote by three.
-- *What happens:* `0.333 × 3 = 0.999`. The ones who wrote more threes get more nines.
-  Nobody gets back to 1. The pair `(1, 3)` would have got back to 1 exactly, and it is
-  shorter to write.
-- *Aim:* **Where did the missing bit go?**
+- *Do now:* Three brothers inherit a strip a hundred links long, share and share alike.
+  Write each brother's share in the deed.
+- *What happens:* `33.33` links each, and three of those is `99.99`. A hundredth of a
+  link has gone missing and the deed has to say who got it. Write it as the pair
+  `100/3` instead and three of them is exactly a hundred, with nothing left over and
+  nobody to argue with.
+- *Aim:* **Who gets the leftover?**
 
 **3. Tables, and the Gaps Between Their Entries** — `Δ` introduced
-- *Do now:* `2, 5, 10, 17, 26, 37`. What comes next, and how do you know?
-- *What happens:* Staring at it does not work. The ones who get it subtracted each
-  entry from the next and got `3, 5, 7, 9, 11`, which anybody can continue — so the
-  answer is 50. They did not solve the puzzle; they made a second table.
+- *Do now:* The county has recorded the same figure for six years running:
+  `2, 5, 10, 17, 26, 37`. The board meets Thursday and wants next year's.
+- *What happens:* Staring at it does not work. The ones who get it subtract each entry
+  from the next and get `3, 5, 7, 9, 11`, which anybody can carry on — so the answer is
+  50. They did not solve the puzzle. They made a second table and solved that.
 - *Aim:* **Why does subtracting help?**
 
 **4. When the Gap Never Changes** — linear, discovered rather than defined
-- *Do now:* Four tables, no rules given. Take the gaps of each and put the tables into
-  piles by what the gaps do.
-- *What happens:* Two piles, without being told there would be two. The constant-gap
-  pile all turn out to be *so much per step, starting from somewhere* — which is the
-  definition, arrived at from the far side.
-- *Aim:* **What do the ones in the first pile have in common?**
+- *Do now:* Four men's pay records, four different arrangements, none of them written
+  down anywhere. Which of these men can you tell me next month's figure for?
+- *What happens:* Two piles form, and nobody was told there would be two. The
+  predictable pile all turn out to be *so much each month, starting from somewhere* —
+  which is the definition of a straight line, arrived at from the far side and without
+  the word.
+- *Aim:* **What have the ones we can predict got in common?**
 
 **5. When the Gap's Gap Never Changes** — quadratics, before the quadratic formula
-- *Do now:* A ball is let go down a ramp. Where it is at each tick: `0, 1, 4, 9, 16, 25`.
-  Take the gaps. Then take the gaps of those.
-- *What happens:* Gaps `1, 3, 5, 7, 9` — the odd numbers. Gaps of gaps: `2, 2, 2, 2`.
-  Constant, one floor down. This is Galileo's table from 1638, and he had no calculus;
-  he had a ramp and a pen. The constant is the acceleration, though nobody says so yet.
+- *Do now:* Galileo had a ramp, a ball, and a water clock, and no calculus, because
+  nobody had any. Here is what he wrote down: `0, 1, 4, 9, 16, 25`. Take the gaps. Then
+  take the gaps of those.
+- *What happens:* Gaps `1, 3, 5, 7, 9` — the odd numbers, which is the thing he
+  published in 1638 and is remembered for. Gaps of gaps: `2, 2, 2, 2`. Constant, one
+  floor down. That constant is the acceleration, though nobody says the word yet.
 - *Aim:* **The gaps keep changing but their gaps don't. What kind of thing is that?**
+- *Why it is here:* the one chapter where no invented need would be better than the
+  real one. A man rolled a ball down a plank and wrote the numbers in a column, and the
+  column is a difference table. Everything this book does, he did first, with a pen.
 
 **6. Pascal's Triangle Is a Machine**
-- *Do now:* Corner to corner across a three-by-three grid, moving only right or down.
-  How many different ways? Draw them. — *Then, once they are done and pleased with
-  themselves:* now do the ten-by-ten.
-- *What happens:* Twenty, and drawing all twenty is miserable. Ten-by-ten is **184,756**,
-  which at ten seconds a path is three weeks of drawing without sleeping. The method is
-  not slow. It is finished as a method. Somebody writes the count at each corner instead
-  — 121 additions, and it fits in the lesson.
+- *Do now:* The county is laid out in mile squares. A man has to get from the
+  courthouse to a farm three miles east and three north, along the roads, never
+  doubling back — and he is paid by the route, so the clerk needs to know how many
+  there are. Draw them.
+- *What happens:* Twenty, and drawing all twenty is miserable. — *Then, once they are
+  done and pleased with themselves:* now the farm ten east and ten north. That is
+  **184,756**, which at ten seconds a route is three weeks of drawing without sleeping.
+  The method is not slow. It is finished as a method. Somebody writes the count at each
+  crossroads instead — 121 additions, and it fits in the lesson.
 - *Aim:* **Nobody can draw a hundred and eighty thousand of anything. What else is
   there?**
 - *Why it is here:* the first place in the book where a way of getting an answer runs
-  out, rather than merely being tiresome. Drawing paths doubles every time a row is
-  added; the table grows like `n²`. A twelve-year-old can feel that difference with no
-  notation at all, and does not need to be told which of the two is the answer.
+  out rather than merely being tiresome. Drawing routes doubles every time a row is
+  added; the table of crossroads grows like `n²`. A twelve-year-old can feel that
+  difference with no notation at all, and does not need telling which of the two won.
 
 **7. Sums That Collapse** — `Σ` as the undoing of `Δ`; the Fundamental Theorem, unnamed
-- *Do now:* Here is a table: `1, 4, 9, 16, 25, 36, 49, 64`. Write down its gaps. Add the
-  gaps up. Now look at your total and look back at the table.
-- *What happens:* The gaps are `3, 5, 7, 9, 11, 13, 15` and they add to 63. The table
-  runs 1 to 64. Everything in the middle cancelled and nobody arranged for it to.
-- *Aim:* **Why is the total of the gaps just the last one take away the first?**
+- *Do now:* A year of the county ledger: the twelve monthly changes, and nothing else.
+  What is the balance in December? The clerk added all twelve and it took him an hour.
+  The treasurer looked at two numbers and had it in four seconds.
+- *What happens:* On the table `1, 4, 9, 16, 25, 36, 49, 64` the gaps are
+  `3, 5, 7, 9, 11, 13, 15`, which add to 63 — and the table runs from 1 to 64.
+  Everything in the middle cancelled, and nobody arranged for it to.
+- *Aim:* **Why is the total of the changes just the last one take away the first?**
 
 **8. Dots in a Box** — area by counting
-- *Do now:* A right triangle on dotted paper, legs six and four. (a) What is its area?
-  (b) How many dots are inside it? Count them.
-- *What happens:* The formula says twelve. The count says seven. Both are done
-  correctly. Twelve dots sit on the edge, which is the whole of the discrepancy, and
-  nobody has said yet what an edge dot is half of.
-- *Aim:* **The formula says twelve and I count seven. Which one is the area?**
+- *Do now:* A triangular parcel, staked at every chain, six chains along the road and
+  four back. The assessor taxes by the acre. (a) What is its area? (b) How many stakes
+  are inside it? Count them.
+- *What happens:* The formula says twelve square chains, which is an acre and a fifth.
+  The count says seven. Both are done correctly, by people who agree about everything
+  else. Twelve stakes sit on the boundary, which is exactly the discrepancy, and nobody
+  has yet said what a boundary stake is half of.
+- *Aim:* **The formula says twelve and I count seven. Which one do we tax him on?**
 
 **9. Two Rules, One Table** — a procedure is not its answer
-- *Do now:* Here is a table: `1, 3, 5, 7, 9, 11`. Write down a rule that makes it.
-  One line.
-- *What happens:* Half the room writes *add two to the one before*. The other half
-  writes *double where you are and take one off*. Both are correct and both make exactly
-  this table — but they are not the same instructions. The first cannot tell you the
-  hundredth entry without grinding out the ninety-nine before it. The second can be
-  asked directly. Pascal's triangle, three chapters ago, was the first kind and has no
-  known second kind; the collapsing sums of chapter seven turned a first kind into a
-  second.
-- *Aim:* **We wrote different rules. Are they the same rule?**
-- *Why it is here:* the answer is *no, and yes* — different work, same table — and
-  holding both halves at once is the whole of what it means to think about a procedure
-  rather than an answer. It is also the thing every later volume leans on. When a
-  faster method is deferred with *it gets the same dots*, this is the chapter that
-  makes the sentence mean something. Picked up again in V.6, recurrences and closed
-  forms.
+- *Do now:* Two clerks were given the same column to fill in. One added two to the line
+  above, all the way down. The other worked out each line from its own line number and
+  never looked up. The columns came out identical: `1, 3, 5, 7, 9, 11`.
+- *What happens:* Both are right and both produced this column, but they are not the
+  same instructions. Ask for the hundredth line: the first clerk must grind out the
+  ninety-nine before it; the second answers directly. Pascal's crossroads, three
+  chapters ago, was the first kind and has no known second kind. The collapsing ledger
+  of chapter seven turned a first kind into a second, which is why the treasurer beat
+  the clerk.
+- *Aim:* **We did different work and got the same column. Did we do the same thing?**
+- *Why it is here:* the answer is *no, and yes*, and holding both halves at once is the
+  whole of what it means to think about a procedure rather than an answer. Every later
+  volume leans on it. When a faster method is deferred with *it gets the same dots*,
+  this is the chapter that makes the sentence mean something. Picked up again in V.6,
+  recurrences and closed forms.
 
 > *Credits:* Boole (1860) and Jordan (1939) for the difference calculus; Graham, Knuth
 > & Patashnik, *Concrete Mathematics* ch. 2, for the modern treatment.
