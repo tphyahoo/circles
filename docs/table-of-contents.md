@@ -579,7 +579,18 @@ square and roads running on section lines, so the lattice is the actual place; a
 **Hal Finney**, who spent a career in finite fields. Not needed yet and possibly never.
 If a setting does get invented it should be more fantastical than a plain American
 county — closer to Downing's Carmorra — while keeping the survey feel the do-nows have
-grown on their own. Mrs. Feeney keeps her spelling in the meantime; nothing turns on it.
+grown on their own.
+
+The candidate for that is **Finney County, in the land of Lamportia**, and the nesting
+is what makes it work: a made-up country containing an entirely ordinary county gets
+both halves, since the mathematics still happens at a courthouse with a chain while the
+map it sits on can be as silly as it likes. The joke is also the right one for this book
+— a magical mystical land named for the man whose whole position is that you should say
+exactly what a thing is before building it. TLA+ is his, and is already the notation in
+the one lesson that exists; so is LaTeX, which the book would be set in; and IV.3 is
+*Clock Arithmetic*, which is an accident.
+
+Mrs. Feeney keeps her spelling in the meantime; nothing turns on it.
 
 **A dedication.** To Hal Finney (1956–2014), who worked in finite fields. Volumes IV
 and V teach the mathematics his work rested on: clock arithmetic, counting the points on
