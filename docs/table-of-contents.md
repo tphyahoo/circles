@@ -263,26 +263,131 @@ area, surface area, volume · sampling and probability*
 transformations and similarity · exponents and scientific notation · systems ·
 volume of cones and spheres*
 
-1. The Grid Has No Gaps in It
-2. Quadrance — squared distance, so no square root ever appears
-3. Pythagoras Without a Square Root
-4. Which Numbers Are Hypotenuses? — sums of two squares
-5. A Circle Is a Set of Dots
-6. Drawing a Circle With Nothing but Addition — the midpoint algorithm
-7. Counting Your Way to π — the Gauss circle problem
-8. Pick's Theorem — the area of any lattice polygon, by counting its dots
-9. Spread — turning, measured without trigonometry
+The county again, and now its land. Every need in this volume is somebody's job:
+setting a boundary, settling which farm is nearer, filling in a deed, laying out a
+bend, taxing a parcel. It is also where a chain stops being a length and becomes an
+instrument — a hundred links, counted, and nothing in between them.
+
+> **The old chapters 5 and 6 have become 5, 6 and 7.** Writing the do-nows is what
+> forced it. Chapter 5 hands you the spots that land *exactly* on the curve; old
+> chapter 6 handed you a fast way to run along one. Neither of them opens on the
+> question in the middle — you have to set a stake where no exact spot exists, so how
+> wrong may you be? — and that question carries the half-link bound and the proof that
+> the rule never gets stuck. A chapter that cannot produce a do-now is in the wrong
+> place; here it was a do-now that could not find a chapter.
+
+**1. The Grid Has No Gaps in It**
+- *Do now:* A boundary has to be set exactly halfway along a run of seven links. Two
+  brothers are watching. Put the stake in.
+- *What happens:* Three and a half links, and the chain has no half links. You can
+  re-mark the whole chain in half-links, and then the next man wants a quarter, and the
+  one after him wants an eighth. Or you say the spot is not there to be marked.
+- *Aim:* **Is there a place there or isn't there?**
+
+**2. Quadrance** — squared distance, so no square root ever appears
+- *Do now:* Two farms both claim to be nearer the new schoolhouse, and the one that is
+  gets the road. One is thirty links east and forty north; the other ten east and
+  forty-eight north. There is standing water between, so neither can be chained
+  directly. Settle it.
+- *What happens:* Squares added: **2,500** against **2,404**. The second is nearer, and
+  it is nearer by less than a link — far too close to settle by eye, and nobody had to
+  say how far either of them was. One of the two distances is exactly 50; the other is
+  a number that does not exist and never had to.
+- *Aim:* **Can we say which is nearer without saying how far?**
+
+**3. Pythagoras Without a Square Root**
+- *Do now:* Two deeds want a diagonal. One field is 60 links by 80, the other 50 by 50.
+  Write both diagonals into the deeds.
+- *What happens:* The first squares to **10,000** and comes out at exactly 100, and the
+  clerk is happy. The second squares to **5,000** and there is no whole number of links
+  that does it — it falls between 70 and 71. Same question, same working, two entirely
+  different kinds of answer, and the deed can only be written for one of them.
+- *Aim:* **Why did one come out and the other didn't?**
+
+**4. Which Numbers Are Hypotenuses?** — sums of two squares
+- *Do now:* The surveyor wants a list he can keep in his pocket: every pair of whole
+  legs, twenty links or under, whose diagonal is also whole. Make him the list.
+- *What happens:* Seven pairs out of two hundred and ten. `3 4 5`, `5 12 13`, `6 8 10`,
+  `8 15 17`, `9 12 15`, `12 16 20`, `15 20 25`. Enormous gaps between them, and no
+  pattern anybody can see by staring — which means the list is worth carrying, and also
+  that something is deciding which numbers get in.
+- *Aim:* **Which ones work, and can you tell without trying?**
+
+**5. A Circle Is a Set of Dots** — the exact ones, and how few there are
+- *Do now:* The peg is set. The curve runs ten chains out from it, all the way round.
+  Put a stake at every spot exactly ten chains from the peg. Do not measure anything.
+- *What happens:* Twelve. Four on the axes and eight from the `6-8-10` of two chapters
+  ago, and that is the lot, on the whole county. Twelve stakes is not a road.
+- *Aim:* **Twelve stakes isn't a curve. So what is?**
+
+**6. Drawing One** — the nearest rule, and how wrong it is allowed to be
+- *Do now:* A curve a thousand links out from the peg. You have to set the stake at
+  station 100 and there is no whole-link spot on the curve anywhere near it. Set it
+  anyway, and be ready to say in front of the county why you put it there.
+- *What happens:* 995 links up misses the curve by **25**; 994 misses by 1,964 and 996
+  by 2,016. So 995, and it is not close. But *nearest* is a rule about the other
+  candidates, not about the curve, and somebody is going to ask how far off the road
+  actually is.
+- *Aim:* **How wrong am I allowed to be?**
+- *Why it is here:* the half-link bound lives in this chapter, and so does the proof
+  that the rule never comes to a tie — the two things that make *nearest* a rule you can
+  hand to somebody else rather than a judgement you have to be present for. Half a link
+  is four inches, on a curve thirteen hundred feet across.
+
+**7. Drawing One Fast** — the midpoint algorithm
+- *Do now:* You are in the field. The book is back at the courthouse, it is going dark,
+  and you have just set station 300. Where does 301 go?
+- *What happens:* The rule from last chapter wants `301²` and then a search, by hand,
+  in the dark, and then the same again for 302. There has to be a way of getting the
+  next stake out of the one you just set, and there is: it is all additions, and the
+  numbers stay small.
+- *Aim:* **Can I get the next stake from the one I just set?**
+- *Why it is here:* the fast way, kept in its own chapter and after the slow one on
+  purpose. It gets the same stakes — which is I.9's *two rules, one table*, arriving
+  where it matters.
+
+**8. Counting Your Way to π** — the Gauss circle problem
+- *Do now:* A round parcel, ten chains from peg to edge, staked at every chain. The
+  assessor taxes by the acre and has no formula for a round thing that he is willing to
+  trust. Count the stakes inside it.
+- *What happens:* **317**. And 317 square chains is thirty-one and a bit acres, which
+  is the area, near enough to argue about but not near enough to fight over — the true
+  figure is 314.16, so counting overshot by under three. Divide the count by the square
+  of the radius and you get 3.17, and nobody said the word π.
+- *Aim:* **Can you get the area of a round thing just by counting?**
+
+**9. Pick's Theorem** — the area of any lattice polygon, by counting its dots
+- *Do now:* A five-cornered parcel, not one corner square, staked at every chain. The
+  assessor wants the acreage and will not accept a rule he cannot check himself.
+- *What happens:* 29 stakes inside, 14 on the boundary. Half the boundary ones, plus
+  all the inside ones, less one: 35 square chains, three and a half acres — and it is
+  exact, not near. The boundary stakes counting half is the same half that made the
+  triangle in Volume I come out at twelve when the counting said seven.
+- *Aim:* **Is there one rule that works for any shape at all?**
+- *Why it is here:* it settles I.8, which was left open a year earlier with *which one
+  do we tax him on?* That is the longest arc in the book so far, and it should be
+  allowed to be that long.
+
+**10. Spread** — turning, measured without trigonometry
+- *Do now:* Two roads meet at a bend. The county must record the bend in the book well
+  enough that a different man with a different chain can lay it out again next year.
+  There is no protractor in the county. Write it down.
+- *What happens:* What you have is two directions, each of them so far along and so far
+  up — pairs of whole numbers. Whatever *amount of turn* is, it has to be got out of
+  those four numbers, because they are all that was measured.
+- *Aim:* **How do you write down a bend?**
 
 > *Credits:* Wildberger, *Divine Proportions* (2005), for quadrance and spread.
 >
-> The circle-drawing algorithm here is the **midpoint circle algorithm** (`d = 3 − 2r`).
-> Read the primary source before crediting it: Bresenham's *A Linear Algorithm for
-> Incremental Digital Display of Circular Arcs*, CACM 20(2), Feb 1977, 100–106, uses a
-> **different** decision variable — evaluated at the diagonal neighbour, initialised
-> `2 − 2R`. The two agree on output but are not the same procedure, so the near-universal
-> name "Bresenham's circle algorithm" for the `3 − 2r` form is a misattribution. (And the
-> famous 1965 IBM Systems Journal paper draws lines, not circles.) Also: Gauss for the
-> circle problem; Fermat and Jacobi for two squares; Pick (1899).
+> The circle-drawing algorithm in chapter 7 is the **midpoint circle algorithm**
+> (`d = 3 − 2r`). Read the primary source before crediting it: Bresenham's *A Linear
+> Algorithm for Incremental Digital Display of Circular Arcs*, CACM 20(2), Feb 1977,
+> 100–106, uses a **different** decision variable — evaluated at the diagonal
+> neighbour, initialised `2 − 2R`. The two agree on output but are not the same
+> procedure, so the near-universal name "Bresenham's circle algorithm" for the `3 − 2r`
+> form is a misattribution. (And the famous 1965 IBM Systems Journal paper draws lines,
+> not circles.) Also: Gauss for the circle problem; Fermat and Jacobi for two squares;
+> Pick (1899).
 
 ---
 
@@ -466,7 +571,7 @@ between them*.
 
 Stated up front so a prototype can attack them first.
 
-- **Chapter II.9 and the whole spread strand.** Reviewers of *Divine Proportions*
+- **Chapter II.10 and the whole spread strand.** Reviewers of *Divine Proportions*
   granted its coherence but questioned whether quadrance and spread are actually
   *easier* for ordinary students. That objection lands on a claim this book does not
   make — see *What it is for*. What has to be tested is narrower and harder: not
