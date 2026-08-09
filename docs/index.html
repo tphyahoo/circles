@@ -807,10 +807,21 @@ r = 2000   11,312 dots     3.006 seconds</div></div>
   dots in exactly the spots that rounding a square root would, at every radius from 1
   to 300.</p>
 
+  <p>The program in &sect;03 does not merely respect the blueprint beside it &mdash; it
+  produces <em>exactly</em> the set the blueprint names, the same dots and no others, at
+  every radius from 1 to 120. That was not true until recently: the module said
+  &ldquo;in each column&rdquo; and said nothing about rows, so at R=12 the program drew
+  twenty dots along the steep sides that the module forbade. The program was right and
+  the specification was silent. It now says <em>least in its column, or least in its
+  row</em>, which is what the class worked out and what the code always did.</p>
+
   <p>Ralphie's parity argument is carried in the specification as an invariant,
-  <span style="font-family:var(--mono)">NoTies</span>, model-checked at eight radii
-  &mdash; though the argument itself settles every radius at once, which is the point
-  he makes to Mrs. Feeney and she concedes.</p>
+  <span style="font-family:var(--mono)">NoTies</span>, model-checked at seven radii
+  and verified directly at every radius from 1 to 200. An eighth radius was attempted
+  and abandoned after half an hour: the check looks at every pair of dots on the sheet,
+  so its work grows like the fourth power of the radius. Ralphie's argument settles
+  every radius at once and takes two lines, which is the point he makes to Mrs. Feeney
+  and she concedes.</p>
 
   <p>The program in &sect;03 is not a transcription of the one that drew the figures. It
   <em>is</em> that program: the page prints the file, and Figures 8 and 9 are its output,

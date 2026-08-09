@@ -57,6 +57,26 @@ def by_square_root(r):
 mismatch = [r for r in range(1, 301) if board_program.circle(r) != by_square_root(r)]
 check('integer rule == square-root method, radii 1..300', mismatch, [])
 
+# ---- the program IS the specification, not merely near it
+#      Circle.tla:  Circle == { p \in Dots : Least(p,1) \/ Least(p,2) }
+def spec(R):
+    col = {x: min(abs(x*x + y*y - R*R) for y in range(-R, R + 1))
+           for x in range(-R, R + 1)}
+    row = {y: min(abs(x*x + y*y - R*R) for x in range(-R, R + 1))
+           for y in range(-R, R + 1)}
+    return {(x, y) for x in range(-R, R + 1) for y in range(-R, R + 1)
+            if abs(x*x + y*y - R*R) in (col[x], row[y])}
+
+
+off = [r for r in range(1, 121) if board_program.circle(r) != spec(r)]
+check('program == Circle.tla exactly, radii 1..120', off, [])
+
+# ---- NoTies, the way TLC checks it, but at every radius at once
+ties = [(r, x, y) for r in range(1, 121) for x in range(-r, r + 1)
+        for y in range(-r, r + 1)
+        if x*x + y*y + x*x + (y+1)*(y+1) == 2*r*r]
+check('NoTies holds at every radius 1..120', ties, [])
+
 # ---- what is actually IN each document, so the colophon only claims those
 print('\nwhat each document contains:')
 txt = lambda x: ' '.join(H.unescape(re.sub(r'<[^>]+>', ' ', x)).split())

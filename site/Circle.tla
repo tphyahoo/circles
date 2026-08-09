@@ -76,15 +76,38 @@ Total(p) == p[1]*p[1] + p[2]*p[2]
 
 Gap(p) == LET d == Total(p) - R*R IN IF d < 0 THEN -d ELSE d
 
-Circle == { p \in Dots :
-              \A q \in Dots :
-                (q[1] = p[1]) => Gap(p) =< Gap(q) }
-    (*  In each column, the dot whose total misses by least. One dot thick.  *)
+Least(p, along) ==
+    \A q \in Dots : (q[along] = p[along]) => Gap(p) =< Gap(q)
+    (*  Nothing in p's column (along = 1) or p's row (along = 2) misses by less.  *)
+
+Circle == { p \in Dots : Least(p, 1) \/ Least(p, 2) }
+    (*  THE DEFINITION. In each column, the dot whose total misses by least --
+        and the same again along each row, because near the sides one column
+        holds half the ring and settles nothing. One dot thick either way.
+        Note what is absent: any order of steps, any loop, any decision about
+        which dot to visit first. A set does not have a beginning.  *)
+
+    (*  "Take the least" only names a dot if there is never a tie. A tie in
+        column x between the dots at y and y+1 would need their totals to sit
+        the same distance either side of the target, that is
+
+              Total1 + Total2  =  2*R^2
+
+        It never happens, and not by luck: the left side is
+        2x^2 + y^2 + (y+1)^2 = 2x^2 + 2y^2 + 2y + 1, which is always ODD,
+        while 2*R^2 is always EVEN. Checked by TLC one radius at a time in
+        CircleCheck; the parity argument settles every radius at once.  *)
+
+NoTies == \A x \in -R..R : \A y \in -R..R :
+            LET Q1 == x*x + y*y
+                Q2 == x*x + (y+1)*(y+1)
+            IN  Q1 + Q2 # 2*R*R
 ====
 ```
 
 ## Notes
 
-Every dot here is the nearest in its column, so the two gaps either side of the
-ring make one unit between them and nothing is more than **half a unit** out.
+Every dot here is the nearest in its column or the nearest in its row, so the two
+gaps either side of the ring make one unit between them and nothing is more than
+**half a unit** out.
 Measured worst case: 0.37 at R=12, 0.46 at R=60, 0.49 at R=120.

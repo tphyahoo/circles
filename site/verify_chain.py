@@ -69,9 +69,10 @@ for x, y in board_program.circle(1000):
 check('all 5656 stakes within half a link, radially', True, True)
 
 # ---- the toy on the board and the curve in the field obey one rule
-#      a stake is kept if it is the nearest in its column OR the nearest in its
-#      row -- the row pass is what carries the steep sides, where one column
-#      holds half the curve and is no use to anybody.
+#      Least in its column OR least in its row, exactly as Circle.tla says.
+#      This check was once written column-only, failed, and was relaxed to match
+#      the program. That was backwards: the program was right and the module was
+#      silent about rows. The module has since been corrected.
 def obeys_spec(r):
     rr = r * r
     best_col = {x: min(abs(x * x + y * y - rr) for y in range(0, r + 1))
