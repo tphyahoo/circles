@@ -581,10 +581,11 @@ If a setting does get invented it should be more fantastical than a plain Americ
 county — closer to Downing's Carmorra — while keeping the survey feel the do-nows have
 grown on their own. Mrs. Feeney keeps her spelling in the meantime; nothing turns on it.
 
-**A dedication.** To Hal Finney (1956–2014) — PGP, the first cypherpunk remailer,
-reusable proofs of work. Volumes IV and V teach the mathematics his work stood on:
-clock arithmetic, counting the points on a curve over a prime, and the discrete
-logarithm. Credit the cryptography and not the coin. And only if the book is finished.
+**A dedication.** To Hal Finney (1956–2014), who worked in finite fields. Volumes IV
+and V teach the mathematics his work rested on: clock arithmetic, counting the points on
+a curve over a prime, and the discrete logarithm. Named for that and nothing else —
+everything he built has an argument attached to it, and this book is not carrying any of
+them. Anyone who knows, knows. Only if the book is finished.
 
 **Whether anything ever gets specified, or run.** *Program*, *specification*, *code*
 and *implement* appear **zero** times across all seven volumes' chapter listings. What
