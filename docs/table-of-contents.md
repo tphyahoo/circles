@@ -72,6 +72,25 @@ and Pick and the Gauss circle problem, is the part of this book that is genuinel
 borrowed. Which is worth noticing, since it is also the part that produced the
 surveying spine and the do-nows that work best.
 
+**But a debt is also a safety net, and only half this book has one.** If Volume I, III,
+IV or V goes wrong, there is a six-hundred-page book that got the same material right in
+1989 to check it against. The lattice strand has no equivalent. Its one book-length
+source is Wildberger's *Divine Proportions* (2005), which covers quadrance and spread
+and stops there; Pick is an 1899 paper; the Gauss circle problem lives in number theory
+texts and, at any depth, in Huxley's *Area, Lattice Points and Exponential Sums* (1996),
+which is research; circle rasterisation lives in the graphics literature, which is
+engineering and not pedagogy. Nobody has written this as a course. There are lecture
+notes, an undergraduate thesis or two, and enrichment activities.
+
+There is a symmetry in that, and it is not a comfortable one. The analysis half has a
+book with complete tools and the wrong stance — *Concrete Mathematics* reaches for the
+infinite whenever it is convenient. The geometry half has a book with the right stance
+and almost none of the material, since Wildberger is himself sceptical of infinite sets
+and real numbers. Neither half has both.
+
+The practical consequence is why `docs/verify_vol2.py` matters more than its counterpart
+for Volume I: there is nothing else to check Volume II against.
+
 The difference between the two projects is audience and order. *Concrete Mathematics* is
 for people who already have the calculus and need the discrete half; this is for people
 who have neither, taking the discrete half first.
@@ -793,6 +812,12 @@ it", neither of which any chapter delivers.
 
 Stated up front so a prototype can attack them first.
 
+- **The lattice strand has no prior art.** Volume II and the first half of III are the
+  original part of this book, and originality here means nobody has taught it, so
+  nobody knows what goes wrong. Everything else has *Concrete Mathematics* behind it.
+  This does not. The failure would be quiet: not a wrong theorem — the mathematics is
+  centuries old and correct — but a sequence that turns out to be unteachable in an
+  order nobody has tried. Only a classroom settles that, and the scripts cannot.
 - **The excursion is untested as an excursion.** It was written as a required year and
   has been demoted to an optional one. Nobody has checked that it still reads as
   optional — whether it stands alone without the tenth-grade scaffolding around it, or
