@@ -73,7 +73,6 @@ check('D(x(x-1)) is exactly 2x -- the family is genuinely clean',
       [fall2(x + 1) - fall2(x) for x in range(1, 5)], [2, 4, 6, 8])
 
 # ---- III.9  how few numbers rebuild a whole table
-# ---- III.10  how few numbers rebuild a whole table
 def rebuild(first_differences, start, n):
     """Newton's series: a table from its leading differences."""
     out, row = [], list(first_differences)
