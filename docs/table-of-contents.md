@@ -39,9 +39,9 @@ room: a boundary set, a curve staked, a parcel taxed, a ledger closed.
 receipt — a number and how wrong it can be. Proof is kept where it is short, because it
 is cheaper than checking, not because it is holier.
 
-**Where it stands.** Volumes I and II are worked out chapter by chapter, with every
-number in them checked by `docs/verify_vol1.py` and `docs/verify_vol2.py`. III, IV and V
-are titles and glosses. The chapter list below marks which is which, and is regenerated
+**Where it stands.** Volumes I, II and III are worked out chapter by chapter, with
+every number in them checked by `docs/verify_vol1.py`, `verify_vol2.py` and
+`verify_vol3.py`. IV and V are titles and glosses. The chapter list below marks which is which, and is regenerated
 from the volumes by `docs/toc_index.py` so it cannot drift away from them. One lesson
 has actually been written, from II.6 — and it predates the entry it now sits under, so
 the pipeline that matters, entry in and lesson out, has never been exercised.
@@ -140,16 +140,16 @@ has been worked out. Roman means it is still only a title.*
 
 **Volume III — Ninth Grade: Turning**
 
-1. Turning Without Angles
-2. The Rotation Rule — `(a,b) ⋆ (u,v) = (au − bv, av + bu)`
-3. You Cannot Get Off the Circle — closure, and why it's a group
-4. Exact Turns — Pythagorean triples as rotations that land perfectly
-5. Every Exact Turn There Is — the rational parametrization `((1−t²)/(1+t²), 2t/(1+t²))`, which emits the triples of Volume II on demand
-6. The Spread Laws — the rational replacements for the sine and cosine rules
-7. Spread Polynomials — multiple turns are *polynomials* in a single turn, so `cos nθ` is algebra rather than analysis (Chebyshev's polynomials, in disguise)
-8. Polynomials Are Difference Tables
-9. The Right Kind of Power — falling factorials, and the return of `Δx⁽ⁿ⁾ = n·x⁽ⁿ⁻¹⁾`
-10. Newton's Series — every polynomial rebuilt from its differences at zero, in finitely many terms, exactly
+1. Turning Without Angles — *Why doesn't turning add up?*
+2. The Rotation Rule — *What's the one rule that moves every stake?*
+3. You Cannot Get Off the Circle — *Why does it always land dead on a ring?*
+4. Exact Turns — *Is a triple a triangle or a turn?*
+5. Every Exact Turn There Is — *Can we make them to order instead of hunting for them?*
+6. The Spread Laws — *Can we get the far side without going out there?*
+7. Spread Polynomials — *The spreads keep moving. Is there a pattern, or do we just measure?*
+8. Polynomials Are Difference Tables — *How do you tell what kind of thing a table is?*
+9. The Right Kind of Power — *Is there a family where the differences come out clean?*
+10. Newton's Series — *How few numbers do you need to send?*
 
 **Volume IV — Tenth Grade: Growth**
 
@@ -191,7 +191,7 @@ has been worked out. Roman means it is still only a title.*
 4. Two Finite Worlds — a quotient is not an approximation
 5. Quadrance and Spread Over Any Field — the same formulas, on a clock
 
-**20 of 49 chapters in the required sequence are worked out** — a do-now, what goes wrong, and an elicited aim. The Coda and the excursion are optional and add 9 more.
+**30 of 49 chapters in the required sequence are worked out** — a do-now, what goes wrong, and an elicited aim. The Coda and the excursion are optional and add 9 more.
 
 <!-- INDEX:END -->
 
@@ -652,27 +652,116 @@ instrument — a hundred links, counted, and nothing in between them.
 *Traditional Algebra I: linear, quadratic and exponential functions · factoring ·
 polynomials · radicals · systems of equations*
 
-1. Turning Without Angles
-2. The Rotation Rule — `(a,b) ⋆ (u,v) = (au − bv, av + bu)`
-3. You Cannot Get Off the Circle — closure, and why it's a group
-4. Exact Turns — Pythagorean triples as rotations that land perfectly
-5. Every Exact Turn There Is — the rational parametrization
-   `((1−t²)/(1+t²), 2t/(1+t²))`, which emits the triples of Volume II on demand
-6. The Spread Laws — the rational replacements for the sine and cosine rules
-7. Spread Polynomials — multiple turns are *polynomials* in a single turn, so
-   `cos nθ` is algebra rather than analysis (Chebyshev's polynomials, in disguise)
-8. Polynomials Are Difference Tables
-9. The Right Kind of Power — falling factorials, and the return of `Δx⁽ⁿ⁾ = n·x⁽ⁿ⁻¹⁾`
-10. Newton's Series — every polynomial rebuilt from its differences at zero, in
-    finitely many terms, exactly
+The county still, and the roads bend. Chapters 1 to 7 have customers; 8 to 10 are where
+the book stops being geometry and becomes the difference calculus, and it shows — the
+seam is at chapter 9, and it is written down below rather than smoothed over.
 
-> *Chapter 7 is the book's hinge.* The familiar power rule visibly **fails** on ordinary
-> powers (`Δx² ≠ 2x`), and then comes back perfect on the right basis. Break it, then
-> fix it.
+**1. Turning Without Angles**
+- *Do now:* Two bends in the same road, both recorded in the book as spreads. The road
+  leaves the courthouse heading east, turns by the first, then turns again by the
+  second. Which way is it heading now?
+- *What happens:* Everyone adds the spreads, and everyone is wrong. A bend of `0.25`
+  followed by another of `0.25` does not give `0.5`; it gives **0.75**. Do it a third
+  time and you get 1, and a fourth time it goes back *down* to 0.75, which nothing that
+  adds has ever done.
+- *Aim:* **Why doesn't turning add up?**
 
-> *Credits:* Chapters 6–8 are *Concrete Mathematics* ch. 2 and 5, reordered for a reader
+**2. The Rotation Rule** — `(a,b) ⋆ (u,v) = (au − bv, av + bu)`
+- *Do now:* The plan is drawn with the main road running east. The county wants it
+  redrawn with the road along the 3-4-5 direction, and every one of the two hundred
+  stakes moved to match. Do the first three by hand.
+- *What happens:* Three is fine and two hundred is not, and worse, nobody's three agree
+  — they each did it a different way. What is wanted is one rule, applied without
+  judgement, that anybody's clerk can carry out and anybody's clerk can check.
+- *Aim:* **What's the one rule that moves every stake?**
+
+**3. You Cannot Get Off the Circle** — closure, and why it's a group
+- *Do now:* Take the 3-4-5 turn and apply it to itself. Then again. Then again. Write
+  down the quadrance each time.
+- *What happens:* **25, 625, 15625, 390625** — every one a power of 25, so every one a
+  perfect square, so every one of those points sits *exactly* on a ring with no offset
+  and no nearest. Two chapters ago exact stakes were rare enough to be worth a pocket
+  list. Turning makes them on demand and never once misses.
+- *Aim:* **Why does it always land dead on a ring?**
+
+**4. Exact Turns** — Pythagorean triples as rotations that land perfectly
+- *Do now:* Your pocket list from II.4 has seven pairs. Turn `(5,0)` by each of them and
+  say which ones leave you on a whole-number spot.
+- *What happens:* The list of triples and the list of exact turns are the same list.
+  They were never two facts.
+- *Aim:* **Is a triple a triangle or a turn?**
+
+**5. Every Exact Turn There Is** — the rational parametrization
+  `((1−t²)/(1+t²), 2t/(1+t²))`, which emits the triples of Volume II on demand
+- *Do now:* The commissioner wants an exact turn with a leg over a thousand links. Find
+  him one. Your pocket list stops at twenty.
+- *What happens:* Hunting is hopeless — the useful ones are enormously far apart. But
+  `m=40, n=9` gives **1519, 720, 1681** in one line of arithmetic, and it is a genuine
+  triple, and the same two numbers will make as many more as anybody wants.
+- *Aim:* **Can we make them to order instead of hunting for them?**
+
+**6. The Spread Laws** — the rational replacements for the sine and cosine rules
+- *Do now:* Three stakes make a triangle. Two of its sides are in the book and so is the
+  bend between them. The third side runs across standing water and nobody is going to
+  chain it. Write its length in the deed.
+- *What happens:* This is the oldest job in surveying — the distance you cannot walk —
+  and it turns out to need only the two quadrances and the spread, all of them already
+  in the book.
+- *Aim:* **Can we get the far side without going out there?**
+
+**7. Spread Polynomials** — multiple turns are *polynomials* in a single turn, so
+  `cos nθ` is algebra rather than analysis (Chebyshev's polynomials, in disguise)
+- *Do now:* One bend, applied over and over. Record the spread after each turn. Six of
+  them.
+- *What happens:* The numbers rise, fall, and come back, and they are not random: each
+  is a polynomial in the first spread. The second is `4s(1−s)`. There is one for every
+  number of turns, and they can be written down.
+- *Aim:* **The spreads keep moving. Is there a pattern, or do we just measure?**
+- *Why it is here:* the book's hinge. The familiar power rule visibly **fails** on
+  ordinary powers — `Δx² ≠ 2x` — and comes back perfect on the right basis two chapters
+  later. Break it, then fix it.
+
+**8. Polynomials Are Difference Tables**
+- *Do now:* The commissioner has six years of figures and wants year twelve. He says the
+  growth is "quadratic." Check him first, then answer him.
+- *What happens:* The second differences are not constant, so he is wrong. The *third*
+  ones are. It is a cubic, and once that is known the table extends as far as anybody
+  wants by addition alone.
+- *Aim:* **How do you tell what kind of thing a table is?**
+- *Note:* this generalises I.5, where a constant *second* difference meant a quadratic.
+  The need is thinner here — checking a claim rather than answering a question — and it
+  is the first chapter in the book where that is true.
+
+**9. The Right Kind of Power** — falling factorials, and the return of `Δx⁽ⁿ⁾ = n·x⁽ⁿ⁻¹⁾`
+- *Do now:* You know `Δ` of `x²`. It is `2x + 1`, and has been since seventh grade. Find
+  me something whose `Δ` is exactly `2x`, with nothing left over.
+- *What happens:* Hunting turns up `x(x−1)`, and its differences are `2, 4, 6, 8` — dead
+  clean. Then `x(x−1)(x−2)` gives exactly `3x(x−1)`. There is a whole family in which
+  the power rule works perfectly, and it is not the family anybody was taught.
+- *Aim:* **Is there a family where the differences come out clean?**
+- > **This chapter fails the outside-need test, and it is the only one in the book that
+  > does.** Every other do-now here begins with somebody who wants something. Nobody in
+  > any county has ever wanted a falling factorial. The need is internal — `2x + 1` is
+  > ugly and the ugliness is load-bearing — which makes this a puzzle rather than a job.
+  >
+  > It may not be a chapter. The next one needs exactly this and has a real customer, so
+  > the honest repair is probably to merge them: the telegram cannot be sent without the
+  > right basis, and the basis arrives as the thing that makes the telegram possible
+  > rather than as a curiosity to be admired first. Left separate here so the seam stays
+  > visible.
+
+**10. Newton's Series** — every polynomial rebuilt from its differences at zero, in
+  finitely many terms, exactly
+- *Do now:* The clerk has to wire twelve years of figures to the state capital, and the
+  telegraph charges by the word. Send fewer than twelve.
+- *What happens:* Take differences until they stop changing. For the table of cubes that
+  is **four numbers — 0, 1, 6, 6** — and from those four the far end rebuilds all twelve
+  exactly, with no rounding and nothing lost. Twelve words become four.
+- *Aim:* **How few numbers do you need to send?**
+
+> *Credits:* Chapters 8–10 are *Concrete Mathematics* ch. 2 and 5, reordered for a reader
 > who has not met calculus. The falling-factorial notation and its treatment are theirs.
-> Wildberger (2005) for chapters 1–5.
+> Wildberger (2005) for chapters 1–7.
 
 ---
 
@@ -865,6 +954,13 @@ Stated up front so a prototype can attack them first.
   This does not. The failure would be quiet: not a wrong theorem — the mathematics is
   centuries old and correct — but a sequence that turns out to be unteachable in an
   order nobody has tried. Only a classroom settles that, and the scripts cannot.
+- **III.9 has no customer, and it is the only chapter in the book that hasn't.** Nobody
+  in a county has ever wanted a falling factorial. The do-now written for it is a puzzle
+  — *find something whose `Δ` is exactly `2x`* — which is a good puzzle and not a job,
+  and the whole method rests on the difference. The likely repair is to merge it into
+  III.10, whose customer is real and who cannot be served without it: the telegram
+  needs the right basis, so the basis arrives as what makes the telegram possible. Left
+  separate for now so the seam stays visible rather than being papered over.
 - **The excursion is untested as an excursion.** It was written as a required year and
   has been demoted to an optional one. Nobody has checked that it still reads as
   optional — whether it stands alone without the tenth-grade scaffolding around it, or
