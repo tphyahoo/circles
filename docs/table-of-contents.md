@@ -39,9 +39,10 @@ room: a boundary set, a curve staked, a parcel taxed, a ledger closed.
 receipt — a number and how wrong it can be. Proof is kept where it is short, because it
 is cheaper than checking, not because it is holier.
 
-**Where it stands.** Volumes I, II and III are worked out chapter by chapter, with
-every number in them checked by `docs/verify_vol1.py`, `verify_vol2.py` and
-`verify_vol3.py`. IV and V are titles and glosses. The chapter list below marks which is which, and is regenerated
+**Where it stands.** Every chapter of the required sequence is worked out — a do-now, a
+statement of what goes wrong, and an elicited aim — with every number in all five volumes
+checked by `docs/verify_vol1.py` through `verify_vol45.py`. The Coda and the excursion
+are still titles. The chapter list below marks which is which, and is regenerated
 from the volumes by `docs/toc_index.py` so it cannot drift away from them. One lesson
 has actually been written, from II.6 — and it predates the entry it now sits under, so
 the pipeline that matters, entry in and lesson out, has never been exercised.
@@ -152,28 +153,28 @@ has been worked out. Roman means it is still only a title.*
 
 **Volume IV — Tenth Grade: Growth**
 
-1. Counting Them All at Once — induction, arriving as a labour-saving device rather than a proof engine: a check you do not have to run because you already ran the general one
-2. Doubling — `Δ2ˣ = 2ˣ`, so **2** is this world's `e`
-3. Every Other Base — `Δbˣ = (b − 1)bˣ`, and why 2 is the only fixed point
-4. Letters in the Wrong Envelopes — `n` letters, `n` envelopes, nobody gets their own. Count the ways; `n!/Dₙ` marches to **e**. The same trick that gave us π, on a different pile of things to count
-5. e, to as Many Digits as You Ask For — partial sums of `1/k!` are exact fractions and the leftover is smaller than `1/(n·n!)`, so every answer arrives with a receipt
-6. Undoing Growth — discrete logarithms
-7. Summation by Parts
-8. Generating Functions — power series with no convergence question, because nothing is ever evaluated
-9. Recurrences and Closed Forms
-10. Tables With Two Indices — matrices as bookkeeping
-11. Conics on a Lattice
+1. Counting Them All at Once — *Do we have to check them all?*
+2. Doubling — *Why is the growth the same as the amount?*
+3. Every Other Base — *What's so special about doubling?*
+4. Letters in the Wrong Envelopes — *How likely is it that nobody gets their own letter?*
+5. e, to as Many Digits as You Ask For — *How do you get more places, and how do you know when to stop?*
+6. Undoing Growth — *How many doublings gets us there — and what about the years in between?*
+7. Summation by Parts — *Can we collapse this one too?*
+8. Generating Functions — *Can we count the ways without writing them all out?*
+9. Recurrences and Closed Forms — *Can we get the hundredth without doing the ninety-nine first?*
+10. Tables With Two Indices — *How do you keep a table with two questions in it?*
+11. Conics on a Lattice — *What shape is that?*
 
 **Volume V — Eleventh Grade: Calculus, Finitely**
 
-1. The Tolerance Game — you name the error you'll accept, I hand you the `N`. A procedure, introduced as a game, not a mystery
-2. Refining the Grid — `h` gets smaller; it never "reaches" zero
-3. The Difference Quotient
-4. When Refinement Settles Down, and When It Doesn't
-5. Sums Become Integrals
-6. The Fundamental Theorem, Twice — the telescoping version you proved in Volume I, and the continuous shadow it casts
-7. Taylor From Newton — the series that used to stop, and what breaks when it doesn't
-8. Where We Must Borrow — the intermediate value theorem fails constructively; here is the weaker true thing, and here is what it costs
+1. The Tolerance Game — *How much work buys how many places?*
+2. Refining the Grid — *How fine is fine enough?*
+3. The Difference Quotient — *How fast is it going at a moment, when all we have is between moments?*
+4. When Refinement Settles Down, and When It Doesn't — *When does refining give an answer and when doesn't it?*
+5. Sums Become Integrals — *How much did we accumulate?*
+6. The Fundamental Theorem, Twice — *Is this the same thing we did in Volume I?*
+7. Taylor From Newton — *What do you do when the differences never stop?*
+8. Where We Must Borrow — *We know it's in there. Can we say where?*
 
 **Coda — A Gesture at More Variables**
 
@@ -190,7 +191,7 @@ has been worked out. Roman means it is still only a title.*
 4. Two Finite Worlds — a quotient is not an approximation
 5. Quadrance and Spread Over Any Field — the same formulas, on a clock
 
-**29 of 48 chapters in the required sequence are worked out** — a do-now, what goes wrong, and an elicited aim. The Coda and the excursion are optional and add 9 more.
+**48 of 48 chapters in the required sequence are worked out** — a do-now, what goes wrong, and an elicited aim. The Coda and the excursion are optional and add 9 more.
 
 <!-- INDEX:END -->
 
@@ -765,23 +766,107 @@ seam is at chapter 9, and it is written down below rather than smoothed over.
 and logarithms · sequences and series · trigonometric functions · conics · matrices ·
 vectors*
 
-1. Counting Them All at Once — induction, arriving as a labour-saving device rather
-   than a proof engine: a check you do not have to run because you already ran the
-   general one
-2. Doubling — `Δ2ˣ = 2ˣ`, so **2** is this world's `e`
-3. Every Other Base — `Δbˣ = (b − 1)bˣ`, and why 2 is the only fixed point
-4. Letters in the Wrong Envelopes — `n` letters, `n` envelopes, nobody gets their own.
-   Count the ways; `n!/Dₙ` marches to **e**. The same trick that gave us π, on a
-   different pile of things to count
-5. e, to as Many Digits as You Ask For — partial sums of `1/k!` are exact fractions
-   and the leftover is smaller than `1/(n·n!)`, so every answer arrives with a receipt
-6. Undoing Growth — discrete logarithms
-7. Summation by Parts
-8. Generating Functions — power series with no convergence question, because nothing
-   is ever evaluated
-9. Recurrences and Closed Forms
-10. Tables With Two Indices — matrices as bookkeeping
-11. Conics on a Lattice
+Money and mail and interest, mostly — the county's ledger rather than its land.
+
+**1. Counting Them All at Once** — induction, arriving as a labour-saving device rather
+  than a proof engine
+- *Do now:* A clerk claims the odd numbers always add to a square. `1` is 1, `1+3` is 4,
+  `1+3+5` is 9. He has checked it to twenty. The board meets in an hour and wants it for
+  a thousand. Check it for a thousand.
+- *What happens:* Nobody checks a thousand in an hour. But put one more odd number on
+  top of a square — `n² + (2n+1)` — and it is `(n+1)²`, every time, because that is what
+  those symbols say. One line covers the thousand, and the ten thousand, and all of them.
+- *Aim:* **Do we have to check them all?**
+
+**2. Doubling** — `Δ2ˣ = 2ˣ`, so **2** is this world's `e`
+- *Do now:* A debt doubles every year and starts at a dollar. Write seven years of it.
+  Then, as always, write the gaps.
+- *What happens:* `1 2 4 8 16 32 64`, and the gaps are `1 2 4 8 16 32` — **the same
+  table**. The amount it grows by is the amount there is. Nothing else in the book has
+  done that.
+- *Aim:* **Why is the growth the same as the amount?**
+
+**3. Every Other Base** — `Δbˣ = (b − 1)bˣ`, and why 2 is the only fixed point
+- *Do now:* Now the debt triples. Same question.
+- *What happens:* `1 3 9 27 81`, and the gaps are `2 6 18 54` — twice the table, not the
+  table. Tripling grows by two of itself, quadrupling by three. Only doubling grows by
+  exactly itself.
+- *Aim:* **What's so special about doubling?**
+
+**4. Letters in the Wrong Envelopes** — count the ways; `n!/Dₙ` marches to **e**
+- *Do now:* The clerk stuffed five letters into five envelopes without looking. How many
+  ways could he have got **every single one** wrong?
+- *What happens:* **44**, out of 120 — so it happens about one time in three. Do it for
+  ten letters and it is one time in `2.7183`. The same number turns up whatever the pile
+  is, and nobody put it there.
+- *Aim:* **How likely is it that nobody gets their own letter?**
+
+**5. e, to as Many Digits as You Ask For**
+- *Do now:* You told the board "about 2.7." The board does not accept *about* — it is
+  the same board that would not take *about four hundred* fence posts in seventh grade.
+  Five places.
+- *What happens:* Add `1/k!` as exact fractions and stop when the leftover is small
+  enough to not matter. Nine terms does it, the leftover is under `1/3265920`, and the
+  answer is `2.71828` — **with the receipt attached**, which is what makes it an answer
+  and not a claim.
+- *Aim:* **How do you get more places, and how do you know when to stop?**
+
+**6. Undoing Growth** — discrete logarithms
+- *Do now:* The debt doubles yearly from a dollar. In what year does the county owe more
+  than a million?
+- *What happens:* Year twenty — `2¹⁹` is 524,288 and `2²⁰` is 1,048,576. And notice what
+  it never does: there is **no year in which the debt is a million**. It steps over.
+- *Aim:* **How many doublings gets us there — and what about the years in between?**
+
+**7. Summation by Parts**
+- *Do now:* A man's wage rises by a dollar a year and the county owes him compound
+  interest on every unpaid year. Total the first hundred years.
+- *What happens:* Chapter I.7 collapsed a sum by recognising it as gaps. This one is a
+  product of two tables and will not collapse the same way — but it collapses, with one
+  extra term, and the extra term is the whole content of the chapter.
+- *Aim:* **Can we collapse this one too?**
+- *Note:* the weakest opening in this volume. The need is real but contrived — a
+  hundred years of anything is a made-up hurry — and it leans on I.7 having been
+  satisfying rather than on anybody actually wanting the total.
+
+**8. Generating Functions** — power series with no convergence question, because nothing
+  is ever evaluated
+- *Do now:* The county pays bounties in one-, two- and five-dollar tokens. A man is owed
+  seventeen. How many different ways can the clerk pay him?
+- *What happens:* **22**, and listing them is miserable and error-prone. But a piece of
+  bookkeeping that multiplies three simple things together gives it without listing
+  anything — and the same bookkeeping gives 100 dollars (**541 ways**) at no extra
+  trouble.
+- *Aim:* **Can we count the ways without writing them all out?**
+
+**9. Recurrences and Closed Forms**
+- *Do now:* The courthouse has fourteen steps and the clerk takes them one or two at a
+  time. How many ways up?
+- *What happens:* **610**, and the way to get it is that each step's count is the two
+  before it added together — which is a rule that must be run from the bottom every
+  time. Ask for a hundred steps and you get a twenty-one digit number and no way to
+  reach it except through the ninety-nine below.
+- *Aim:* **Can we get the hundredth without doing the ninety-nine first?**
+- *Why it is here:* this is I.9 collecting. *Two rules, one table* asked whether a rule
+  you must grind and a rule you can ask directly are the same rule. Here is the case
+  where only the grinding rule is known, and the chapter is about finding the other one.
+
+**10. Tables With Two Indices** — matrices as bookkeeping
+- *Do now:* Three townships, four kinds of tax. The clerk needs the total for each
+  township and the total for each tax, off one sheet, and the two sets of totals have to
+  agree with each other.
+- *What happens:* A table you can enter from two directions, and a check that falls out
+  for free: both sets of totals must come to the same grand total, so the sheet catches
+  its own arithmetic errors.
+- *Aim:* **How do you keep a table with two questions in it?**
+
+**11. Conics on a Lattice**
+- *Do now:* A drainage ditch has to run so that it is always as far from the road as it
+  is from the creek. Stake it.
+- *What happens:* *As far as* is the trap from Volume II and the class does not fall in
+  any more — you compare quadrances, never distances. The stakes come out on a curve
+  nobody drew and nobody has a name for yet.
+- *Aim:* **What shape is that?**
 
 > *Credits:* Chapters 7–9 are *Concrete Mathematics* ch. 7 and 8 — generating functions
 > and recurrences — at a slower pace. Chapter 8 is the one place this book gets something
@@ -795,17 +880,78 @@ vectors*
 *Traditional AP Calculus AB/BC: limits and continuity · derivatives and applications ·
 integrals · the Fundamental Theorem · series · parametric and polar (BC)*
 
-1. The Tolerance Game — you name the error you'll accept, I hand you the `N`. A
-   procedure, introduced as a game, not a mystery
-2. Refining the Grid — `h` gets smaller; it never "reaches" zero
-3. The Difference Quotient
-4. When Refinement Settles Down, and When It Doesn't
-5. Sums Become Integrals
-6. The Fundamental Theorem, Twice — the telescoping version you proved in Volume I,
-   and the continuous shadow it casts
-7. Taylor From Newton — the series that used to stop, and what breaks when it doesn't
-8. Where We Must Borrow — the intermediate value theorem fails constructively; here is
-   the weaker true thing, and here is what it costs
+Every chapter here has the same customer: somebody who wants an answer to a stated
+accuracy and will not accept *about*. That is the whole of what a limit is for, and it
+turns out to be a job rather than a mystery.
+
+**1. The Tolerance Game** — you name the error you'll accept, I hand you the `N`
+- *Do now:* The board wants `π` to five places for the water tank. You have the counting
+  method from II.8. How big a parcel do you have to count?
+- *What happens:* Ten chains gave two places. A hundred gave four. A *thousand* gave
+  3.1415 against 3.1416, and tripling that again buys almost nothing. Each place costs
+  enormously more than the last, and now the question is not *what is π* but **what does
+  another place cost**.
+- *Aim:* **How much work buys how many places?**
+
+**2. Refining the Grid** — `h` gets smaller; it never "reaches" zero
+- *Do now:* Stakes a chain apart, and the curve wanders between them. Put them every
+  half chain. Now every tenth.
+- *What happens:* The wandering halves, then tenths. It does not stop, and it does not
+  have to — you stop when it is under what anybody can measure with a chain.
+- *Aim:* **How fine is fine enough?**
+
+**3. The Difference Quotient**
+- *Do now:* Galileo's ramp again, positions at each tick. How fast is the ball going
+  **at** tick three?
+- *What happens:* Nobody can answer. What is available is `5` over the tick before and
+  `7` over the tick after, and *at* a moment is not a thing the table contains. Then
+  somebody halves the ticks and asks again.
+- *Aim:* **How fast is it going at a moment, when all we have is between moments?**
+
+**4. When Refinement Settles Down, and When It Doesn't**
+- *Do now:* Same question at the corner where two roads meet.
+- *What happens:* From the right the answer is `1` however fine you go — 1 at a chain,
+  1 at a tenth, 1 at a thousandth. From the left it is `−1`, just as stubbornly. It is
+  not closing in on anything and no amount of refining will make it.
+- *Aim:* **When does refining give an answer and when doesn't it?**
+- *Why it is here:* the failure is the point. Refining is something you **do**, and it
+  either settles or it does not, and you find out by doing it. Nothing has to be
+  asserted in advance about which functions are allowed.
+
+**5. Sums Become Integrals**
+- *Do now:* Water runs into the tank at a rate that changes all day. The gauge is read
+  every hour. How much water is in the tank at six?
+- *What happens:* Rate times an hour, twelve times over, added up. Then somebody reads
+  the gauge every half hour and gets a different answer, and a better one.
+- *Aim:* **How much did we accumulate?**
+
+**6. The Fundamental Theorem, Twice** — the telescoping version you proved in Volume I,
+  and the continuous shadow it casts
+- *Do now:* Here is the rate table and here is the total table, side by side. Compare
+  them.
+- *What happens:* The total's gaps are the rate. The rate's sum is the total. This
+  happened in seventh grade — *why is the total of the gaps just the last one take away
+  the first* — and it is the same fact, wearing the clothes it wears in the rest of the
+  world.
+- *Aim:* **Is this the same thing we did in Volume I?**
+
+**7. Taylor From Newton** — the series that used to stop, and what breaks when it doesn't
+- *Do now:* In ninth grade you wired twelve years of figures in four words by sending
+  the leading differences. Do it for a debt that doubles.
+- *What happens:* The differences of `1 2 4 8 16` are `1 2 4 8` — the same table. Take
+  differences eleven times and you still have a `1` sitting there. **They never become
+  zero, so the telegram never ends.** Every table the book has met so far terminated;
+  this one does not, and the method has just met its first thing it cannot finish.
+- *Aim:* **What do you do when the differences never stop?**
+
+**8. Where We Must Borrow** — the intermediate value theorem fails constructively; here
+  is the weaker true thing, and here is what it costs
+- *Do now:* The ground is below the flood line at the courthouse and above it at the
+  county line. Somewhere between, it crosses. Find the spot.
+- *What happens:* You can bracket it as tightly as anybody pays for — halve, halve,
+  halve — and you can never hand over *the* spot, only a bracket and a receipt. Which is
+  the answer the surveyor wanted anyway, and not the answer the theorem promises.
+- *Aim:* **We know it's in there. Can we say where?**
 
 > *Credits:* Bishop, *Foundations of Constructive Analysis* (1967), for chapters 4 and
 > 8; Weihrauch, *Computable Analysis* (2000), for the tolerance game.
@@ -948,6 +1094,13 @@ Stated up front so a prototype can attack them first.
   This does not. The failure would be quiet: not a wrong theorem — the mathematics is
   centuries old and correct — but a sequence that turns out to be unteachable in an
   order nobody has tried. Only a classroom settles that, and the scripts cannot.
+- **The method has now passed every volume, which is itself suspicious.** Forty-eight
+  do-nows written, one chapter refused. A test that says yes forty-eight times out of
+  forty-nine is not obviously distinguishable from no test at all, and the same person
+  wrote the chapters, wrote the do-nows, and graded them. Two openings are on record as
+  reached for — I.1 and I.4 — and one more, IV.7, admits in the text that its hurry is
+  invented. Those three are where an outside reader should look first, because they are
+  where the author noticed himself pushing.
 - **The test that found the bad chapter has said no exactly once.** III.9 was falling
   factorials; the best do-now anybody could write for it was *find something whose `Δ` is
   exactly `2x`*, which is a good puzzle and not a job. It has been binned. But the same
