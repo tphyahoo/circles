@@ -25,6 +25,10 @@ plotter and the earlier writing.
 | `site/CircleCheck.cfg` | TLC config — set the radius and pick an invariant here. |
 | `site/lattice_circle.py` | The drawing in Python, with the blueprint's invariants as asserts. |
 | `site/no_floats.py` | Proves `lattice_circle.py` is integer-only. Exits non-zero if not. |
+| `site/verify_colophon.py` | **Re-checks every claim the day-one colophon makes**, including that `board_program.circle(R)` equals `Circle.tla` exactly. Exits non-zero on any failure. |
+| `site/verify_chain.py` | The surveying numbers for the unbuilt chain lesson — links, offsets, the field-book page. |
+| `docs/verify_vol1.py`, `docs/verify_vol2.py` | Every table and count in the Volume I and II do-nows. |
+| `site/build_page.py` | Dead. Superseded by `build_v2.py`; nothing references it. |
 | `site/day-one-circles-v1-ministry.html` | Abandoned first version, `F_p` framing. Reference only. |
 | `circles.py` | The modular-circle plotter. `python3 circles.py` opens one window. |
 | `day-one-circles.md`, `day-one-dialogue.md` | Earlier writing on the `F_p` material. |
@@ -93,7 +97,17 @@ machine-drawn.
   exactly at the Pythagorean radii, which is why §03 plants a promise that §05 pays off.
 - `NoTies` has a proof as well as a check: two dots one apart give totals summing to an
   odd number, twice the target is even. TLC verifies it one radius at a time; the parity
-  argument settles all of them. Do not delete the proof in favour of the check.
+  argument settles all of them. Do not delete the proof in favour of the check — and the
+  reason is now measured, not asserted: TLC clears R = 3…55 in seconds and **R = 89 was
+  abandoned after thirty-one minutes**, because `Circle` quantifies over every pair of
+  dots and the work grows like `R⁴`. The proof takes two lines and no time.
+- **The spec once forbade dots the program drew.** `Circle` said "in each column" and
+  said nothing about rows, while `board_program.py` does both passes — so at R=12 the
+  program drew twenty steep-side dots the module disallowed, and the colophon claimed on
+  a live page that the two could not drift. The program was right; the spec had been
+  shortened in a legibility pass and the row clause went with it. *Cannot be misread* and
+  *says everything* are different properties. `verify_colophon.py` now checks
+  `circle(R) == Circle` directly so it cannot recur quietly.
 - Everything in the page is verified before being written. The colophon says so, which
   means it has to stay true.
 
