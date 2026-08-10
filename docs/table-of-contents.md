@@ -6,6 +6,41 @@ gesture beyond. Set against the traditional sequence so the divergences are visi
 Nothing here is new mathematics. Sources are credited per volume; the point is the
 *order*, not the content.
 
+## At a glance
+
+| | | | |
+|---|---|---|---|
+| **I** | 7th | Counting Things | tables and the gaps between them — `Δ` and `Σ`, before either has a name |
+| **II** | 8th | The Lattice Plane | the county's land: quadrance, circles, π by counting, Pick's rule |
+| **III** | 9th | Turning | rotation without angles; polynomials turn out to be difference tables |
+| **IV** | 10th | Growth | doubling, `e`, discrete logs, generating functions, recurrences |
+| **V** | 11th | Calculus, Finitely | `h` gets smaller and never reaches zero |
+| **VI** | 12th | The Continuous Dialect | the notation the exam is written in, with a year to learn it |
+
+*Optional:* **an excursion into other finite worlds** — circles drawn over a prime.
+Nothing depends on it, which is why it is not a year.
+
+**What it is for.** Computation as the substrate the rest is done with — the way
+arithmetic is the substrate now. The graduate specialises afterward and arrives able to
+say what a procedure does before running it.
+
+**How a chapter opens.** A do-now on the board before anybody sits down, answerable with
+only what earlier chapters gave. Then the day's question is *elicited*, in the students'
+words, out of the trouble the do-now has just caused. The needs come from outside the
+room: a boundary set, a curve staked, a parcel taxed, a ledger closed.
+
+**How it knows things.** By computing them, and saying so. Every answer arrives with a
+receipt — a number and how wrong it can be. Proof is kept where it is short, because it
+is cheaper than checking, not because it is holier.
+
+**Where it stands.** Volumes I and II are specified chapter by chapter — do-now, what
+goes wrong, elicited aim — with every number in them checked by `docs/verify_vol1.py`
+and `docs/verify_vol2.py`. **19 of 58 chapters.** III through VI are titles and
+glosses. One lesson has actually been written, from II.6, and it predates the entry it
+now sits under.
+
+---
+
 ### A standing debt
 
 The nearest existing book is **Graham, Knuth & Patashnik, *Concrete Mathematics* (1989)**,
@@ -20,6 +55,22 @@ recurrences, and needed six hundred pages of remediation to get there. That is a
 measurement, taken in our world, of the gap this book proposes to close from the other
 side — and it is a stronger argument for the book than any claim about whether infinity
 is real.
+
+How complete the overlap is, is worth stating plainly rather than gesturing at.
+*Concrete Mathematics* covers §2.6 *Finite and Infinite Calculus* — `Δ`, `Σ`, falling
+factorials, summation by parts — plus generating functions, recurrences, hypergeometric
+summation, and in the second edition the Gosper–Zeilberger mechanical summation
+algorithm. That is essentially the whole difference-calculus spine of Volumes I, III, IV
+and V, done thoroughly, decades ago.
+
+What it does not do is *stop*. §2.7 is infinite sums; chapter 9 is asymptotics. It uses
+finite methods without inhabiting a finite world, and nothing in it arrives with a
+receipt. It is the toolkit, not the stance.
+
+And it contains almost no geometry — so the lattice strand here, quadrance and spread
+and Pick and the Gauss circle problem, is the part of this book that is genuinely not
+borrowed. Which is worth noticing, since it is also the part that produced the
+surveying spine and the do-nows that work best.
 
 The difference between the two projects is audience and order. *Concrete Mathematics* is
 for people who already have the calculus and need the discrete half; this is for people
@@ -40,8 +91,7 @@ world get that at all; the ones who do get it at thirty, at work, badly.
 
 **The claim is not that this is easier.** Nobody knows whether it is, and this
 document should not pretend to. The claim is that it is a different vantage, and that
-the vantage buys something specific: a student who can implement what a calculator or
-a spreadsheet does has taken that much magic out of the world and got a tool back —
+the vantage buys something specific: a student who can implement what a spreadsheet does has taken that much magic out of the world and got a tool back —
 the kind of thing that hangs in a garage, which you are allowed to open, and which
 turns out to have nothing in it you could not have built.
 
@@ -65,6 +115,46 @@ because the failure mode is one short hop away: the moment the subject becomes t
 apparatus — how to specify, how to make it fast, what a tool is *for* — the
 mathematics has stopped moving. Legibility is the whole of what the formal notation
 is here to buy. Nothing beyond that is in scope.
+
+A spreadsheet and not a calculator, deliberately. A spreadsheet is a table, the gaps
+between its entries, and running totals — which is Volume I, exactly. A calculator is a
+different promise: it has a square-root key this book declines, and does sine and
+logarithm by methods the book replaces rather than builds. **Floating point is out of
+scope on the same grounds as fast algorithms** — it is an answer to *how shall we store
+this*, which is engineering. Students may use it freely; the mathematics never asks for
+it, because I.2 settles that a fraction is a pair of whole numbers and never a decimal.
+
+---
+
+## How sure, and how you know
+
+The book discovers things by computing them and then says so, rather than working
+empirically and dressing the result in deductive clothes afterward. That is the
+**Babylonian** habit, as against the Greek one, and it is not a philosophical position
+the book argues for — it is just what actually happens when anybody does mathematics,
+and this book declines to hide it.
+
+Three consequences, and they are the whole of the epistemology.
+
+**Every answer arrives with a receipt.** Not certainty — a number, and how wrong it can
+be. The drawing is never off by more than half a unit. `e` to n places leaves under
+`1/(n·n!)`. Counting dots gives π and tells you it overshot by under three. An answer
+without a receipt is not finished.
+
+**A proof is a compression of a check, not a higher grade of knowledge.** It is kept
+wherever it is short, because it is cheaper — not because it is holier. This is
+measurable rather than arguable: model-checking the circle specification clears radius
+55 in seconds and was abandoned at radius 89 after **thirty-one minutes**, because the
+work grows like `R⁴`. The two-line parity argument settles every radius and costs
+nothing, because it never runs.
+
+**And a check is only as good as the case somebody thought to try.** One constant
+altered in the fast circle algorithm — 6 into 4, invisible to reading — breaks 114 of
+the 118 radii from 3 to 120 and *survives* at 3, 5, 7 and 10, which are exactly the
+radii small enough to fit on a board.
+
+There are a great many books that teach mathematics as proof. One that does not is
+unlikely to damage anybody's roads.
 
 ---
 
@@ -140,6 +230,30 @@ stays a source of jobs that happens to repeat, is a live decision and should be 
 purpose. Galileo appears in chapter five because a real man with a real ramp beats any
 invented need, and the two chapters where the county has to be reached for — one and
 four — are the weakest openings in the volume, which is worth watching for.
+
+### Two habits, and one rule
+
+Neither habit is a topic, and that is the point — a topic can take over a lesson and a
+line at the end of an exercise cannot.
+
+**"…and say how far you checked."** Attached to answers. It is what makes the receipt a
+routine rather than a sermon, and it is the whole of the book's rigour policy.
+
+**"…now write it down so it runs without you."** Attached to procedures. It is what
+makes a graduate somebody who has *built* things rather than watched them being built,
+and it is the only thing that cashes the *implement* half of the claim above. The
+implementations are already in the book; what has been missing is that the class watches
+somebody else type them.
+
+And the rule, which governs the formal notation wherever it appears:
+
+> **A specification may be shown. It may not be discussed.**
+
+Written on a board, printed on a page, attached to an answer, it costs what it costs and
+stops. Turned into a scene — two people talking about why one would write such a thing —
+it grows without limit, every time, and the mathematics stops moving while it does. That
+is not a guess; it is the one failure this project has had repeatedly, and it has never
+once arrived any other way.
 
 The failure mode to watch: nine consecutive ambushes is a lot of ambushes. Some
 chapters should be allowed to open with *here is a tool, now use it*, and the method
@@ -628,6 +742,17 @@ a curve over a prime, and the discrete logarithm. Named for that and nothing els
 everything he built has an argument attached to it, and this book is not carrying any of
 them. Anyone who knows, knows. Only if the book is finished.
 
+**A chapter on checking versus proving.** The material is unusually good and verified:
+one constant changed in the fast circle algorithm, invisible to reading, breaking 114 of
+118 radii and surviving at exactly the four small enough to fit on a board; against a
+two-line parity argument that settles all of them. Deferred, for two reasons. It depends
+on the fast algorithm, which is the chapter this project has been least willing to
+commit to — a bad foundation. And it cashes nothing: the two exercise habits deliver the
+promise, and this would deliver a philosophical point. The distinction already lands for
+free in II.6, in two lines, in a chapter that exists for other reasons. Numbers are on
+record in `site/CircleCheck.tla`; the prose there is not itself checked by anything, so
+it will rot if the specification moves again.
+
 **Whether anything ever gets specified, or run.** *Program*, *specification*, *code*
 and *implement* appear **zero** times across all seven volumes' chapter listings. What
 the book does have is the idea underneath — I.9's *two rules, one table*, I.6's *the
@@ -637,7 +762,7 @@ lesson does the whole thing already: a blueprint in TLA+, a program that obeys i
 figure that is that program's output. Two questions, both open: whether this becomes a
 strand or is merely named where it already happens; and — a correctness matter rather
 than an idea — that *What it is for* currently promises a graduate who can "implement
-what a calculator or a spreadsheet does" and "say what a procedure does before running
+what a spreadsheet does" and "say what a procedure does before running
 it", neither of which any chapter delivers.
 
 ---
