@@ -10,7 +10,7 @@ Nothing here is new mathematics. Sources are credited per volume; the point is t
 
 The nearest existing book is **Graham, Knuth & Patashnik, *Concrete Mathematics* (1989)**,
 and this outline should say so on its first page rather than in a footnote. Volumes I,
-III, V and VII are all walking through territory it mapped: the difference operator,
+III, IV and VI are all walking through territory it mapped: the difference operator,
 falling factorials, telescoping, summation by parts, generating functions, recurrences.
 Read it before writing a word of this.
 
@@ -420,54 +420,38 @@ polynomials · radicals · systems of equations*
 
 ---
 
-## Volume IV — Tenth Grade: Proof, and Other Finite Worlds
-
-*Traditional Geometry: formal proof · congruence and similarity · right-triangle
-trigonometry · circles · coordinate geometry · volume*
-
-1. Induction — the only proof engine we need
-2. Why Collapsing Sums Always Collapse
-3. Clock Arithmetic
-4. Circles on a Clock — `p − 1` points, or `p + 1`, and why `−1` decides
-5. Why That Circle Doesn't Look Like a Circle — equidistribution, honestly
-6. Two Finite Worlds — a quotient is not an approximation
-7. Quadrance and Spread Over Any Field — the same formulas, on a clock
-8. What We Gave Up — no order, no distance, no betweenness
-
-> *Volume IV is where the book earns trust.* Chapters 5 and 8 admit what the approach
-> cannot do. A curriculum that only shows its wins is the thing we're replacing.
-
----
-
-## Volume V — Eleventh Grade: Growth
+## Volume IV — Tenth Grade: Growth
 
 *Traditional Algebra II / Precalculus: polynomial and rational functions · exponentials
 and logarithms · sequences and series · trigonometric functions · conics · matrices ·
 vectors*
 
-1. Doubling — `Δ2ˣ = 2ˣ`, so **2** is this world's `e`
-2. Every Other Base — `Δbˣ = (b − 1)bˣ`, and why 2 is the only fixed point
-3. Letters in the Wrong Envelopes — `n` letters, `n` envelopes, nobody gets their own.
+1. Counting Them All at Once — induction, arriving as a labour-saving device rather
+   than a proof engine: a check you do not have to run because you already ran the
+   general one
+2. Doubling — `Δ2ˣ = 2ˣ`, so **2** is this world's `e`
+3. Every Other Base — `Δbˣ = (b − 1)bˣ`, and why 2 is the only fixed point
+4. Letters in the Wrong Envelopes — `n` letters, `n` envelopes, nobody gets their own.
    Count the ways; `n!/Dₙ` marches to **e**. The same trick that gave us π, on a
    different pile of things to count
-4. e, to as Many Digits as You Ask For — partial sums of `1/k!` are exact fractions
+5. e, to as Many Digits as You Ask For — partial sums of `1/k!` are exact fractions
    and the leftover is smaller than `1/(n·n!)`, so every answer arrives with a receipt
-5. Undoing Growth — discrete logarithms
-4. Summation by Parts
-5. Generating Functions — power series with no convergence question, because nothing
+6. Undoing Growth — discrete logarithms
+7. Summation by Parts
+8. Generating Functions — power series with no convergence question, because nothing
    is ever evaluated
-6. Recurrences and Closed Forms
-7. Tables With Two Indices — matrices as bookkeeping
-8. Conics on a Lattice
+9. Recurrences and Closed Forms
+10. Tables With Two Indices — matrices as bookkeeping
+11. Conics on a Lattice
 
-> *Credits:* Chapters 4–6 are *Concrete Mathematics* ch. 7 and 8 — generating functions
-> and recurrences — at a slower pace. Chapter 5 is the one place this book gets something
+> *Credits:* Chapters 7–9 are *Concrete Mathematics* ch. 7 and 8 — generating functions
+> and recurrences — at a slower pace. Chapter 8 is the one place this book gets something
 > for free that the continuous route pays dearly for: a generating function is never
 > evaluated, so convergence never arises.
 
 ---
 
-## Volume VI — Calculus, Finitely
+## Volume V — Eleventh Grade: Calculus, Finitely
 
 *Traditional AP Calculus AB/BC: limits and continuity · derivatives and applications ·
 integrals · the Fundamental Theorem · series · parametric and polar (BC)*
@@ -505,11 +489,17 @@ Not a course. Four chapters to show the machinery keeps working.
 
 ---
 
-## Volume VII — The Continuous Dialect
+## Volume VI — Twelfth Grade: The Continuous Dialect
 
-**Not an appendix.** An earlier draft of this document called it one, on the assumption
-that a finite reader needs only new notation. That is false, and the error is worth
-recording: the gap is partly conceptual, and one part of it is large.
+**A year, not an appendix.** Two drafts got this wrong in opposite directions. The
+first called it an appendix, on the assumption that a finite reader needs only new
+notation — false, and the error is worth recording, because part of the gap is
+conceptual and one part of it is large. The second gave it the right size and left it
+sitting outside the grades anyway, which meant a reader who followed the sequence met
+the notation of the exam in whatever time was left over.
+
+It is twelfth grade. That is what dropping the old Volume IV bought, and it is the
+better use of the year.
 
 ### What comes free — the same idea, renamed
 
@@ -567,6 +557,46 @@ between them*.
 
 ---
 
+## An excursion — Other Finite Worlds
+
+*Optional. Nothing later depends on it, which is exactly why it is here rather than in
+the sequence.*
+
+This was Volume IV, a required tenth-grade year, and it is where this whole project
+started: circles drawn over a prime instead of over a lattice. It came out of the
+sequence for three reasons, none of them about its quality.
+
+Nothing needs it. Volumes IV, V and VI refer to induction, modular arithmetic,
+equidistribution and finite fields exactly **zero** times between them. It is a
+cul-de-sac — a beautiful one, and a whole year is a great deal to spend in one.
+
+Its first two chapters were the book's only Greek chapters. *Induction — the only proof
+engine we need* and *Why Collapsing Sums Always Collapse* exist to prove things the book
+has been using contentedly since Volume I. That is the rigour-for-its-own-sake the rest
+of this document declines.
+
+And it was the one volume with no customer. Every other opens on somebody who wants
+something: a boundary set, a curve staked, a parcel taxed, a balance predicted. Nobody
+anywhere wants the remainder of something modulo seven, and a do-now cannot be written
+for a need that does not exist.
+
+1. Clock Arithmetic
+2. Circles on a Clock — `p − 1` points, or `p + 1`, and why `−1` decides
+3. Why That Circle Doesn't Look Like a Circle — equidistribution, honestly
+4. Two Finite Worlds — a quotient is not an approximation
+5. Quadrance and Spread Over Any Field — the same formulas, on a clock
+
+> Chapter 4 is the one worth rescuing whatever happens to the rest. Reduction modulo a
+> prime is a *quotient*, not an approximation — `ℤ/p` has no order and no metric, so a
+> circle there is not a coarse circle, it is a different object wearing the same
+> equation. Getting that wrong is what started this project, and the correction is
+> worth more than the excursion around it.
+
+*Credits:* Gauss; Fermat and Jacobi for two squares; Wildberger (2005) for quadrance and
+spread over a general field.
+
+---
+
 ## Probably not going to need this
 
 Good ideas, parked. Kept so they do not have to be worked out twice.
@@ -616,6 +646,10 @@ it", neither of which any chapter delivers.
 
 Stated up front so a prototype can attack them first.
 
+- **The excursion is untested as an excursion.** It was written as a required year and
+  has been demoted to an optional one. Nobody has checked that it still reads as
+  optional — whether it stands alone without the tenth-grade scaffolding around it, or
+  whether pulling it out of the sequence left dangling references in its own chapters.
 - **Chapter II.10 and the whole spread strand.** Reviewers of *Divine Proportions*
   granted its coherence but questioned whether quadrance and spread are actually
   *easier* for ordinary students. That objection lands on a claim this book does not
@@ -629,9 +663,11 @@ Stated up front so a prototype can attack them first.
   did not. `π` and `e` as *numbers* are fine — they are procedures with error
   certificates. It is `d/dx sin x = cos x`, which needs arc length, that has no finite
   route.
-- **Convergence.** The one large gap, and the whole of VII.9. Everything in Volumes I–VI
+- **Convergence.** The one large gap, and the whole of VI.9. Everything in Volumes I–VI
   terminates, which is the book's chief pleasure and also why its reader meets an
   infinite series for the first time in the last hundred pages.
-- **The exit ramp.** A reader who does only this book would walk into the AP Calculus
-  exam having never evaluated a limit in the notation the test is written in. The
-  appendix is not optional decoration; it is what makes the book usable.
+- **The exit ramp**, which is better than it was and is still the thing to watch. A
+  reader who did only this book walks into the AP Calculus exam having never evaluated a
+  limit in the notation the test is written in. That used to be an appendix's problem;
+  it is now twelfth grade, with a year to do it in. What has not changed is that the
+  whole book funnels into it, so if Volume VI does not work, nothing upstream saves it.
