@@ -15,10 +15,16 @@ Nothing here is new mathematics. Sources are credited per volume; the point is t
 | **III** | 9th | Turning | rotation without angles; polynomials turn out to be difference tables |
 | **IV** | 10th | Growth | doubling, `e`, discrete logs, generating functions, recurrences |
 | **V** | 11th | Calculus, Finitely | `h` gets smaller and never reaches zero |
-| **VI** | 12th | Where the Finite Route Ends | the sums that do not stop, and the length you cannot count |
 
 *Optional:* **an excursion into other finite worlds** — circles drawn over a prime.
 Nothing depends on it, which is why it is not a year.
+
+**It stops at calculus and does not go on to the examination.** Volume V is calculus —
+the difference quotient, refinement, sums becoming integrals, the Fundamental Theorem.
+What the book does not do is teach the notation the AP paper is written in. That was a
+volume once; it is parked, because eight of its ten chapters were compliance with a
+system this book is an alternative to, and the one chapter that was not is now II.10.
+Twelfth grade is free.
 
 **What it is for.** Computation as the substrate the rest is done with — the way
 arithmetic is the substrate now. The graduate specialises afterward and arrives able to
@@ -501,7 +507,30 @@ instrument — a hundred links, counted, and nothing in between them.
   do we tax him on?* That is the longest arc in the book so far, and it should be
   allowed to be that long.
 
-**10. Spread** — turning, measured without trigonometry
+**10. How Long Is the Fence?** — where counting stops working
+- *Do now:* The assessor is finished; he has the acreage. Now the road commissioner
+  wants to know how much fence goes round the round parcel. You got the area by counting
+  the stakes inside it. Count the stakes on the edge.
+- *What happens:* At ten chains the ring holds 56 stakes, and `56 ÷ 10` is 5.6. At
+  sixty it is 5.667. At four hundred, 5.66. It settles hard, and it settles on
+  **5.657** — and the fence is `2π`, which is **6.283**. Counting is short by a tenth
+  at every size, and making the parcel bigger never once helps. The same method that
+  got the area right to four figures gets the perimeter wrong by ten per cent forever.
+- *Aim:* **Why does counting work for the field and not for the fence?**
+- *Why it is here:* because the answer is *the method stops here*, and that is worth a
+  chapter rather than a footnote. Dots step in whole units. A diagonal step crosses
+  `√2` of ground and counts as one, so the ring's stakes total `4√2·r` and the fence is
+  `2π·r`, and the gap between them is a square root that will not go away — which is
+  exactly the operation this book has spent two volumes not needing. A chain measures
+  chords. It has never once measured an arc, and Popovich's grandfather could stake a
+  curve to four inches and could not tell you how long it was.
+  >
+  > This is the one honest hole in the method, and everything else the book declines to
+  > do — angles, real numbers, limits — it declines by choice. This one it cannot reach.
+  > Arc length is why radian measure exists, and it is the reason the traditional route
+  > has a continuum in it at all.
+
+**11. Spread** — turning, measured without trigonometry
 - *Do now:* Two roads meet at a bend. The county must record the bend in the book well
   enough that a different man with a different chain can lay it out again next year.
   There is no protractor in the county. Write it down.
@@ -622,96 +651,6 @@ Not a course. Four chapters to show the machinery keeps working.
 
 ---
 
-## Volume VI — Twelfth Grade: Where the Finite Route Ends
-
-**This is where the book pays for its method.** Three drafts got it wrong in three
-different ways, and the errors are worth keeping because each one was a plausible
-mistake about what the volume is.
-
-The first called it an appendix, on the assumption that a finite reader needs only new
-notation. False: seven of the ten chapters below are mathematics this book has not done
-at all.
-
-The second gave it the right size and left it outside the grades, so a reader who
-followed the sequence met it in whatever time was left over.
-
-The third — this one — gave it the year and then justified the year by the examination,
-which made it **the only volume in the book whose customer is an institution.**
-Everywhere else somebody wants something: a boundary set, a curve staked, a parcel
-taxed, a ledger closed. *The College Board wants it* is not a need, and a do-now cannot
-be written from one.
-
-What it is actually for: **the finite route does not reach everywhere, and this is where
-it stops.** A sum that does not terminate. A difference quotient that never settles, no
-matter how far you refine. And a length you cannot get by counting — because a chain
-measures chords and has never once measured an arc, which is why radian measure exists
-and why it is the one place in this book where the continuum is unavoidable rather than
-merely conventional.
-
-That job — saying out loud what the approach cannot do — used to belong to the old
-Volume IV, whose note read *"this is where the book earns trust; a curriculum that only
-shows its wins is the thing we're replacing."* When that volume became an excursion the
-job was left vacant, and this volume had been doing it anyway without being told.
-
-The notation of the examination comes along for free, because it is the notation the
-mathematics is written in. But it is a by-product, and it is not the reason.
-
-### What comes free — the same idea, renamed
-
-| This book | The usual notation |
-|---|---|
-| `Δf` | `f′` |
-| `Σ` | `∫` |
-| telescoping | the Fundamental Theorem |
-| finite sums | Riemann sums |
-| summation by parts | integration by parts |
-| difference equations | Euler's method, slope fields |
-| the tolerance game | `ε`–`N` |
-| quadrance `Q` | `d²` |
-| spread `s` | `sin²θ` |
-
-On this half the reader arrives **ahead** of a traditional student. Riemann sums and
-Euler's method are what they have been doing since Volume I.
-
-### What must be relearned — same concept, different shape
-
-1. The Power Rule Again — `Δx⁽ⁿ⁾ = n·x⁽ⁿ⁻¹⁾` becomes `d/dx xⁿ = n·xⁿ⁻¹`; the basis
-   changes back
-2. The Product Rule Loses Its Shift — discretely it is `Δf·g(x+1) + f·Δg`, which is
-   *not* symmetric; continuously the shift vanishes and it is
-3. Quotients, and Why They Were Ugly Before
-
-### What is genuinely missing — new machinery
-
-An earlier draft listed `e` and the trigonometric functions here. That was wrong, and
-the mistake is instructive enough to keep in the book. **The objects are all reachable
-finitely.** `e` is a counting problem about envelopes; sine and cosine are the rational
-parametrization of the circle, the spread polynomials, and the rotation group, all of
-them exact. What needs the limit is not the objects but the *differential relationships
-between them*.
-
-4. The Chain Rule — there is no clean general discrete analogue, so this is built from
-   scratch. It is also the most-used tool on the exam.
-5. Radians, and Why the Angle Had to Change — `d/dx sin x = cos x` is false in degrees
-   and true in radians, and radian measure is defined by arc length. This is the one
-   place the continuum is genuinely unavoidable, and it is worth dwelling on
-6. Why the Natural Base Moved — it was 2 for `Δ`, it is `e` for `d/dx`. Same question,
-   different operator, different answer
-7. Logarithms of the Continuous Kind
-8. Limits of Functions — one-sided, at infinity, L'Hôpital
-9. **Series That Do Not Stop** — the longest chapter in the book, and the only really
-   large gap. Everything until now terminated. Convergence tests, radius of
-   convergence, and why Newton's series became Taylor's problem
-10. Continuity and the Intermediate Value Theorem — the classical statement, the
-    constructive one from VI.8, and an honest account of the difference
-
-> **Honest accounting.** A reader finishing Volume VI arrives already owning `π`, `e`,
-> sine and cosine as *objects*, with the structural half of calculus unusually solid.
-> What they lack is the differential calculus of those objects, and convergence.
-> Chapter 9 is the real work; the rest is smaller than it looks.
-
----
-
 ## An excursion — Other Finite Worlds
 
 *Optional. Nothing later depends on it, which is exactly why it is here rather than in
@@ -783,6 +722,20 @@ a curve over a prime, and the discrete logarithm. Named for that and nothing els
 everything he built has an argument attached to it, and this book is not carrying any of
 them. Anyone who knows, knows. Only if the book is finished.
 
+**The phrasebook.** Volume VI was *The Continuous Dialect*, then briefly *Where the
+Finite Route Ends*, and it is neither. Sorted honestly, its ten chapters were one real
+gap — arc length, now II.10 — one arguable (the chain rule, which has no clean discrete
+analogue), and eight of translation: the power rule in a changed basis, the product
+rule's lost shift, quotients, why the natural base moves from 2 to `e`, continuous
+logarithms, limits and L'Hôpital, convergence, and the intermediate value theorem.
+
+Convergence is the tell. V.8 already says a generating function is never evaluated, so
+the question never arises; the book computes to a tolerance and keeps the receipt.
+Convergence theory is an artifact of the continuum, not a hole in the method.
+
+It comes back the day somebody needs to sit the examination, and it will be a
+phrasebook, and it should be labelled one. It is not mathematics this book owes.
+
 **A chapter on checking versus proving.** The material is unusually good and verified:
 one constant changed in the fast circle algorithm, invisible to reading, breaking 114 of
 118 radii and surviving at exactly the four small enough to fit on a board; against a
@@ -822,7 +775,7 @@ Stated up front so a prototype can attack them first.
   has been demoted to an optional one. Nobody has checked that it still reads as
   optional — whether it stands alone without the tenth-grade scaffolding around it, or
   whether pulling it out of the sequence left dangling references in its own chapters.
-- **Chapter II.10 and the whole spread strand.** Reviewers of *Divine Proportions*
+- **Chapter II.11 and the whole spread strand.** Reviewers of *Divine Proportions*
   granted its coherence but questioned whether quadrance and spread are actually
   *easier* for ordinary students. That objection lands on a claim this book does not
   make — see *What it is for*. What has to be tested is narrower and harder: not
@@ -830,17 +783,23 @@ Stated up front so a prototype can attack them first.
   spread can do ninth-grade work with it. If the strand cannot carry Volume III on its
   own, the sequence breaks here first, which is why this is still the first chapter to
   write and test rather than the last.
-- **Radian measure** is the single genuinely unavoidable appeal to the continuum. Every
-  other apparent obstacle turned out to be reachable by counting or by algebra; this one
-  did not. `π` and `e` as *numbers* are fine — they are procedures with error
-  certificates. It is `d/dx sin x = cos x`, which needs arc length, that has no finite
-  route.
-- **Convergence.** The one large gap, and the whole of VI.9. Everything in Volumes I–VI
-  terminates, which is the book's chief pleasure and also why its reader meets an
-  infinite series for the first time in the last hundred pages.
-- **Volume VI carries two jobs and may not survive both.** It is where the method's
-  boundary gets drawn honestly — convergence, arc length, the chain rule — and it is
-  also, incidentally, where a reader picks up the notation the examination is written
-  in. Those coincide, which is lucky rather than designed. If they ever pull apart, the
-  boundary is the one that matters and the notation is the one that will get demanded.
-  The whole book funnels through this volume, so nothing upstream saves it if it fails.
+- **Arc length is the one genuinely unavoidable appeal to the continuum**, and it now
+  has a chapter of its own — II.10 — rather than being an admission buried five years
+  later. Every other apparent obstacle turned out to be reachable by counting or by
+  algebra. This one is not, and it fails *measurably*: count the stakes on a ring and
+  divide by the radius and you get 5.657 at every size, when the fence is 6.283. `π`
+  and `e` as **numbers** are fine, being procedures with error certificates. It is
+  `d/dx sin x = cos x` — which needs arc length, which needs radian measure — that has
+  no finite route.
+- **Convergence is not a gap in this book, and that claim deserves suspicion.** V.8
+  says a generating function is never evaluated, so the question does not arise; the
+  book computes to a stated tolerance and keeps the receipt. That is either a genuine
+  structural advantage of the finite route or a place where the difficulty has been
+  moved rather than removed, and nobody here has established which. It is the deepest
+  unexamined claim in the document.
+- **The exit is now explicit, and it is a real cost.** A reader who does only this book
+  reaches calculus and cannot read `dy/dx`. That was going to be twelfth grade; it is
+  now parked, on the grounds that a year of a system's notation is a poor use of a year
+  when you are still finding out whether the five volumes before it work at all. The
+  cost does not go away by being named: it is the single largest practical objection to
+  the whole project, and the answer to it is a phrasebook nobody has written.

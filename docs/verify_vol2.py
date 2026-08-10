@@ -113,5 +113,30 @@ check('  -- stakes strictly inside', I5, 29)
 check("  -- Pick's rule: inside + boundary/2 - 1", I5 + B5 / 2 - 1, A5)
 check('  -- in acres', A5 / 10, 3.5)
 
+# ---- II.10  counting gives the area and lies about the perimeter
+import sys as _s
+_s.path.insert(0, '/Users/claudecode/circles/site')
+import board_program
+
+for r in (10, 100, 1000):
+    n = disc(r)
+    check(f'area by counting at r={r}, n/r^2', round(n / (r * r), 4),
+          {10: 3.17, 100: 3.1417, 1000: 3.1415}[r])
+
+print('\n  and the same method on the perimeter:')
+for r in (12, 60, 200, 400):
+    n = len(board_program.circle(r))
+    print(f'     r={r:4}  {n:5} stakes   n/r = {n/r:.4f}   fence 2pi = {2*math.pi:.4f}')
+# it approaches 4*sqrt(2) from just above -- the ring carries a few extra stakes
+# where the column and row passes overlap, a constant that does not grow with r
+gaps = [abs(len(board_program.circle(r)) / r - 4 * math.sqrt(2)) for r in (60, 200, 400)]
+check('the ring count sits within 0.01 of 4*sqrt(2) at every size',
+      [g < 0.01 for g in gaps], [True, True, True])
+check('  -- and it is NOT approaching 2*pi',
+      abs(len(board_program.circle(400)) / 400 - 2 * math.pi) > 0.6, True)
+check('  -- and 2*pi is', round(2 * math.pi, 3), 6.283)
+check('  -- so counting is short by, per cent',
+      round(100 * (1 - 4 * math.sqrt(2) / (2 * math.pi))), 10)
+
 print('\nVERIFIED' if ok else '\nSOMETHING IS WRONG')
 sys.exit(0 if ok else 1)
