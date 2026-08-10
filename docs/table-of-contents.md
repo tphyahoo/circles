@@ -15,7 +15,7 @@ Nothing here is new mathematics. Sources are credited per volume; the point is t
 | **III** | 9th | Turning | rotation without angles; polynomials turn out to be difference tables |
 | **IV** | 10th | Growth | doubling, `e`, discrete logs, generating functions, recurrences |
 | **V** | 11th | Calculus, Finitely | `h` gets smaller and never reaches zero |
-| **VI** | 12th | The Continuous Dialect | the notation the exam is written in, with a year to learn it |
+| **VI** | 12th | Where the Finite Route Ends | the sums that do not stop, and the length you cannot count |
 
 *Optional:* **an excursion into other finite worlds** — circles drawn over a prime.
 Nothing depends on it, which is why it is not a year.
@@ -603,17 +603,39 @@ Not a course. Four chapters to show the machinery keeps working.
 
 ---
 
-## Volume VI — Twelfth Grade: The Continuous Dialect
+## Volume VI — Twelfth Grade: Where the Finite Route Ends
 
-**A year, not an appendix.** Two drafts got this wrong in opposite directions. The
-first called it an appendix, on the assumption that a finite reader needs only new
-notation — false, and the error is worth recording, because part of the gap is
-conceptual and one part of it is large. The second gave it the right size and left it
-sitting outside the grades anyway, which meant a reader who followed the sequence met
-the notation of the exam in whatever time was left over.
+**This is where the book pays for its method.** Three drafts got it wrong in three
+different ways, and the errors are worth keeping because each one was a plausible
+mistake about what the volume is.
 
-It is twelfth grade. That is what dropping the old Volume IV bought, and it is the
-better use of the year.
+The first called it an appendix, on the assumption that a finite reader needs only new
+notation. False: seven of the ten chapters below are mathematics this book has not done
+at all.
+
+The second gave it the right size and left it outside the grades, so a reader who
+followed the sequence met it in whatever time was left over.
+
+The third — this one — gave it the year and then justified the year by the examination,
+which made it **the only volume in the book whose customer is an institution.**
+Everywhere else somebody wants something: a boundary set, a curve staked, a parcel
+taxed, a ledger closed. *The College Board wants it* is not a need, and a do-now cannot
+be written from one.
+
+What it is actually for: **the finite route does not reach everywhere, and this is where
+it stops.** A sum that does not terminate. A difference quotient that never settles, no
+matter how far you refine. And a length you cannot get by counting — because a chain
+measures chords and has never once measured an arc, which is why radian measure exists
+and why it is the one place in this book where the continuum is unavoidable rather than
+merely conventional.
+
+That job — saying out loud what the approach cannot do — used to belong to the old
+Volume IV, whose note read *"this is where the book earns trust; a curriculum that only
+shows its wins is the thing we're replacing."* When that volume became an excursion the
+job was left vacant, and this volume had been doing it anyway without being told.
+
+The notation of the examination comes along for free, because it is the notation the
+mathematics is written in. But it is a by-product, and it is not the reason.
 
 ### What comes free — the same idea, renamed
 
@@ -791,8 +813,9 @@ Stated up front so a prototype can attack them first.
 - **Convergence.** The one large gap, and the whole of VI.9. Everything in Volumes I–VI
   terminates, which is the book's chief pleasure and also why its reader meets an
   infinite series for the first time in the last hundred pages.
-- **The exit ramp**, which is better than it was and is still the thing to watch. A
-  reader who did only this book walks into the AP Calculus exam having never evaluated a
-  limit in the notation the test is written in. That used to be an appendix's problem;
-  it is now twelfth grade, with a year to do it in. What has not changed is that the
-  whole book funnels into it, so if Volume VI does not work, nothing upstream saves it.
+- **Volume VI carries two jobs and may not survive both.** It is where the method's
+  boundary gets drawn honestly — convergence, arc length, the chain rule — and it is
+  also, incidentally, where a reader picks up the notation the examination is written
+  in. Those coincide, which is lucky rather than designed. If they ever pull apart, the
+  boundary is the one that matters and the notation is the one that will get demanded.
+  The whole book funnels through this volume, so nothing upstream saves it if it fails.
