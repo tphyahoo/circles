@@ -62,19 +62,17 @@ big = triple(40, 9)
 check('m=40, n=9 gives a leg over a thousand', big, (1519, 720, 1681))
 check('  -- and it is a genuine triple', big[0] ** 2 + big[1] ** 2 == big[2] ** 2, True)
 
-# ---- III.9  the basis where differences come out clean
+# ---- (the falling-factorial chapter was binned; kept as the reason why)
+#      the family is real and clean -- and no do-now could be written for it that
+#      began with somebody wanting something, so it is not a chapter.
 sq = lambda x: x * x
 fall2 = lambda x: x * (x - 1)
-fall3 = lambda x: x * (x - 1) * (x - 2)
-
-check('D(x^2) is 2x+1, which is not 2x',
+check('D(x^2) is 2x+1, not 2x -- the ugliness that motivated it',
       [sq(x + 1) - sq(x) for x in range(1, 5)], [3, 5, 7, 9])
-check('D(x(x-1)) is exactly 2x',
+check('D(x(x-1)) is exactly 2x -- the family is genuinely clean',
       [fall2(x + 1) - fall2(x) for x in range(1, 5)], [2, 4, 6, 8])
-check('D(x(x-1)(x-2)) is exactly 3x(x-1)',
-      [fall3(x + 1) - fall3(x) for x in range(1, 5)],
-      [3 * fall2(x) for x in range(1, 5)])
 
+# ---- III.9  how few numbers rebuild a whole table
 # ---- III.10  how few numbers rebuild a whole table
 def rebuild(first_differences, start, n):
     """Newton's series: a table from its leading differences."""

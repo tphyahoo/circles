@@ -148,8 +148,7 @@ has been worked out. Roman means it is still only a title.*
 6. The Spread Laws — *Can we get the far side without going out there?*
 7. Spread Polynomials — *The spreads keep moving. Is there a pattern, or do we just measure?*
 8. Polynomials Are Difference Tables — *How do you tell what kind of thing a table is?*
-9. The Right Kind of Power — *Is there a family where the differences come out clean?*
-10. Newton's Series — *How few numbers do you need to send?*
+9. Newton's Series — *How few numbers do you need to send?*
 
 **Volume IV — Tenth Grade: Growth**
 
@@ -191,7 +190,7 @@ has been worked out. Roman means it is still only a title.*
 4. Two Finite Worlds — a quotient is not an approximation
 5. Quadrance and Spread Over Any Field — the same formulas, on a clock
 
-**30 of 49 chapters in the required sequence are worked out** — a do-now, what goes wrong, and an elicited aim. The Coda and the excursion are optional and add 9 more.
+**29 of 48 chapters in the required sequence are worked out** — a do-now, what goes wrong, and an elicited aim. The Coda and the excursion are optional and add 9 more.
 
 <!-- INDEX:END -->
 
@@ -717,9 +716,17 @@ seam is at chapter 9, and it is written down below rather than smoothed over.
   is a polynomial in the first spread. The second is `4s(1−s)`. There is one for every
   number of turns, and they can be written down.
 - *Aim:* **The spreads keep moving. Is there a pattern, or do we just measure?**
-- *Why it is here:* the book's hinge. The familiar power rule visibly **fails** on
-  ordinary powers — `Δx² ≠ 2x` — and comes back perfect on the right basis two chapters
-  later. Break it, then fix it.
+- *Why it is here:* the book's hinge, and geometry is what turns. A bend applied `n`
+  times stops being a thing you go out and measure and becomes a **polynomial in the
+  first bend** — which is `cos nθ` as arithmetic rather than analysis, and Chebyshev's
+  polynomials arriving without anybody having to name them.
+  >
+  > An earlier draft justified the hinge differently: the power rule breaking on
+  > `Δx² ≠ 2x` and coming back perfect on the falling-factorial basis two chapters later.
+  > Break it, then fix it. That was a good line about a chapter which has since been
+  > binned for having no customer, so the line went with it — and the honest hinge was
+  > always this one, since it is the only place in the book where a measurement turns
+  > into algebra.
 
 **8. Polynomials Are Difference Tables**
 - *Do now:* The commissioner has six years of figures and wants year twelve. He says the
@@ -732,25 +739,7 @@ seam is at chapter 9, and it is written down below rather than smoothed over.
   The need is thinner here — checking a claim rather than answering a question — and it
   is the first chapter in the book where that is true.
 
-**9. The Right Kind of Power** — falling factorials, and the return of `Δx⁽ⁿ⁾ = n·x⁽ⁿ⁻¹⁾`
-- *Do now:* You know `Δ` of `x²`. It is `2x + 1`, and has been since seventh grade. Find
-  me something whose `Δ` is exactly `2x`, with nothing left over.
-- *What happens:* Hunting turns up `x(x−1)`, and its differences are `2, 4, 6, 8` — dead
-  clean. Then `x(x−1)(x−2)` gives exactly `3x(x−1)`. There is a whole family in which
-  the power rule works perfectly, and it is not the family anybody was taught.
-- *Aim:* **Is there a family where the differences come out clean?**
-- > **This chapter fails the outside-need test, and it is the only one in the book that
-  > does.** Every other do-now here begins with somebody who wants something. Nobody in
-  > any county has ever wanted a falling factorial. The need is internal — `2x + 1` is
-  > ugly and the ugliness is load-bearing — which makes this a puzzle rather than a job.
-  >
-  > It may not be a chapter. The next one needs exactly this and has a real customer, so
-  > the honest repair is probably to merge them: the telegram cannot be sent without the
-  > right basis, and the basis arrives as the thing that makes the telegram possible
-  > rather than as a curiosity to be admired first. Left separate here so the seam stays
-  > visible.
-
-**10. Newton's Series** — every polynomial rebuilt from its differences at zero, in
+**9. Newton's Series** — every polynomial rebuilt from its differences at zero, in
   finitely many terms, exactly
 - *Do now:* The clerk has to wire twelve years of figures to the state capital, and the
   telegraph charges by the word. Send fewer than twelve.
@@ -759,9 +748,14 @@ seam is at chapter 9, and it is written down below rather than smoothed over.
   exactly, with no rounding and nothing lost. Twelve words become four.
 - *Aim:* **How few numbers do you need to send?**
 
-> *Credits:* Chapters 8–10 are *Concrete Mathematics* ch. 2 and 5, reordered for a reader
-> who has not met calculus. The falling-factorial notation and its treatment are theirs.
-> Wildberger (2005) for chapters 1–7.
+> *Credits:* Chapters 8 and 9 are *Concrete Mathematics* ch. 2 and 5, reordered for a
+> reader who has not met calculus. Wildberger (2005) for chapters 1–7.
+>
+> Falling factorials are theirs as well, and are deliberately **not** here. They were a
+> chapter; the chapter had no customer; nothing depended on it, because Newton's series
+> is a procedure and rebuilds a table by addition without ever naming one. If closed-form
+> summation of polynomials is ever claimed, they come back inside IV.7, where they would
+> actually get used.
 
 ---
 
@@ -954,13 +948,12 @@ Stated up front so a prototype can attack them first.
   This does not. The failure would be quiet: not a wrong theorem — the mathematics is
   centuries old and correct — but a sequence that turns out to be unteachable in an
   order nobody has tried. Only a classroom settles that, and the scripts cannot.
-- **III.9 has no customer, and it is the only chapter in the book that hasn't.** Nobody
-  in a county has ever wanted a falling factorial. The do-now written for it is a puzzle
-  — *find something whose `Δ` is exactly `2x`* — which is a good puzzle and not a job,
-  and the whole method rests on the difference. The likely repair is to merge it into
-  III.10, whose customer is real and who cannot be served without it: the telegram
-  needs the right basis, so the basis arrives as what makes the telegram possible. Left
-  separate for now so the seam stays visible rather than being papered over.
+- **The test that found the bad chapter has said no exactly once.** III.9 was falling
+  factorials; the best do-now anybody could write for it was *find something whose `Δ` is
+  exactly `2x`*, which is a good puzzle and not a job. It has been binned. But the same
+  test passed nine other chapters in the same volume, so its discrimination is
+  unmeasured — a test that almost always says yes is not obviously distinguishable from
+  no test at all, and one refusal is a thin basis for trusting it.
 - **The excursion is untested as an excursion.** It was written as a required year and
   has been demoted to an optional one. Nobody has checked that it still reads as
   optional — whether it stands alone without the tenth-grade scaffolding around it, or
